@@ -48,7 +48,6 @@
 ## II. Giao diện
 <a name="Main"></a>
 ### 2.1 Main
-![image](https://user-images.githubusercontent.com/107678223/236499497-322e2356-6495-44ff-9373-8c2802d5ad15.png)
 ![dashboard](app/src/main/assets/img/dashboard.jpg)
 
 <a name="BienBao"></a>
@@ -67,12 +66,10 @@
 
 <a name="ThiThu"></a>
 ### 2.6 Thi thử (Đề thi)
-![image](https://user-images.githubusercontent.com/107678223/236501362-21cedf43-e599-472a-8f1a-1c46a2672c65.png)
 ![list_exam](app/src/main/assets/img/list_exam.jpg)
 
 <a name="KetQua"></a>
 ### 2.7 kết quả
-![image](https://user-images.githubusercontent.com/107678223/236501467-f0106e29-ce5c-4863-b878-f4d14f0c3cf4.png)
 ![exam_result](app/src/main/assets/img/exam_result.jpg)
 
 <a name="ThiThu"></a>
@@ -91,8 +88,7 @@
 
   - Thành viên trong nhóm khá hài lòng với sản phẩm của nhóm xây dựng (mặc dù còn một số phần chưa hài lòng VD: tốc độ load bị ảnh hưởng do ảnh, giao diện hơi đơn giản, còn lỗi khi chạy ...).
 
-  - Công việc trong nhóm nhiều lúc còn bị chậm. Việc liên lạc và phối hợp giữa các thành viên nhiều lúc còn không chặt chẽ.
 - Nêu bài học kinh nghiệm rút ra từ bài tập dự án của nhóm:
 
   - Học được về lập trình android Java biết thêm về nhưng thư viện hay.
-  - Học được thêm về làm việc theo nhóm, sử dụng các công cụ hỗ trợ (GitHub, GitBook...) để hoàn thành 1 dự án.
+  - Học được thêm về làm việc theo nhóm, sử dụng các công cụ hỗ trợ (GitHub, AI...) để hoàn thành 1 dự án.
