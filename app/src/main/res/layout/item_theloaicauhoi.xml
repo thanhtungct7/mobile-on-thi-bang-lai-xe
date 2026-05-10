@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Top divider; hidden for position 0 via adapter -->
+    <View
+        android:id="@+id/topicDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border"/>
+
+    <!-- Content row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:minHeight="52dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <!-- Topic icon in rounded square -->
+        <LinearLayout
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/topic_icon_bg"
+            android:gravity="center"
+            android:layout_marginEnd="12dp">
+
+            <ImageView
+                android:id="@+id/ivTheLoaiCauHoi"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:contentDescription="@null"/>
+
+        </LinearLayout>
+
+        <!-- Body -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Name + badge -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/txtTheLoaiCauHoi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/fg"
+                    android:layout_marginEnd="6dp"/>
+
+                <TextView
+                    android:id="@+id/tvDiemLiet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Điểm liệt"
+                    android:textSize="9sp"
+                    android:textColor="@color/diem_liet_text"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    android:background="@drawable/diem_liet_badge"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <!-- Count + progress bar + percentage -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/txtSoCau"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="@color/muted"
+                    android:fontFamily="monospace"
+                    android:layout_marginEnd="7dp"/>
+
+                <ProgressBar
+                    android:id="@+id/pbTheLoaiCauHoi"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="4dp"
+                    android:layout_weight="1"
+                    android:progressDrawable="@drawable/progress_bar"
+                    android:max="100"/>
+
+                <TextView
+                    android:id="@+id/txtPct"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/muted"
+                    android:fontFamily="monospace"
+                    android:gravity="end"
+                    android:layout_marginStart="7dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

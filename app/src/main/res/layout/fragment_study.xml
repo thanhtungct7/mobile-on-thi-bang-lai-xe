@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="10dp"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 câu · 6 chủ đề"
+                    android:textSize="11sp"
+                    android:textColor="@color/muted"
+                    android:fontFamily="monospace"
+                    android:layout_marginBottom="3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ôn luyện"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/fg"/>
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btnSearch"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/card_stroke"
+                android:src="@drawable/ic_search"
+                android:padding="9dp"
+                android:contentDescription="Tìm kiếm"/>
+
+        </LinearLayout>
+
+        <!-- Overall progress card -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/card_stroke"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="13dp"
+            android:paddingBottom="13dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tổng tiến độ"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/fg"/>
+
+                <TextView
+                    android:id="@+id/txtProgressCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 / 0"
+                    android:textSize="13sp"
+                    android:textColor="@color/muted"
+                    android:fontFamily="monospace"/>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/pbTheLoaiCauHoi"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+                android:progressDrawable="@drawable/progress_bar"
+                android:max="100"/>
+
+            <TextView
+                android:id="@+id/txtProgressMeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="0% hoàn thành"
+                android:textSize="11sp"
+                android:textColor="@color/muted"
+                android:fontFamily="monospace"/>
+
+        </LinearLayout>
+
+        <!-- CHẾ ĐỘ — mode grid 2×2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginBottom="18dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CHẾ ĐỘ"
+                android:textSize="11sp"
+                android:textColor="@color/muted"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.08"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Row 1: Đề thi + 600 câu -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <!-- Đề thi (primary) -->
+                <LinearLayout
+                    android:id="@+id/cardExam"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/accent_card_bg"
+                    android:padding="14dp"
+                    android:minHeight="90dp"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/mode_card_icon_primary_bg"
+                        android:gravity="center"
+                        android:layout_marginBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_exam_doc"
+                            android:tint="@color/white"
+                            android:contentDescription="@null"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Đề thi"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        android:id="@+id/txtModeExamSub"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30 đề · 25 câu · 19 phút"
+                        android:textSize="10sp"
+                        android:textColor="#A6FFFFFF"
+                        android:fontFamily="monospace"
+                        android:layout_marginTop="2dp"/>
+
+                </LinearLayout>
+
+                <!-- 600 câu -->
+                <LinearLayout
+                    android:id="@+id/card600Cau"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/card_stroke"
+                    android:padding="14dp"
+                    android:minHeight="90dp"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/topic_icon_bg"
+                        android:gravity="center"
+                        android:layout_marginBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ico_exam"
+                            android:contentDescription="@null"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="600 câu"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/fg"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ngẫu nhiên · không giới hạn"
+                        android:textSize="10sp"
+                        android:textColor="@color/muted"
+                        android:fontFamily="monospace"
+                        android:layout_marginTop="2dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Row 2: Biển báo + Mẹo thi -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Biển báo -->
+                <LinearLayout
+                    android:id="@+id/cardBienBao"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/card_stroke"
+                    android:padding="14dp"
+                    android:minHeight="90dp"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/topic_icon_bg"
+                        android:gravity="center"
+                        android:layout_marginBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ico_traffic_signs"
+                            android:contentDescription="@null"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Biển báo"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/fg"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5 nhóm · 185 loại biển"
+                        android:textSize="10sp"
+                        android:textColor="@color/muted"
+                        android:fontFamily="monospace"
+                        android:layout_marginTop="2dp"/>
+
+                </LinearLayout>
+
+                <!-- Mẹo thi -->
+                <LinearLayout
+                    android:id="@+id/cardMeoThi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/card_stroke"
+                    android:padding="14dp"
+                    android:minHeight="90dp"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <LinearLayout
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@drawable/topic_icon_bg"
+                        android:gravity="center"
+                        android:layout_marginBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ico_tips"
+                            android:contentDescription="@null"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mẹo thi"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/fg"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12 mẹo · tránh điểm liệt"
+                        android:textSize="10sp"
+                        android:textColor="@color/muted"
+                        android:fontFamily="monospace"
+                        android:layout_marginTop="2dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- CHỦ ĐỀ — topic list -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CHỦ ĐỀ"
+                android:textSize="11sp"
+                android:textColor="@color/muted"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.08"
+                android:layout_marginBottom="4dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTheLoaiCauHoi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

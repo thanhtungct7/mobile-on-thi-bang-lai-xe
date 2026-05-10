@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- Top divider; hidden for position 0 via adapter -->
+    <View
+        android:id="@+id/resultDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border"/>
+
+    <!-- Row content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:minHeight="56dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <!-- Icon in colored rounded square -->
+        <LinearLayout
+            android:id="@+id/resultIconBg"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:background="@drawable/result_pass_icon_bg"
+            android:gravity="center"
+            android:layout_marginEnd="12dp">
+
+            <ImageView
+                android:id="@+id/ivResultIcon"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_check"
+                android:contentDescription="@null"/>
+
+        </LinearLayout>
+
+        <!-- Body -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtResultTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/fg"/>
+
+            <!-- Badge -->
+            <TextView
+                android:id="@+id/tvResultBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ĐẬU"
+                android:textSize="10sp"
+                android:fontFamily="monospace"
+                android:textStyle="bold"
+                android:textColor="@color/result_pass_fg"
+                android:paddingStart="9dp"
+                android:paddingEnd="9dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:background="@drawable/pass_badge"
+                android:letterSpacing="0.04"
+                android:layout_marginTop="3dp"/>
+
+            <!-- Failure reason (shown only when failed) -->
+            <TextView
+                android:id="@+id/txtResultReason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:fontFamily="monospace"
+                android:textColor="@color/result_fail_fg"
+                android:layout_marginTop="3dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <!-- Score on the right -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:id="@+id/txtResultScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:textColor="@color/result_pass_fg"
+                android:gravity="end"/>
+
+            <TextView
+                android:id="@+id/txtResultDenom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:fontFamily="monospace"
+                android:textColor="@color/muted"
+                android:gravity="end"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

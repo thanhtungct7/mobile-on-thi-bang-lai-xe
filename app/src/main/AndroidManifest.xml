@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ÔnThiBằngLáiXe"
+        tools:targetApi="31">
+        <activity
+            android:name=".HaySaiActivity"
+            android:exported="false"
+            tools:ignore="MissingClass" />
+        <activity
+            android:name=".CauLuuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CauSaiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChiTietKetQuaActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ThiThuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DeThiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CauHoiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WebActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChiTietBienBaoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BienBaoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KetQuaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OnBoardingActivity"
+            android:exported="false"
+            android:noHistory="true" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name=".Custom.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4384743339570615~9005080600"/>
+    </application>
+
+</manifest>

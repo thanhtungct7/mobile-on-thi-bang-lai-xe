@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#1A1714</color>
+    <color name="surface">#231F1B</color>
+    <color name="border">#332E28</color>
+    <color name="fg">#F0EAE2</color>
+    <color name="muted">#9A9186</color>
+    <color name="text">#F0EAE2</color>
+    <color name="box">#332E28</color>
+    <color name="radio_box">#4A4540</color>
+    <color name="checked">#5A5550</color>
+    <color name="nav_text">#E07850</color>
+    <color name="accent">#E07850</color>
+    <color name="accent_soft">#2A1810</color>
+    <color name="result_pass_bg">#0D2E1A</color>
+    <color name="result_pass_border">#1E5C33</color>
+    <color name="result_pass_fg">#6DC98A</color>
+    <color name="result_fail_bg">#2A1810</color>
+    <color name="result_fail_border">#5A3025</color>
+    <color name="result_fail_fg">#D4845A</color>
+    <color name="topic_icon_bg">#2E2A27</color>
+    <color name="progress_fill">#605A55</color>
+    <color name="diem_liet_bg">#2A1810</color>
+    <color name="diem_liet_border">#5A3025</color>
+    <color name="diem_liet_text">#D4845A</color>
+</resources>

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__open-design__get_artifact",
+      "mcp__open-design__get_active_context",
+      "mcp__open-design__list_projects",
+      "mcp__open-design__list_files"
+    ]
+  }
+}

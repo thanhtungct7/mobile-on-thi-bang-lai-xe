@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- legacy material tokens (keep for lib compatibility) -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- design-system palette -->
+    <color name="background">#F9F5F0</color>   <!-- warm cream -->
+    <color name="surface">#FDFCFB</color>       <!-- card surface -->
+    <color name="accent">#C25B30</color>         <!-- terracotta CTA -->
+    <color name="accent_dark">#9E3F18</color>    <!-- pressed state -->
+    <color name="accent_soft">#F6E9E3</color>    <!-- accent tint bg -->
+    <color name="border">#E9E4DC</color>         <!-- card stroke -->
+    <color name="fg">#2C2820</color>             <!-- primary text -->
+    <color name="muted">#777368</color>          <!-- secondary text -->
+
+    <!-- semantic aliases used throughout existing code -->
+    <color name="text">#2C2820</color>
+    <color name="box">#E9E4DC</color>
+    <color name="nav_text">#C25B30</color>
+    <color name="checked">#C0C0C0</color>
+    <color name="radio_box">#B8B8B8</color>
+
+    <!-- keep functional colours unchanged -->
+    <color name="colorExam">#2C77F8</color>
+    <color name="red">#AE0000</color>
+    <color name="light_green">#90EE90</color>
+    <color name="cherry">#D2042D</color>
+    <color name="celadon">#BFAFE1AF</color>
+    <color name="paster_red">#BFFAA0A0</color>
+    <color name="result_pass_bg">#EDFAF3</color>
+    <color name="result_pass_border">#AEDFC0</color>
+    <color name="result_pass_fg">#1A6B3C</color>
+    <color name="result_fail_bg">#FEF0EB</color>
+    <color name="result_fail_border">#EFBFAB</color>
+    <color name="result_fail_fg">#8B3510</color>
+    <color name="topic_icon_bg">#EDEAE5</color>
+    <color name="progress_fill">#AAA7A3</color>
+    <color name="diem_liet_bg">#FEF0EB</color>
+    <color name="diem_liet_border">#EFBFAB</color>
+    <color name="diem_liet_text">#8B3510</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="text_shadow">#7F000000</color>
+    <color name="dodger_blue">#1E90FF</color>
+    <color name="dark_violet">#9400d3</color>
+    <color name="aqua">#00FFFF</color>
+    <color name="fuchsia">#FF00FF</color>
+</resources>

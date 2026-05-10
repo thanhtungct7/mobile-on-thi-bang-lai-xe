@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hồ sơ"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/fg"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="16dp" />
+
+        <!-- License type badge -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/card_stroke"
+            android:layout_marginHorizontal="16dp"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ico_license_welcome"
+                android:padding="4dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LOẠI BẰNG"
+                    android:textSize="10sp"
+                    android:textColor="@color/muted"
+                    android:letterSpacing="0.08"
+                    android:fontFamily="monospace"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:id="@+id/txtLoaiBang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/fg" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnChangeLoaiBang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_button"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="8dp"
+                android:text="Đổi"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </LinearLayout>
+
+        <!-- Quick stats -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:id="@+id/lo_save"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/card_stroke"
+                android:padding="12dp"
+                android:layout_marginEnd="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ico_fav"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/txtLuu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/fg"
+                    android:fontFamily="monospace" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đã lưu"
+                    android:textSize="11sp"
+                    android:textColor="@color/muted" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loCauSai"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/card_stroke"
+                android:padding="12dp"
+                android:layout_marginHorizontal="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ico_close"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/txtCauSai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/fg"
+                    android:fontFamily="monospace" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Câu sai"
+                    android:textSize="11sp"
+                    android:textColor="@color/muted" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lo_HaySai"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/card_stroke"
+                android:padding="12dp"
+                android:layout_marginStart="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ico_wrongs"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/txtHaySai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/fg"
+                    android:fontFamily="monospace" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hay sai"
+                    android:textSize="11sp"
+                    android:textColor="@color/muted" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Links -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/card_stroke"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="12dp"
+            android:paddingHorizontal="16dp">
+
+            <LinearLayout
+                android:id="@+id/btnHoTro"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_nav_hotro"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Hỗ trợ — 0336 669 999"
+                    android:textSize="14sp"
+                    android:textColor="@color/fg" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/baseline_arrow_forward_ios_24"
+                    android:alpha="0.4" />
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp"
+                android:background="@color/border" />
+
+            <LinearLayout
+                android:id="@+id/btnChinhSach"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_nav_thongtin"
+                    android:layout_marginEnd="12dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Thông tin ứng dụng"
+                    android:textSize="14sp"
+                    android:textColor="@color/fg" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/baseline_arrow_forward_ios_24"
+                    android:alpha="0.4" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
