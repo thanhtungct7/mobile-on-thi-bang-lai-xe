@@ -81,6 +81,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadDBToDanhSach() {
+        if (dbHandler.isBienBaoEmpty()) {
+            dbHandler.loadBienBaoFromAssets();
+        }
         DanhSach.setDsCauHoi(dbHandler.docCauHoi());
         DanhSach.setDsBienBao(dbHandler.docBienBao());
         DanhSach.setDsLoaiBienBao(dbHandler.docLoaiBienBao());

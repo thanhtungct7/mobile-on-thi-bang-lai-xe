@@ -18,9 +18,7 @@ import com.kma.OnThiBangLaiXe.ChiTietBienBaoActivity;
 import com.kma.OnThiBangLaiXe.Model.BienBao;
 import com.kma.OnThiBangLaiXe.R;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.List;
 
 public class BienBaoAdapter extends RecyclerView.Adapter<BienBaoAdapter.ViewHolder>
@@ -46,13 +44,11 @@ public class BienBaoAdapter extends RecyclerView.Adapter<BienBaoAdapter.ViewHold
         BienBao bb = dsBienBao.get(position);
 
         try {
-            File f = new File(context.getDataDir() + "/app_images/", bb.getHinhAnh());
-            Log.d("path", f.getAbsolutePath());
-            Bitmap b = BitmapFactory.decodeStream(new FileInputStream(f));
+            InputStream is = context.getAssets().open("bien_bao/" + bb.getHinhAnh());
+            Bitmap b = BitmapFactory.decodeStream(is);
+            is.close();
             holder.ivBienBao.setImageBitmap(b);
-        }
-        catch (FileNotFoundException e)
-        {
+        } catch (Exception e) {
             holder.ivBienBao.setImageResource(R.drawable.ico_exam);
         }
 

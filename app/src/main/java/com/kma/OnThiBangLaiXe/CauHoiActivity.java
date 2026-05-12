@@ -1,7 +1,8 @@
 package com.kma.OnThiBangLaiXe;
 
 import android.os.Bundle;
-import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,7 +12,6 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.kma.OnThiBangLaiXe.Adapter.CauHoiAdapter;
 import com.kma.OnThiBangLaiXe.Model.CauHoi;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +19,7 @@ import java.util.List;
 public class CauHoiActivity extends AppCompatActivity {
     public ViewPager2 vp;
     TextView txtTitle;
-    BottomNavigationView bnv;
+    Button btnNavBack, btnNavForward;
     Toolbar toolbarBack;
     List<CauHoi> dsCauHoi;
     @Override
@@ -29,10 +29,12 @@ public class CauHoiActivity extends AppCompatActivity {
         txtTitle = findViewById(R.id.txtTitle);
         txtTitle.setText("Câu hỏi ôn thi");
         toolbarBack = findViewById(R.id.toolbarBack);
+        findViewById(R.id.navPanel).setVisibility(View.GONE);
 
         // Mã loại câu hỏi
         int maLoaiCH = getIntent().getIntExtra("MaLoaiCH", 0);
-        bnv = findViewById(R.id.bottomNavigationView);
+        btnNavBack = findViewById(R.id.btnNavBack);
+        btnNavForward = findViewById(R.id.btnNavForward);
         vp = findViewById(R.id.vp);
         DBHandler db = new DBHandler(this);
         DanhSach.setDsCauHoi(db.docCauHoi());
@@ -54,26 +56,15 @@ public class CauHoiActivity extends AppCompatActivity {
 
 
         vp.setAdapter(new CauHoiAdapter(dsCauHoi, this));
-        toolbarBack.setNavigationOnClickListener(view -> onBackPressed() );
+        toolbarBack.setNavigationOnClickListener(view -> onBackPressed());
 
-        Menu menu = bnv.getMenu();
-
-        bnv.setOnNavigationItemSelectedListener(item ->
-        {
-            int id = item.getItemId();
-            if (id == R.id.tiBack) {
-                if (vp.getCurrentItem() > 0) {
-                    vp.setCurrentItem(vp.getCurrentItem() - 1, true);
-                }
-            } else if (id == R.id.tiForward) {
-                if (vp.getCurrentItem() < dsCauHoi.size() - 1) {
-                    vp.setCurrentItem(vp.getCurrentItem() + 1, true);
-                }
-            }
-            return false;
+        btnNavBack.setOnClickListener(v -> {
+            if (vp.getCurrentItem() > 0) vp.setCurrentItem(vp.getCurrentItem() - 1, true);
         });
-
-        menu.setGroupCheckable(0, false, true);
+        btnNavForward.setOnClickListener(v -> {
+            if (vp.getCurrentItem() < dsCauHoi.size() - 1)
+                vp.setCurrentItem(vp.getCurrentItem() + 1, true);
+        });
     }
 
     @Override

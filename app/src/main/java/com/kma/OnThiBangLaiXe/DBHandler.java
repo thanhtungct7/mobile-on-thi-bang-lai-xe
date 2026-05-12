@@ -7,6 +7,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import com.kma.OnThiBangLaiXe.Model.BienBao;
 import com.kma.OnThiBangLaiXe.Model.CauHoi;
 import com.kma.OnThiBangLaiXe.Model.CauTraLoi;
@@ -215,6 +218,58 @@ public class DBHandler extends SQLiteOpenHelper {
         cursor.close();
         return null;
     }
+    public boolean isBienBaoEmpty() {
+        mDatabase = this.getWritableDatabase();
+        Cursor cursor = mDatabase.rawQuery("SELECT COUNT(*) FROM BienBao", null);
+        cursor.moveToFirst();
+        int count = cursor.getInt(0);
+        cursor.close();
+        return count == 0;
+    }
+
+    public void loadBienBaoFromAssets() {
+        try {
+            java.io.InputStream is = context.getAssets().open("bien_bao_assets.json");
+            byte[] buffer = new byte[is.available()];
+            is.read(buffer);
+            is.close();
+            String json = new String(buffer, "UTF-8");
+
+            JSONObject root = new JSONObject(json);
+
+            mDatabase = this.getWritableDatabase();
+            mDatabase.beginTransaction();
+            try {
+                mDatabase.execSQL("DELETE FROM LoaiBienBao");
+                JSONArray loaiArr = root.getJSONArray("LoaiBienBao");
+                for (int i = 0; i < loaiArr.length(); i++) {
+                    JSONObject o = loaiArr.getJSONObject(i);
+                    ContentValues cv = new ContentValues();
+                    cv.put("MaLoaiBB", o.getInt("MaLoaiBB"));
+                    cv.put("TenLoaiBB", o.getString("TenLoaiBB"));
+                    mDatabase.insert("LoaiBienBao", null, cv);
+                }
+
+                JSONArray bbArr = root.getJSONArray("BienBao");
+                for (int i = 0; i < bbArr.length(); i++) {
+                    JSONObject o = bbArr.getJSONObject(i);
+                    ContentValues cv = new ContentValues();
+                    cv.put("MaBB", o.getString("MaBB"));
+                    cv.put("MaLoaiBB", o.getInt("MaLoaiBB"));
+                    cv.put("TieuDe", o.getString("TieuDe"));
+                    cv.put("NoiDung", o.getString("NoiDung"));
+                    cv.put("HinhAnh", o.getString("HinhAnh"));
+                    mDatabase.insertWithOnConflict("BienBao", null, cv, SQLiteDatabase.CONFLICT_IGNORE);
+                }
+                mDatabase.setTransactionSuccessful();
+            } finally {
+                mDatabase.endTransaction();
+            }
+        } catch (Exception e) {
+            Log.e("DBHandler", "loadBienBaoFromAssets failed: " + e.getMessage());
+        }
+    }
+
     //Get list Biển báo
     public List<BienBao> docBienBao()
     {

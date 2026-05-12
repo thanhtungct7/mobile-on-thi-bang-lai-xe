@@ -46,7 +46,7 @@ public class ProfileFragment extends Fragment {
         view.findViewById(R.id.btnChangeLoaiBang).setOnClickListener(v -> confirmChangeLoaiBang());
 
         view.findViewById(R.id.btnHoTro).setOnClickListener(v -> {
-            startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse("tel:0336669999")));
+            startActivity(new Intent(Intent.ACTION_DIAL, Uri.parse("tel:0855985761")));
         });
 
         view.findViewById(R.id.btnChinhSach).setOnClickListener(v -> {

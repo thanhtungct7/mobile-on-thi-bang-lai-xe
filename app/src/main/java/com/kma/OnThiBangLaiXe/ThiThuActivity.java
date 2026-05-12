@@ -3,14 +3,14 @@ package com.kma.OnThiBangLaiXe;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -19,7 +19,6 @@ import com.kma.OnThiBangLaiXe.Adapter.CauTraLoiAdapter;
 import com.kma.OnThiBangLaiXe.Adapter.menuCauHoiAdapter;
 import com.kma.OnThiBangLaiXe.Model.CauTraLoi;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -36,7 +35,7 @@ public class ThiThuActivity extends AppCompatActivity {
     private int maDeThi;
     TabLayout tabLayout;
     Toolbar toolbarBack;
-    BottomNavigationView bnv;
+    Button btnNavBack, btnNavForward;
     private DBHandler db;
     public static List<CauTraLoi> dsCauTraLoi;
     public static CauTraLoiAdapter ctlApdater;
@@ -54,7 +53,8 @@ public class ThiThuActivity extends AppCompatActivity {
         txtNopBai=findViewById(R.id.txtThiLai);
         txtNopBai.setVisibility(View.VISIBLE);
         txtNopBai.setText("Nộp bài");
-        bnv=findViewById(R.id.bottomNavigationView);
+        btnNavBack = findViewById(R.id.btnNavBack);
+        btnNavForward = findViewById(R.id.btnNavForward);
         toolbarBack =findViewById(R.id.toolbarBack);
         // Mã loại câu hỏi
         maDeThi = getIntent().getIntExtra("MaDeThi", 0);
@@ -76,26 +76,23 @@ public class ThiThuActivity extends AppCompatActivity {
 
         menuAdapter = new menuCauHoiAdapter(dsCauTraLoi, this);
         rvCauHoi.setAdapter(menuAdapter);
-        rvCauHoi.setLayoutManager(new GridLayoutManager(this, 15));
+        rvCauHoi.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
-        Menu menu = bnv.getMenu();
-
-        bnv.setOnNavigationItemSelectedListener(item ->
-        {
-            int id = item.getItemId();
-            if (id == R.id.tiBack) {
-                if (vp.getCurrentItem() > 0) {
-                    vp.setCurrentItem(vp.getCurrentItem() - 1, true);
-                }
-            } else if (id == R.id.tiForward) {
-                if (vp.getCurrentItem() < dsCauTraLoi.size() - 1) {
-                    vp.setCurrentItem(vp.getCurrentItem() + 1, true);
-                }
-            }
-            return false;
+        btnNavBack.setOnClickListener(v -> {
+            if (vp.getCurrentItem() > 0) vp.setCurrentItem(vp.getCurrentItem() - 1, true);
+        });
+        btnNavForward.setOnClickListener(v -> {
+            if (vp.getCurrentItem() < dsCauTraLoi.size() - 1)
+                vp.setCurrentItem(vp.getCurrentItem() + 1, true);
         });
 
-        menu.setGroupCheckable(0, false, true);
+        vp.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                rvCauHoi.smoothScrollToPosition(position);
+                menuAdapter.setActivePosition(position);
+            }
+        });
 
         new TabLayoutMediator(tabLayout, vp, (tab, position)
                 -> tab.setText("Câu " + (position + 1))).attach();

@@ -1,0 +1,2525 @@
+{
+  "LoaiBienBao": [
+    {
+      "MaLoaiBB": 1,
+      "TenLoaiBB": "Biển báo cấm"
+    },
+    {
+      "MaLoaiBB": 2,
+      "TenLoaiBB": "Biển báo nguy hiểm và cảnh báo"
+    },
+    {
+      "MaLoaiBB": 3,
+      "TenLoaiBB": "Biển báo hiệu lệnh"
+    },
+    {
+      "MaLoaiBB": 4,
+      "TenLoaiBB": "Biển chỉ dẫn"
+    },
+    {
+      "MaLoaiBB": 5,
+      "TenLoaiBB": "Biển phụ và biển khác"
+    }
+  ],
+  "BienBao": [
+    {
+      "MaBB": "P101",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.101",
+      "NoiDung": "Đường cấm",
+      "HinhAnh": "120px-Vietnam_road_sign_P101.svg.png"
+    },
+    {
+      "MaBB": "P102",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.102",
+      "NoiDung": "Cấm đi ngược chiều",
+      "HinhAnh": "120px-Vietnam_road_sign_P102.svg.png"
+    },
+    {
+      "MaBB": "P103a",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.103a",
+      "NoiDung": "Cấm xe ô tô",
+      "HinhAnh": "120px-Vietnam_road_sign_P103a.svg.png"
+    },
+    {
+      "MaBB": "P103b",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.103b",
+      "NoiDung": "Cấm xe ô tô rẽ phải",
+      "HinhAnh": "120px-Vietnam_road_sign_P103b.svg.png"
+    },
+    {
+      "MaBB": "P103c",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.103c",
+      "NoiDung": "Cấm xe ô tô rẽ trái",
+      "HinhAnh": "120px-Vietnam_road_sign_P103c.svg.png"
+    },
+    {
+      "MaBB": "P104",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.104",
+      "NoiDung": "Cấm xe máy",
+      "HinhAnh": "120px-Vietnam_road_sign_P104.svg.png"
+    },
+    {
+      "MaBB": "P105",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.105",
+      "NoiDung": "Cấm xe ô tô và xe máy",
+      "HinhAnh": "120px-Vietnam_road_sign_P105.svg.png"
+    },
+    {
+      "MaBB": "P106a",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.106a",
+      "NoiDung": "Cấm xe ô tô tải (bao gồm cả máy kéo và các xe máy chuyên dùng)",
+      "HinhAnh": "120px-Vietnam_road_sign_P106a.svg.png"
+    },
+    {
+      "MaBB": "P106b",
+      "MaLoaiBB": 1,
+      "TieuDe": "106b",
+      "NoiDung": "Cấm xe ô tô tải có khối lượng chuyên chở lớn hơn giới hạn (cấm luôn cả máy kéo và xe máy chuyên dùng)",
+      "HinhAnh": "120px-Vietnam_road_sign_P106b.svg.png"
+    },
+    {
+      "MaBB": "P106c",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.106c",
+      "NoiDung": "Cấm các xe chở hàng nguy hiểm",
+      "HinhAnh": "120px-Vietnam_road_sign_P106c.svg.png"
+    },
+    {
+      "MaBB": "P107",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.107",
+      "NoiDung": "Cấm xe ô tô khách và xe ô tô tải (bao gồm cả máy kéo và các xe máy chuyên dùng)",
+      "HinhAnh": "120px-Vietnam_road_sign_P107.svg.png"
+    },
+    {
+      "MaBB": "P107a",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.107a",
+      "NoiDung": "Cấm xe ô tô khách",
+      "HinhAnh": "120px-Vietnam_road_sign_P107a.svg.png"
+    },
+    {
+      "MaBB": "P107b",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.107b",
+      "NoiDung": "Cấm xe ô tô taxi",
+      "HinhAnh": "120px-Vietnam_road_sign_P107b.svg.png"
+    },
+    {
+      "MaBB": "P108",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.108",
+      "NoiDung": "Cấm xe kéo rơ-moóc",
+      "HinhAnh": "120px-Vietnam_road_sign_P108.svg.png"
+    },
+    {
+      "MaBB": "P108a",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.108a",
+      "NoiDung": "Cấm xe sơ-mi rơ-moóc",
+      "HinhAnh": "120px-Vietnam_road_sign_P108a.svg.png"
+    },
+    {
+      "MaBB": "P109",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.109",
+      "NoiDung": "Cấm máy kéo",
+      "HinhAnh": "120px-Vietnam_road_sign_P109.svg.png"
+    },
+    {
+      "MaBB": "P110a",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.110a",
+      "NoiDung": "Cấm xe đạp",
+      "HinhAnh": "120px-Vietnam_road_sign_P110a.svg.png"
+    },
+    {
+      "MaBB": "P110b",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.110b",
+      "NoiDung": "Cấm xe đạp thồ",
+      "HinhAnh": "120px-Vietnam_road_sign_P110b.svg.png"
+    },
+    {
+      "MaBB": "P111a",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.111a",
+      "NoiDung": "Cấm xe gắn máy",
+      "HinhAnh": "120px-Vietnam_road_sign_P111a.svg.png"
+    },
+    {
+      "MaBB": "P111b",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.111b",
+      "NoiDung": "Cấm xe ba bánh loại có động cơ (hình xe lam)",
+      "HinhAnh": "120px-Vietnam_road_sign_P111b.svg.png"
+    },
+    {
+      "MaBB": "P111c",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.111c",
+      "NoiDung": "Cấm xe ba bánh loại có động cơ (hình xe xích lô máy)",
+      "HinhAnh": "120px-Vietnam_road_sign_P111c.svg.png"
+    },
+    {
+      "MaBB": "P111d",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.111d",
+      "NoiDung": "Cấm xe ba bánh loại không có động cơ",
+      "HinhAnh": "120px-Vietnam_road_sign_P111d.svg.png"
+    },
+    {
+      "MaBB": "P112",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.112",
+      "NoiDung": "Cấm người đi bộ",
+      "HinhAnh": "120px-Vietnam_road_sign_P112.svg.png"
+    },
+    {
+      "MaBB": "P113",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.113",
+      "NoiDung": "Cấm xe người kéo, đẩy",
+      "HinhAnh": "120px-Vietnam_road_sign_P113.svg.png"
+    },
+    {
+      "MaBB": "P114",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.114",
+      "NoiDung": "Cấm xe vật nuôi kéo",
+      "HinhAnh": "120px-Vietnam_road_sign_P114.svg.png"
+    },
+    {
+      "MaBB": "P115",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.115",
+      "NoiDung": "Hạn chế trọng tải toàn bộ xe",
+      "HinhAnh": "120px-Vietnam_road_sign_P115.svg.png"
+    },
+    {
+      "MaBB": "P116",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.116",
+      "NoiDung": "Hạn chế tải trọng trên trục xe",
+      "HinhAnh": "120px-Vietnam_road_sign_P116.svg.png"
+    },
+    {
+      "MaBB": "P117",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.117",
+      "NoiDung": "Hạn chế chiều cao",
+      "HinhAnh": "120px-Vietnam_road_sign_P117.svg.png"
+    },
+    {
+      "MaBB": "P118",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.118",
+      "NoiDung": "Hạn chế chiều ngang",
+      "HinhAnh": "120px-Vietnam_road_sign_P118.svg.png"
+    },
+    {
+      "MaBB": "P119",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.119",
+      "NoiDung": "Hạn chế chiều dài xe",
+      "HinhAnh": "120px-Vietnam_road_sign_P119.svg.png"
+    },
+    {
+      "MaBB": "P120",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.120",
+      "NoiDung": "Hạn chế chiều dài xe cơ giới kéo theo rơ-moóc hoặc sơ-mi rơ-moóc",
+      "HinhAnh": "120px-Vietnam_road_sign_P120.svg.png"
+    },
+    {
+      "MaBB": "P121",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.121",
+      "NoiDung": "Cự ly tối thiểu giữa hai xe  (Lưu ý: Có thể kèm theo biển S.501)",
+      "HinhAnh": "120px-Vietnam_road_sign_P121.svg.png"
+    },
+    {
+      "MaBB": "P123a",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.123a",
+      "NoiDung": "Cấm rẽ trái (không cấm quay đầu xe)",
+      "HinhAnh": "120px-Vietnam_road_sign_P123a.svg.png"
+    },
+    {
+      "MaBB": "P123b",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.123b",
+      "NoiDung": "Cấm rẽ phải",
+      "HinhAnh": "120px-Vietnam_road_sign_P123b.svg.png"
+    },
+    {
+      "MaBB": "P124a1",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.124a1",
+      "NoiDung": "Cấm quay đầu xe (được rẽ trái)",
+      "HinhAnh": "120px-Vietnam_road_sign_P124a1.svg.png"
+    },
+    {
+      "MaBB": "P124a2",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.124a2",
+      "NoiDung": "Cấm quay đầu xe (được rẽ phải)",
+      "HinhAnh": "120px-Vietnam_road_sign_P124a2.svg.png"
+    },
+    {
+      "MaBB": "P124b1",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.124b1",
+      "NoiDung": "Cấm ô tô quay đầu xe (được rẽ trái)",
+      "HinhAnh": "120px-Vietnam_road_sign_P124b1.svg.png"
+    },
+    {
+      "MaBB": "P124b2",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.124b2",
+      "NoiDung": "Cấm ô tô quay đầu xe (được rẽ phải)",
+      "HinhAnh": "120px-Vietnam_road_sign_P124b2.svg.png"
+    },
+    {
+      "MaBB": "P124c",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.124c",
+      "NoiDung": "Cấm rẽ trái và quay đầu xe",
+      "HinhAnh": "120px-Vietnam_road_sign_P124c.svg.png"
+    },
+    {
+      "MaBB": "P124d",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.124d",
+      "NoiDung": "Cấm rẽ phải và quay đầu xe",
+      "HinhAnh": "120px-Vietnam_road_sign_P124d.svg.png"
+    },
+    {
+      "MaBB": "P124e",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.124e",
+      "NoiDung": "Cấm ô tô rẽ trái và quay đầu xe",
+      "HinhAnh": "120px-Vietnam_road_sign_P124e.svg.png"
+    },
+    {
+      "MaBB": "P124f",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.124f",
+      "NoiDung": "Cấm ô tô rẽ phải và quay đầu xe",
+      "HinhAnh": "120px-Vietnam_road_sign_P124f.svg.png"
+    },
+    {
+      "MaBB": "P",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.125",
+      "NoiDung": "Cấm vượt",
+      "HinhAnh": "120px-Vietnam_road_sign_P.125_%28QCVN_41-2019-BGTVT%29.svg.png"
+    },
+    {
+      "MaBB": "P127a",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.127a",
+      "NoiDung": "Tốc độ tối đa cho phép về ban đêm (hiệu lực được tính từ nơi đặt biển sau khi đặt biển R.420: Bắt đầu khu đông dân cư đến vị trí đặt biển R.421: Hết khu đông dân cư)",
+      "HinhAnh": "120px-Vietnam_road_sign_P127a.svg.png"
+    },
+    {
+      "MaBB": "P127c",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.127c",
+      "NoiDung": "Giới hạn tốc độ theo phương tiện trên từng làn đường",
+      "HinhAnh": "120px-Vietnam_road_sign_P127c.svg.png"
+    },
+    {
+      "MaBB": "DP127a",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển DP.127a",
+      "NoiDung": "Hết hạn chế tốc độ tối đa cho phép theo phương tiện trên từng làn đường",
+      "HinhAnh": "120px-Vietnam_road_sign_DP127a.svg.png"
+    },
+    {
+      "MaBB": "DP127b",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển DP.127b",
+      "NoiDung": "Hết hạn chế tốc độ tối đa cho phép theo làn đường",
+      "HinhAnh": "120px-Vietnam_road_sign_DP127b.svg.png"
+    },
+    {
+      "MaBB": "DP127c",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển DP.127c",
+      "NoiDung": "Hết hạn chế tốc độ tối đa cho phép theo phương tiện trên từng làn đường",
+      "HinhAnh": "120px-Vietnam_road_sign_DP127c.svg.png"
+    },
+    {
+      "MaBB": "P128",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.128",
+      "NoiDung": "Cấm sử dụng còi  (Lưu ý: Có thể kèm theo biển S.501)",
+      "HinhAnh": "120px-Vietnam_road_sign_P128.svg.png"
+    },
+    {
+      "MaBB": "P129",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.129",
+      "NoiDung": "Kiểm tra",
+      "HinhAnh": "120px-Vietnam_road_sign_P129.svg.png"
+    },
+    {
+      "MaBB": "P130",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.130",
+      "NoiDung": "Cấm dừng xe và đỗ xe  (Lưu ý: Có thể kèm theo biển S.501)",
+      "HinhAnh": "120px-Vietnam_road_sign_P130.svg.png"
+    },
+    {
+      "MaBB": "P131a",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.131a",
+      "NoiDung": "Cấm đỗ xe  (Lưu ý: Có thể kèm theo biển S.501)",
+      "HinhAnh": "120px-Vietnam_road_sign_P131a.svg.png"
+    },
+    {
+      "MaBB": "P131c",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.131c",
+      "NoiDung": "Cấm đỗ xe ngày chẵn",
+      "HinhAnh": "120px-Vietnam_road_sign_P131c.svg.png"
+    },
+    {
+      "MaBB": "P132",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.132",
+      "NoiDung": "Nhường đường cho xe cơ giới đi ngược chiều qua đường hẹp",
+      "HinhAnh": "120px-Vietnam_road_sign_P132.svg.png"
+    },
+    {
+      "MaBB": "P135",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển DP.135",
+      "NoiDung": "Hết tất cả các lệnh cấm",
+      "HinhAnh": "120px-Vietnam_road_sign_P135.svg.png"
+    },
+    {
+      "MaBB": "P136",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.136",
+      "NoiDung": "Cấm đi thẳng",
+      "HinhAnh": "120px-Vietnam_road_sign_P136.svg.png"
+    },
+    {
+      "MaBB": "P137",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.137",
+      "NoiDung": "Cấm rẽ trái và rẽ phải",
+      "HinhAnh": "120px-Vietnam_road_sign_P137.svg.png"
+    },
+    {
+      "MaBB": "P138",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.138",
+      "NoiDung": "Cấm đi thẳng và rẽ trái",
+      "HinhAnh": "120px-Vietnam_road_sign_P138.svg.png"
+    },
+    {
+      "MaBB": "P139",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.139",
+      "NoiDung": "Cấm đi thẳng và rẽ phải",
+      "HinhAnh": "120px-Vietnam_road_sign_P139.svg.png"
+    },
+    {
+      "MaBB": "P140",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển P.140",
+      "NoiDung": "Cấm xe công nông và các loại xe tương tự",
+      "HinhAnh": "120px-Vietnam_road_sign_P140.svg.png"
+    },
+    {
+      "MaBB": "W201a",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.201a",
+      "NoiDung": "Chỗ ngoặt nguy hiểm vòng bên trái",
+      "HinhAnh": "120px-Vietnam_road_sign_W201a.svg.png"
+    },
+    {
+      "MaBB": "W201b",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.201b",
+      "NoiDung": "Chỗ ngoặt nguy hiểm vòng bên phải",
+      "HinhAnh": "120px-Vietnam_road_sign_W201b.svg.png"
+    },
+    {
+      "MaBB": "W201c",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.201c",
+      "NoiDung": "Chỗ ngoặt nguy hiểm có nguy cơ lật xe bên phải (đường cong vòng sang trái)",
+      "HinhAnh": "120px-Vietnam_road_sign_W201c.svg.png"
+    },
+    {
+      "MaBB": "W201d",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.201d",
+      "NoiDung": "Chỗ ngoặt nguy hiểm có nguy cơ lật xe bên trái (đường cong vòng sang phải)",
+      "HinhAnh": "120px-Vietnam_road_sign_W201d.svg.png"
+    },
+    {
+      "MaBB": "W202a",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.202a",
+      "NoiDung": "Nhiều chỗ ngoặt nguy hiểm liên tiếp, chỗ đầu tiên sang trái  (Lưu ý: Có thể kèm theo biển S.501)",
+      "HinhAnh": "120px-Vietnam_road_sign_W202a.svg.png"
+    },
+    {
+      "MaBB": "W202b",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.202b",
+      "NoiDung": "Nhiều chỗ ngoặt nguy hiểm liên tiếp, chỗ đầu tiên sang phải  (Lưu ý: Có thể kèm theo biển S.501)",
+      "HinhAnh": "120px-Vietnam_road_sign_W202b.svg.png"
+    },
+    {
+      "MaBB": "W203a",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.203a",
+      "NoiDung": "Đường bị thu hẹp cả hai bên",
+      "HinhAnh": "120px-Vietnam_road_sign_W203a.svg.png"
+    },
+    {
+      "MaBB": "W203b",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.203b",
+      "NoiDung": "Đường bị thu hẹp bên trái",
+      "HinhAnh": "120px-Vietnam_road_sign_W203b.svg.png"
+    },
+    {
+      "MaBB": "W203c",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.203c",
+      "NoiDung": "Đường bị thu hẹp bên phải",
+      "HinhAnh": "120px-Vietnam_road_sign_W203c.svg.png"
+    },
+    {
+      "MaBB": "W204",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.204",
+      "NoiDung": "Đường hai chiều",
+      "HinhAnh": "120px-Vietnam_road_sign_W204.svg.png"
+    },
+    {
+      "MaBB": "W205a",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.205a",
+      "NoiDung": "Đường giao nhau (ngã tư)",
+      "HinhAnh": "120px-Vietnam_road_sign_W205a.svg.png"
+    },
+    {
+      "MaBB": "W205b",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.205b",
+      "NoiDung": "Đường giao nhau (ngã ba bên trái)",
+      "HinhAnh": "120px-Vietnam_road_sign_W205b.svg.png"
+    },
+    {
+      "MaBB": "W205c",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.205c",
+      "NoiDung": "Đường giao nhau (ngã ba bên phải)",
+      "HinhAnh": "120px-Vietnam_road_sign_W205c.svg.png"
+    },
+    {
+      "MaBB": "W205d",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.205d",
+      "NoiDung": "Đường giao nhau (hình chữ T)",
+      "HinhAnh": "120px-Vietnam_road_sign_W205d.svg.png"
+    },
+    {
+      "MaBB": "W205e",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.205e",
+      "NoiDung": "Đường giao nhau (hình chữ Y)",
+      "HinhAnh": "120px-Vietnam_road_sign_W205e.svg.png"
+    },
+    {
+      "MaBB": "W206",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.206",
+      "NoiDung": "Giao nhau chạy theo vòng xuyến",
+      "HinhAnh": "120px-Vietnam_road_sign_W206.svg.png"
+    },
+    {
+      "MaBB": "W207a",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.207a",
+      "NoiDung": "Giao nhau với đường không ưu tiên",
+      "HinhAnh": "120px-Vietnam_road_sign_W207a.svg.png"
+    },
+    {
+      "MaBB": "W207b",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.207b",
+      "NoiDung": "Giao nhau với đường không ưu tiên",
+      "HinhAnh": "120px-Vietnam_road_sign_W207b.svg.png"
+    },
+    {
+      "MaBB": "W207c",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.207c",
+      "NoiDung": "Giao nhau với đường không ưu tiên",
+      "HinhAnh": "120px-Vietnam_road_sign_W207c.svg.png"
+    },
+    {
+      "MaBB": "W207d",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.207d",
+      "NoiDung": "Giao nhau với đường không ưu tiên",
+      "HinhAnh": "120px-Vietnam_road_sign_W207d.svg.png"
+    },
+    {
+      "MaBB": "W207e",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.207e",
+      "NoiDung": "Giao nhau với đường không ưu tiên",
+      "HinhAnh": "120px-Vietnam_road_sign_W207e.svg.png"
+    },
+    {
+      "MaBB": "W207f",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.207f",
+      "NoiDung": "Giao nhau với đường không ưu tiên",
+      "HinhAnh": "120px-Vietnam_road_sign_W207f.svg.png"
+    },
+    {
+      "MaBB": "W207g",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.207g",
+      "NoiDung": "Giao nhau với đường không ưu tiên",
+      "HinhAnh": "120px-Vietnam_road_sign_W207g.svg.png"
+    },
+    {
+      "MaBB": "W207h",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.207h",
+      "NoiDung": "Giao nhau với đường không ưu tiên",
+      "HinhAnh": "120px-Vietnam_road_sign_W207h.svg.png"
+    },
+    {
+      "MaBB": "W207i",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.207i",
+      "NoiDung": "Giao nhau với đường không ưu tiên",
+      "HinhAnh": "120px-Vietnam_road_sign_W207i.svg.png"
+    },
+    {
+      "MaBB": "W207j",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.207j",
+      "NoiDung": "Giao nhau với đường không ưu tiên",
+      "HinhAnh": "120px-Vietnam_road_sign_W207j.svg.png"
+    },
+    {
+      "MaBB": "W207k",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.207k",
+      "NoiDung": "Giao nhau với đường không ưu tiên",
+      "HinhAnh": "120px-Vietnam_road_sign_W207k.svg.png"
+    },
+    {
+      "MaBB": "W207l",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.207l",
+      "NoiDung": "Giao nhau với đường không ưu tiên",
+      "HinhAnh": "120px-Vietnam_road_sign_W207l.svg.png"
+    },
+    {
+      "MaBB": "W207m",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.207m",
+      "NoiDung": "Giao nhau với đường không ưu tiên",
+      "HinhAnh": "120px-Vietnam_road_sign_W207m.svg.png"
+    },
+    {
+      "MaBB": "W208",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.208",
+      "NoiDung": "Giao nhau với đường ưu tiên",
+      "HinhAnh": "120px-Vietnam_road_sign_W208.svg.png"
+    },
+    {
+      "MaBB": "W209",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.209",
+      "NoiDung": "Giao nhau có tín hiệu đèn giao thông",
+      "HinhAnh": "120px-Vietnam_road_sign_W209.svg.png"
+    },
+    {
+      "MaBB": "W210",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.210",
+      "NoiDung": "Giao nhau với đường sắt có rào chắn",
+      "HinhAnh": "120px-Vietnam_road_sign_W210.svg.png"
+    },
+    {
+      "MaBB": "W211a",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.211",
+      "NoiDung": "Giao nhau với đường sắt không có rào chắn",
+      "HinhAnh": "120px-Vietnam_road_sign_W211a.svg.png"
+    },
+    {
+      "MaBB": "W212",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.212",
+      "NoiDung": "Cầu hẹp",
+      "HinhAnh": "120px-Vietnam_road_sign_W212.svg.png"
+    },
+    {
+      "MaBB": "W213",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.213",
+      "NoiDung": "Cầu tạm",
+      "HinhAnh": "120px-Vietnam_road_sign_W213.svg.png"
+    },
+    {
+      "MaBB": "W214",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.214",
+      "NoiDung": "Cầu quay – cầu cất",
+      "HinhAnh": "120px-Vietnam_road_sign_W214.svg.png"
+    },
+    {
+      "MaBB": "W215a",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.215a",
+      "NoiDung": "Kè, vực sâu phía trước",
+      "HinhAnh": "120px-Vietnam_road_sign_W215a.svg.png"
+    },
+    {
+      "MaBB": "W215b",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.215b",
+      "NoiDung": "Kè, vực sâu bên đường phía bên phải",
+      "HinhAnh": "120px-Vietnam_road_sign_W215b.svg.png"
+    },
+    {
+      "MaBB": "W215c",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.215c",
+      "NoiDung": "Kè, vực sâu bên đường phía bên trái",
+      "HinhAnh": "120px-Vietnam_road_sign_W215c.svg.png"
+    },
+    {
+      "MaBB": "W216a",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.216a",
+      "NoiDung": "Đường ngầm (thường đặt thêm cột thủy chí để báo mực nước)",
+      "HinhAnh": "120px-Vietnam_road_sign_W216a.svg.png"
+    },
+    {
+      "MaBB": "W216b",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.216b",
+      "NoiDung": "Đường ngầm có nguy cơ lũ quét (thường đặt thêm cột thủy chí để báo mực nước)",
+      "HinhAnh": "120px-Vietnam_road_sign_W216b.svg.png"
+    },
+    {
+      "MaBB": "W217",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.217",
+      "NoiDung": "Bến phà",
+      "HinhAnh": "120px-Vietnam_road_sign_W217.svg.png"
+    },
+    {
+      "MaBB": "W218",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.218",
+      "NoiDung": "Cửa chui",
+      "HinhAnh": "120px-Vietnam_road_sign_W218.svg.png"
+    },
+    {
+      "MaBB": "W219",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.219",
+      "NoiDung": "Dốc xuống nguy hiểm  (Lưu ý: Có thể kèm theo biển S.501)",
+      "HinhAnh": "120px-Vietnam_road_sign_W219.svg.png"
+    },
+    {
+      "MaBB": "W220",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.220",
+      "NoiDung": "Dốc lên nguy hiểm  (Lưu ý: Có thể kèm theo biển S.501)",
+      "HinhAnh": "120px-Vietnam_road_sign_W220.svg.png"
+    },
+    {
+      "MaBB": "W221a",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.221a",
+      "NoiDung": "Đường lồi lõm  (Lưu ý: Có thể kèm theo biển S.501)",
+      "HinhAnh": "120px-Vietnam_road_sign_W221a.svg.png"
+    },
+    {
+      "MaBB": "W221b",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.221b",
+      "NoiDung": "Đường có gờ giảm tốc",
+      "HinhAnh": "120px-Vietnam_road_sign_W221b.svg.png"
+    },
+    {
+      "MaBB": "W222a",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.222a",
+      "NoiDung": "Đường trơn",
+      "HinhAnh": "120px-Vietnam_road_sign_W222a.svg.png"
+    },
+    {
+      "MaBB": "W222b",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.222b",
+      "NoiDung": "Lề đường nguy hiểm",
+      "HinhAnh": "120px-Vietnam_road_sign_W222b.svg.png"
+    },
+    {
+      "MaBB": "W223a",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.223a",
+      "NoiDung": "Vách núi nguy hiểm phía bên trai",
+      "HinhAnh": "120px-Vietnam_road_sign_W223a.svg.png"
+    },
+    {
+      "MaBB": "W223b",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.223b",
+      "NoiDung": "Vách núi nguy hiểm phía bên phai",
+      "HinhAnh": "120px-Vietnam_road_sign_W223b.svg.png"
+    },
+    {
+      "MaBB": "W224",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.224",
+      "NoiDung": "Đường người đi bộ cắt ngang",
+      "HinhAnh": "120px-Vietnam_road_sign_W224.svg.png"
+    },
+    {
+      "MaBB": "W225",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.225",
+      "NoiDung": "Trẻ em  (Lưu ý: Có thể kèm theo biển S.501)",
+      "HinhAnh": "120px-Vietnam_road_sign_W225.svg.png"
+    },
+    {
+      "MaBB": "W226",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.226",
+      "NoiDung": "Đường người đi xe đạp cắt ngang",
+      "HinhAnh": "120px-Vietnam_road_sign_W226.svg.png"
+    },
+    {
+      "MaBB": "W227",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.227",
+      "NoiDung": "Công trường",
+      "HinhAnh": "120px-Vietnam_road_sign_W227.svg.png"
+    },
+    {
+      "MaBB": "W228a",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.228a",
+      "NoiDung": "Đá lở từ bên trái  (Lưu ý: Có thể kèm theo biển S.501)",
+      "HinhAnh": "120px-Vietnam_road_sign_W228a.svg.png"
+    },
+    {
+      "MaBB": "W228b",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.228b",
+      "NoiDung": "Đá lở từ bên phải  (Lưu ý: Có thể kèm theo biển S.501)",
+      "HinhAnh": "120px-Vietnam_road_sign_W228b.svg.png"
+    },
+    {
+      "MaBB": "W228c",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.228c",
+      "NoiDung": "Sỏi đá bắn lên",
+      "HinhAnh": "120px-Vietnam_road_sign_W228c.svg.png"
+    },
+    {
+      "MaBB": "W228d",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.228d",
+      "NoiDung": "Nền đường yếu",
+      "HinhAnh": "120px-Vietnam_road_sign_W228d.svg.png"
+    },
+    {
+      "MaBB": "W229",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.229",
+      "NoiDung": "Dải máy bay lên xuống",
+      "HinhAnh": "120px-Vietnam_road_sign_W229.svg.png"
+    },
+    {
+      "MaBB": "W230",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.230",
+      "NoiDung": "Gia súc",
+      "HinhAnh": "120px-Vietnam_road_sign_W230.svg.png"
+    },
+    {
+      "MaBB": "W231",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.231",
+      "NoiDung": "Thú rừng vượt qua đường  (Lưu ý: Có thể kèm theo biển S.501)",
+      "HinhAnh": "120px-Vietnam_road_sign_W231.svg.png"
+    },
+    {
+      "MaBB": "W232",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.232",
+      "NoiDung": "Gió ngang",
+      "HinhAnh": "120px-Vietnam_road_sign_W232.svg.png"
+    },
+    {
+      "MaBB": "W233",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.233",
+      "NoiDung": "Nguy hiểm khác",
+      "HinhAnh": "120px-Vietnam_road_sign_W233.svg.png"
+    },
+    {
+      "MaBB": "W234",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.234",
+      "NoiDung": "Giao nhau với đường hai chiều",
+      "HinhAnh": "120px-Vietnam_road_sign_W234.svg.png"
+    },
+    {
+      "MaBB": "W235",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.235",
+      "NoiDung": "Đường đôi",
+      "HinhAnh": "120px-Vietnam_road_sign_W235.svg.png"
+    },
+    {
+      "MaBB": "W236",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.236",
+      "NoiDung": "Kết thúc đường đôi",
+      "HinhAnh": "120px-Vietnam_road_sign_W236.svg.png"
+    },
+    {
+      "MaBB": "W237",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.237",
+      "NoiDung": "Cầu vồng",
+      "HinhAnh": "120px-Vietnam_road_sign_W237.svg.png"
+    },
+    {
+      "MaBB": "W238",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.238",
+      "NoiDung": "Đường cao tốc phía trước",
+      "HinhAnh": "120px-Vietnam_road_sign_W238.svg.png"
+    },
+    {
+      "MaBB": "W239a",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.239a",
+      "NoiDung": "Đường cáp điện ở phía trên (kèm thêm biển S.509a: Chiều cao an toàn)",
+      "HinhAnh": "120px-Vietnam_road_sign_W239a.svg.png"
+    },
+    {
+      "MaBB": "W239b",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.239b",
+      "NoiDung": "Chiều cao tĩnh không thực tế",
+      "HinhAnh": "120px-Vietnam_road_sign_W239b.svg.png"
+    },
+    {
+      "MaBB": "W240",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.240",
+      "NoiDung": "Đường hầm",
+      "HinhAnh": "120px-Vietnam_road_sign_W240.svg.png"
+    },
+    {
+      "MaBB": "W241",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.241",
+      "NoiDung": "Ùn tắc giao thông",
+      "HinhAnh": "120px-Vietnam_road_sign_W241.svg.png"
+    },
+    {
+      "MaBB": "W242a",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.242a",
+      "NoiDung": "Giao nhau vuông góc với một cặp đường ray",
+      "HinhAnh": "120px-Vietnam_road_sign_W242a.svg.png"
+    },
+    {
+      "MaBB": "W242b",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.242b",
+      "NoiDung": "Giao nhau vuông góc với nhiều cặp đường ray",
+      "HinhAnh": "120px-Vietnam_road_sign_W242b.svg.png"
+    },
+    {
+      "MaBB": "W243a",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.243a",
+      "NoiDung": "Báo trước giao nhau không vuông góc với đường sắt (50 m)",
+      "HinhAnh": "120px-Vietnam_road_sign_W243a.svg.png"
+    },
+    {
+      "MaBB": "W243b",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.243b",
+      "NoiDung": "Báo trước giao nhau không vuông góc với đường sắt (100 m)",
+      "HinhAnh": "120px-Vietnam_road_sign_W243b.svg.png"
+    },
+    {
+      "MaBB": "W243c",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.243c",
+      "NoiDung": "Báo trước giao nhau không vuông góc với đường sắt (150 m)",
+      "HinhAnh": "120px-Vietnam_road_sign_W243c.svg.png"
+    },
+    {
+      "MaBB": "W244",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.244",
+      "NoiDung": "Đoạn đường hay xảy ra tai nạn",
+      "HinhAnh": "120px-Vietnam_road_sign_W244.svg.png"
+    },
+    {
+      "MaBB": "W245a",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.245a",
+      "NoiDung": "Đi chậm",
+      "HinhAnh": "120px-Vietnam_road_sign_W245a.svg.png"
+    },
+    {
+      "MaBB": "W245b",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.245b",
+      "NoiDung": "Đi chậm (song ngữ)",
+      "HinhAnh": "120px-Vietnam_road_sign_W245b.svg.png"
+    },
+    {
+      "MaBB": "W246a",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.246a",
+      "NoiDung": "Chú ý chướng ngại vật – vòng tránh ra hai bên",
+      "HinhAnh": "120px-Vietnam_road_sign_W246a.svg.png"
+    },
+    {
+      "MaBB": "W246b",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.246b",
+      "NoiDung": "Chú ý chướng ngại vật – vòng tránh sang bên trái",
+      "HinhAnh": "120px-Vietnam_road_sign_W246b.svg.png"
+    },
+    {
+      "MaBB": "W246c",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.246c",
+      "NoiDung": "Chú ý chướng ngại vật – vòng tránh sang bên phải",
+      "HinhAnh": "120px-Vietnam_road_sign_W246c.svg.png"
+    },
+    {
+      "MaBB": "W247",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.247",
+      "NoiDung": "Chú ý xe đỗ",
+      "HinhAnh": "120px-Vietnam_road_sign_W247.svg.png"
+    },
+    {
+      "MaBB": "P122",
+      "MaLoaiBB": 1,
+      "TieuDe": "Biển R.122",
+      "NoiDung": "Dừng lại",
+      "HinhAnh": "120px-Vietnam_road_sign_P122.svg.png"
+    },
+    {
+      "MaBB": "R301a",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.301a",
+      "NoiDung": "Hướng đi thẳng phải theo",
+      "HinhAnh": "120px-Vietnam_road_sign_R301a.svg.png"
+    },
+    {
+      "MaBB": "R301b",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.301b",
+      "NoiDung": "Hướng đi phải phải theo",
+      "HinhAnh": "120px-Vietnam_road_sign_R301b.svg.png"
+    },
+    {
+      "MaBB": "R301c",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.301c",
+      "NoiDung": "Hướng đi trái phải theo",
+      "HinhAnh": "120px-Vietnam_road_sign_R301c.svg.png"
+    },
+    {
+      "MaBB": "R301d",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.301d",
+      "NoiDung": "Các xe chỉ được rẽ phải",
+      "HinhAnh": "120px-Vietnam_road_sign_R301d.svg.png"
+    },
+    {
+      "MaBB": "R301e",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.301e",
+      "NoiDung": "Các xe chỉ được rẽ trái",
+      "HinhAnh": "120px-Vietnam_road_sign_R301e.svg.png"
+    },
+    {
+      "MaBB": "R301f",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.301f",
+      "NoiDung": "Các xe chỉ được đi thẳng và rẽ phải",
+      "HinhAnh": "120px-Vietnam_road_sign_R301f.svg.png"
+    },
+    {
+      "MaBB": "R301g",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.301g",
+      "NoiDung": "Các xe chỉ được đi thẳng và rẽ trái",
+      "HinhAnh": "120px-Vietnam_road_sign_R301g.svg.png"
+    },
+    {
+      "MaBB": "R301i",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.301h",
+      "NoiDung": "Các xe chỉ được rẽ trái và rẽ phải",
+      "HinhAnh": "120px-Vietnam_road_sign_R301i.svg.png"
+    },
+    {
+      "MaBB": "R302a",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.302a",
+      "NoiDung": "Phải đi vòng sang bên phải",
+      "HinhAnh": "120px-Vietnam_road_sign_R302a.svg.png"
+    },
+    {
+      "MaBB": "R302b",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.302b",
+      "NoiDung": "Phải đi vòng sang bên trái",
+      "HinhAnh": "120px-Vietnam_road_sign_R302b.svg.png"
+    },
+    {
+      "MaBB": "R302c",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.302c",
+      "NoiDung": "Có thể đi vòng sang trái hoặc phải",
+      "HinhAnh": "120px-Vietnam_road_sign_R302c.svg.png"
+    },
+    {
+      "MaBB": "R303",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.303",
+      "NoiDung": "Nơi giao nhau chạy theo vòng xuyến",
+      "HinhAnh": "120px-Vietnam_road_sign_R303.svg.png"
+    },
+    {
+      "MaBB": "R304",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.304",
+      "NoiDung": "Đường dành cho xe thô sơ",
+      "HinhAnh": "120px-Vietnam_road_sign_R304.svg.png"
+    },
+    {
+      "MaBB": "R305",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.305",
+      "NoiDung": "Đường dành cho người đi bộ",
+      "HinhAnh": "120px-Vietnam_road_sign_R305.svg.png"
+    },
+    {
+      "MaBB": "R306",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.306",
+      "NoiDung": "Tốc độ tối thiểu cho phép",
+      "HinhAnh": "120px-Vietnam_road_sign_R306.svg.png"
+    },
+    {
+      "MaBB": "R307",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.307",
+      "NoiDung": "Hết tốc độ tối thiểu cho phép",
+      "HinhAnh": "120px-Vietnam_road_sign_R307.svg.png"
+    },
+    {
+      "MaBB": "R308a",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.308a",
+      "NoiDung": "Tuyến đường cầu vượt cắt qua",
+      "HinhAnh": "120px-Vietnam_road_sign_R308a.svg.png"
+    },
+    {
+      "MaBB": "R308b",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.308b",
+      "NoiDung": "Tuyến đường cầu vượt cắt qua",
+      "HinhAnh": "120px-Vietnam_road_sign_R308b.svg.png"
+    },
+    {
+      "MaBB": "R309",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.309",
+      "NoiDung": "Ấn còi",
+      "HinhAnh": "120px-Vietnam_road_sign_R309.svg.png"
+    },
+    {
+      "MaBB": "R310a",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.310a",
+      "NoiDung": "Xe chở hàng nguy hiểm chỉ được rẽ trái",
+      "HinhAnh": "120px-Vietnam_road_sign_R310a.svg.png"
+    },
+    {
+      "MaBB": "R310b",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.310b",
+      "NoiDung": "Xe chở hàng nguy hiểm chỉ được đi thẳng",
+      "HinhAnh": "120px-Vietnam_road_sign_R310b.svg.png"
+    },
+    {
+      "MaBB": "R310c",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.310c",
+      "NoiDung": "Xe chở hàng nguy hiểm chỉ được rẽ phải",
+      "HinhAnh": "120px-Vietnam_road_sign_R310c.svg.png"
+    },
+    {
+      "MaBB": "R403a",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.403a",
+      "NoiDung": "Đường dành cho xe ô tô",
+      "HinhAnh": "120px-Vietnam_road_sign_R403a.svg.png"
+    },
+    {
+      "MaBB": "R403b",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.403b",
+      "NoiDung": "Đường dành cho xe ô tô và xe máy",
+      "HinhAnh": "120px-Vietnam_road_sign_R403b.svg.png"
+    },
+    {
+      "MaBB": "R403c",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.403c",
+      "NoiDung": "Đường dành cho xe buýt",
+      "HinhAnh": "120px-Vietnam_road_sign_R403c.svg.png"
+    },
+    {
+      "MaBB": "R403d",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.403d",
+      "NoiDung": "Đường dành cho xe ô tô con",
+      "HinhAnh": "120px-Vietnam_road_sign_R403d.svg.png"
+    },
+    {
+      "MaBB": "R403e",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.403e",
+      "NoiDung": "Đường dành cho xe máy",
+      "HinhAnh": "120px-Vietnam_road_sign_R403e.svg.png"
+    },
+    {
+      "MaBB": "R403f",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.403f",
+      "NoiDung": "Đường dành cho xe máy và xe đạp",
+      "HinhAnh": "120px-Vietnam_road_sign_R403f.svg.png"
+    },
+    {
+      "MaBB": "R403g",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.403g",
+      "NoiDung": "Đường dành cho xe chở hàng bốn bánh gắn động cơ",
+      "HinhAnh": "120px-Vietnam_road_sign_R403g.svg.png"
+    },
+    {
+      "MaBB": "R403h",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.403h",
+      "NoiDung": "Đường dành cho xe chở người bốn bánh gắn động cơ",
+      "HinhAnh": "120px-Vietnam_road_sign_R403h.svg.png"
+    },
+    {
+      "MaBB": "R403k",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.403k",
+      "NoiDung": "Đường dành cho xe chở hàng, xe chở người bốn bánh gắn động cơ",
+      "HinhAnh": "120px-Vietnam_road_sign_R403k.svg.png"
+    },
+    {
+      "MaBB": "R404a",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.404a",
+      "NoiDung": "Hết đường dành cho xe ô tô",
+      "HinhAnh": "120px-Vietnam_road_sign_R404a.svg.png"
+    },
+    {
+      "MaBB": "R404b",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.404b",
+      "NoiDung": "Hết đường dành cho xe ô tô, xe máy",
+      "HinhAnh": "120px-Vietnam_road_sign_R404b.svg.png"
+    },
+    {
+      "MaBB": "R404c",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.404c",
+      "NoiDung": "Hết đường dành cho xe buyt",
+      "HinhAnh": "120px-Vietnam_road_sign_R404c.svg.png"
+    },
+    {
+      "MaBB": "R404d",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.404d",
+      "NoiDung": "Hết đường dành cho xe ô tô con",
+      "HinhAnh": "120px-Vietnam_road_sign_R404d.svg.png"
+    },
+    {
+      "MaBB": "R404e",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.404e",
+      "NoiDung": "Hết đường dành cho xe máy",
+      "HinhAnh": "120px-Vietnam_road_sign_R404e.svg.png"
+    },
+    {
+      "MaBB": "R404f",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.404f",
+      "NoiDung": "Hết đường dành cho xe máy và xe đạp",
+      "HinhAnh": "120px-Vietnam_road_sign_R404f.svg.png"
+    },
+    {
+      "MaBB": "R404g",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.404g",
+      "NoiDung": "Hết đường dành cho xe chở hàng bốn bánh gắn động cơ",
+      "HinhAnh": "120px-Vietnam_road_sign_R404g.svg.png"
+    },
+    {
+      "MaBB": "R404h",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.404h",
+      "NoiDung": "Hết đường dành cho xe chở người bốn bánh gắn động cơ",
+      "HinhAnh": "120px-Vietnam_road_sign_R404h.svg.png"
+    },
+    {
+      "MaBB": "R404k",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.404k",
+      "NoiDung": "Hết đường dành cho xe chở hàng, xe chở người bốn bánh gắn động cơ",
+      "HinhAnh": "120px-Vietnam_road_sign_R404k.svg.png"
+    },
+    {
+      "MaBB": "R411",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.411",
+      "NoiDung": "Hướng đi trên mỗi làn đường phải theo",
+      "HinhAnh": "120px-Vietnam_road_sign_R411.svg.png"
+    },
+    {
+      "MaBB": "R415a",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.415a",
+      "NoiDung": "Phân làn",
+      "HinhAnh": "120px-Vietnam_road_sign_R415a.svg.png"
+    },
+    {
+      "MaBB": "R415b",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.415b",
+      "NoiDung": "Hết phân làn",
+      "HinhAnh": "120px-Vietnam_road_sign_R415b.svg.png"
+    },
+    {
+      "MaBB": "R420",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.420",
+      "NoiDung": "Bắt đầu khu đông dân cư",
+      "HinhAnh": "120px-Vietnam_road_sign_R420.svg.png"
+    },
+    {
+      "MaBB": "R421",
+      "MaLoaiBB": 3,
+      "TieuDe": "Biển R.421",
+      "NoiDung": "Hết khu đông dân cư",
+      "HinhAnh": "120px-Vietnam_road_sign_R421.svg.png"
+    },
+    {
+      "MaBB": "RE9a",
+      "MaLoaiBB": 3,
+      "TieuDe": "RE9a",
+      "NoiDung": "Biển R.E,9aCấm đỗ xe trong khu vực",
+      "HinhAnh": "120px-Vietnam_road_sign_RE9a.svg.png"
+    },
+    {
+      "MaBB": "RE10a",
+      "MaLoaiBB": 3,
+      "TieuDe": "RE10a",
+      "NoiDung": "Biển R.E,10aHết cấm đỗ xe trong khu vực",
+      "HinhAnh": "120px-Vietnam_road_sign_RE10a.svg.png"
+    },
+    {
+      "MaBB": "RE11a",
+      "MaLoaiBB": 3,
+      "TieuDe": "RE11a",
+      "NoiDung": "Biển R.E,11aĐường hầm",
+      "HinhAnh": "120px-Vietnam_road_sign_RE11a.svg.png"
+    },
+    {
+      "MaBB": "RE11b",
+      "MaLoaiBB": 3,
+      "TieuDe": "RE11b",
+      "NoiDung": "Biển R.E,11bKết thúc đường hầm",
+      "HinhAnh": "120px-Vietnam_road_sign_RE11b.svg.png"
+    },
+    {
+      "MaBB": "I401",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.401",
+      "NoiDung": "Bắt đầu đường ưu tiên",
+      "HinhAnh": "120px-Vietnam_road_sign_I401.svg.png"
+    },
+    {
+      "MaBB": "I402",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.402",
+      "NoiDung": "Hết đoạn đường ưu tiên",
+      "HinhAnh": "120px-Vietnam_road_sign_I402.svg.png"
+    },
+    {
+      "MaBB": "I405a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.405a",
+      "NoiDung": "Đường cụt ở bên phải",
+      "HinhAnh": "120px-Vietnam_road_sign_I405a.svg.png"
+    },
+    {
+      "MaBB": "I405b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.405b",
+      "NoiDung": "Đường cụt ở bên trái",
+      "HinhAnh": "120px-Vietnam_road_sign_I405b.svg.png"
+    },
+    {
+      "MaBB": "I405c",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.405c",
+      "NoiDung": "Đường cụt phía trước",
+      "HinhAnh": "120px-Vietnam_road_sign_I405c.svg.png"
+    },
+    {
+      "MaBB": "I406",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.406",
+      "NoiDung": "Được ưu tiên qua đường hẹp",
+      "HinhAnh": "120px-Vietnam_road_sign_I406.svg.png"
+    },
+    {
+      "MaBB": "I407a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.407a",
+      "NoiDung": "Đường một chiều",
+      "HinhAnh": "120px-Vietnam_road_sign_I407a.svg.png"
+    },
+    {
+      "MaBB": "I407b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.407b",
+      "NoiDung": "Đường một chiều",
+      "HinhAnh": "120px-Vietnam_road_sign_I407b.svg.png"
+    },
+    {
+      "MaBB": "I407c",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.407c",
+      "NoiDung": "Đường một chiều",
+      "HinhAnh": "120px-Vietnam_road_sign_I407c.svg.png"
+    },
+    {
+      "MaBB": "I408",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.408",
+      "NoiDung": "Nơi đỗ xe",
+      "HinhAnh": "120px-Vietnam_road_sign_I408.svg.png"
+    },
+    {
+      "MaBB": "I408a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.408a",
+      "NoiDung": "Nơi đỗ xe một phần trên hè phố",
+      "HinhAnh": "120px-Vietnam_road_sign_I408a.svg.png"
+    },
+    {
+      "MaBB": "I409",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.409",
+      "NoiDung": "Chỗ quay xe",
+      "HinhAnh": "120px-Vietnam_road_sign_I409.svg.png"
+    },
+    {
+      "MaBB": "I410",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.410",
+      "NoiDung": "Khu vực quay xe",
+      "HinhAnh": "120px-Vietnam_road_sign_I410.svg.png"
+    },
+    {
+      "MaBB": "I413a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.413a",
+      "NoiDung": "Đường phía trước có làn đường dành cho ô tô khách",
+      "HinhAnh": "120px-Vietnam_road_sign_I413a.svg.png"
+    },
+    {
+      "MaBB": "I413b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.413b",
+      "NoiDung": "Rẽ ra đường có làn đường dành cho ô tô khách",
+      "HinhAnh": "120px-Vietnam_road_sign_I413b.svg.png"
+    },
+    {
+      "MaBB": "I413c",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.413c",
+      "NoiDung": "Rẽ ra đường có làn đường dành cho ô tô khách",
+      "HinhAnh": "120px-Vietnam_road_sign_I413c.svg.png"
+    },
+    {
+      "MaBB": "I414a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.414a",
+      "NoiDung": "Chỉ hướng đường",
+      "HinhAnh": "120px-Vietnam_road_sign_I414a.svg.png"
+    },
+    {
+      "MaBB": "I414b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.414b",
+      "NoiDung": "Chỉ hướng đường",
+      "HinhAnh": "120px-Vietnam_road_sign_I414b.svg.png"
+    },
+    {
+      "MaBB": "I414c",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.414c",
+      "NoiDung": "Chỉ hướng đường",
+      "HinhAnh": "120px-Vietnam_road_sign_I414c.svg.png"
+    },
+    {
+      "MaBB": "I414d",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.414d",
+      "NoiDung": "Chỉ hướng đường",
+      "HinhAnh": "120px-Vietnam_road_sign_I414d.svg.png"
+    },
+    {
+      "MaBB": "I415",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.415",
+      "NoiDung": "Mũi tên chỉ hướng đi",
+      "HinhAnh": "120px-Vietnam_road_sign_I415.svg.png"
+    },
+    {
+      "MaBB": "I416",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.416",
+      "NoiDung": "Đường tránh",
+      "HinhAnh": "120px-Vietnam_road_sign_I416.svg.png"
+    },
+    {
+      "MaBB": "I417a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.417a",
+      "NoiDung": "Chỉ hướng đường phải đi cho từng loại xe",
+      "HinhAnh": "120px-Vietnam_road_sign_I417a.svg.png"
+    },
+    {
+      "MaBB": "I417b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.417b",
+      "NoiDung": "Chỉ hướng đường phải đi cho từng loại xe",
+      "HinhAnh": "120px-Vietnam_road_sign_I417b.svg.png"
+    },
+    {
+      "MaBB": "I417c",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.417c",
+      "NoiDung": "Chỉ hướng đường phải đi cho từng loại xe",
+      "HinhAnh": "120px-Vietnam_road_sign_I417c.svg.png"
+    },
+    {
+      "MaBB": "I418",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.418",
+      "NoiDung": "Lối đi ở những vị trí cấm rẽ",
+      "HinhAnh": "120px-Vietnam_road_sign_I418.svg.png"
+    },
+    {
+      "MaBB": "I419a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.419a",
+      "NoiDung": "Chỉ dẫn địa giới",
+      "HinhAnh": "120px-Vietnam_road_sign_I419a.svg.png"
+    },
+    {
+      "MaBB": "I419b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.419b",
+      "NoiDung": "Chỉ dẫn địa giới (song ngữ)",
+      "HinhAnh": "120px-Vietnam_road_sign_I419b.svg.png"
+    },
+    {
+      "MaBB": "I422a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.422a",
+      "NoiDung": "Di tích lịch sử",
+      "HinhAnh": "120px-Vietnam_road_sign_I422a.svg.png"
+    },
+    {
+      "MaBB": "I422b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.422b",
+      "NoiDung": "Di tích lịch sử (song ngữ)",
+      "HinhAnh": "120px-Vietnam_road_sign_I422b.svg.png"
+    },
+    {
+      "MaBB": "I423a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.423a",
+      "NoiDung": "Vị trí người đi bộ sang ngang bên trái",
+      "HinhAnh": "120px-Vietnam_road_sign_I423a.svg.png"
+    },
+    {
+      "MaBB": "I423b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.423b",
+      "NoiDung": "Vị trí người đi bộ sang ngang bên phải",
+      "HinhAnh": "120px-Vietnam_road_sign_I423b.svg.png"
+    },
+    {
+      "MaBB": "I423c",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.423c",
+      "NoiDung": "Điểm bắt đầu đường đi bộ",
+      "HinhAnh": "120px-Vietnam_road_sign_I423c.svg.png"
+    },
+    {
+      "MaBB": "I424a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.424a",
+      "NoiDung": "Cầu vượt qua đường cho người đi bộ bên trái",
+      "HinhAnh": "120px-Vietnam_road_sign_I424a.svg.png"
+    },
+    {
+      "MaBB": "I424b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.424b",
+      "NoiDung": "Cầu vượt qua đường cho người đi bộ bên phải",
+      "HinhAnh": "120px-Vietnam_road_sign_I424b.svg.png"
+    },
+    {
+      "MaBB": "I424c",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.424c",
+      "NoiDung": "Hầm chui qua đường cho người đi bộ bên trái",
+      "HinhAnh": "120px-Vietnam_road_sign_I424c.svg.png"
+    },
+    {
+      "MaBB": "I424d",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.424d",
+      "NoiDung": "Hầm chui qua đường cho người đi bộ bên phải",
+      "HinhAnh": "120px-Vietnam_road_sign_I424d.svg.png"
+    },
+    {
+      "MaBB": "I425",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.425",
+      "NoiDung": "Bệnh viện",
+      "HinhAnh": "120px-Vietnam_road_sign_I425.svg.png"
+    },
+    {
+      "MaBB": "I426",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.426",
+      "NoiDung": "Trạm cấp cứu",
+      "HinhAnh": "120px-Vietnam_road_sign_I426.svg.png"
+    },
+    {
+      "MaBB": "I427a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.427a",
+      "NoiDung": "Trạm sửa chữa",
+      "HinhAnh": "120px-Vietnam_road_sign_I427a.svg.png"
+    },
+    {
+      "MaBB": "I428",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.428a",
+      "NoiDung": "Cửa hàng xăng dầu",
+      "HinhAnh": "120px-Vietnam_road_sign_I428.svg.png"
+    },
+    {
+      "MaBB": "I429",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.429",
+      "NoiDung": "Nơi rửa xe",
+      "HinhAnh": "120px-Vietnam_road_sign_I429.svg.png"
+    },
+    {
+      "MaBB": "I430",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.430",
+      "NoiDung": "Điện thoại",
+      "HinhAnh": "120px-Vietnam_road_sign_I430.svg.png"
+    },
+    {
+      "MaBB": "I431",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.431",
+      "NoiDung": "Trạm dừng nghỉ",
+      "HinhAnh": "120px-Vietnam_road_sign_I431.svg.png"
+    },
+    {
+      "MaBB": "I432",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.432",
+      "NoiDung": "Khách sạn",
+      "HinhAnh": "120px-Vietnam_road_sign_I432.svg.png"
+    },
+    {
+      "MaBB": "I433a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.433a",
+      "NoiDung": "Nơi nghỉ mát",
+      "HinhAnh": "120px-Vietnam_road_sign_I433a.svg.png"
+    },
+    {
+      "MaBB": "I433b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.433b",
+      "NoiDung": "Nơi cắm trại",
+      "HinhAnh": "120px-Vietnam_road_sign_I433b.svg.png"
+    },
+    {
+      "MaBB": "I433c",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.433c",
+      "NoiDung": "Nơi dành cho nhà lưu động",
+      "HinhAnh": "120px-Vietnam_road_sign_I433c.svg.png"
+    },
+    {
+      "MaBB": "I433d",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.433d",
+      "NoiDung": "Nơi cắm trại và nhà lưu động",
+      "HinhAnh": "120px-Vietnam_road_sign_I433d.svg.png"
+    },
+    {
+      "MaBB": "I433e",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.433e",
+      "NoiDung": "Nhà trọ",
+      "HinhAnh": "120px-Vietnam_road_sign_I433e.svg.png"
+    },
+    {
+      "MaBB": "I434a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.434a",
+      "NoiDung": "Bến xe buýt",
+      "HinhAnh": "120px-Vietnam_road_sign_I434a.svg.png"
+    },
+    {
+      "MaBB": "I434b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.434b",
+      "NoiDung": "Bến xe tải",
+      "HinhAnh": "120px-Vietnam_road_sign_I434b.svg.png"
+    },
+    {
+      "MaBB": "I435",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.435",
+      "NoiDung": "Bến xe điện",
+      "HinhAnh": "120px-Vietnam_road_sign_I435.svg.png"
+    },
+    {
+      "MaBB": "I436",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.436",
+      "NoiDung": "Trạm cảnh sát giao thông",
+      "HinhAnh": "120px-Vietnam_road_sign_I436.svg.png"
+    },
+    {
+      "MaBB": "I437",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.437",
+      "NoiDung": "Đường cao tốc",
+      "HinhAnh": "120px-Vietnam_road_sign_I437.svg.png"
+    },
+    {
+      "MaBB": "I439",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.439",
+      "NoiDung": "Tên cầu",
+      "HinhAnh": "120px-Vietnam_road_sign_I439.svg.png"
+    },
+    {
+      "MaBB": "I440",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.440",
+      "NoiDung": "Đường đang thi công",
+      "HinhAnh": "120px-Vietnam_road_sign_I440.svg.png"
+    },
+    {
+      "MaBB": "I441a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.441a",
+      "NoiDung": "Báo hiệu phía trước có công trường thi công",
+      "HinhAnh": "120px-Vietnam_road_sign_I441a.svg.png"
+    },
+    {
+      "MaBB": "I441b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.441b",
+      "NoiDung": "Báo hiệu phía trước có công trường thi công",
+      "HinhAnh": "120px-Vietnam_road_sign_I441b.svg.png"
+    },
+    {
+      "MaBB": "I441c",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.441c",
+      "NoiDung": "Báo hiệu phía trước có công trường thi công",
+      "HinhAnh": "120px-Vietnam_road_sign_I441c.svg.png"
+    },
+    {
+      "MaBB": "I442",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.442",
+      "NoiDung": "Chợ",
+      "HinhAnh": "120px-Vietnam_road_sign_I442.svg.png"
+    },
+    {
+      "MaBB": "I443",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.443",
+      "NoiDung": "Xe kéo rơ-moóc",
+      "HinhAnh": "120px-Vietnam_road_sign_I443.svg.png"
+    },
+    {
+      "MaBB": "I444a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.444a",
+      "NoiDung": "Biển chỉ dẫn hướng vào ga tàu",
+      "HinhAnh": "120px-Vietnam_road_sign_I444a.svg.png"
+    },
+    {
+      "MaBB": "I444b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.444b",
+      "NoiDung": "Biển chỉ dẫn hướng vào sân bay",
+      "HinhAnh": "120px-Vietnam_road_sign_I444b.svg.png"
+    },
+    {
+      "MaBB": "I444c",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.444c",
+      "NoiDung": "Biển chỉ dẫn hướng vào bãi đậu xe",
+      "HinhAnh": "120px-Vietnam_road_sign_I444c.svg.png"
+    },
+    {
+      "MaBB": "I444d",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.444d",
+      "NoiDung": "Biển chỉ dẫn hướng vào bến xe khách đường dài",
+      "HinhAnh": "120px-Vietnam_road_sign_I444d.svg.png"
+    },
+    {
+      "MaBB": "I444e",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.444e",
+      "NoiDung": "Biển chỉ dẫn hướng vào trạm cấp cứu",
+      "HinhAnh": "120px-Vietnam_road_sign_I444e.svg.png"
+    },
+    {
+      "MaBB": "I444f",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.444f",
+      "NoiDung": "Biển chỉ dẫn hướng vào bến tàu khách",
+      "HinhAnh": "120px-Vietnam_road_sign_I444f.svg.png"
+    },
+    {
+      "MaBB": "I444g",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.444g",
+      "NoiDung": "Biển chỉ dẫn hướng vào khu danh thắng và du lịch",
+      "HinhAnh": "120px-Vietnam_road_sign_I444g.svg.png"
+    },
+    {
+      "MaBB": "I444h",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.444h",
+      "NoiDung": "Biển chỉ dẫn hướng vào trạm xăng",
+      "HinhAnh": "120px-Vietnam_road_sign_I444h.svg.png"
+    },
+    {
+      "MaBB": "I444i",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.444i",
+      "NoiDung": "Biển chỉ dẫn hướng vào trạm rửa xe",
+      "HinhAnh": "120px-Vietnam_road_sign_I444i.svg.png"
+    },
+    {
+      "MaBB": "I444j",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.444j",
+      "NoiDung": "Biển chỉ dẫn hướng vào bến phà",
+      "HinhAnh": "120px-Vietnam_road_sign_I444j.svg.png"
+    },
+    {
+      "MaBB": "I444k",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.444k",
+      "NoiDung": "Biển chỉ dẫn hướng vào ga tàu điện ngầm",
+      "HinhAnh": "120px-Vietnam_road_sign_I444k.svg.png"
+    },
+    {
+      "MaBB": "I444l",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.444l",
+      "NoiDung": "Biển chỉ dẫn hướng vào khu vực dịch vụ cho khách đi đường",
+      "HinhAnh": "120px-Vietnam_road_sign_I444l.svg.png"
+    },
+    {
+      "MaBB": "I444m",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.444m",
+      "NoiDung": "Biển chỉ dẫn hướng vào trạm sửa chữa xe",
+      "HinhAnh": "120px-Vietnam_road_sign_I444m.svg.png"
+    },
+    {
+      "MaBB": "I445a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.445a",
+      "NoiDung": "Đường trơn, chạy chậm",
+      "HinhAnh": "120px-Vietnam_road_sign_I445a.svg.png"
+    },
+    {
+      "MaBB": "I445b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.445b",
+      "NoiDung": "Đường dốc, chạy chậm",
+      "HinhAnh": "120px-Vietnam_road_sign_I445b.svg.png"
+    },
+    {
+      "MaBB": "I445c",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.445c",
+      "NoiDung": "Đường nhiều sương mù",
+      "HinhAnh": "120px-Vietnam_road_sign_I445c.svg.png"
+    },
+    {
+      "MaBB": "I445d",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.445d",
+      "NoiDung": "Nền đường yếu",
+      "HinhAnh": "120px-Vietnam_road_sign_I445d.svg.png"
+    },
+    {
+      "MaBB": "I445e",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.445e",
+      "NoiDung": "Xe lớn đi sát về bên phải",
+      "HinhAnh": "120px-Vietnam_road_sign_I445e.svg.png"
+    },
+    {
+      "MaBB": "I445f",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.445f",
+      "NoiDung": "Chú ý gió ngang",
+      "HinhAnh": "120px-Vietnam_road_sign_I445f.svg.png"
+    },
+    {
+      "MaBB": "I445g",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.445g",
+      "NoiDung": "Đoạn đường hay xảy ra tai nạn",
+      "HinhAnh": "120px-Vietnam_road_sign_I445g.svg.png"
+    },
+    {
+      "MaBB": "I445h",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.445h",
+      "NoiDung": "Xuống dốc liên tục",
+      "HinhAnh": "120px-Vietnam_road_sign_I445h.svg.png"
+    },
+    {
+      "MaBB": "I446",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.446",
+      "NoiDung": "Nơi đỗ xe dành cho người khuyết tật",
+      "HinhAnh": "120px-Vietnam_road_sign_I446.svg.png"
+    },
+    {
+      "MaBB": "I447a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.447a",
+      "NoiDung": "Biển báo cầu vượt liên thông",
+      "HinhAnh": "120px-Vietnam_road_sign_I447a.svg.png"
+    },
+    {
+      "MaBB": "I447b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.447b",
+      "NoiDung": "Biển báo cầu vượt liên thông",
+      "HinhAnh": "120px-Vietnam_road_sign_I447b.svg.png"
+    },
+    {
+      "MaBB": "I447c",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.447c",
+      "NoiDung": "Biển báo cầu vượt liên thông",
+      "HinhAnh": "120px-Vietnam_road_sign_I447c.svg.png"
+    },
+    {
+      "MaBB": "I447d",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.447d",
+      "NoiDung": "Biển báo cầu vượt liên thông",
+      "HinhAnh": "120px-Vietnam_road_sign_I447d.svg.png"
+    },
+    {
+      "MaBB": "I448",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.448",
+      "NoiDung": "Làn đường cứu nạn hay làn dừng xe khẩn cấp",
+      "HinhAnh": "120px-Vietnam_road_sign_I448.svg.png"
+    },
+    {
+      "MaBB": "I449",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.449",
+      "NoiDung": "Biển tên đường Xuyên Á",
+      "HinhAnh": "120px-Vietnam_road_sign_I449.svg.png"
+    },
+    {
+      "MaBB": "IE450a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.450a",
+      "NoiDung": "Khoảng cách đến nút giao với đường dẫn vào đường cao tốc",
+      "HinhAnh": "120px-Vietnam_road_sign_IE450a.svg.png"
+    },
+    {
+      "MaBB": "IE450b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.450b",
+      "NoiDung": "Sơ đồ đến nút giao với đường dẫn vào đường cao tốc",
+      "HinhAnh": "120px-Vietnam_road_sign_IE450b.svg.png"
+    },
+    {
+      "MaBB": "IE451a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.451a",
+      "NoiDung": "Khoảng cách đến lối vào đường cao tốc",
+      "HinhAnh": "120px-Vietnam_road_sign_IE451a.svg.png"
+    },
+    {
+      "MaBB": "IE451b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.451b",
+      "NoiDung": "Lối vào đường cao tốc",
+      "HinhAnh": "120px-Vietnam_road_sign_IE451b.svg.png"
+    },
+    {
+      "MaBB": "IE452",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.452",
+      "NoiDung": "Bắt đầu đường cao tốc",
+      "HinhAnh": "120px-Vietnam_road_sign_IE452.svg.png"
+    },
+    {
+      "MaBB": "IE453a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.453a",
+      "NoiDung": "Khoảng cách đến điểm kết thúc đường cao tốc",
+      "HinhAnh": "120px-Vietnam_road_sign_IE453a.svg.png"
+    },
+    {
+      "MaBB": "IE453b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.453b",
+      "NoiDung": "Điểm kết thúc đường cao tốc",
+      "HinhAnh": "120px-Vietnam_road_sign_IE453b.svg.png"
+    },
+    {
+      "MaBB": "IE453c",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.453c",
+      "NoiDung": "Hết đường cao tốc",
+      "HinhAnh": "120px-Vietnam_road_sign_IE453c.svg.png"
+    },
+    {
+      "MaBB": "IE454",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.454",
+      "NoiDung": "Khoảng cách đến lối ra phía trước",
+      "HinhAnh": "120px-Vietnam_road_sign_IE454.svg.png"
+    },
+    {
+      "MaBB": "IE455",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.455",
+      "NoiDung": "Khoảng cách đến các lối ra tiếp theo",
+      "HinhAnh": "120px-Vietnam_road_sign_IE455.svg.png"
+    },
+    {
+      "MaBB": "IE456a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.456a",
+      "NoiDung": "Khoảng cách đến trạm dừng nghỉ",
+      "HinhAnh": "120px-Vietnam_road_sign_IE456a.svg.png"
+    },
+    {
+      "MaBB": "IE456b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.456b",
+      "NoiDung": "Hướng rẽ đến trạm dừng nghỉ",
+      "HinhAnh": "120px-Vietnam_road_sign_IE456b.svg.png"
+    },
+    {
+      "MaBB": "IE456c",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.456c",
+      "NoiDung": "Lối vào trạm dừng nghỉ",
+      "HinhAnh": "120px-Vietnam_road_sign_IE456c.svg.png"
+    },
+    {
+      "MaBB": "IE457a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.457a",
+      "NoiDung": "Khoảng cách đến nơi đỗ xe trong trạm dừng nghỉ",
+      "HinhAnh": "120px-Vietnam_road_sign_IE457a.svg.png"
+    },
+    {
+      "MaBB": "IE457b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.457b",
+      "NoiDung": "Hướng rẽ đến vị trí bãi đỗ xe trong trạm dừng nghỉ",
+      "HinhAnh": "120px-Vietnam_road_sign_IE457b.svg.png"
+    },
+    {
+      "MaBB": "IE458",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.458",
+      "NoiDung": "Khoảng cách đến các trạm dừng nghỉ tiếp theo",
+      "HinhAnh": "120px-Vietnam_road_sign_IE458.svg.png"
+    },
+    {
+      "MaBB": "IE459a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.459a",
+      "NoiDung": "Khoảng cách đến khu tham quan, du lịch",
+      "HinhAnh": "120px-Vietnam_road_sign_IE459a.svg.png"
+    },
+    {
+      "MaBB": "IE459b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.459b",
+      "NoiDung": "Hướng rẽ vào khu tham quan, du lịch",
+      "HinhAnh": "120px-Vietnam_road_sign_IE459b.svg.png"
+    },
+    {
+      "MaBB": "IE460a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.460a",
+      "NoiDung": "Cột kilômét (một chữ số)",
+      "HinhAnh": "120px-Vietnam_road_sign_IE460a.svg.png"
+    },
+    {
+      "MaBB": "IE460b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.460b",
+      "NoiDung": "Cột kilômét (hai chữ số)",
+      "HinhAnh": "60px-Vietnam_road_sign_IE460b.svg.png"
+    },
+    {
+      "MaBB": "IE460c",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.460c",
+      "NoiDung": "Cột kilômét (ba chữ số)",
+      "HinhAnh": "40px-Vietnam_road_sign_IE460c.svg.png"
+    },
+    {
+      "MaBB": "IE461a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.461a",
+      "NoiDung": "Khoảng cách đến khu dịch vụ công cộng, giải trí",
+      "HinhAnh": "120px-Vietnam_road_sign_IE461a.svg.png"
+    },
+    {
+      "MaBB": "IE461b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.461b",
+      "NoiDung": "Hướng rẽ đến khu dịch vụ công cộng, giải trí",
+      "HinhAnh": "120px-Vietnam_road_sign_IE461b.svg.png"
+    },
+    {
+      "MaBB": "IE461c",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.461c",
+      "NoiDung": "Hướng rẽ vào khu dịch vụ công cộng",
+      "HinhAnh": "120px-Vietnam_road_sign_IE461c.svg.png"
+    },
+    {
+      "MaBB": "IE461d",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.461d",
+      "NoiDung": "Hướng rẽ vào khu giải trí",
+      "HinhAnh": "120px-Vietnam_road_sign_IE461d.svg.png"
+    },
+    {
+      "MaBB": "IE462",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.462",
+      "NoiDung": "Tần số trên sóng radio",
+      "HinhAnh": "120px-Vietnam_road_sign_IE462.svg.png"
+    },
+    {
+      "MaBB": "IE464a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.464a",
+      "NoiDung": "Lối ra một chiều",
+      "HinhAnh": "120px-Vietnam_road_sign_IE464a.svg.png"
+    },
+    {
+      "MaBB": "IE464b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.464b",
+      "NoiDung": "Hướng ra",
+      "HinhAnh": "120px-Vietnam_road_sign_IE464b.svg.png"
+    },
+    {
+      "MaBB": "IE465",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.465",
+      "NoiDung": "Địa điểm và khoảng cách",
+      "HinhAnh": "120px-Vietnam_road_sign_IE465.svg.png"
+    },
+    {
+      "MaBB": "IE466",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.466",
+      "NoiDung": "Sơ đồ lối ra một chiều",
+      "HinhAnh": "120px-Vietnam_road_sign_IE466.svg.png"
+    },
+    {
+      "MaBB": "IE467a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.467a",
+      "NoiDung": "Khoảng cách đến vị trí nhập làn xe",
+      "HinhAnh": "120px-Vietnam_road_sign_IE467a.svg.png"
+    },
+    {
+      "MaBB": "IE467b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.467b",
+      "NoiDung": "Vị trí nhập làn xe",
+      "HinhAnh": "120px-Vietnam_road_sign_IE467b.svg.png"
+    },
+    {
+      "MaBB": "IE468a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.468a",
+      "NoiDung": "Chướng ngại vật phía trước – đi theo hướng bên trái",
+      "HinhAnh": "40px-Vietnam_road_sign_IE468a.svg.png"
+    },
+    {
+      "MaBB": "IE468b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.468b",
+      "NoiDung": "Chướng ngại vật phía trước – đi được cả hai hướng",
+      "HinhAnh": "40px-Vietnam_road_sign_IE468b.svg.png"
+    },
+    {
+      "MaBB": "IE468c",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.468c",
+      "NoiDung": "Chướng ngại vật phía trước – đi theo hướng bên phải",
+      "HinhAnh": "40px-Vietnam_road_sign_IE468c.svg.png"
+    },
+    {
+      "MaBB": "IE469a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.469a",
+      "NoiDung": "Tiêu phản quang – hướng rẽ phải",
+      "HinhAnh": "120px-Vietnam_road_sign_IE469a.svg.png"
+    },
+    {
+      "MaBB": "IE469b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.469b",
+      "NoiDung": "Tiêu phản quang – hướng rẽ trái",
+      "HinhAnh": "120px-Vietnam_road_sign_IE469b.svg.png"
+    },
+    {
+      "MaBB": "IE470",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.470",
+      "NoiDung": "Số điện thoại khẩn cấp",
+      "HinhAnh": "120px-Vietnam_road_sign_IE470.svg.png"
+    },
+    {
+      "MaBB": "IE472a",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.472a",
+      "NoiDung": "Khoảng cách đến trạm thu phí",
+      "HinhAnh": "120px-Vietnam_road_sign_IE472a.svg.png"
+    },
+    {
+      "MaBB": "IE472b",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.472b",
+      "NoiDung": "Trạm thu phí",
+      "HinhAnh": "120px-Vietnam_road_sign_IE472b.svg.png"
+    },
+    {
+      "MaBB": "IE472c",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.472c",
+      "NoiDung": "Thu phí không dừng",
+      "HinhAnh": "120px-Vietnam_road_sign_IE472c.svg.png"
+    },
+    {
+      "MaBB": "IE472d",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.472d",
+      "NoiDung": "Rút thẻ",
+      "HinhAnh": "120px-Vietnam_road_sign_IE472d.svg.png"
+    },
+    {
+      "MaBB": "IE472e",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.472e",
+      "NoiDung": "Thu phí",
+      "HinhAnh": "120px-Vietnam_road_sign_IE472e.svg.png"
+    },
+    {
+      "MaBB": "IE473",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.473",
+      "NoiDung": "Giảm tốc độ",
+      "HinhAnh": "120px-Vietnam_road_sign_IE473.svg.png"
+    },
+    {
+      "MaBB": "IE474",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.474",
+      "NoiDung": "Lối ra đường cao tốc",
+      "HinhAnh": "120px-Vietnam_road_sign_IE474.svg.png"
+    },
+    {
+      "MaBB": "S501",
+      "MaLoaiBB": 5,
+      "TieuDe": "Biển S.501",
+      "NoiDung": "Phạm vi tác dụng của biển",
+      "HinhAnh": "120px-Vietnam_road_sign_S501.svg.png"
+    },
+    {
+      "MaBB": "S502",
+      "MaLoaiBB": 5,
+      "TieuDe": "Biển S.502",
+      "NoiDung": "Khoảng cách đến đối tượng báo hiệu",
+      "HinhAnh": "120px-Vietnam_road_sign_S502.svg.png"
+    },
+    {
+      "MaBB": "S503a",
+      "MaLoaiBB": 5,
+      "TieuDe": "Biển S.503a",
+      "NoiDung": "Hướng tác dụng của biển",
+      "HinhAnh": "120px-Vietnam_road_sign_S503a.svg.png"
+    },
+    {
+      "MaBB": "S503b",
+      "MaLoaiBB": 5,
+      "TieuDe": "Biển S.503b",
+      "NoiDung": "Hướng tác dụng của biển",
+      "HinhAnh": "120px-Vietnam_road_sign_S503b.svg.png"
+    },
+    {
+      "MaBB": "S503c",
+      "MaLoaiBB": 5,
+      "TieuDe": "Biển S.503c",
+      "NoiDung": "Hướng tác dụng của biển",
+      "HinhAnh": "120px-Vietnam_road_sign_S503c.svg.png"
+    },
+    {
+      "MaBB": "S503d",
+      "MaLoaiBB": 5,
+      "TieuDe": "Biển S.503d",
+      "NoiDung": "Hướng tác dụng của biển",
+      "HinhAnh": "60px-Vietnam_road_sign_S503d.svg.png"
+    },
+    {
+      "MaBB": "S503e",
+      "MaLoaiBB": 5,
+      "TieuDe": "Biển S.503e",
+      "NoiDung": "Hướng tác dụng của biển",
+      "HinhAnh": "60px-Vietnam_road_sign_S503e.svg.png"
+    },
+    {
+      "MaBB": "S503f",
+      "MaLoaiBB": 5,
+      "TieuDe": "Biển S.503f",
+      "NoiDung": "Hướng tác dụng của biển",
+      "HinhAnh": "60px-Vietnam_road_sign_S503f.svg.png"
+    },
+    {
+      "MaBB": "S504",
+      "MaLoaiBB": 5,
+      "TieuDe": "Biển S.504",
+      "NoiDung": "Làn đường",
+      "HinhAnh": "120px-Vietnam_road_sign_S504.svg.png"
+    },
+    {
+      "MaBB": "S505a",
+      "MaLoaiBB": 5,
+      "TieuDe": "Biển S.505a",
+      "NoiDung": "Loại xe",
+      "HinhAnh": "120px-Vietnam_road_sign_S505a.svg.png"
+    },
+    {
+      "MaBB": "S505b",
+      "MaLoaiBB": 5,
+      "TieuDe": "Biển S.505b",
+      "NoiDung": "Loại xe hạn chế qua cầu",
+      "HinhAnh": "120px-Vietnam_road_sign_S505b.svg.png"
+    },
+    {
+      "MaBB": "S505c",
+      "MaLoaiBB": 5,
+      "TieuDe": "Biển S.505c",
+      "NoiDung": "Tải trọng trục hạn chế qua cầu",
+      "HinhAnh": "120px-Vietnam_road_sign_S505c.svg.png"
+    },
+    {
+      "MaBB": "S506a",
+      "MaLoaiBB": 5,
+      "TieuDe": "Biển S.506a",
+      "NoiDung": "Hướng đường ưu tiên",
+      "HinhAnh": "120px-Vietnam_road_sign_S506a.svg.png"
+    },
+    {
+      "MaBB": "S506b",
+      "MaLoaiBB": 5,
+      "TieuDe": "Biển S.506b",
+      "NoiDung": "Hướng đường ưu tiên",
+      "HinhAnh": "120px-Vietnam_road_sign_S506b.svg.png"
+    },
+    {
+      "MaBB": "S507",
+      "MaLoaiBB": 5,
+      "TieuDe": "Biển S.507",
+      "NoiDung": "Hướng rẽ",
+      "HinhAnh": "120px-Vietnam_road_sign_S507.svg.png"
+    },
+    {
+      "MaBB": "S508a",
+      "MaLoaiBB": 5,
+      "TieuDe": "Biển S.508a",
+      "NoiDung": "Biểu thị thời gian",
+      "HinhAnh": "120px-Vietnam_road_sign_S508a.svg.png"
+    },
+    {
+      "MaBB": "S508b",
+      "MaLoaiBB": 5,
+      "TieuDe": "Biển S.508b",
+      "NoiDung": "Biểu thị thời gian",
+      "HinhAnh": "120px-Vietnam_road_sign_S508b.svg.png"
+    },
+    {
+      "MaBB": "S509a",
+      "MaLoaiBB": 5,
+      "TieuDe": "Biển S.509a",
+      "NoiDung": "Thuyết minh biển chính – Chiều cao an toàn (đặt dưới biển W.239)",
+      "HinhAnh": "120px-Vietnam_road_sign_S509a.svg.png"
+    },
+    {
+      "MaBB": "S509b",
+      "MaLoaiBB": 5,
+      "TieuDe": "Biển S.509b",
+      "NoiDung": "Thuyết minh biển chính – Cấm đỗ xe (đặt dưới biển P.130, P.131 (a,b,c))",
+      "HinhAnh": "120px-Vietnam_road_sign_S509b.svg.png"
+    },
+    {
+      "MaBB": "S510",
+      "MaLoaiBB": 5,
+      "TieuDe": "Biển S.510a",
+      "NoiDung": "Chú ý đường trơn có băng tuyết",
+      "HinhAnh": "120px-Vietnam_road_sign_S510.svg.png"
+    },
+    {
+      "MaBB": "SG7",
+      "MaLoaiBB": 5,
+      "TieuDe": "SG7",
+      "NoiDung": "Biển S.G,7Địa điểm cắm trại",
+      "HinhAnh": "120px-Vietnam_road_sign_SG7.svg.png"
+    },
+    {
+      "MaBB": "SG8",
+      "MaLoaiBB": 5,
+      "TieuDe": "SG8",
+      "NoiDung": "Biển S.G,8Địa điểm nhà trọ",
+      "HinhAnh": "120px-Vietnam_road_sign_SG8.svg.png"
+    },
+    {
+      "MaBB": "SG9b",
+      "MaLoaiBB": 5,
+      "TieuDe": "SG9b",
+      "NoiDung": "Biển S.G,9bChỉ dẫn tới điểm đỗ xe dành cho lái xe muốn sử dụng phương tiện công cộng",
+      "HinhAnh": "120px-Vietnam_road_sign_SG9b.png"
+    },
+    {
+      "MaBB": "W211b",
+      "MaLoaiBB": 2,
+      "TieuDe": "Biển W.211b",
+      "NoiDung": "Giao nhau với đường tàu điện(2012–2024)",
+      "HinhAnh": "120px-Vietnam_road_sign_W211b.svg.png"
+    },
+    {
+      "MaBB": "I",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển I.427b",
+      "NoiDung": "Trạm kiểm tra tải trọng xe(2016–2024)",
+      "HinhAnh": "120px-Vietnam_road_sign_I.427b_%28QCVN_41-2016-BGTVT%29.svg.png"
+    },
+    {
+      "MaBB": "IE",
+      "MaLoaiBB": 4,
+      "TieuDe": "Biển IE.463a",
+      "NoiDung": "Khoảng cách đến trạm kiểm tra tải trọng xe(2016–2024)",
+      "HinhAnh": "120px-Vietnam_road_sign_IE.463a_%28QCVN_41-2016-BGTVT%29.svg.png"
+    },
+    {
+      "MaBB": "IE471",
+      "MaLoaiBB": 4,
+      "TieuDe": "IE471",
+      "NoiDung": "IE.471Giữ khoảng cách lái xe an toàn (2016–2024)",
+      "HinhAnh": "120px-Vietnam_road_sign_IE471.svg.png"
+    }
+  ]
+}

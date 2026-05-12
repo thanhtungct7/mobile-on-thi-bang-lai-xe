@@ -1,6 +1,5 @@
 package com.kma.OnThiBangLaiXe.Adapter;
 
-
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.graphics.Bitmap;
@@ -9,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -18,7 +18,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.kma.OnThiBangLaiXe.DBHandler;
-import com.kma.OnThiBangLaiXe.MainActivity;
 import com.kma.OnThiBangLaiXe.Model.CauHoi;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
 import com.kma.OnThiBangLaiXe.R;
@@ -28,8 +27,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.List;
 
-public class CauHoiAdapter extends RecyclerView.Adapter<CauHoiAdapter.ViewHolder>
-{
+public class CauHoiAdapter extends RecyclerView.Adapter<CauHoiAdapter.ViewHolder> {
+
     private List<CauHoi> dsCauHoi;
     private Context context;
     private DBHandler db;
@@ -37,45 +36,38 @@ public class CauHoiAdapter extends RecyclerView.Adapter<CauHoiAdapter.ViewHolder
     public CauHoiAdapter(List<CauHoi> dsCauHoi, Context context) {
         this.context = context;
         this.dsCauHoi = dsCauHoi;
-        db=new DBHandler(context);
+        db = new DBHandler(context);
     }
 
     @NonNull
     @Override
-    public CauHoiAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new CauHoiAdapter.ViewHolder(LayoutInflater.from(parent.getContext())
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new ViewHolder(LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_cau_hoi, parent, false));
     }
 
     @Override
-    public int getItemViewType(int position) {
-        return position;
-    }
+    public int getItemViewType(int position) { return position; }
 
     @Override
-    public void onBindViewHolder(@NonNull CauHoiAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         CauHoi ch = dsCauHoi.get(position);
-        holder.txtSoCauHoi.setText("Câu " + (position + 1) + "/" + dsCauHoi.size() + " câu |");
+        holder.txtSoCauHoi.setText("Câu " + (position + 1) + "/" + dsCauHoi.size());
         holder.ivSave.setTag(0);
-        if(ch.getLuu()==1)
-        {
+
+        if (ch.getLuu() == 1) {
             holder.ivSave.setImageResource(R.drawable.baseline_bookmark_24_green);
             holder.ivSave.setTag(1);
         }
-        if (ch.getDaTraLoiDung()!=0)
-        {
+
+        if (ch.getDaTraLoiDung() != 0) {
             holder.txtDungSai.setText("Đã học");
-            if (ch.getDaTraLoiDung()==1)
-            {
-                holder.ivDungSai.setImageResource(R.drawable.baseline_check_circle_24);
+            if (ch.getDaTraLoiDung() == 1) {
+                holder.ivDungSai.setImageResource(R.drawable.baseline_check_circle_16);
+            } else if (ch.getDaTraLoiDung() == 2) {
+                holder.ivDungSai.setImageResource(R.drawable.baseline_cancel_16);
             }
-            else if(ch.getDaTraLoiDung()==2)
-            {
-                holder.ivDungSai.setImageResource(R.drawable.baseline_cancel_24);
-            }
-        }
-        else
-        {
+        } else {
             holder.txtDungSai.setText("Chưa học");
         }
 
@@ -90,47 +82,112 @@ public class CauHoiAdapter extends RecyclerView.Adapter<CauHoiAdapter.ViewHolder
                 holder.ivSave.setTag(1);
                 db.updateLuuLaiCauHoi(ch.getMaCH(), 1);
             }
-
         });
 
         loadImage(ch.getHinhAnh(), holder.ivCauHoi);
 
-        if (ch.getDapAnA() != null && !ch.getDapAnA().equals("null") && !ch.getDapAnA().isEmpty())
-        {
-            holder.rbA.setText(ch.getDapAnA());
-            holder.rbA.setVisibility(View.VISIBLE);
-            holder.rbA.setOnCheckedChangeListener((i, v) -> setDapAn(holder, position, "A"));
-        }
-        else { holder.rbA.setVisibility(View.GONE); }
+        bindOption(holder, position, "A", holder.wrapA, holder.tvLetterA, holder.rbA, ch.getDapAnA());
+        bindOption(holder, position, "B", holder.wrapB, holder.tvLetterB, holder.rbB, ch.getDapAnB());
+        bindOption(holder, position, "C", holder.wrapC, holder.tvLetterC, holder.rbC, ch.getDapAnC());
+        bindOption(holder, position, "D", holder.wrapD, holder.tvLetterD, holder.rbD, ch.getDapAnD());
 
-        if (ch.getDapAnB() != null && !ch.getDapAnB().equals("null") && !ch.getDapAnB().isEmpty())
-        {
-            holder.rbB.setText(ch.getDapAnB());
-            holder.rbB.setVisibility(View.VISIBLE);
-            holder.rbB.setOnCheckedChangeListener((i, v) -> setDapAn(holder, position, "B"));
-        }
-        else { holder.rbB.setVisibility(View.GONE); }
+        LinearLayoutManager llm = new LinearLayoutManager(context);
+        llm.setReverseLayout(true);
+        llm.setStackFromEnd(true);
+        holder.rvCauHoi.setLayoutManager(llm);
+    }
 
-        if (ch.getDapAnC() != null && !ch.getDapAnC().equals("null") && !ch.getDapAnC().isEmpty())
-        {
-            holder.rbC.setText(ch.getDapAnC());
-            holder.rbC.setVisibility(View.VISIBLE);
-            holder.rbC.setOnCheckedChangeListener((i, v) -> setDapAn(holder, position, "C"));
+    private void bindOption(ViewHolder holder, int position, String letter,
+                            LinearLayout wrap, TextView tvLetter, RadioButton rb, String text) {
+        if (text == null || text.equals("null") || text.isEmpty()) {
+            wrap.setVisibility(View.GONE);
+            return;
         }
-        else { holder.rbC.setVisibility(View.GONE); }
+        wrap.setVisibility(View.VISIBLE);
+        rb.setText(text);
+        rb.setOnCheckedChangeListener(null);
+        rb.setChecked(false);
+        setCardDefault(wrap, tvLetter);
 
-        if (ch.getDapAnD() != null && !ch.getDapAnD().equals("null") && !ch.getDapAnD().isEmpty())
-        {
-            holder.rbD.setText(ch.getDapAnD());
-            holder.rbD.setVisibility(View.VISIBLE);
-            holder.rbD.setOnCheckedChangeListener((i, v) -> setDapAn(holder, position, "D"));
+        rb.setOnCheckedChangeListener((btn, checked) -> {
+            if (!checked) return;
+            setDapAn(holder, position, letter);
+        });
+
+        wrap.setOnClickListener(v -> {
+            uncheckOthers(holder, letter);
+            rb.setChecked(true);
+        });
+    }
+
+    private void uncheckOthers(ViewHolder holder, String except) {
+        if (!except.equals("A")) holder.rbA.setChecked(false);
+        if (!except.equals("B")) holder.rbB.setChecked(false);
+        if (!except.equals("C")) holder.rbC.setChecked(false);
+        if (!except.equals("D")) holder.rbD.setChecked(false);
+    }
+
+    private void setDapAn(ViewHolder holder, int position, String value) {
+        CauHoi ch = dsCauHoi.get(position);
+
+        if (ch.getGiaiThich() != null && !ch.getGiaiThich().isEmpty() && !ch.getGiaiThich().equals("null")) {
+            holder.txtGiaiThichCauHoi.setText(ch.getGiaiThich());
+            holder.txtGiaiThichCauHoi.setVisibility(View.VISIBLE);
         }
-        else { holder.rbD.setVisibility(View.GONE); }
-        LinearLayoutManager layoutManager = new LinearLayoutManager(context);
-        layoutManager.setReverseLayout(true);
-        layoutManager.setStackFromEnd(true);
-        holder.rvCauHoi.setLayoutManager(layoutManager);
 
+        holder.wrapA.setClickable(false);
+        holder.wrapB.setClickable(false);
+        holder.wrapC.setClickable(false);
+        holder.wrapD.setClickable(false);
+        holder.rbA.setEnabled(false);
+        holder.rbB.setEnabled(false);
+        holder.rbC.setEnabled(false);
+        holder.rbD.setEnabled(false);
+        holder.txtDungSai.setText("Đã học");
+
+        boolean correct = ch.getDapAnDung().equals(value);
+        if (correct) {
+            holder.ivDungSai.setImageResource(R.drawable.baseline_check_circle_16);
+        } else {
+            holder.ivDungSai.setImageResource(R.drawable.baseline_cancel_16);
+            setCardForLetter(holder, value, false);
+        }
+        setCardForLetter(holder, ch.getDapAnDung(), true);
+
+        DanhSach.getDsCauHoi().get(position).setDaTraLoiDung(correct ? 1 : 2);
+        db.updateDaTraLoi(ch.getMaCH(), correct ? 1 : 2);
+    }
+
+    private void setCardForLetter(ViewHolder holder, String letter, boolean correct) {
+        LinearLayout wrap;
+        TextView tvLetter;
+        switch (letter) {
+            case "A": wrap = holder.wrapA; tvLetter = holder.tvLetterA; break;
+            case "B": wrap = holder.wrapB; tvLetter = holder.tvLetterB; break;
+            case "C": wrap = holder.wrapC; tvLetter = holder.tvLetterC; break;
+            case "D": wrap = holder.wrapD; tvLetter = holder.tvLetterD; break;
+            default: return;
+        }
+        if (correct) setCardCorrect(wrap, tvLetter);
+        else setCardWrong(wrap, tvLetter);
+    }
+
+    private void setCardDefault(LinearLayout wrap, TextView letter) {
+        wrap.setBackground(AppCompatResources.getDrawable(context, R.drawable.answer_card_default));
+        letter.setBackground(AppCompatResources.getDrawable(context, R.drawable.answer_letter_bg));
+        letter.setTextColor(context.getColor(R.color.muted));
+    }
+
+    private void setCardCorrect(LinearLayout wrap, TextView letter) {
+        wrap.setBackground(AppCompatResources.getDrawable(context, R.drawable.answer_card_correct));
+        letter.setBackground(AppCompatResources.getDrawable(context, R.drawable.answer_letter_correct_bg));
+        letter.setTextColor(context.getColor(R.color.white));
+    }
+
+    private void setCardWrong(LinearLayout wrap, TextView letter) {
+        wrap.setBackground(AppCompatResources.getDrawable(context, R.drawable.answer_card_wrong));
+        letter.setBackground(AppCompatResources.getDrawable(context, R.drawable.answer_letter_wrong_bg));
+        letter.setTextColor(context.getColor(R.color.white));
     }
 
     private void loadImage(String hinhAnh, ImageView iv) {
@@ -141,98 +198,46 @@ public class CauHoiAdapter extends RecyclerView.Adapter<CauHoiAdapter.ViewHolder
         try {
             File f = new File(new ContextWrapper(context).getDir("images", Context.MODE_PRIVATE), hinhAnh);
             Bitmap b = BitmapFactory.decodeStream(new FileInputStream(f));
-            if (b != null) {
-                iv.setImageBitmap(b);
-                iv.setVisibility(View.VISIBLE);
-            } else {
-                iv.setVisibility(View.GONE);
-            }
+            if (b != null) { iv.setImageBitmap(b); iv.setVisibility(View.VISIBLE); }
+            else { iv.setVisibility(View.GONE); }
         } catch (FileNotFoundException e) {
             iv.setVisibility(View.GONE);
         }
     }
 
-    private void setDapAn(CauHoiAdapter.ViewHolder holder, int position, String value)
-    {
-        CauHoi ch = dsCauHoi.get(position);
-
-        if(ch.getGiaiThich() != null || !ch.getGiaiThich().isEmpty() || !ch.getGiaiThich().equals("null"))
-        {
-            holder.txtGiaiThichCauHoi.setText(ch.getGiaiThich());
-            holder.txtGiaiThichCauHoi.setVisibility(View.VISIBLE);
-        }
-
-        holder.rbA.setEnabled(false);
-        holder.rbB.setEnabled(false);
-        holder.rbC.setEnabled(false);
-        holder.rbD.setEnabled(false);
-        holder.txtDungSai.setText("Đã học");
-
-        if (ch.getDapAnDung().equals(value))
-        {
-            holder.ivDungSai.setImageResource(R.drawable.baseline_check_circle_24);
-        }
-        else
-        {
-            holder.ivDungSai.setImageResource(R.drawable.baseline_cancel_24);
-            setBackGround(holder, R.drawable.radio_button_background_shape_wrong, value);
-        }
-
-        setBackGround(holder, R.drawable.radio_button_background_shape_correct, ch.getDapAnDung());
-        DanhSach.getDsCauHoi().get(position).setDaTraLoiDung(ch.getDapAnDung().equals(value) ? 1 : 2);
-        db.updateDaTraLoi(ch.getMaCH(), ch.getDapAnDung().equals(value) ? 1 : 2);
-    }
-
-    private void setBackGround(CauHoiAdapter.ViewHolder holder, int backgroundID, String value)
-    {
-        switch (value)
-        {
-            case "A":
-                holder.rbA.setBackground(AppCompatResources.getDrawable(context, backgroundID));
-                holder.rbA.setTextColor(context.getColor(R.color.black));
-                break;
-            case "B":
-                holder.rbB.setBackground(AppCompatResources.getDrawable(context, backgroundID));
-                holder.rbB.setTextColor(context.getColor(R.color.black));
-                break;
-            case "C":
-                holder.rbC.setBackground(AppCompatResources.getDrawable(context, backgroundID));
-                holder.rbC.setTextColor(context.getColor(R.color.black));
-                break;
-            case "D":
-                holder.rbD.setBackground(AppCompatResources.getDrawable(context, backgroundID));
-                holder.rbA.setTextColor(context.getColor(R.color.black));
-                break;
-        }
-    }
-
     @Override
-    public int getItemCount() {
-        return dsCauHoi.size();
-    }
+    public int getItemCount() { return dsCauHoi.size(); }
 
-    class ViewHolder extends RecyclerView.ViewHolder
-    {
-        private final TextView txtNoiDungCauHoi, txtGiaiThichCauHoi, txtSoCauHoi, txtDungSai;
-        private final RadioButton rbA, rbB, rbC, rbD;
-        private final RecyclerView rvCauHoi;
+    class ViewHolder extends RecyclerView.ViewHolder {
+        final TextView txtNoiDungCauHoi, txtGiaiThichCauHoi, txtSoCauHoi, txtDungSai;
+        final RadioButton rbA, rbB, rbC, rbD;
+        final LinearLayout wrapA, wrapB, wrapC, wrapD;
+        final TextView tvLetterA, tvLetterB, tvLetterC, tvLetterD;
+        final RecyclerView rvCauHoi;
+        final ImageView ivDungSai, ivCauHoi, ivSave;
 
-        private final ImageView ivDungSai, ivCauHoi,ivSave;
-        public ViewHolder(@NonNull View itemView) {
+        ViewHolder(@NonNull View itemView) {
             super(itemView);
-            rvCauHoi = itemView.findViewById(R.id.rvGiaiThichBienBao);
-            txtSoCauHoi = itemView.findViewById(R.id.txtSoCauHoi);
-            txtDungSai = itemView.findViewById(R.id.txtDungSai);
-            txtNoiDungCauHoi = itemView.findViewById(R.id.txtNoiDungCauHoi);
+            rvCauHoi           = itemView.findViewById(R.id.rvGiaiThichBienBao);
+            txtSoCauHoi        = itemView.findViewById(R.id.txtSoCauHoi);
+            txtDungSai         = itemView.findViewById(R.id.txtDungSai);
+            txtNoiDungCauHoi   = itemView.findViewById(R.id.txtNoiDungCauHoi);
             txtGiaiThichCauHoi = itemView.findViewById(R.id.txtGiaiThichCauHoi);
-            ivDungSai = itemView.findViewById(R.id.ivDungSai);
-            ivCauHoi = itemView.findViewById(R.id.ivCauHoi);
-            rbA = itemView.findViewById(R.id.rbA);
-            rbB = itemView.findViewById(R.id.rbB);
-            rbC = itemView.findViewById(R.id.rbC);
-            rbD = itemView.findViewById(R.id.rbD);
-            ivSave = itemView.findViewById(R.id.ivSave);
+            ivDungSai          = itemView.findViewById(R.id.ivDungSai);
+            ivCauHoi           = itemView.findViewById(R.id.ivCauHoi);
+            ivSave             = itemView.findViewById(R.id.ivSave);
+            rbA                = itemView.findViewById(R.id.rbA);
+            rbB                = itemView.findViewById(R.id.rbB);
+            rbC                = itemView.findViewById(R.id.rbC);
+            rbD                = itemView.findViewById(R.id.rbD);
+            wrapA              = itemView.findViewById(R.id.wrapA);
+            wrapB              = itemView.findViewById(R.id.wrapB);
+            wrapC              = itemView.findViewById(R.id.wrapC);
+            wrapD              = itemView.findViewById(R.id.wrapD);
+            tvLetterA          = itemView.findViewById(R.id.tvLetterA);
+            tvLetterB          = itemView.findViewById(R.id.tvLetterB);
+            tvLetterC          = itemView.findViewById(R.id.tvLetterC);
+            tvLetterD          = itemView.findViewById(R.id.tvLetterD);
         }
-
     }
 }

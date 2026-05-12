@@ -4,16 +4,13 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.InputStream;
 
 public class ChiTietBienBaoActivity extends AppCompatActivity {
     ImageView imgDetailBB;
@@ -28,13 +25,11 @@ public class ChiTietBienBaoActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         try {
-            File f = new File(getDataDir() + "/app_images", intent.getStringExtra("HinhAnh"));
-            Log.d("path", f.getAbsolutePath());
-            Bitmap b = BitmapFactory.decodeStream(new FileInputStream(f));
+            InputStream is = getAssets().open("bien_bao/" + intent.getStringExtra("HinhAnh"));
+            Bitmap b = BitmapFactory.decodeStream(is);
+            is.close();
             imgDetailBB.setImageBitmap(b);
-        }
-        catch (FileNotFoundException e)
-        {
+        } catch (Exception e) {
             imgDetailBB.setImageResource(R.drawable.ico_exam);
         }
 

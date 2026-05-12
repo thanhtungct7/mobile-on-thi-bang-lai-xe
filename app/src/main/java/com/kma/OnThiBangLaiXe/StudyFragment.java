@@ -67,12 +67,13 @@ public class StudyFragment extends Fragment implements RecyclerViewInterface {
         txtModeExamSub = view.findViewById(R.id.txtModeExamSub);
 
         List<LoaiCauHoi> topics = new ArrayList<>();
-        topics.add(new LoaiCauHoi(1, "ico_fire",        "Câu hỏi điểm liệt",    true));
-        topics.add(new LoaiCauHoi(2, "ico_car",         "Kỹ thuật lái xe",       true));
-        topics.add(new LoaiCauHoi(3, "ico_trafficligh", "Khái niệm và quy tắc",  true));
-        topics.add(new LoaiCauHoi(4, "ico_account",     "Văn hóa và đạo đức",    false));
-        topics.add(new LoaiCauHoi(5, "ico_truck",       "Nghiệp vụ vận tải",     false));
-        topics.add(new LoaiCauHoi(6, "ico_sahinh",      "Sa hình",               false));
+        topics.add(new LoaiCauHoi(1, "ico_fire",          "Câu hỏi điểm liệt",     true));
+        topics.add(new LoaiCauHoi(2, "ico_trafficligh",   "Khái niệm và quy tắc",  false));
+        topics.add(new LoaiCauHoi(3, "ico_traffic_signs", "Biển báo",               false));
+        topics.add(new LoaiCauHoi(4, "ico_car",           "Tình huống giao thông",  false));
+        topics.add(new LoaiCauHoi(5, "ico_truck",         "Kỹ thuật lái xe",        false));
+        topics.add(new LoaiCauHoi(6, "ico_sahinh",        "Cấu tạo phương tiện",    false));
+        topics.add(new LoaiCauHoi(7, "ico_account",       "Văn hóa và đạo đức",     false));
 
         tlchAdapter = new TheLoaiCauHoiAdapter(topics, requireContext(), this);
         rvTheLoaiCauHoi.setLayoutManager(new LinearLayoutManager(requireContext()));
@@ -126,7 +127,7 @@ public class StudyFragment extends Fragment implements RecyclerViewInterface {
             txtModeExamSub.setText(totalDe + " đề · " + cauMoiDe + " câu · 19 phút");
         }
 
-        txtSubtitle.setText(total + " câu · 6 chủ đề · " + totalDe + " đề thi");
+        txtSubtitle.setText(total + " câu · 7 chủ đề · " + totalDe + " đề thi");
     }
 
     @Override
