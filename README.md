@@ -2,7 +2,7 @@
 <p>Language: Java</p>
 <p>Database: SQLite,Firebase </p>
 
->**Môn học: Phát triển ứng dụng di động HUFI**
+>**Môn học: Lập trình mobile cơ bản**
 
 <hr/>
 <p>Giảng viên hướng dẫn:</p>
