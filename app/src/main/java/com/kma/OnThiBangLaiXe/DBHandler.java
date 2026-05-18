@@ -5,8 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -58,7 +56,6 @@ public class DBHandler extends SQLiteOpenHelper {
         if (cursor.moveToFirst()) {
             do {
                 pb = Integer.parseInt(cursor.getString(0));
-                Log.d("SQLite", cursor.getString(0));
             } while (cursor.moveToNext());
         }
         cursor.close();
@@ -266,7 +263,7 @@ public class DBHandler extends SQLiteOpenHelper {
                 mDatabase.endTransaction();
             }
         } catch (Exception e) {
-            Log.e("DBHandler", "loadBienBaoFromAssets failed: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 
@@ -384,7 +381,6 @@ public class DBHandler extends SQLiteOpenHelper {
         mDatabase=this.getWritableDatabase();
         ContentValues contentValues  = new ContentValues();
         contentValues.put("DaTraLoiDung",DaTraLoiDung);
-        Log.e("123",DaTraLoiDung+"");
         mDatabase.update("CauHoi",contentValues,"MaCH=?", new String[]{String.valueOf(MaCH)});
 
     }

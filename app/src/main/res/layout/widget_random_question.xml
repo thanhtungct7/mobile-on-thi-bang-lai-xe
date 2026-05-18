@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widgetRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/widget_bg"
+    android:padding="10dp">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CÂU HỎI NGẪU NHIÊN"
+            android:textSize="9sp"
+            android:textColor="#99777368"/>
+
+        <TextView
+            android:id="@+id/widgetBtnRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="↺ Đổi câu"
+            android:textSize="10sp"
+            android:textColor="#FFC25B30"
+            android:paddingStart="6dp"
+            android:paddingEnd="0dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"/>
+
+    </LinearLayout>
+
+    <!-- Question image (hidden by default) -->
+    <ImageView
+        android:id="@+id/widgetImage"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:layout_marginBottom="5dp"
+        android:visibility="gone"/>
+
+    <!-- Question text -->
+    <TextView
+        android:id="@+id/widgetQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mở ứng dụng để tải câu hỏi"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="#FF2C2820"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:layout_marginBottom="6dp"/>
+
+    <!-- Answer A -->
+    <TextView
+        android:id="@+id/widgetOptA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:textColor="#FF5C4F3D"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/widget_answer_default"/>
+
+    <!-- Answer B -->
+    <TextView
+        android:id="@+id/widgetOptB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:textColor="#FF5C4F3D"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/widget_answer_default"/>
+
+    <!-- Answer C -->
+    <TextView
+        android:id="@+id/widgetOptC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:textColor="#FF5C4F3D"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/widget_answer_default"/>
+
+    <!-- Answer D -->
+    <TextView
+        android:id="@+id/widgetOptD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:textColor="#FF5C4F3D"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:background="@drawable/widget_answer_default"/>
+
+</LinearLayout>

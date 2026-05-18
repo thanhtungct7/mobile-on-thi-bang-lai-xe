@@ -2,8 +2,6 @@ package com.kma.OnThiBangLaiXe.Adapter;
 
 import android.content.Context;
 import android.content.ContextWrapper;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,14 +15,14 @@ import androidx.appcompat.content.res.AppCompatResources;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import com.kma.OnThiBangLaiXe.DBHandler;
 import com.kma.OnThiBangLaiXe.Model.CauHoi;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
 import com.kma.OnThiBangLaiXe.R;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.List;
 
 public class CauHoiAdapter extends RecyclerView.Adapter<CauHoiAdapter.ViewHolder> {
@@ -195,14 +193,13 @@ public class CauHoiAdapter extends RecyclerView.Adapter<CauHoiAdapter.ViewHolder
             iv.setVisibility(View.GONE);
             return;
         }
-        try {
-            File f = new File(new ContextWrapper(context).getDir("images", Context.MODE_PRIVATE), hinhAnh);
-            Bitmap b = BitmapFactory.decodeStream(new FileInputStream(f));
-            if (b != null) { iv.setImageBitmap(b); iv.setVisibility(View.VISIBLE); }
-            else { iv.setVisibility(View.GONE); }
-        } catch (FileNotFoundException e) {
+        File f = new File(new ContextWrapper(context).getDir("images", Context.MODE_PRIVATE), hinhAnh);
+        if (!f.exists()) {
             iv.setVisibility(View.GONE);
+            return;
         }
+        iv.setVisibility(View.VISIBLE);
+        Glide.with(context).load(f).into(iv);
     }
 
     @Override

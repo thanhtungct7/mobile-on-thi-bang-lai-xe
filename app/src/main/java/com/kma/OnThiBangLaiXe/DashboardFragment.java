@@ -16,7 +16,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.kma.OnThiBangLaiXe.Adapter.WeakAreaAdapter;
 import com.kma.OnThiBangLaiXe.Model.CauHoi;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
-import com.kma.OnThiBangLaiXe.Model.LoaiCauHoi;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -30,6 +29,7 @@ public class DashboardFragment extends Fragment {
     private TextView txtGreeting, txtSubtitle, txtStatQuestions, txtStatAccuracy, txtStatTopics;
     private RecyclerView rvWeakAreas;
     private View cardWeakAreas, txtNoWeakAreas;
+    private WeakAreaAdapter.OnItemClickListener weakAreaListener;
 
     // Category metadata (matches loadDBToDanhSach order in MainActivity)
     private static final int[]    CAT_IDS   = {1, 2, 3, 4, 5};
@@ -66,6 +66,12 @@ public class DashboardFragment extends Fragment {
 
         view.findViewById(R.id.btnStartPractice).setOnClickListener(v ->
                 startActivity(new Intent(requireContext(), CauHoiActivity.class)));
+
+        weakAreaListener = (catId, catName) -> {
+            Intent intent = new Intent(requireContext(), CauHoiActivity.class);
+            intent.putExtra("MaLoaiCH", catId);
+            startActivity(intent);
+        };
 
         setGreeting();
     }
@@ -149,7 +155,7 @@ public class DashboardFragment extends Fragment {
             if (catAnswered == 0) continue;
             int acc = (int) ((catCorrect / (float) catAnswered) * 100);
             if (acc < 80) {
-                areas.add(new WeakAreaAdapter.WeakArea(CAT_NAMES[i], wrong, acc, 0));
+                areas.add(new WeakAreaAdapter.WeakArea(CAT_NAMES[i], catId, wrong, acc, 0));
             }
         }
 
@@ -162,7 +168,7 @@ public class DashboardFragment extends Fragment {
         } else {
             cardWeakAreas.setVisibility(View.VISIBLE);
             txtNoWeakAreas.setVisibility(View.GONE);
-            rvWeakAreas.setAdapter(new WeakAreaAdapter(areas));
+            rvWeakAreas.setAdapter(new WeakAreaAdapter(areas, weakAreaListener));
         }
     }
 

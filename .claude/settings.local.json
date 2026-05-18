@@ -6,5 +6,8 @@
       "mcp__open-design__list_projects",
       "mcp__open-design__list_files"
     ]
+  },
+  "enabledPlugins": {
+    "sap-mdk-server@claude-plugins-official": true
   }
 }

@@ -29,8 +29,7 @@ public class ThiThuActivity extends AppCompatActivity {
     public static ViewPager2 vp;
     public static RecyclerView rvCauHoi;
     private CountDownTimer countDownTimer;
-//    private long time=1140000;//19 phút
-    private long time = 1200000;//10s dung de test
+    private long time;
     TextView txtTitle,txtNopBai;
     private int maDeThi;
     TabLayout tabLayout;
@@ -56,6 +55,7 @@ public class ThiThuActivity extends AppCompatActivity {
         btnNavBack = findViewById(R.id.btnNavBack);
         btnNavForward = findViewById(R.id.btnNavForward);
         toolbarBack =findViewById(R.id.toolbarBack);
+        time = DanhSach.getLoaiBang() == 2 ? 1_200_000L : 1_140_000L;
         // Mã loại câu hỏi
         maDeThi = getIntent().getIntExtra("MaDeThi", 0);
         db=new DBHandler(this);

@@ -1,14 +1,11 @@
 package com.kma.OnThiBangLaiXe;
 
-import static androidx.constraintlayout.widget.ConstraintLayoutStates.TAG;
-
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -17,8 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.kma.OnThiBangLaiXe.Custom.MyDB;
 import com.kma.OnThiBangLaiXe.Custom.MySharedPreferences;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.io.File;
@@ -102,13 +97,11 @@ public class SplashActivity extends AppCompatActivity {
         {
             try{
                 CopyDataBaseFromAsset();
-                Log.e("SQL","Đã Coppy đến database");
             }
             catch (Exception e){
                 Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
             }
         }
-        Log.e("SQL","Đã tồn tại");
     }
     private String getDatabasePath() {
         return getApplicationInfo().dataDir + DB_PATH_SUFFIX+ DATABASE_NAME;
@@ -136,18 +129,9 @@ public class SplashActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-    private  void getToken(){
-        FirebaseMessaging.getInstance().getToken().addOnCompleteListener(new OnCompleteListener<String>() {
-            @Override
-            public void onComplete(@NonNull Task<String> task) {
-                if (!task.isSuccessful()) {
-                    Log.w(TAG, "Fetching FCM registration token failed", task.getException());
-                }
-                // Get new FCM registration token
-                String token = task.getResult();
-                // Log and toast
-                Log.d(TAG, "thanh cong :"+token);
-            }
+    private void getToken() {
+        FirebaseMessaging.getInstance().getToken().addOnCompleteListener(task -> {
+            // FCM token retrieved – use task.getResult() to send to server if needed
         });
     }
 }

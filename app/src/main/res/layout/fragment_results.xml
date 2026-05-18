@@ -48,15 +48,6 @@
 
             </LinearLayout>
 
-            <ImageButton
-                android:id="@+id/btnFilter"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:background="@drawable/card_stroke"
-                android:src="@drawable/ic_filter"
-                android:padding="9dp"
-                android:contentDescription="Lọc"/>
-
         </LinearLayout>
 
         <!-- Summary stat grid -->

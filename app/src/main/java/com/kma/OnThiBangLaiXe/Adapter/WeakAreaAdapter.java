@@ -3,7 +3,6 @@ package com.kma.OnThiBangLaiXe.Adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,14 +14,20 @@ import java.util.List;
 
 public class WeakAreaAdapter extends RecyclerView.Adapter<WeakAreaAdapter.VH> {
 
+    public interface OnItemClickListener {
+        void onWeakAreaClick(int categoryId, String categoryName);
+    }
+
     public static class WeakArea {
         public final String categoryName;
+        public final int categoryId;
         public final int wrongCount;
         public final int accuracyPercent;
         public final int iconResId;
 
-        public WeakArea(String categoryName, int wrongCount, int accuracyPercent, int iconResId) {
+        public WeakArea(String categoryName, int categoryId, int wrongCount, int accuracyPercent, int iconResId) {
             this.categoryName    = categoryName;
+            this.categoryId      = categoryId;
             this.wrongCount      = wrongCount;
             this.accuracyPercent = accuracyPercent;
             this.iconResId       = iconResId;
@@ -30,9 +35,11 @@ public class WeakAreaAdapter extends RecyclerView.Adapter<WeakAreaAdapter.VH> {
     }
 
     private final List<WeakArea> items;
+    private final OnItemClickListener listener;
 
-    public WeakAreaAdapter(List<WeakArea> items) {
-        this.items = items;
+    public WeakAreaAdapter(List<WeakArea> items, OnItemClickListener listener) {
+        this.items    = items;
+        this.listener = listener;
     }
 
     @NonNull
@@ -50,12 +57,15 @@ public class WeakAreaAdapter extends RecyclerView.Adapter<WeakAreaAdapter.VH> {
         h.wrong.setText(item.wrongCount + " câu trả lời sai");
         h.accuracy.setText(item.accuracyPercent + "%");
 
-        // Divider: hide top border on first row
         if (pos == 0) {
             h.itemView.setPadding(
                     h.itemView.getPaddingLeft(), 4,
                     h.itemView.getPaddingRight(), 11);
         }
+
+        h.itemView.setOnClickListener(v -> {
+            if (listener != null) listener.onWeakAreaClick(item.categoryId, item.categoryName);
+        });
     }
 
     @Override

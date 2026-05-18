@@ -21,6 +21,10 @@ public class BienBaoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bien_bao);
         db=new DBHandler(this);
+        if (DanhSach.getDsBienBao().isEmpty()) {
+            DanhSach.setDsBienBao(db.docBienBao());
+            DanhSach.setDsLoaiBienBao(db.docLoaiBienBao());
+        }
         TabLayout tabLayout = findViewById(R.id.tab_layout);
         toolbarBienBao = findViewById(R.id.toolbarBienBao);
         toolbarBienBao.setNavigationOnClickListener(view -> onBackPressed());
@@ -30,5 +34,11 @@ public class BienBaoActivity extends AppCompatActivity {
 
         new TabLayoutMediator(tabLayout, vp, (tab, position)
                 -> tab.setText(DanhSach.getDsLoaiBienBao().get(position).getTenLoaiBB())).attach();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        DanhSach.clearBienBao();
     }
 }

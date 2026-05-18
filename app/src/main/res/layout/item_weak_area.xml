@@ -5,7 +5,10 @@
     android:orientation="horizontal"
     android:paddingVertical="11dp"
     android:paddingHorizontal="4dp"
-    android:gravity="center_vertical">
+    android:gravity="center_vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
 
     <LinearLayout
         android:id="@+id/iconBox"
@@ -48,6 +51,14 @@
         android:paddingVertical="3dp"
         android:textSize="10sp"
         android:textColor="@color/muted"
-        android:fontFamily="monospace" />
+        android:fontFamily="monospace"
+        android:layout_marginEnd="8dp"/>
+
+    <ImageView
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@drawable/ic_chevron_right"
+        android:alpha="0.4"
+        android:contentDescription="@null"/>
 
 </LinearLayout>

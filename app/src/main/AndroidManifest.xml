@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -70,6 +69,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver
+            android:name=".QuestionWidgetProvider"
+            android:exported="true"
+            android:label="Câu hỏi ngẫu nhiên">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.kma.OnThiBangLaiXe.WIDGET_REFRESH" />
+                <action android:name="com.kma.OnThiBangLaiXe.WIDGET_ANSWER_A" />
+                <action android:name="com.kma.OnThiBangLaiXe.WIDGET_ANSWER_B" />
+                <action android:name="com.kma.OnThiBangLaiXe.WIDGET_ANSWER_C" />
+                <action android:name="com.kma.OnThiBangLaiXe.WIDGET_ANSWER_D" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+
         <service
             android:name=".Custom.MyFirebaseMessagingService"
             android:exported="false">

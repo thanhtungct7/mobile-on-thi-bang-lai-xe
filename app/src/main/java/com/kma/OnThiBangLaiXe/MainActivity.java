@@ -85,10 +85,17 @@ public class MainActivity extends AppCompatActivity {
             dbHandler.loadBienBaoFromAssets();
         }
         DanhSach.setDsCauHoi(dbHandler.docCauHoi());
-        DanhSach.setDsBienBao(dbHandler.docBienBao());
-        DanhSach.setDsLoaiBienBao(dbHandler.docLoaiBienBao());
         DanhSach.setDsDeThi(dbHandler.docDeThi());
         DanhSach.setDsCauTraLoi(dbHandler.docCauTraLoi());
+        // BienBao & LoaiBienBao được load lazy trong BienBaoActivity
+    }
+
+    @Override
+    public void onTrimMemory(int level) {
+        super.onTrimMemory(level);
+        if (level >= TRIM_MEMORY_MODERATE) {
+            DanhSach.clearBienBao();
+        }
     }
 
     public void dialog(String title, String content) {

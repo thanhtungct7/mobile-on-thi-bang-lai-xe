@@ -1,7 +1,6 @@
 package com.kma.OnThiBangLaiXe.Adapter;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,7 +53,6 @@ public class menuCauHoiAdapter extends RecyclerView.Adapter<menuCauHoiAdapter.Vi
         }
 
         holder.btnCauHoi.setText(String.valueOf(position + 1));
-        Log.d("Test", String.valueOf(position + 1));
 
         boolean answered = ctl.getDapAnChon() != null;
         boolean critical = ch != null && ch.getMaLoaiCH() == 1;

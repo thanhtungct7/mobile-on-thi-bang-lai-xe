@@ -63,6 +63,11 @@ public class DanhSach {
         DanhSach.dsBienBao = dsBienBao;
     }
 
+    public static void clearBienBao() {
+        dsBienBao.clear();
+        dsLoaiBienBao.clear();
+    }
+
     public static List<CauHoi> getDsCauHoi() {
         return dsCauHoi;
     }

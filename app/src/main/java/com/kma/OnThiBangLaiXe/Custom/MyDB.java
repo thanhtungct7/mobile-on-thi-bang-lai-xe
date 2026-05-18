@@ -6,8 +6,6 @@ import android.content.ContextWrapper;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.util.Log;
-
 import androidx.annotation.NonNull;
 
 import com.kma.OnThiBangLaiXe.DBHandler;
@@ -79,9 +77,7 @@ public class MyDB {
                 }
             }
             @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Log.e("MyDB", "LoaiCauHoi failed: " + error.getMessage());
-            }
+            public void onCancelled(@NonNull DatabaseError error) { }
         });
 
         DatabaseReference csdlBienBao = database.getReference("BienBao");
@@ -100,9 +96,7 @@ public class MyDB {
                 }
             }
             @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Log.e("MyDB", "BienBao failed: " + error.getMessage());
-            }
+            public void onCancelled(@NonNull DatabaseError error) { }
         });
 
         DatabaseReference csdlCauHoi = database.getReference("CauHoi").child(String.valueOf(DanhSach.getLoaiBang()));
@@ -124,7 +118,6 @@ public class MyDB {
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Log.e("MyDB", "CauHoi failed: " + error.getMessage());
                 checkAndNavigate.run();
             }
         });
@@ -145,9 +138,7 @@ public class MyDB {
                 }
             }
             @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Log.e("MyDB", "DeThi failed: " + error.getMessage());
-            }
+            public void onCancelled(@NonNull DatabaseError error) { }
         });
 
         DatabaseReference csdlCauTraLoi = database.getReference("CauTraLoi");
@@ -168,7 +159,6 @@ public class MyDB {
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Log.e("MyDB", "CauTraLoi failed: " + error.getMessage());
                 checkAndNavigate.run();
             }
         });
@@ -189,33 +179,23 @@ public class MyDB {
                 }
             }
             @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                Log.e("MyDB", "LoaiBang failed: " + error.getMessage());
-            }
+            public void onCancelled(@NonNull DatabaseError error) { }
         });
     }
     public void downloadWithBytes(String type) {
         StorageReference imageRefl = storageReference.child(type);
-        Log.d("IMG_DEBUG", "Bắt đầu listAll folder: " + type);
         imageRefl.listAll()
             .addOnSuccessListener(listResult -> {
-                Log.d("IMG_DEBUG", "Folder [" + type + "] có " + listResult.getItems().size() + " ảnh");
                 for (StorageReference sr : listResult.getItems()) {
                     ContextWrapper cw = new ContextWrapper(context);
                     File directory = cw.getDir("images", Context.MODE_PRIVATE);
                     File existing = new File(directory, sr.getName());
-                    if (existing.exists()) {
-                        Log.d("IMG_DEBUG", "Đã có sẵn, bỏ qua: " + existing.getAbsolutePath());
-                        continue;
-                    }
-                    Log.d("IMG_DEBUG", "Đang tải: " + sr.getName());
+                    if (existing.exists()) continue;
                     long SIZE = 5 * 1024 * 1024;
                     sr.getBytes(SIZE)
-                        .addOnSuccessListener(bytes -> storeImageBytes(bytes, sr.getName()))
-                        .addOnFailureListener(e -> Log.e("IMG_DEBUG", "Tải thất bại: " + sr.getName() + " - " + e.getMessage()));
+                        .addOnSuccessListener(bytes -> storeImageBytes(bytes, sr.getName()));
                 }
-            })
-            .addOnFailureListener(e -> Log.e("IMG_DEBUG", "listAll thất bại cho [" + type + "]: " + e.getMessage()));
+            });
     }
 
     public void downloadImagesIfNeeded() {
@@ -230,9 +210,8 @@ public class MyDB {
             try (FileOutputStream fos = new FileOutputStream(file)) {
                 fos.write(bytes);
                 fos.flush();
-                Log.d("IMG_DEBUG", "Đã lưu: " + file.getAbsolutePath());
             } catch (java.io.IOException e) {
-                Log.e("IMG_DEBUG", "Lưu thất bại: " + name + " - " + e.getMessage());
+                e.printStackTrace();
             }
         }
     }
@@ -255,14 +234,12 @@ public class MyDB {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 isLastestVersion[0] = dbHandler.isLastestVersion(snapshot.getValue(int.class));
-                Log.e("Có cap nhat hay khong", isLastestVersion[0] + "");
                 if (!isLastestVersion[0]) {
                     progressDialog = new ProgressDialog(context);
                     progressDialog.setTitle("Loading....");
                     progressDialog.setMessage("quá trình này có thể mất vài phút,yêu cầu phải kết nối mạng...");
                     progressDialog.setCancelable(false);
                     progressDialog.show();
-                    Log.e("Có phiên bản mới", "");
                     String imageFolder = DanhSach.getLoaiBang() == 1 ? "anh_cau_hoi_a1" : "CauHoi";
                     downloadWithBytes(imageFolder);
                     capNhatDatabase();
@@ -291,7 +268,6 @@ public class MyDB {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Log.e("MyDB", "kiemTraPhienBan failed: " + error.getMessage());
                 MySharedPreferences mySharedPreferences = new MySharedPreferences(context);
                 mySharedPreferences.putBooleanValue("KEY_FIRST_INSTALL", true);
                 Intent intent = new Intent(context, MainActivity.class);

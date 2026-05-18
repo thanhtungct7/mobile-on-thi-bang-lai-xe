@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phân tích App – Ôn Thi Bằng Lái Xe</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --border: #2a2d3a;
+      --accent: #4f8ef7;
+      --green: #34d399;
+      --red: #f87171;
+      --yellow: #fbbf24;
+      --purple: #a78bfa;
+      --text: #e2e8f0;
+      --muted: #8892a4;
+      --radius: 12px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 40px 20px;
+    }
+
+    .container { max-width: 960px; margin: 0 auto; }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+    header .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #4f8ef7 0%, #a78bfa 100%);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+    header h1 {
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 800;
+      background: linear-gradient(135deg, #e2e8f0 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+    header p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* META ROW */
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+    .meta-chip {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .meta-chip strong { color: var(--text); }
+
+    /* SECTION */
+    section { margin-bottom: 52px; }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-title .icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .icon-blue   { background: rgba(79,142,247,.18); }
+    .icon-green  { background: rgba(52,211,153,.18); }
+    .icon-red    { background: rgba(248,113,113,.18); }
+    .icon-yellow { background: rgba(251,191,36,.18); }
+    .icon-purple { background: rgba(167,139,250,.18); }
+
+    /* FEATURE GRID */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .feature-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+    .feature-card h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .feature-card p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* PRO / CON LIST */
+    .pro-con-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 620px) { .pro-con-grid { grid-template-columns: 1fr; } }
+
+    .pro-box, .con-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+    .pro-box { border-top: 3px solid var(--green); }
+    .con-box { border-top: 3px solid var(--red); }
+
+    .pro-box h3 { color: var(--green); font-size: 14px; font-weight: 700; margin-bottom: 14px; letter-spacing: .5px; }
+    .con-box h3 { color: var(--red); font-size: 14px; font-weight: 700; margin-bottom: 14px; letter-spacing: .5px; }
+
+    ul.check { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    ul.check li { font-size: 13px; color: var(--muted); display: flex; align-items: flex-start; gap: 8px; }
+    ul.check li::before { flex-shrink: 0; margin-top: 2px; }
+    .pro-box ul.check li::before { content: '✓'; color: var(--green); font-weight: 700; }
+    .con-box ul.check li::before { content: '✗'; color: var(--red); font-weight: 700; }
+
+    /* TODO TABLE */
+    .todo-list { display: flex; flex-direction: column; gap: 12px; }
+    .todo-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .priority-badge {
+      flex-shrink: 0;
+      padding: 3px 10px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+    .p-high   { background: rgba(248,113,113,.18); color: var(--red); }
+    .p-medium { background: rgba(251,191,36,.18);  color: var(--yellow); }
+    .p-low    { background: rgba(52,211,153,.18);  color: var(--green); }
+
+    .todo-content h4 { font-size: 14px; font-weight: 600; margin-bottom: 3px; }
+    .todo-content p  { font-size: 13px; color: var(--muted); }
+    .todo-content code {
+      font-family: monospace;
+      font-size: 12px;
+      background: rgba(255,255,255,.07);
+      padding: 1px 6px;
+      border-radius: 4px;
+      color: var(--accent);
+    }
+
+    /* STATS */
+    .stats-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 22px;
+      flex: 1 1 130px;
+      text-align: center;
+    }
+    .stat-card .num {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1.1;
+    }
+    .stat-card .label {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <header>
+    <div class="badge">Báo cáo phân tích</div>
+    <h1>Ôn Thi Bằng Lái Xe</h1>
+    <p>Phân tích chức năng · Điểm mạnh · Điểm yếu · Đề xuất cải tiến</p>
+  </header>
+
+  <!-- META -->
+  <div class="meta-row">
+    <div class="meta-chip"><strong>Ngôn ngữ:</strong> Java (Android)</div>
+    <div class="meta-chip"><strong>Min SDK:</strong> 24 &nbsp;|&nbsp; <strong>Target SDK:</strong> 34</div>
+    <div class="meta-chip"><strong>Database:</strong> SQLite + Firebase Realtime DB</div>
+    <div class="meta-chip"><strong>Storage:</strong> Firebase Cloud Storage</div>
+    <div class="meta-chip"><strong>Môn học:</strong> Lập trình ứng dụng di động – KMA</div>
+    <div class="meta-chip"><strong>Nhóm:</strong> Ngô Thanh Tùng · Tô Quốc Tuấn · Lê Xuân Trường</div>
+  </div>
+
+  <!-- THỐNG KÊ -->
+  <section>
+    <div class="section-title">
+      <span class="icon icon-blue">📊</span>
+      Thống kê dự án
+    </div>
+    <div class="stats-row">
+      <div class="stat-card"><div class="num">51</div><div class="label">File Java</div></div>
+      <div class="stat-card"><div class="num">14</div><div class="label">Activity</div></div>
+      <div class="stat-card"><div class="num">5</div><div class="label">Fragment</div></div>
+      <div class="stat-card"><div class="num">15</div><div class="label">Adapter</div></div>
+      <div class="stat-card"><div class="num">35</div><div class="label">Layout XML</div></div>
+      <div class="stat-card"><div class="num">600+</div><div class="label">Câu hỏi</div></div>
+    </div>
+  </section>
+
+  <!-- CHỨC NĂNG -->
+  <section>
+    <div class="section-title">
+      <span class="icon icon-blue">⚙️</span>
+      Các chức năng đã triển khai
+    </div>
+    <div class="feature-grid">
+
+      <div class="feature-card">
+        <h3>🏠 Dashboard tổng quan</h3>
+        <p>Hiển thị vòng tròn sẵn sàng thi (<code>ReadinessRingView</code>), tỉ lệ đúng, số câu đã làm, danh sách chủ đề yếu. Cập nhật realtime từ SQLite.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>📚 Học theo chủ đề</h3>
+        <p>Chia 600+ câu hỏi thành 7 chủ đề. Màn hình học dùng ViewPager2, hiển thị hình ảnh minh họa, đáp án và giải thích chi tiết. Cho phép bookmark câu hỏi.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>📝 Thi thử có giới hạn thời gian</h3>
+        <p>Mô phỏng đề thi thực tế với đồng hồ đếm ngược 19 phút, bảng câu hỏi thu nhỏ để điều hướng nhanh, ghi nhận đáp án từng câu.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>📊 Xem kết quả thi</h3>
+        <p>Hiển thị điểm số, tỉ lệ chính xác, phân tích từng câu (đúng/sai/bỏ trống). Lịch sử đề thi với bộ lọc Tất cả / Đậu / Rớt.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>🚦 Thư viện biển báo</h3>
+        <p>Duyệt toàn bộ biển báo giao thông, phân loại theo tab (cấm, nguy hiểm, hiệu lệnh…), xem chi tiết từng biển với hình ảnh và mô tả.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>🔖 Câu đã lưu</h3>
+        <p>Danh sách câu hỏi mà người dùng đã bookmark, cho phép xem lại và luyện tập riêng.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>❌ Câu sai</h3>
+        <p>Tự động lưu câu hỏi trả lời sai để người dùng ôn lại. Cũng có màn hình riêng cho "câu hay sai" (lọc theo độ khó).</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>👤 Hồ sơ người dùng</h3>
+        <p>Chọn hạng bằng lái (A1, B1, B2, C…), xem nhanh số câu đã lưu, số câu sai, số câu dễ sai.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>🔔 Thông báo đẩy (FCM)</h3>
+        <p>Tích hợp Firebase Cloud Messaging để gửi nhắc nhở học bài hoặc thông báo cập nhật nội dung.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>📶 Đồng bộ offline / online</h3>
+        <p>Dữ liệu câu hỏi và hình ảnh tải về máy một lần (<code>MyDB</code> + <code>DBHandler</code>). Sau đó hoàn toàn hoạt động offline. Kiểm tra version để cập nhật khi có nội dung mới.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>🪟 Widget màn hình chính</h3>
+        <p>App Widget hiển thị câu hỏi ngẫu nhiên ngay ngoài màn hình chính, 4 nút chọn đáp án A/B/C/D, phản hồi màu sắc đúng/sai tức thì.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>🗒️ Mẹo & Tips</h3>
+        <p>Trang mẹo thi bằng lái hiển thị qua WebView từ nội dung HTML nội tuyến, dễ cập nhật không cần release mới.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ĐIỂM LỢI -->
+  <section>
+    <div class="section-title">
+      <span class="icon icon-green">✅</span>
+      Điểm mạnh
+    </div>
+    <div class="pro-con-grid">
+      <div class="pro-box">
+        <h3>Kiến trúc &amp; Code</h3>
+        <ul class="check">
+          <li>Phân tách rõ Activity / Fragment / Adapter / Model – dễ bảo trì và mở rộng.</li>
+          <li>Sử dụng đúng <strong>ViewPager2 + RecyclerView</strong>, tránh gây giật lag khi cuộn.</li>
+          <li>Custom view <code>ReadinessRingView</code> vẽ trực tiếp trên Canvas, hiệu năng tốt hơn dùng ảnh SVG.</li>
+          <li>App Widget tích hợp bài thi vào home screen – điểm khác biệt so với app cùng loại.</li>
+          <li>Kiến trúc offline-first: tải dữ liệu một lần, dùng mãi mà không cần mạng.</li>
+          <li>Xử lý lỗi Firebase có callback, không để crash thầm lặng.</li>
+          <li>Sử dụng <code>MySharedPreferences</code> tập trung thay vì rải SharedPreferences khắp nơi.</li>
+        </ul>
+      </div>
+      <div class="pro-box">
+        <h3>Tính năng &amp; UX</h3>
+        <ul class="check">
+          <li>Hỗ trợ nhiều hạng bằng lái (A1, B1, B2, C…) – phù hợp nhiều đối tượng.</li>
+          <li>Dashboard thống kê trực quan giúp người dùng biết mình đang yếu ở chủ đề nào.</li>
+          <li>Bảng câu hỏi thu nhỏ trong thi thử giúp điều hướng nhanh như đề thi thật.</li>
+          <li>Thư viện biển báo đầy đủ với hình ảnh thực tế từ Firebase Storage.</li>
+          <li>Onboarding tốt: hướng dẫn người dùng ngay lần đầu cài đặt.</li>
+          <li>Tách màn hình "câu sai" và "câu hay sai" giúp ôn tập đúng trọng tâm.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ĐIỂM HẠI -->
+  <section>
+    <div class="section-title">
+      <span class="icon icon-red">⚠️</span>
+      Điểm yếu / Hạn chế
+    </div>
+    <div class="pro-con-grid">
+      <div class="con-box">
+        <h3>Kỹ thuật</h3>
+        <ul class="check">
+          <li><strong>Timer thi thử để giá trị test:</strong> <code>time = 1200000ms (20 phút)</code> thay vì 19 phút đúng quy định. Cần sửa trước khi phát hành.</li>
+          <li><strong>DanhSach singleton tĩnh</strong> giữ toàn bộ dữ liệu trong RAM – có thể gây <code>OutOfMemoryError</code> trên thiết bị thấp khi dataset lớn.</li>
+          <li><strong>Không có ViewModel / LiveData</strong> – Fragment kết nối trực tiếp với DB/singleton, khó test và dễ bug khi xoay màn hình.</li>
+          <li><strong>Log debug còn sót lại</strong> (<code>Log.d("IMG_DEBUG", ...)</code>) trong <code>MyDB.java</code> – ảnh hưởng hiệu năng và bảo mật log trên production.</li>
+          <li><strong>Quyền BLUETOOTH</strong> khai báo trong Manifest nhưng không thấy dùng ở đâu trong code – thừa, gây nghi ngờ cho người dùng.</li>
+          <li><strong>Tải ảnh thủ công</strong> từ Firebase Storage bằng code tự viết, không dùng thư viện (Glide/Picasso) – thiếu cache layer, dễ tải lại ảnh không cần thiết.</li>
+          <li><strong>Không có Proguard / R8 rule</strong> được tùy chỉnh – code có thể bị obfuscate nhầm khi build release.</li>
+        </ul>
+      </div>
+      <div class="con-box">
+        <h3>UX &amp; Tính năng</h3>
+        <ul class="check">
+          <li><strong>Không có tìm kiếm câu hỏi</strong> – người dùng không thể tìm câu hỏi theo từ khóa.</li>
+          <li><strong>Không có chế độ tối / sáng</strong> tuỳ chỉnh – giao diện cố định, không theo system theme.</li>
+          <li><strong>Không có âm thanh phản hồi</strong> – khi trả lời đúng/sai không có feedback âm thanh, giảm trải nghiệm gamification.</li>
+          <li><strong>Profile không cho sửa tên/avatar</strong> – người dùng không cảm thấy cá nhân hóa.</li>
+          <li><strong>Không có chế độ luyện tập ngẫu nhiên</strong> toàn bộ 600 câu (chỉ có theo chủ đề hoặc đề thi cố định).</li>
+          <li><strong>Kết quả thi không xuất được</strong> ra file hay chia sẻ – không có tính năng so sánh với bạn bè.</li>
+          <li><strong>Onboarding chỉ hiện một lần</strong>, không có cách xem lại hướng dẫn từ trong app.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CẦN BỔ SUNG / SỬA -->
+  <section>
+    <div class="section-title">
+      <span class="icon icon-yellow">🛠️</span>
+      Cần bổ sung &amp; chỉnh sửa
+    </div>
+    <div class="todo-list">
+
+      <div class="todo-item">
+        <span class="priority-badge p-high">Khẩn</span>
+        <div class="todo-content">
+          <h4>Sửa thời gian thi thử về đúng quy định (19 phút)</h4>
+          <p>File <code>ThiThuActivity.java</code> – biến <code>time</code> đang là <code>1200000ms</code> (giá trị test). Đổi lại thành <code>1140000ms</code> hoặc đúng quy định từng hạng bằng.</p>
+        </div>
+      </div>
+
+      <div class="todo-item">
+        <span class="priority-badge p-high">Khẩn</span>
+        <div class="todo-content">
+          <h4>Xóa toàn bộ Log.d / Log debug trước khi phát hành</h4>
+          <p>Tìm và xóa các dòng <code>Log.d("IMG_DEBUG", ...)</code> trong <code>MyDB.java</code>. Cân nhắc dùng <code>BuildConfig.DEBUG</code> để bật/tắt log theo môi trường.</p>
+        </div>
+      </div>
+
+      <div class="todo-item">
+        <span class="priority-badge p-high">Khẩn</span>
+        <div class="todo-content">
+          <h4>Xóa quyền BLUETOOTH không cần thiết</h4>
+          <p>Trong <code>AndroidManifest.xml</code>, quyền <code>android.permission.BLUETOOTH</code> không được sử dụng. Xóa để tránh từ chối từ Google Play và gây lo ngại quyền riêng tư.</p>
+        </div>
+      </div>
+
+      <div class="todo-item">
+        <span class="priority-badge p-medium">Quan trọng</span>
+        <div class="todo-content">
+          <h4>Thay thế tải ảnh thủ công bằng Glide hoặc Coil</h4>
+          <p>Hiện tải ảnh từ Firebase Storage tự quản lý cache. Dùng <strong>Glide</strong> với <code>GlideApp.with(context).load(firebaseStorageRef)</code> để có cache đĩa, placeholder, error handling tự động.</p>
+        </div>
+      </div>
+
+      <div class="todo-item">
+        <span class="priority-badge p-medium">Quan trọng</span>
+        <div class="todo-content">
+          <h4>Áp dụng ViewModel + LiveData / StateFlow cho các Fragment</h4>
+          <p>DashboardFragment, StudyFragment… đang đọc trực tiếp từ <code>DanhSach</code> singleton. Chuyển sang ViewModel để tránh memory leak khi xoay màn hình và dễ viết unit test hơn.</p>
+        </div>
+      </div>
+
+      <div class="todo-item">
+        <span class="priority-badge p-medium">Quan trọng</span>
+        <div class="todo-content">
+          <h4>Thêm tính năng tìm kiếm câu hỏi và biển báo</h4>
+          <p>Người dùng cần tìm câu theo từ khóa (vd: "tốc độ tối đa", "đèn đỏ"). Thêm SearchView ở màn hình học và biển báo, tìm kiếm trong SQLite với <code>LIKE %keyword%</code>.</p>
+        </div>
+      </div>
+
+      <div class="todo-item">
+        <span class="priority-badge p-medium">Quan trọng</span>
+        <div class="todo-content">
+          <h4>Hỗ trợ Dark mode / Light mode theo hệ thống</h4>
+          <p>Thêm file <code>res/values-night/colors.xml</code> với bảng màu tối. Trong code, thay màu hardcode bằng attribute theme (<code>?attr/colorSurface</code>…). Người dùng Android 10+ sẽ được tự động áp dụng.</p>
+        </div>
+      </div>
+
+      <div class="todo-item">
+        <span class="priority-badge p-medium">Quan trọng</span>
+        <div class="todo-content">
+          <h4>Thêm chế độ luyện ngẫu nhiên (Random 600 câu)</h4>
+          <p>Bổ sung chế độ luyện tập chọn ngẫu nhiên N câu từ toàn bộ ngân hàng đề, không theo chủ đề hay đề cố định. Thêm vào StudyFragment như một card riêng.</p>
+        </div>
+      </div>
+
+      <div class="todo-item">
+        <span class="priority-badge p-low">Nên làm</span>
+        <div class="todo-content">
+          <h4>Phản hồi âm thanh khi trả lời đúng / sai</h4>
+          <p>Dùng <code>SoundPool</code> phát âm thanh nhẹ khi chọn đáp án. Thêm toggle tắt âm thanh trong Settings để không làm phiền ở nơi công cộng.</p>
+        </div>
+      </div>
+
+      <div class="todo-item">
+        <span class="priority-badge p-low">Nên làm</span>
+        <div class="todo-content">
+          <h4>Cho phép chỉnh sửa tên / avatar trong Profile</h4>
+          <p>Thêm trường tên và ảnh đại diện (chọn từ thư viện hoặc chụp ảnh). Lưu vào SharedPreferences hoặc Firebase Auth nếu có tài khoản.</p>
+        </div>
+      </div>
+
+      <div class="todo-item">
+        <span class="priority-badge p-low">Nên làm</span>
+        <div class="todo-content">
+          <h4>Xuất / chia sẻ kết quả thi</h4>
+          <p>Sau khi thi, cho phép chia sẻ kết quả dạng ảnh hoặc văn bản qua các nền tảng (Zalo, Facebook…). Dùng <code>ShareCompat.IntentBuilder</code> hoặc tạo ảnh từ layout bằng <code>Canvas</code>.</p>
+        </div>
+      </div>
+
+      <div class="todo-item">
+        <span class="priority-badge p-low">Nên làm</span>
+        <div class="todo-content">
+          <h4>Thêm màn hình cài đặt (Settings)</h4>
+          <p>Tập hợp các tùy chỉnh: bật/tắt âm thanh, thông báo, chọn lại hạng bằng, xóa lịch sử thi, xem lại onboarding. Hiện các tùy chọn này không có hoặc nằm rải rác.</p>
+        </div>
+      </div>
+
+      <div class="todo-item">
+        <span class="priority-badge p-low">Nên làm</span>
+        <div class="todo-content">
+          <h4>Thêm màn hình Splash / Loading khi đồng bộ dữ liệu lần đầu</h4>
+          <p>Hiện SplashActivity tải dữ liệu ngầm nhưng không hiển thị tiến trình rõ ràng. Thêm ProgressBar với % tải ảnh để người dùng không nghĩ app bị treo.</p>
+        </div>
+      </div>
+
+      <div class="todo-item">
+        <span class="priority-badge p-low">Nên làm</span>
+        <div class="todo-content">
+          <h4>Viết unit test cho DBHandler và logic tính điểm</h4>
+          <p>Hiện chỉ có <code>ExampleUnitTest.java</code> rỗng. Thêm test cho <code>DBHandler</code> (CRUD), logic tính điểm thi, và bộ lọc câu hỏi để tránh regression khi sửa code.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KẾT LUẬN -->
+  <section>
+    <div class="section-title">
+      <span class="icon icon-purple">💡</span>
+      Tổng kết
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px 28px;line-height:1.8;">
+      <p style="margin-bottom:14px;">
+        App <strong>Ôn Thi Bằng Lái Xe</strong> đã hoàn thiện được các chức năng cốt lõi đúng yêu cầu môn học: học lý thuyết, thi thử, thống kê, biển báo, widget. Codebase được tổ chức tốt, phân tách rõ các tầng, và offline-first là điểm mạnh thực sự.
+      </p>
+      <p style="margin-bottom:14px;">
+        Vấn đề ưu tiên cần giải quyết ngay là <strong>sửa timer thi</strong> về đúng 19 phút và <strong>dọn dẹp code debug</strong> trước khi phát hành. Về trung hạn, chuyển sang <strong>ViewModel + Glide</strong> sẽ nâng đáng kể độ ổn định và hiệu năng. Về dài hạn, thêm <strong>tìm kiếm, dark mode, settings</strong> sẽ cải thiện hẳn trải nghiệm người dùng.
+      </p>
+      <p style="color:var(--muted);font-size:13px;">
+        Tổng thể: đây là một sản phẩm tốt cho môn học, có chiều sâu kỹ thuật và giá trị thực tế. Với các cải tiến trên, app hoàn toàn đủ tiêu chuẩn phát hành lên Google Play.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    Tạo tự động bởi Claude Code &nbsp;·&nbsp; Dự án KMA – Lập trình ứng dụng di động &nbsp;·&nbsp; 2026
+  </footer>
+
+</div>
+</body>
+</html>

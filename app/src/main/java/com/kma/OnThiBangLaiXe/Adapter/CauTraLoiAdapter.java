@@ -2,9 +2,6 @@ package com.kma.OnThiBangLaiXe.Adapter;
 
 import android.content.Context;
 import android.content.ContextWrapper;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import com.kma.OnThiBangLaiXe.DBHandler;
 import com.kma.OnThiBangLaiXe.Model.CauHoi;
 import com.kma.OnThiBangLaiXe.Model.CauTraLoi;
@@ -25,8 +24,6 @@ import com.kma.OnThiBangLaiXe.R;
 import com.kma.OnThiBangLaiXe.ThiThuActivity;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.util.List;
 import java.util.Objects;
 
@@ -218,15 +215,13 @@ public class CauTraLoiAdapter extends RecyclerView.Adapter<CauTraLoiAdapter.View
             iv.setVisibility(View.GONE);
             return;
         }
-        try {
-            File f = new File(new ContextWrapper(context).getDir("images", Context.MODE_PRIVATE), hinhAnh);
-            Log.d("IMG_DEBUG", "Load: " + f.getAbsolutePath() + " exists=" + f.exists());
-            Bitmap b = BitmapFactory.decodeStream(new FileInputStream(f));
-            if (b != null) { iv.setImageBitmap(b); iv.setVisibility(View.VISIBLE); }
-            else { iv.setVisibility(View.GONE); }
-        } catch (FileNotFoundException e) {
+        File f = new File(new ContextWrapper(context).getDir("images", Context.MODE_PRIVATE), hinhAnh);
+        if (!f.exists()) {
             iv.setVisibility(View.GONE);
+            return;
         }
+        iv.setVisibility(View.VISIBLE);
+        Glide.with(context).load(f).into(iv);
     }
 
     @Override

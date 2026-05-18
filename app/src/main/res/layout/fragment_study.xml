@@ -48,15 +48,6 @@
 
             </LinearLayout>
 
-            <ImageButton
-                android:id="@+id/btnSearch"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:background="@drawable/card_stroke"
-                android:src="@drawable/ic_search"
-                android:padding="9dp"
-                android:contentDescription="Tìm kiếm"/>
-
         </LinearLayout>
 
         <!-- Overall progress card -->
