@@ -2,7 +2,9 @@ package com.kma.OnThiBangLaiXe;
 
 import static com.kma.OnThiBangLaiXe.Model.DanhSach.getDsBienBao;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -28,6 +30,10 @@ public class BienBaoActivity extends AppCompatActivity {
         TabLayout tabLayout = findViewById(R.id.tab_layout);
         toolbarBienBao = findViewById(R.id.toolbarBienBao);
         toolbarBienBao.setNavigationOnClickListener(view -> onBackPressed());
+
+        TextView btnFlashcard = findViewById(R.id.btnFlashcard);
+        btnFlashcard.setOnClickListener(v ->
+                startActivity(new Intent(this, FlashcardActivity.class)));
         ViewPager2 vp = findViewById(R.id.vp);
         LoaiBienBaoAdapter lbbAdapter = new LoaiBienBaoAdapter(DanhSach.getDsLoaiBienBao(), this, getDsBienBao());
         vp.setAdapter(lbbAdapter);

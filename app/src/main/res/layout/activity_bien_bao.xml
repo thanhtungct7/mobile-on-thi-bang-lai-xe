@@ -27,6 +27,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center" />
+        <TextView
+            android:id="@+id/btnFlashcard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="12dp"
+            android:text="Flashcard"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/accent_card_bg"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="6dp"
+            android:clickable="true"
+            android:focusable="true" />
     </androidx.appcompat.widget.Toolbar>
 
     <com.google.android.material.tabs.TabLayout
