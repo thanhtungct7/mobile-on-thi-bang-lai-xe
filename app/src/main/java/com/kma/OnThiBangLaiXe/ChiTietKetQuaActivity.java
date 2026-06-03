@@ -13,7 +13,9 @@ import com.kma.OnThiBangLaiXe.Model.CauTraLoi;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ChiTietKetQuaActivity extends AppCompatActivity {
     public ViewPager2 vp;
@@ -35,11 +37,19 @@ public class ChiTietKetQuaActivity extends AppCompatActivity {
 
         int maDeThi = getIntent().getIntExtra("MaDeThi", 0);
         int viTri = getIntent().getIntExtra("ViTri", 0);
+        int[] maCHList = getIntent().getIntArrayExtra("MaCHList");
 
-        for (CauTraLoi ctl : db.getListCauTraLoiByMaDeThi(maDeThi))
-        {
-            if (ctl.getMaDeThi() == maDeThi)
-                dsCauTraLoi.add(ctl);
+        List<CauTraLoi> allCTL = db.getListCauTraLoiByMaDeThi(maDeThi);
+
+        if (maCHList != null && maCHList.length > 0) {
+            Map<Integer, CauTraLoi> ctlMap = new HashMap<>();
+            for (CauTraLoi ctl : allCTL) ctlMap.put(ctl.getMaCH(), ctl);
+            for (int maCH : maCHList) {
+                CauTraLoi ctl = ctlMap.get(maCH);
+                if (ctl != null) dsCauTraLoi.add(ctl);
+            }
+        } else {
+            dsCauTraLoi.addAll(allCTL);
         }
 
         vp.setAdapter(new CauTraLoiAdapter(dsCauTraLoi, this, true));

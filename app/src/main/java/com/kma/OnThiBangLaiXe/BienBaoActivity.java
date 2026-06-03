@@ -34,6 +34,7 @@ public class BienBaoActivity extends AppCompatActivity {
         TextView btnFlashcard = findViewById(R.id.btnFlashcard);
         btnFlashcard.setOnClickListener(v ->
                 startActivity(new Intent(this, FlashcardActivity.class)));
+
         ViewPager2 vp = findViewById(R.id.vp);
         LoaiBienBaoAdapter lbbAdapter = new LoaiBienBaoAdapter(DanhSach.getDsLoaiBienBao(), this, getDsBienBao());
         vp.setAdapter(lbbAdapter);

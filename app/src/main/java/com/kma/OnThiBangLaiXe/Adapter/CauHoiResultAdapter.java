@@ -87,15 +87,21 @@ public class CauHoiResultAdapter extends RecyclerView.Adapter<CauHoiResultAdapte
             holder.cau.setTextColor(ContextCompat.getColor(context, R.color.result_fail_fg));
         }
 
-        // Tap to view detail — ViTri is position in full exam list
+        // Tap to view detail — only show questions in the current filtered list
         holder.itemView.setOnClickListener(view -> {
             int adapterPos = holder.getAdapterPosition();
             if (adapterPos == RecyclerView.NO_POSITION) return;
             CauTraLoi clicked = dsCTL.get(adapterPos);
-            int viTriGoc = fullList.indexOf(clicked);
+
+            int[] maCHList = new int[dsCTL.size()];
+            for (int i = 0; i < dsCTL.size(); i++) {
+                maCHList[i] = dsCTL.get(i).getMaCH();
+            }
+
             Intent intent = new Intent(context, ChiTietKetQuaActivity.class);
             intent.putExtra("MaDeThi", clicked.getMaDeThi());
-            intent.putExtra("ViTri", viTriGoc >= 0 ? viTriGoc : adapterPos);
+            intent.putExtra("ViTri", adapterPos);
+            intent.putExtra("MaCHList", maCHList);
             context.startActivity(intent);
         });
     }

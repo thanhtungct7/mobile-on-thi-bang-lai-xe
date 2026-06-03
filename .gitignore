@@ -12,3 +12,5 @@ local.properties
 /app/google-services.json
 /app/src/debug/google-services.json
 json/
+.claude
+doc/

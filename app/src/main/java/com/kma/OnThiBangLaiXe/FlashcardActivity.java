@@ -2,16 +2,16 @@ package com.kma.OnThiBangLaiXe;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.view.View;
-import android.view.animation.AccelerateInterpolator;
-import android.view.animation.DecelerateInterpolator;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -33,9 +33,7 @@ public class FlashcardActivity extends AppCompatActivity {
     private boolean isFlipped = false;
     private boolean isAnimating = false;
 
-    private MaterialCardView flashCard;
-    private LinearLayout frontFace;
-    private ScrollView backFace;
+    private MaterialCardView flashCardFront, flashCardBack;
     private ImageView ivSign;
     private TextView txtCounter;
     private TextView txtMaBBBack;
@@ -52,9 +50,8 @@ public class FlashcardActivity extends AppCompatActivity {
         txtTitle.setText("Flashcard Biển báo");
         toolbar.setNavigationOnClickListener(v -> onBackPressed());
 
-        flashCard = findViewById(R.id.flashCard);
-        frontFace = findViewById(R.id.frontFace);
-        backFace = findViewById(R.id.backFace);
+        flashCardFront = findViewById(R.id.flashCardFront);
+        flashCardBack = findViewById(R.id.flashCardBack);
         ivSign = findViewById(R.id.ivSign);
         txtCounter = findViewById(R.id.txtFlashcardCounter);
         txtMaBBBack = findViewById(R.id.txtMaBBBack);
@@ -62,9 +59,11 @@ public class FlashcardActivity extends AppCompatActivity {
         txtNoiDungBack = findViewById(R.id.txtNoiDungBack);
         Button btnPrev = findViewById(R.id.btnPrev);
         Button btnNext = findViewById(R.id.btnNext);
+        ScrollView backFace = findViewById(R.id.backFace);
 
         float scale = getResources().getDisplayMetrics().density;
-        flashCard.setCameraDistance(8000 * scale);
+        flashCardFront.setCameraDistance(8000 * scale);
+        flashCardBack.setCameraDistance(8000 * scale);
 
         DBHandler db = new DBHandler(this);
         if (DanhSach.getDsBienBao().isEmpty()) {
@@ -74,8 +73,22 @@ public class FlashcardActivity extends AppCompatActivity {
 
         showCard(0);
 
-        flashCard.setOnClickListener(v -> flipCard());
-        backFace.setOnClickListener(v -> flipCard());
+        flashCardFront.setOnClickListener(v -> flipCard());
+
+        // GestureDetector để phân biệt tap đơn và scroll trên mặt sau
+        GestureDetector gestureDetector = new GestureDetector(this,
+                new GestureDetector.SimpleOnGestureListener() {
+                    @Override
+                    public boolean onSingleTapUp(MotionEvent e) {
+                        flipCard();
+                        return true;
+                    }
+                });
+        backFace.setOnTouchListener((v, event) -> {
+            gestureDetector.onTouchEvent(event);
+            return false; // cho phép ScrollView vẫn xử lý scroll
+        });
+
         btnPrev.setOnClickListener(v -> navigate(-1));
         btnNext.setOnClickListener(v -> navigate(1));
     }
@@ -99,42 +112,50 @@ public class FlashcardActivity extends AppCompatActivity {
         }
 
         isFlipped = false;
-        frontFace.setVisibility(View.VISIBLE);
-        backFace.setVisibility(View.GONE);
-        flashCard.setRotationY(0f);
+        flashCardFront.setRotationY(0f);
+        flashCardFront.setVisibility(android.view.View.VISIBLE);
+        flashCardBack.setRotationY(180f);
+        flashCardBack.setVisibility(android.view.View.GONE);
     }
 
     private void flipCard() {
         if (isAnimating) return;
         isAnimating = true;
 
-        ObjectAnimator firstHalf = ObjectAnimator.ofFloat(flashCard, "rotationY", 0f, 90f);
-        firstHalf.setDuration(150);
-        firstHalf.setInterpolator(new AccelerateInterpolator());
-        firstHalf.addListener(new AnimatorListenerAdapter() {
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                isFlipped = !isFlipped;
-                if (isFlipped) {
-                    frontFace.setVisibility(View.GONE);
-                    backFace.setVisibility(View.VISIBLE);
-                } else {
-                    frontFace.setVisibility(View.VISIBLE);
-                    backFace.setVisibility(View.GONE);
-                }
-                ObjectAnimator secondHalf = ObjectAnimator.ofFloat(flashCard, "rotationY", -90f, 0f);
-                secondHalf.setDuration(150);
-                secondHalf.setInterpolator(new DecelerateInterpolator());
-                secondHalf.addListener(new AnimatorListenerAdapter() {
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        isAnimating = false;
-                    }
-                });
-                secondHalf.start();
+        MaterialCardView fromCard = isFlipped ? flashCardBack : flashCardFront;
+        MaterialCardView toCard = isFlipped ? flashCardFront : flashCardBack;
+
+        // toCard bắt đầu ở phía sau (180° hoặc -180° tùy chiều lật)
+        float toStartAngle = isFlipped ? -180f : 180f;
+        float fromEndAngle = isFlipped ? 180f : -180f;
+
+        toCard.setRotationY(toStartAngle);
+        toCard.setVisibility(android.view.View.VISIBLE);
+
+        ObjectAnimator fromAnim = ObjectAnimator.ofFloat(fromCard, "rotationY", 0f, fromEndAngle);
+        ObjectAnimator toAnim = ObjectAnimator.ofFloat(toCard, "rotationY", toStartAngle, 0f);
+
+        // Ẩn mặt đang quay đi khi qua ngưỡng 90°
+        fromAnim.addUpdateListener(anim -> {
+            float val = (float) anim.getAnimatedValue();
+            if (Math.abs(val) >= 90f) {
+                fromCard.setVisibility(android.view.View.INVISIBLE);
             }
         });
-        firstHalf.start();
+
+        AnimatorSet animSet = new AnimatorSet();
+        animSet.playTogether(fromAnim, toAnim);
+        animSet.setDuration(350);
+        animSet.setInterpolator(new AccelerateDecelerateInterpolator());
+        animSet.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                fromCard.setVisibility(android.view.View.GONE);
+                isFlipped = !isFlipped;
+                isAnimating = false;
+            }
+        });
+        animSet.start();
     }
 
     private void navigate(int direction) {

@@ -27,31 +27,22 @@ public class CauHoiActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cau_hoi);
         txtTitle = findViewById(R.id.txtTitle);
-        txtTitle.setText("Câu hỏi ôn thi");
         toolbarBack = findViewById(R.id.toolbarBack);
         findViewById(R.id.navPanel).setVisibility(View.GONE);
 
-        // Mã loại câu hỏi
         int maLoaiCH = getIntent().getIntExtra("MaLoaiCH", 0);
+        boolean chiHienThiSai = getIntent().getBooleanExtra("ChiHienThiSai", false);
+        txtTitle.setText(chiHienThiSai ? "Câu sai" : "Câu hỏi ôn thi");
         btnNavBack = findViewById(R.id.btnNavBack);
         btnNavForward = findViewById(R.id.btnNavForward);
         vp = findViewById(R.id.vp);
         DBHandler db = new DBHandler(this);
         DanhSach.setDsCauHoi(db.docCauHoi());
         dsCauHoi = new ArrayList<>();
-        if(maLoaiCH==0)
-        {
-            dsCauHoi=DanhSach.getDsCauHoi();
-        }
-        else
-        {
-            for(CauHoi a:DanhSach.getDsCauHoi())
-            {
-                if(a.getMaLoaiCH()==maLoaiCH)
-                {
-                    dsCauHoi.add(a);
-                }
-            }
+        for (CauHoi a : DanhSach.getDsCauHoi()) {
+            if (maLoaiCH != 0 && a.getMaLoaiCH() != maLoaiCH) continue;
+            if (chiHienThiSai && a.getDaTraLoiDung() != 2) continue;
+            dsCauHoi.add(a);
         }
 
 

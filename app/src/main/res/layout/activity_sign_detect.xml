@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FF000000">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarDetect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CC000000"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+    <!-- Camera preview + overlay -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <!-- Ảnh đã chụp (hiện lên khi capture, ẩn khi xem preview) -->
+        <ImageView
+            android:id="@+id/ivCaptured"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+    <!-- Panel kết quả ở dưới -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#EE000000"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chụp ảnh để nhận diện biển báo"
+            android:textColor="#DDFFFFFF"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnCapture"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="📷  Chụp ảnh"
+            android:backgroundTint="#FFC25B30"
+            android:textColor="#FFFFFFFF"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/btnRetake"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="↺  Chụp lại"
+            android:backgroundTint="#44888888"
+            android:textColor="#FFFFFFFF"
+            android:layout_marginTop="6dp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnViewDetail"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="Xem chi tiết biển báo →"
+            android:backgroundTint="#FF2C2820"
+            android:textColor="#FFFFFFFF"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</LinearLayout>

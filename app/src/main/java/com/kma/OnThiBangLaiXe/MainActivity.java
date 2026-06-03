@@ -1,5 +1,6 @@
 package com.kma.OnThiBangLaiXe;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -63,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNav.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
+            if (id == R.id.nav_detect) {
+                startActivity(new Intent(this, SignDetectActivity.class));
+                return false; // không highlight item này
+            }
             Fragment next;
             if      (id == R.id.nav_dashboard) next = dashboardFragment;
             else if (id == R.id.nav_study)     next = studyFragment;

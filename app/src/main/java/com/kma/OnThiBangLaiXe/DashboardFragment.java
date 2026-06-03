@@ -70,6 +70,7 @@ public class DashboardFragment extends Fragment {
         weakAreaListener = (catId, catName) -> {
             Intent intent = new Intent(requireContext(), CauHoiActivity.class);
             intent.putExtra("MaLoaiCH", catId);
+            intent.putExtra("ChiHienThiSai", true);
             startActivity(intent);
         };
 
