@@ -11,6 +11,12 @@ import com.kma.OnThiBangLaiXe.R;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
+/*
+ * Mô tả file:
+ * Service nhận thông báo Firebase Cloud Messaging.
+ * File này xử lý message gửi đến, tạo notification nội bộ
+ * và kiểm tra quyền POST_NOTIFICATIONS trước khi hiển thị thông báo cho người dùng.
+ */
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     @Override

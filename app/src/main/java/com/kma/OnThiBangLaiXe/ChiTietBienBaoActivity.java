@@ -12,6 +12,12 @@ import androidx.appcompat.widget.Toolbar;
 
 import java.io.InputStream;
 
+/*
+ * Mô tả file:
+ * Activity hiển thị chi tiết một biển báo.
+ * File này nhận mã, tiêu đề, nội dung và tên ảnh qua Intent,
+ * load ảnh từ assets/bien_bao và gán dữ liệu lên giao diện chi tiết.
+ */
 public class ChiTietBienBaoActivity extends AppCompatActivity {
     ImageView imgDetailBB;
     TextView txtIDlBB;

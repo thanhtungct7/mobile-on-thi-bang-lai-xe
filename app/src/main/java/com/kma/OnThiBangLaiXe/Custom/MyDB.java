@@ -29,6 +29,12 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Lớp hỗ trợ đồng bộ dữ liệu ứng dụng với Firebase Realtime Database và Firebase Storage.
+ * File này kiểm tra phiên bản dữ liệu, tải ảnh câu hỏi khi cần,
+ * cập nhật dữ liệu cục bộ qua DBHandler và điều hướng vào MainActivity sau khi đồng bộ xong.
+ */
 public class MyDB {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     FirebaseStorage storage = FirebaseStorage.getInstance();

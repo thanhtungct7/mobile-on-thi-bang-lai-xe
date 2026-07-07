@@ -13,6 +13,12 @@ import com.kma.OnThiBangLaiXe.Model.CauHoi;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Activity hiển thị danh sách câu hỏi đã lưu.
+ * File này truy vấn các câu có cờ luu = 1 từ database, đưa dữ liệu vào
+ * SaveQuestionAdapter và xử lý nút quay lại của màn hình.
+ */
 public class CauLuuActivity extends AppCompatActivity {
 
     private DBHandler db;

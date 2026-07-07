@@ -1,4 +1,4 @@
-package com.kma.OnThiBangLaiXe;
+package com.kma.OnThiBangLaiXe.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,15 +15,27 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.kma.OnThiBangLaiXe.Adapter.TheLoaiCauHoiAdapter;
+import com.kma.OnThiBangLaiXe.BienBaoActivity;
+import com.kma.OnThiBangLaiXe.CauHoiActivity;
+import com.kma.OnThiBangLaiXe.DBHandler;
+import com.kma.OnThiBangLaiXe.DeThiActivity;
 import com.kma.OnThiBangLaiXe.Interface.RecyclerViewInterface;
 import com.kma.OnThiBangLaiXe.Model.CauHoi;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
 import com.kma.OnThiBangLaiXe.Model.DeThi;
 import com.kma.OnThiBangLaiXe.Model.LoaiCauHoi;
+import com.kma.OnThiBangLaiXe.R;
+import com.kma.OnThiBangLaiXe.WebActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Fragment màn hình ôn tập chính.
+ * File này hiển thị tiến độ học, các chế độ luyện tập như đề thi/600 câu/biển báo/mẹo thi
+ * và danh sách chủ đề câu hỏi để người dùng chọn nội dung ôn tập.
+ */
 public class StudyFragment extends Fragment implements RecyclerViewInterface {
 
     private TextView    txtSubtitle;

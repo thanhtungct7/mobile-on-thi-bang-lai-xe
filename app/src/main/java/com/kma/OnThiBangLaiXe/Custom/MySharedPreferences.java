@@ -4,6 +4,12 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 //đây sẽ là lưu nhưng lần lại thông tin khi người dùng install
+/*
+ * Mô tả file:
+ * Lớp bao bọc thao tác lưu trữ SharedPreferences của ứng dụng.
+ * File này cung cấp hàm lưu/đọc boolean và int để ghi nhớ trạng thái cài đặt,
+ * lựa chọn loại giấy phép lái xe và các cấu hình đơn giản dạng key-value.
+ */
 public class MySharedPreferences {
     private static final String MY_SHARED_PREFERENCES="MY_SHARED_PREFERENCES";
     private Context mcontext;

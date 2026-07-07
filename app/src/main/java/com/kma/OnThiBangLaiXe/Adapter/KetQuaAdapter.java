@@ -27,6 +27,12 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Adapter hiển thị chi tiết các câu hỏi trong kết quả bài thi.
+ * File này ghép dữ liệu câu trả lời với câu hỏi gốc, hiển thị đáp án đã chọn,
+ * hình ảnh minh họa và phần giải thích cho từng câu.
+ */
 public class KetQuaAdapter extends RecyclerView.Adapter<KetQuaAdapter.ViewHolder>
 {
     private List<CauHoi> dsCauHoi;

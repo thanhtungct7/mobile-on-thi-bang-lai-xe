@@ -26,6 +26,12 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Activity luyện biển báo bằng flashcard.
+ * File này load danh sách biển báo, hiển thị mặt trước/mặt sau của thẻ,
+ * xử lý hiệu ứng lật thẻ và nút chuyển sang biển báo trước/sau.
+ */
 public class FlashcardActivity extends AppCompatActivity {
 
     private List<BienBao> dsBienBao;

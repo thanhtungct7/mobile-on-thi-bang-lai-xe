@@ -27,6 +27,12 @@ import java.io.File;
 import java.util.List;
 import java.util.Objects;
 
+/*
+ * Mô tả file:
+ * Adapter hiển thị từng câu hỏi trong quá trình thi thử hoặc xem lại bài đã thi.
+ * File này quản lý lựa chọn đáp án, cập nhật menu câu hỏi, lưu câu hỏi yêu thích
+ * và khi đã thi xong thì hiển thị đáp án đúng/sai cho người dùng.
+ */
 public class CauTraLoiAdapter extends RecyclerView.Adapter<CauTraLoiAdapter.ViewHolder> {
 
     private List<CauTraLoi> dsCauTraLoi;

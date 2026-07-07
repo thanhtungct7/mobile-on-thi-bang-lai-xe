@@ -25,6 +25,12 @@ import com.kma.OnThiBangLaiXe.R;
 import java.io.File;
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Adapter hiển thị danh sách câu hỏi ôn tập.
+ * File này gán nội dung câu hỏi, hình ảnh, đáp án A/B/C/D, trạng thái đã học
+ * và xử lý lưu câu hỏi hoặc cập nhật kết quả đúng/sai vào cơ sở dữ liệu.
+ */
 public class CauHoiAdapter extends RecyclerView.Adapter<CauHoiAdapter.ViewHolder> {
 
     private List<CauHoi> dsCauHoi;

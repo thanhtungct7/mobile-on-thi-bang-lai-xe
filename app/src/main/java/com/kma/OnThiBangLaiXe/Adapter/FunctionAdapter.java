@@ -14,6 +14,12 @@ import com.kma.OnThiBangLaiXe.function;
 
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Adapter dạng BaseAdapter dùng để hiển thị danh sách chức năng cơ bản.
+ * File này nhận danh sách function, inflate layout item và gán icon/tên chức năng
+ * cho từng dòng trong giao diện dạng ListView/GridView cũ.
+ */
 public class FunctionAdapter extends BaseAdapter {
     private Context context;
     private int Layout;

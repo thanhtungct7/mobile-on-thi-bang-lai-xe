@@ -12,12 +12,19 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.kma.OnThiBangLaiXe.Adapter.CauTraLoiAdapter;
 import com.kma.OnThiBangLaiXe.Model.CauTraLoi;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
+import com.kma.OnThiBangLaiXe.Fragment.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/*
+ * Mô tả file:
+ * Activity hiển thị chi tiết từng câu trong kết quả bài thi.
+ * File này nhận mã đề, vị trí câu và danh sách mã câu hỏi qua Intent,
+ * gắn CauTraLoiAdapter ở chế độ xem lại để người dùng duyệt đáp án đúng/sai.
+ */
 public class ChiTietKetQuaActivity extends AppCompatActivity {
     public ViewPager2 vp;
     TextView txtTitle;

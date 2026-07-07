@@ -23,6 +23,12 @@ import com.kma.OnThiBangLaiXe.R;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Adapter hiển thị danh sách chủ đề câu hỏi ôn tập.
+ * File này tính tiến độ từng chủ đề, hỗ trợ lọc điểm liệt/đang học/hoàn thành
+ * và mở CauHoiActivity với đúng mã chủ đề khi người dùng chọn một mục.
+ */
 public class TheLoaiCauHoiAdapter extends RecyclerView.Adapter<TheLoaiCauHoiAdapter.ViewHolder> {
 
     public static final int FILTER_ALL         = 0;

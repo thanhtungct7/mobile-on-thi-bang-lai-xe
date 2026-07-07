@@ -14,18 +14,28 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.kma.OnThiBangLaiXe.Fragment.DashboardFragment;
+import com.kma.OnThiBangLaiXe.Fragment.ProfileFragment;
+import com.kma.OnThiBangLaiXe.Fragment.ResultsFragment;
+import com.kma.OnThiBangLaiXe.Fragment.StudyFragment;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+/*
+ * Mô tả file:
+ * Activity chính của ứng dụng sau khi khởi động xong.
+ * File này load dữ liệu từ database vào DanhSach, quản lý bottom navigation,
+ * giữ các Fragment chính và mở màn hình nhận diện biển báo khi người dùng chọn tab camera.
+ */
 public class MainActivity extends AppCompatActivity {
 
     private DBHandler dbHandler;
     private BottomNavigationView bottomNav;
 
     private DashboardFragment dashboardFragment;
-    private StudyFragment     studyFragment;
-    private ResultsFragment   resultsFragment;
-    private ProfileFragment   profileFragment;
+    private StudyFragment studyFragment;
+    private ResultsFragment resultsFragment;
+    private ProfileFragment profileFragment;
     private Fragment          activeFragment;
 
     @Override

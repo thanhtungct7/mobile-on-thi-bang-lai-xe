@@ -23,6 +23,12 @@ import com.kma.OnThiBangLaiXe.R;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Adapter hiển thị lịch sử các đề thi đã làm trong tab kết quả.
+ * File này tính trạng thái đậu/rớt, hỗ trợ lọc tất cả/đậu/rớt,
+ * hiển thị điểm từng đề và mở KetQuaActivity khi người dùng chọn một kết quả.
+ */
 public class ResultDeThiAdapter extends RecyclerView.Adapter<ResultDeThiAdapter.ViewHolder> {
 
     public static final int FILTER_ALL = 0;

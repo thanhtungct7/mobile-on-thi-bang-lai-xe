@@ -7,6 +7,12 @@ import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.view.View;
 
+/*
+ * Mô tả file:
+ * View tùy chỉnh dùng để vẽ vòng tròn tiến độ dạng phần trăm.
+ * File này tự vẽ track, cung tiến độ và số phần trăm ở giữa,
+ * đồng thời cho phép đổi màu để dùng ở dashboard hoặc màn hình kết quả.
+ */
 public class ReadinessRingView extends View {
 
     private final Paint trackPaint = new Paint(Paint.ANTI_ALIAS_FLAG);

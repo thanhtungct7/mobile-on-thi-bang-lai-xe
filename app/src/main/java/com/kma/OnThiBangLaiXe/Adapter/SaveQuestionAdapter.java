@@ -14,6 +14,12 @@ import com.kma.OnThiBangLaiXe.R;
 
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Adapter hiển thị danh sách câu hỏi đã lưu.
+ * File này nhận danh sách CauHoi và gán nội dung câu hỏi vào layout item_cau_hoi_save
+ * để người dùng xem nhanh các câu đã đánh dấu.
+ */
 public class SaveQuestionAdapter extends RecyclerView.Adapter<SaveQuestionAdapter.SaveQuestionViewHolder> {
 
     private Context context;

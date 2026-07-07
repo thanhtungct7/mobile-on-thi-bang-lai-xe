@@ -18,6 +18,12 @@ import com.kma.OnThiBangLaiXe.ThiThuActivity;
 
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Adapter hiển thị thanh điều hướng nhanh giữa các câu trong bài thi thử.
+ * File này đánh dấu câu hiện tại, câu đã trả lời, câu điểm liệt và chuyển ViewPager
+ * tới câu tương ứng khi người dùng bấm vào số câu.
+ */
 public class menuCauHoiAdapter extends RecyclerView.Adapter<menuCauHoiAdapter.ViewHolder> {
 
     private List<CauTraLoi> dsCauTraLoi;

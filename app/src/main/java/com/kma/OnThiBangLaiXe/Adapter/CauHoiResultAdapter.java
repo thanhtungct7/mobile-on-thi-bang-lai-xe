@@ -21,6 +21,12 @@ import com.kma.OnThiBangLaiXe.R;
 
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Adapter hiển thị lưới trạng thái câu hỏi trong màn hình kết quả bài thi.
+ * File này tô màu từng ô theo trạng thái đúng/sai/bỏ qua, đánh dấu câu điểm liệt
+ * và mở ChiTietKetQuaActivity để xem chi tiết câu được chọn.
+ */
 public class CauHoiResultAdapter extends RecyclerView.Adapter<CauHoiResultAdapter.ViewHolder> {
 
     private final List<CauTraLoi> dsCTL;

@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.kma.OnThiBangLaiXe.Fragment.ResultsFragment;
 import com.kma.OnThiBangLaiXe.R;
 import com.kma.OnThiBangLaiXe.Adapter.CauTraLoiAdapter;
 import com.kma.OnThiBangLaiXe.Adapter.menuCauHoiAdapter;
@@ -26,6 +27,12 @@ import com.google.android.material.tabs.TabLayoutMediator;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Activity thực hiện bài thi thử.
+ * File này tạo danh sách câu trả lời cho đề thi, quản lý ViewPager2 và menu câu hỏi,
+ * chạy bộ đếm thời gian, xử lý nộp bài và lưu kết quả để chuyển sang màn hình kết quả.
+ */
 public class ThiThuActivity extends AppCompatActivity {
     public static ViewPager2 vp;
     public static RecyclerView rvCauHoi;

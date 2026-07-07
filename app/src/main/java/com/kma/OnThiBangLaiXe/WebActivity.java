@@ -11,6 +11,12 @@ import androidx.appcompat.widget.Toolbar;
 
 import java.util.Objects;
 
+/*
+ * Mô tả file:
+ * Activity hiển thị nội dung HTML trong WebView.
+ * File này nhận URL và tên trang qua Intent, bật JavaScript/DOM storage,
+ * load nội dung mẹo thi hoặc chính sách và xử lý nút quay lại trên toolbar.
+ */
 public class WebActivity extends AppCompatActivity {
     WebView wb;
     Toolbar toolbarBack;

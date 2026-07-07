@@ -1,4 +1,4 @@
-package com.kma.OnThiBangLaiXe;
+package com.kma.OnThiBangLaiXe.Fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,7 +16,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.kma.OnThiBangLaiXe.Adapter.DeThiAdapter;
 import com.kma.OnThiBangLaiXe.Adapter.ResultDeThiAdapter;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
+import com.kma.OnThiBangLaiXe.R;
 
+/*
+ * Mô tả file:
+ * Fragment màn hình kết quả thi thử.
+ * File này hiển thị thống kê tổng số đề đã làm, số đề đậu/rớt,
+ * quản lý bộ lọc kết quả và danh sách lịch sử đề thi đã hoàn thành.
+ */
 public class ResultsFragment extends Fragment {
 
     // Kept for ThiThuActivity.ketThuc() null-check compatibility

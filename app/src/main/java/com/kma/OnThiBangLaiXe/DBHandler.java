@@ -24,6 +24,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+/*
+ * Mô tả file:
+ * Lớp truy cập SQLite chính của ứng dụng.
+ * File này đọc/ghi câu hỏi, đề thi, câu trả lời, biển báo và loại bằng,
+ * hỗ trợ đồng bộ dữ liệu từ Firebase, cập nhật tiến độ học và tạo đề thi ngẫu nhiên.
+ */
 public class DBHandler extends SQLiteOpenHelper {
     private SQLiteDatabase mDatabase;
 
@@ -591,6 +597,7 @@ public class DBHandler extends SQLiteOpenHelper {
         super.onDowngrade(db, oldVersion, newVersion);
         db.setVersion(newVersion);
     }
+
     //Update loai bang
     public void updateLoaiBang(LoaiBang lch)
     {
@@ -600,6 +607,7 @@ public class DBHandler extends SQLiteOpenHelper {
         mDatabase.update("LoaiBang",contentValues,"MaLoaiBang=?", new String[]{String.valueOf(lch.getMaLoaiBang())});
         mDatabase.close();
     }
+
     //Update biển báo
     public void updateCauTraLoi(List<CauTraLoi> ctl)
     {
@@ -612,6 +620,7 @@ public class DBHandler extends SQLiteOpenHelper {
         }
         mDatabase.close();
     }
+
     //Update loai câu hỏi
     public void updateLoaiCauHoi(LoaiCauHoi lch)
     {
@@ -622,6 +631,7 @@ public class DBHandler extends SQLiteOpenHelper {
         mDatabase.update("LoaiCauHoi",contentValues,"MaLoaiCH=?", new String[]{String.valueOf(lch.getMaLoaiCH())});
         mDatabase.close();
     }
+
     //Update beeirn báo
     public void updateBB(BienBao bb)
     {
@@ -635,6 +645,7 @@ public class DBHandler extends SQLiteOpenHelper {
         mDatabase.update("BienBao",contentValues,"MaBB=?", new String[]{String.valueOf(bb.getMaBB())});
         mDatabase.close();
     }
+
     //Update đề thi
     public void updateDeThi(DeThi dt)
     {
@@ -645,6 +656,7 @@ public class DBHandler extends SQLiteOpenHelper {
         mDatabase.update("DeThi",contentValues,"MaDeThi=?",new String[]{String.valueOf(dt.getMaDeThi())});
         mDatabase.close();
     }
+
     //Update câu hỏi
     public void updateCauHoi(CauHoi ch)
     {
@@ -665,6 +677,7 @@ public class DBHandler extends SQLiteOpenHelper {
         mDatabase.update("CauHoi",contentValues,"MaCH=?", new String[]{String.valueOf(ch.getMaCH())});
         mDatabase.close();
     }
+
     //Update câu trả lời
     public void updateCauTraLoi(CauTraLoi ctl)
     {
@@ -675,6 +688,7 @@ public class DBHandler extends SQLiteOpenHelper {
         mDatabase.update("CauTraLoi",contentValues,"MaCauHoi=? AND MaDeThi=?", new String[]{String.valueOf(ctl.getMaCH()),String.valueOf(ctl.getMaDeThi())});
         mDatabase.close();
     }
+
     //Update dap an da chon trong cau tra loi
     public void updateDapAnChon(CauTraLoi ctl)
     {
@@ -684,6 +698,7 @@ public class DBHandler extends SQLiteOpenHelper {
         mDatabase.update("CauTraLoi",contentValues,"MaCauHoi=? AND MaDeThi=?", new String[]{String.valueOf(ctl.getMaCH()),String.valueOf(ctl.getMaDeThi())});
         mDatabase.close();
     }
+
     //Tao de ngau nhien
     public void RandomQuizz()
     {

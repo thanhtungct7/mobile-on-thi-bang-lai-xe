@@ -22,6 +22,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+/*
+ * Mô tả file:
+ * Activity khởi động ứng dụng.
+ * File này copy database từ assets nếu chưa có, lấy token FCM,
+ * kiểm tra trạng thái cài đặt/lựa chọn loại bằng và điều hướng sang onboarding hoặc màn hình chính.
+ */
 public class SplashActivity extends AppCompatActivity {
     private static final String KEY_FIRST_INSTALL="KEY_FIRST_INSTALL", GPLX="LOAI_GPLX";
 

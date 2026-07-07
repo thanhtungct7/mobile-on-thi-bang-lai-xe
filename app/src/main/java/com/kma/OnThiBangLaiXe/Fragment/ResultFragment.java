@@ -15,6 +15,12 @@ import com.kma.OnThiBangLaiXe.R;
 
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Fragment hiển thị lưới câu hỏi trong phần kết quả bài thi.
+ * File này nhận danh sách câu trả lời, cấu hình RecyclerView dạng 5 cột
+ * và dùng CauHoiResultAdapter để biểu diễn trạng thái từng câu.
+ */
 public class ResultFragment extends Fragment {
 
     private RecyclerView rv;

@@ -15,6 +15,12 @@ import com.kma.OnThiBangLaiXe.Model.DanhSach;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
+/*
+ * Mô tả file:
+ * Activity hiển thị danh mục biển báo giao thông.
+ * File này load dữ liệu biển báo/loại biển báo khi cần, gắn LoaiBienBaoAdapter
+ * cho ViewPager2, tạo tab theo từng loại biển báo và mở màn hình flashcard biển báo.
+ */
 public class BienBaoActivity extends AppCompatActivity {
     DBHandler db;
     @Override

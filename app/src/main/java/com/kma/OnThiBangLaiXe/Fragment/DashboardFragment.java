@@ -1,4 +1,4 @@
-package com.kma.OnThiBangLaiXe;
+package com.kma.OnThiBangLaiXe.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,8 +14,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.kma.OnThiBangLaiXe.Adapter.WeakAreaAdapter;
+import com.kma.OnThiBangLaiXe.CauHoiActivity;
 import com.kma.OnThiBangLaiXe.Model.CauHoi;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
+import com.kma.OnThiBangLaiXe.R;
+import com.kma.OnThiBangLaiXe.ReadinessRingView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -23,6 +26,12 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
+/*
+ * Mô tả file:
+ * Fragment màn hình tổng quan của ứng dụng.
+ * File này tính mức độ sẵn sàng, thống kê số câu đã học/độ chính xác/chủ đề hoàn thành,
+ * hiển thị các chủ đề còn yếu và điều hướng người dùng vào phần luyện tập phù hợp.
+ */
 public class DashboardFragment extends Fragment {
 
     private ReadinessRingView readinessRing;

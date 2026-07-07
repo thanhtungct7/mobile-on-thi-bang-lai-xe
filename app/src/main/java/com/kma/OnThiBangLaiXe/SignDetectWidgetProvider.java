@@ -11,6 +11,12 @@ import android.graphics.BitmapFactory;
 import android.view.View;
 import android.widget.RemoteViews;
 
+/*
+ * Mô tả file:
+ * AppWidgetProvider cho widget nhận diện biển báo.
+ * File này dựng giao diện widget từ kết quả nhận diện gần nhất,
+ * đọc dữ liệu đã lưu trong SharedPreferences và mở SignDetectActivity khi người dùng bấm widget.
+ */
 public class SignDetectWidgetProvider extends AppWidgetProvider {
 
     private static final int RC_OPEN = 0;

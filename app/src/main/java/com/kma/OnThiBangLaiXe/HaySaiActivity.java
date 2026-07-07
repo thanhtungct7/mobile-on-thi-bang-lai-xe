@@ -1,3 +1,4 @@
+
 package com.kma.OnThiBangLaiXe;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.view.Menu;
 import android.widget.TextView;
 
 import com.kma.OnThiBangLaiXe.Adapter.CauHoiAdapter;
+import com.kma.OnThiBangLaiXe.Fragment.StudyFragment;
 import com.kma.OnThiBangLaiXe.Model.CauHoi;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -16,6 +18,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Activity hiển thị các câu hỏi thuộc nhóm hay sai.
+ * File này lấy danh sách câu hay sai từ database, gắn CauHoiAdapter cho ViewPager2
+ * và dùng thanh điều hướng dưới để chuyển qua lại giữa các câu.
+ */
 public class HaySaiActivity extends AppCompatActivity {
     public ViewPager2 vp;
     TextView txtTitle;

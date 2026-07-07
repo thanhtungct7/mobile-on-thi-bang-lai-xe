@@ -12,6 +12,12 @@ import com.kma.OnThiBangLaiXe.R;
 
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Adapter hiển thị các chủ đề người dùng đang yếu trên dashboard.
+ * File này gán tên chủ đề, số câu cần ôn lại, độ chính xác và phát sự kiện
+ * khi người dùng chọn một chủ đề để luyện lại.
+ */
 public class WeakAreaAdapter extends RecyclerView.Adapter<WeakAreaAdapter.VH> {
 
     public interface OnItemClickListener {

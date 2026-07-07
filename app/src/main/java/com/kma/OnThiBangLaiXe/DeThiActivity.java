@@ -14,6 +14,12 @@ import com.kma.OnThiBangLaiXe.Model.DeThi;
 
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Activity hiển thị danh sách đề thi thử.
+ * File này lấy danh sách đề từ DanhSach, gắn DeThiAdapter vào RecyclerView dạng lưới
+ * và xử lý nút quay lại trên toolbar.
+ */
 public class DeThiActivity extends AppCompatActivity {
     List<DeThi> dsDeThi;
     public static DeThiAdapter dtAdapter;

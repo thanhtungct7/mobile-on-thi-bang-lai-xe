@@ -10,12 +10,19 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.kma.OnThiBangLaiXe.Adapter.CauHoiAdapter;
+import com.kma.OnThiBangLaiXe.Fragment.StudyFragment;
 import com.kma.OnThiBangLaiXe.Model.CauHoi;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Activity hiển thị các câu hỏi ôn tập bằng ViewPager2.
+ * File này lọc câu hỏi theo mã loại câu hỏi hoặc chỉ các câu đã làm sai,
+ * gắn CauHoiAdapter và xử lý nút điều hướng câu trước/câu sau.
+ */
 public class CauHoiActivity extends AppCompatActivity {
     public ViewPager2 vp;
     TextView txtTitle;

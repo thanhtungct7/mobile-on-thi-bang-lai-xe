@@ -19,6 +19,12 @@ import com.kma.OnThiBangLaiXe.Model.DanhSach;
 import com.kma.OnThiBangLaiXe.R;
 import com.google.android.material.textfield.TextInputLayout;
 
+/*
+ * Mô tả file:
+ * Fragment đại diện cho từng trang trong luồng giới thiệu ban đầu.
+ * File này nhận ảnh/tiêu đề/nội dung qua arguments; ở trang cuối cho phép chọn loại bằng
+ * và lưu lựa chọn để khởi tạo dữ liệu học phù hợp.
+ */
 public class OnboardingFragment extends Fragment {
 
     private static final String ARG_IMG     = "img";

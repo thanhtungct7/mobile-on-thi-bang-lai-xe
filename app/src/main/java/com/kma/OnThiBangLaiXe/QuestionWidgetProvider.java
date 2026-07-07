@@ -19,6 +19,12 @@ import java.io.File;
 import java.util.List;
 import java.util.Random;
 
+/*
+ * Mô tả file:
+ * AppWidgetProvider cho widget câu hỏi ngẫu nhiên.
+ * File này chọn câu hỏi từ database, hiển thị đáp án trên RemoteViews,
+ * xử lý đổi câu/trả lời A-B-C-D và lưu trạng thái từng widget bằng SharedPreferences.
+ */
 public class QuestionWidgetProvider extends AppWidgetProvider {
 
     static final String ACTION_REFRESH  = "com.kma.OnThiBangLaiXe.WIDGET_REFRESH";

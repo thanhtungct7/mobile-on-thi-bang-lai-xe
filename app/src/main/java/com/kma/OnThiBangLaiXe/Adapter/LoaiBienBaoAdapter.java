@@ -16,6 +16,12 @@ import com.kma.OnThiBangLaiXe.R;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Adapter hiển thị các nhóm loại biển báo.
+ * File này lọc danh sách biển báo theo từng loại và gắn BienBaoAdapter vào
+ * RecyclerView con để hiển thị các biển báo thuộc nhóm đó.
+ */
 public class LoaiBienBaoAdapter extends RecyclerView.Adapter<LoaiBienBaoAdapter.ViewHolder>
 {
     private List<BienBao> dsBienBao;

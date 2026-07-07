@@ -16,6 +16,12 @@ import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Lớp chạy mô hình TensorFlow Lite để nhận diện biển báo từ ảnh.
+ * File này load model/labels từ assets, tiền xử lý bitmap đầu vào,
+ * chạy inference và trả về danh sách nhãn biển báo theo độ tin cậy giảm dần.
+ */
 public class TFLiteSignDetector {
 
     private static final int   INPUT_SIZE     = 640;

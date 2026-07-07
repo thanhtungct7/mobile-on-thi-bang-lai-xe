@@ -24,6 +24,12 @@ import com.kma.OnThiBangLaiXe.ThiThuActivity;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Adapter hiển thị danh sách đề thi thử.
+ * File này tính số câu đúng/sai, xác định trạng thái đề mới/đậu/rớt,
+ * và điều hướng người dùng tới màn hình thi hoặc màn hình kết quả tương ứng.
+ */
 public class DeThiAdapter extends RecyclerView.Adapter<DeThiAdapter.ViewHolder> {
 
     private final List<DeThi> dsDeThi;

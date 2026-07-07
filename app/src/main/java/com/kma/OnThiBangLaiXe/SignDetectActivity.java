@@ -46,6 +46,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/*
+ * Mô tả file:
+ * Activity nhận diện biển báo bằng camera và mô hình TFLite.
+ * File này xin quyền camera, chụp ảnh bằng CameraX, chạy detector,
+ * ánh xạ nhãn AI sang dữ liệu biển báo, mở màn hình chi tiết và cập nhật widget nhận diện.
+ */
 public class SignDetectActivity extends AppCompatActivity {
 
     private static final int RC_CAMERA = 101;

@@ -1,5 +1,11 @@
 package com.kma.OnThiBangLaiXe;
 
+/*
+ * Mô tả file:
+ * Model đơn giản đại diện cho một chức năng trong giao diện.
+ * File này lưu tên chức năng và id icon/drawable để FunctionAdapter hiển thị
+ * trong danh sách hoặc lưới chức năng.
+ */
 public class function {
     private String title;
     private int img;

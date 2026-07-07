@@ -21,6 +21,12 @@ import com.kma.OnThiBangLaiXe.R;
 import java.io.InputStream;
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Adapter hiển thị danh sách biển báo trong RecyclerView.
+ * File này load ảnh biển báo từ assets/bien_bao, gán mã/tên/nội dung biển báo
+ * lên từng item và mở màn hình ChiTietBienBaoActivity khi người dùng chọn một biển báo.
+ */
 public class BienBaoAdapter extends RecyclerView.Adapter<BienBaoAdapter.ViewHolder>
 {
     private List<BienBao> dsBienBao;

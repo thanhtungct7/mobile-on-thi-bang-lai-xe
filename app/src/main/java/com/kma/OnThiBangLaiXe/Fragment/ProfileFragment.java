@@ -1,4 +1,4 @@
-package com.kma.OnThiBangLaiXe;
+package com.kma.OnThiBangLaiXe.Fragment;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -14,8 +14,22 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
+import com.kma.OnThiBangLaiXe.CauLuuActivity;
+import com.kma.OnThiBangLaiXe.CauSaiActivity;
+import com.kma.OnThiBangLaiXe.DBHandler;
+import com.kma.OnThiBangLaiXe.HaySaiActivity;
+import com.kma.OnThiBangLaiXe.MainActivity;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
+import com.kma.OnThiBangLaiXe.R;
+import com.kma.OnThiBangLaiXe.SplashActivity;
+import com.kma.OnThiBangLaiXe.WebActivity;
 
+/*
+ * Mô tả file:
+ * Fragment màn hình hồ sơ và thiết lập cá nhân.
+ * File này hiển thị loại bằng đang học, số câu đã lưu/câu sai/câu hay sai,
+ * mở các màn hình liên quan và xử lý đổi loại giấy phép lái xe.
+ */
 public class ProfileFragment extends Fragment {
 
     private TextView txtLoaiBang, txtLuu, txtCauSai, txtHaySai;

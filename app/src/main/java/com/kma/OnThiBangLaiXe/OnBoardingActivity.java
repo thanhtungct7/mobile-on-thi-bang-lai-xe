@@ -20,6 +20,12 @@ import com.kma.OnThiBangLaiXe.Fragment.OnboardingFragment;
 import com.kma.OnThiBangLaiXe.Custom.MyDB;
 import me.relex.circleindicator.CircleIndicator;
 
+/*
+ * Mô tả file:
+ * Activity quản lý luồng giới thiệu ban đầu của ứng dụng.
+ * File này tạo các OnboardingFragment, gắn vào ViewPager,
+ * hiển thị indicator và xử lý nút bỏ qua/chuyển trang cho người dùng mới.
+ */
 public class OnBoardingActivity extends AppCompatActivity {
     private TextView tvSkip;
     private ViewPager viewPager;

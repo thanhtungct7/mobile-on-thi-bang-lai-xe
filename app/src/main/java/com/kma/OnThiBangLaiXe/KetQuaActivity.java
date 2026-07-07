@@ -20,6 +20,12 @@ import com.kma.OnThiBangLaiXe.Model.DanhSach;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+ * Mô tả file:
+ * Activity tổng hợp kết quả sau khi làm đề thi.
+ * File này tính số câu đúng/sai/bỏ qua, xác định đạt hoặc không đạt,
+ * hiển thị thời gian làm bài, bộ lọc câu hỏi và danh sách câu trong ResultFragment.
+ */
 public class KetQuaActivity extends AppCompatActivity {
     DBHandler db;
     int type = 0, maDeThi;
