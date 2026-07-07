@@ -1,0 +1,5198 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 7,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/ResultDeThiAdapter.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 199,
+      "nonEmptyLines": 173,
+      "functions": [
+        {
+          "name": "passThreshold",
+          "startLine": 32,
+          "endLine": 34,
+          "params": [
+            "dt"
+          ]
+        },
+        {
+          "name": "ResultDeThiAdapter",
+          "startLine": 41,
+          "endLine": 49,
+          "params": [
+            "list",
+            "context"
+          ]
+        },
+        {
+          "name": "setFilter",
+          "startLine": 51,
+          "endLine": 66,
+          "params": [
+            "filter"
+          ]
+        },
+        {
+          "name": "getTotalCompleted",
+          "startLine": 68,
+          "endLine": 68,
+          "params": []
+        },
+        {
+          "name": "getTotalPass",
+          "startLine": 70,
+          "endLine": 74,
+          "params": []
+        },
+        {
+          "name": "getTotalFail",
+          "startLine": 76,
+          "endLine": 76,
+          "params": []
+        },
+        {
+          "name": "isCompleted",
+          "startLine": 78,
+          "endLine": 84,
+          "params": [
+            "dt"
+          ]
+        },
+        {
+          "name": "isDau",
+          "startLine": 86,
+          "endLine": 89,
+          "params": [
+            "dt"
+          ]
+        },
+        {
+          "name": "computeResults",
+          "startLine": 92,
+          "endLine": 107,
+          "params": [
+            "dt"
+          ]
+        },
+        {
+          "name": "onCreateViewHolder",
+          "startLine": 109,
+          "endLine": 115,
+          "params": [
+            "parent",
+            "viewType"
+          ]
+        },
+        {
+          "name": "onBindViewHolder",
+          "startLine": 117,
+          "endLine": 172,
+          "params": [
+            "holder",
+            "position"
+          ]
+        },
+        {
+          "name": "getItemCount",
+          "startLine": 174,
+          "endLine": 175,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "ResultDeThiAdapter",
+          "startLine": 26,
+          "endLine": 199,
+          "methods": [
+            "passThreshold",
+            "ResultDeThiAdapter",
+            "setFilter",
+            "getTotalCompleted",
+            "getTotalPass",
+            "getTotalFail",
+            "isCompleted",
+            "isDau",
+            "computeResults",
+            "onCreateViewHolder",
+            "onBindViewHolder",
+            "getItemCount"
+          ],
+          "properties": [
+            "FILTER_ALL",
+            "FILTER_DAU",
+            "FILTER_ROT",
+            "allList",
+            "displayList",
+            "context",
+            "db"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FILTER_ALL",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "FILTER_DAU",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "FILTER_ROT",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "ResultDeThiAdapter",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "setFilter",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "getTotalCompleted",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "getTotalPass",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "getTotalFail",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "onCreateViewHolder",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "onBindViewHolder",
+          "line": 117,
+          "isDefault": false
+        },
+        {
+          "name": "getItemCount",
+          "line": 174,
+          "isDefault": false
+        },
+        {
+          "name": "ResultDeThiAdapter",
+          "line": 26,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "passThreshold",
+          "callee": "dt.getMaLoaiBang",
+          "lineNumber": 33
+        },
+        {
+          "caller": "ResultDeThiAdapter",
+          "callee": "new DBHandler",
+          "lineNumber": 43
+        },
+        {
+          "caller": "ResultDeThiAdapter",
+          "callee": "new ArrayList<>",
+          "lineNumber": 44
+        },
+        {
+          "caller": "ResultDeThiAdapter",
+          "callee": "isCompleted",
+          "lineNumber": 46
+        },
+        {
+          "caller": "ResultDeThiAdapter",
+          "callee": "this.allList.add",
+          "lineNumber": 46
+        },
+        {
+          "caller": "ResultDeThiAdapter",
+          "callee": "new ArrayList<>",
+          "lineNumber": 48
+        },
+        {
+          "caller": "setFilter",
+          "callee": "new ArrayList<>",
+          "lineNumber": 52
+        },
+        {
+          "caller": "setFilter",
+          "callee": "isDau",
+          "lineNumber": 56
+        },
+        {
+          "caller": "setFilter",
+          "callee": "displayList.add",
+          "lineNumber": 56
+        },
+        {
+          "caller": "setFilter",
+          "callee": "isDau",
+          "lineNumber": 59
+        },
+        {
+          "caller": "setFilter",
+          "callee": "displayList.add",
+          "lineNumber": 59
+        },
+        {
+          "caller": "setFilter",
+          "callee": "displayList.add",
+          "lineNumber": 62
+        },
+        {
+          "caller": "setFilter",
+          "callee": "notifyDataSetChanged",
+          "lineNumber": 65
+        },
+        {
+          "caller": "getTotalCompleted",
+          "callee": "allList.size",
+          "lineNumber": 68
+        },
+        {
+          "caller": "getTotalPass",
+          "callee": "isDau",
+          "lineNumber": 72
+        },
+        {
+          "caller": "getTotalFail",
+          "callee": "allList.size",
+          "lineNumber": 76
+        },
+        {
+          "caller": "getTotalFail",
+          "callee": "getTotalPass",
+          "lineNumber": 76
+        },
+        {
+          "caller": "isCompleted",
+          "callee": "db.getListCauTraLoiByMaDeThi",
+          "lineNumber": 79
+        },
+        {
+          "caller": "isCompleted",
+          "callee": "dt.getMaDeThi",
+          "lineNumber": 79
+        },
+        {
+          "caller": "isCompleted",
+          "callee": "ctl.getDapAnChon",
+          "lineNumber": 80
+        },
+        {
+          "caller": "isCompleted",
+          "callee": "ans.equals",
+          "lineNumber": 81
+        },
+        {
+          "caller": "isCompleted",
+          "callee": "ans.equals",
+          "lineNumber": 81
+        },
+        {
+          "caller": "isDau",
+          "callee": "computeResults",
+          "lineNumber": 87
+        },
+        {
+          "caller": "isDau",
+          "callee": "passThreshold",
+          "lineNumber": 88
+        },
+        {
+          "caller": "computeResults",
+          "callee": "db.getListCauTraLoiByMaDeThi",
+          "lineNumber": 94
+        },
+        {
+          "caller": "computeResults",
+          "callee": "dt.getMaDeThi",
+          "lineNumber": 94
+        },
+        {
+          "caller": "computeResults",
+          "callee": "ctl.getDapAnChon",
+          "lineNumber": 95
+        },
+        {
+          "caller": "computeResults",
+          "callee": "ans.equals",
+          "lineNumber": 96
+        },
+        {
+          "caller": "computeResults",
+          "callee": "ans.equals",
+          "lineNumber": 96
+        },
+        {
+          "caller": "computeResults",
+          "callee": "db.getCauHoiByID",
+          "lineNumber": 97
+        },
+        {
+          "caller": "computeResults",
+          "callee": "ctl.getMaCH",
+          "lineNumber": 97
+        },
+        {
+          "caller": "computeResults",
+          "callee": "ch.getDapAnDung().equals",
+          "lineNumber": 99
+        },
+        {
+          "caller": "computeResults",
+          "callee": "ch.getDapAnDung",
+          "lineNumber": 99
+        },
+        {
+          "caller": "computeResults",
+          "callee": "ch.getMaLoaiCH",
+          "lineNumber": 103
+        },
+        {
+          "caller": "onCreateViewHolder",
+          "callee": "LayoutInflater.from(parent.getContext()).inflate",
+          "lineNumber": 112
+        },
+        {
+          "caller": "onCreateViewHolder",
+          "callee": "LayoutInflater.from",
+          "lineNumber": 112
+        },
+        {
+          "caller": "onCreateViewHolder",
+          "callee": "parent.getContext",
+          "lineNumber": 112
+        },
+        {
+          "caller": "onCreateViewHolder",
+          "callee": "new ViewHolder",
+          "lineNumber": 114
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "displayList.get",
+          "lineNumber": 119
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.divider.setVisibility",
+          "lineNumber": 120
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "computeResults",
+          "lineNumber": 122
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "passThreshold",
+          "lineNumber": 125
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.txtTitle.setText",
+          "lineNumber": 128
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "dt.getTenDeThi",
+          "lineNumber": 128
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.iconBg.setBackground",
+          "lineNumber": 131
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ContextCompat.getDrawable",
+          "lineNumber": 132
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.ivIcon.setImageResource",
+          "lineNumber": 133
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.ivIcon.setColorFilter",
+          "lineNumber": 134
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ContextCompat.getColor",
+          "lineNumber": 135
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.tvBadge.setText",
+          "lineNumber": 136
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.tvBadge.setBackground",
+          "lineNumber": 137
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ContextCompat.getDrawable",
+          "lineNumber": 138
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.tvBadge.setTextColor",
+          "lineNumber": 139
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ContextCompat.getColor",
+          "lineNumber": 140
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.txtScore.setTextColor",
+          "lineNumber": 141
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ContextCompat.getColor",
+          "lineNumber": 142
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.txtReason.setVisibility",
+          "lineNumber": 143
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.iconBg.setBackground",
+          "lineNumber": 145
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ContextCompat.getDrawable",
+          "lineNumber": 146
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.ivIcon.setImageResource",
+          "lineNumber": 147
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.ivIcon.setColorFilter",
+          "lineNumber": 148
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ContextCompat.getColor",
+          "lineNumber": 149
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.tvBadge.setText",
+          "lineNumber": 150
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.tvBadge.setBackground",
+          "lineNumber": 151
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ContextCompat.getDrawable",
+          "lineNumber": 152
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.tvBadge.setTextColor",
+          "lineNumber": 153
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ContextCompat.getColor",
+          "lineNumber": 154
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.txtScore.setTextColor",
+          "lineNumber": 155
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ContextCompat.getColor",
+          "lineNumber": 156
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "passThreshold",
+          "lineNumber": 159
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.txtReason.setText",
+          "lineNumber": 160
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.txtReason.setVisibility",
+          "lineNumber": 161
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.txtScore.setText",
+          "lineNumber": 164
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "String.valueOf",
+          "lineNumber": 164
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.txtDenom.setText",
+          "lineNumber": 165
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.itemView.setOnClickListener",
+          "lineNumber": 167
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "new Intent",
+          "lineNumber": 168
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "intent.putExtra",
+          "lineNumber": 169
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "dt.getMaDeThi",
+          "lineNumber": 169
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "context.startActivity",
+          "lineNumber": 170
+        },
+        {
+          "caller": "getItemCount",
+          "callee": "displayList.size",
+          "lineNumber": 175
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 189
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 190
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 191
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 192
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 193
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 194
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 195
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 196
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 12,
+        "functionCount": 12,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/TheLoaiCauHoiAdapter.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 160,
+      "nonEmptyLines": 137,
+      "functions": [
+        {
+          "name": "TheLoaiCauHoiAdapter",
+          "startLine": 39,
+          "endLine": 45,
+          "params": [
+            "list",
+            "context",
+            "iface"
+          ]
+        },
+        {
+          "name": "setFilter",
+          "startLine": 47,
+          "endLine": 69,
+          "params": [
+            "filter"
+          ]
+        },
+        {
+          "name": "computeProgress",
+          "startLine": 71,
+          "endLine": 80,
+          "params": [
+            "item"
+          ]
+        },
+        {
+          "name": "onCreateViewHolder",
+          "startLine": 82,
+          "endLine": 88,
+          "params": [
+            "parent",
+            "viewType"
+          ]
+        },
+        {
+          "name": "onBindViewHolder",
+          "startLine": 90,
+          "endLine": 126,
+          "params": [
+            "holder",
+            "position"
+          ]
+        },
+        {
+          "name": "getItemCount",
+          "startLine": 128,
+          "endLine": 131,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "TheLoaiCauHoiAdapter",
+          "startLine": 26,
+          "endLine": 160,
+          "methods": [
+            "TheLoaiCauHoiAdapter",
+            "setFilter",
+            "computeProgress",
+            "onCreateViewHolder",
+            "onBindViewHolder",
+            "getItemCount"
+          ],
+          "properties": [
+            "FILTER_ALL",
+            "FILTER_DIEM_LIET",
+            "FILTER_DANG_HOC",
+            "FILTER_HOAN_THANH",
+            "recyclerViewInterface",
+            "allList",
+            "dsLoaiCauHoi",
+            "context",
+            "db"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "FILTER_ALL",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "FILTER_DIEM_LIET",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "FILTER_DANG_HOC",
+          "line": 30,
+          "isDefault": false
+        },
+        {
+          "name": "FILTER_HOAN_THANH",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "TheLoaiCauHoiAdapter",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "setFilter",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "onCreateViewHolder",
+          "line": 82,
+          "isDefault": false
+        },
+        {
+          "name": "onBindViewHolder",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "getItemCount",
+          "line": 128,
+          "isDefault": false
+        },
+        {
+          "name": "TheLoaiCauHoiAdapter",
+          "line": 26,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "TheLoaiCauHoiAdapter",
+          "callee": "new ArrayList<>",
+          "lineNumber": 40
+        },
+        {
+          "caller": "TheLoaiCauHoiAdapter",
+          "callee": "new ArrayList<>",
+          "lineNumber": 41
+        },
+        {
+          "caller": "TheLoaiCauHoiAdapter",
+          "callee": "new DBHandler",
+          "lineNumber": 44
+        },
+        {
+          "caller": "setFilter",
+          "callee": "new ArrayList<>",
+          "lineNumber": 48
+        },
+        {
+          "caller": "setFilter",
+          "callee": "item.isDiemLiet",
+          "lineNumber": 52
+        },
+        {
+          "caller": "setFilter",
+          "callee": "dsLoaiCauHoi.add",
+          "lineNumber": 52
+        },
+        {
+          "caller": "setFilter",
+          "callee": "computeProgress",
+          "lineNumber": 55
+        },
+        {
+          "caller": "setFilter",
+          "callee": "dsLoaiCauHoi.add",
+          "lineNumber": 56
+        },
+        {
+          "caller": "setFilter",
+          "callee": "computeProgress",
+          "lineNumber": 60
+        },
+        {
+          "caller": "setFilter",
+          "callee": "dsLoaiCauHoi.add",
+          "lineNumber": 61
+        },
+        {
+          "caller": "setFilter",
+          "callee": "dsLoaiCauHoi.add",
+          "lineNumber": 65
+        },
+        {
+          "caller": "setFilter",
+          "callee": "notifyDataSetChanged",
+          "lineNumber": 68
+        },
+        {
+          "caller": "computeProgress",
+          "callee": "db.docCauHoi",
+          "lineNumber": 73
+        },
+        {
+          "caller": "computeProgress",
+          "callee": "ch.getMaLoaiCH",
+          "lineNumber": 74
+        },
+        {
+          "caller": "computeProgress",
+          "callee": "item.getMaLoaiCH",
+          "lineNumber": 74
+        },
+        {
+          "caller": "computeProgress",
+          "callee": "ch.getDaTraLoiDung",
+          "lineNumber": 76
+        },
+        {
+          "caller": "onCreateViewHolder",
+          "callee": "LayoutInflater.from(parent.getContext()).inflate",
+          "lineNumber": 85
+        },
+        {
+          "caller": "onCreateViewHolder",
+          "callee": "LayoutInflater.from",
+          "lineNumber": 85
+        },
+        {
+          "caller": "onCreateViewHolder",
+          "callee": "parent.getContext",
+          "lineNumber": 85
+        },
+        {
+          "caller": "onCreateViewHolder",
+          "callee": "new ViewHolder",
+          "lineNumber": 87
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "dsLoaiCauHoi.get",
+          "lineNumber": 92
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.divider.setVisibility",
+          "lineNumber": 94
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.ivTheLoaiCauHoi.setImageResource",
+          "lineNumber": 97
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "context.getResources().getIdentifier",
+          "lineNumber": 97
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "context.getResources",
+          "lineNumber": 97
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "tlch.getHinh",
+          "lineNumber": 98
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "context.getPackageName",
+          "lineNumber": 98
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.ivTheLoaiCauHoi.setImageResource",
+          "lineNumber": 100
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.tvDiemLiet.setVisibility",
+          "lineNumber": 103
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "tlch.isDiemLiet",
+          "lineNumber": 103
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.ten.setText",
+          "lineNumber": 104
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "tlch.getTenLoaiCauHoi",
+          "lineNumber": 104
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "computeProgress",
+          "lineNumber": 106
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.soCauHoi.setText",
+          "lineNumber": 110
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.pbKetQua.setProgressDrawable",
+          "lineNumber": 113
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ContextCompat.getDrawable",
+          "lineNumber": 113
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.pbKetQua.setMax",
+          "lineNumber": 115
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.pbKetQua.setProgress",
+          "lineNumber": 116
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.txtPct.setText",
+          "lineNumber": 117
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.txtPct.setTextColor",
+          "lineNumber": 118
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ContextCompat.getColor",
+          "lineNumber": 118
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.itemView.setOnClickListener",
+          "lineNumber": 121
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "new Intent",
+          "lineNumber": 122
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "intent.putExtra",
+          "lineNumber": 123
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "tlch.getMaLoaiCH",
+          "lineNumber": 123
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "context.startActivity",
+          "lineNumber": 124
+        },
+        {
+          "caller": "getItemCount",
+          "callee": "dsLoaiCauHoi.size",
+          "lineNumber": 130
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 144
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 145
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 146
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 147
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 148
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 149
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 150
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.setOnClickListener",
+          "lineNumber": 152
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "getAdapterPosition",
+          "lineNumber": 154
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "iface.onItemClick",
+          "lineNumber": 155
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 10,
+        "functionCount": 6,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 719,
+      "nonEmptyLines": 673,
+      "functions": [
+        {
+          "name": "DBHandler",
+          "startLine": 33,
+          "endLine": 38,
+          "params": [
+            "context"
+          ]
+        },
+        {
+          "name": "onCreate",
+          "startLine": 40,
+          "endLine": 43,
+          "params": [
+            "sqLiteDatabase"
+          ]
+        },
+        {
+          "name": "onUpgrade",
+          "startLine": 45,
+          "endLine": 47,
+          "params": [
+            "sqLiteDatabase",
+            "i",
+            "i1"
+          ]
+        },
+        {
+          "name": "isLastestVersion",
+          "startLine": 49,
+          "endLine": 64,
+          "params": [
+            "version"
+          ]
+        },
+        {
+          "name": "UpdateVersion",
+          "startLine": 66,
+          "endLine": 74,
+          "params": [
+            "version"
+          ]
+        },
+        {
+          "name": "docDeThi",
+          "startLine": 76,
+          "endLine": 89,
+          "params": []
+        },
+        {
+          "name": "docLoaiCauHoi",
+          "startLine": 90,
+          "endLine": 103,
+          "params": []
+        },
+        {
+          "name": "docCauTraLoi",
+          "startLine": 104,
+          "endLine": 117,
+          "params": []
+        },
+        {
+          "name": "docCauHaySai",
+          "startLine": 119,
+          "endLine": 132,
+          "params": []
+        },
+        {
+          "name": "docCauHoiSai",
+          "startLine": 134,
+          "endLine": 147,
+          "params": []
+        },
+        {
+          "name": "getData",
+          "startLine": 148,
+          "endLine": 151,
+          "params": [
+            "sql"
+          ]
+        },
+        {
+          "name": "docCauHoiLuu",
+          "startLine": 152,
+          "endLine": 165,
+          "params": []
+        },
+        {
+          "name": "docLoaiBienBao",
+          "startLine": 167,
+          "endLine": 179,
+          "params": []
+        },
+        {
+          "name": "getListCauTraLoiByMaDeThi",
+          "startLine": 181,
+          "endLine": 194,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getListCauHoiByMaCH",
+          "startLine": 195,
+          "endLine": 207,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getCauHoiByID",
+          "startLine": 208,
+          "endLine": 217,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "isBienBaoEmpty",
+          "startLine": 218,
+          "endLine": 225,
+          "params": []
+        },
+        {
+          "name": "loadBienBaoFromAssets",
+          "startLine": 227,
+          "endLine": 268,
+          "params": []
+        },
+        {
+          "name": "docBienBao",
+          "startLine": 271,
+          "endLine": 282,
+          "params": []
+        },
+        {
+          "name": "docCauHoi",
+          "startLine": 285,
+          "endLine": 301,
+          "params": []
+        },
+        {
+          "name": "insertLoaiBang",
+          "startLine": 303,
+          "endLine": 310,
+          "params": [
+            "lb"
+          ]
+        },
+        {
+          "name": "insertBB",
+          "startLine": 312,
+          "endLine": 322,
+          "params": [
+            "bb"
+          ]
+        },
+        {
+          "name": "insertDeThi",
+          "startLine": 324,
+          "endLine": 331,
+          "params": [
+            "dt"
+          ]
+        },
+        {
+          "name": "insertCauHoi",
+          "startLine": 333,
+          "endLine": 349,
+          "params": [
+            "ch"
+          ]
+        },
+        {
+          "name": "insertLoaiCauHoi",
+          "startLine": 350,
+          "endLine": 357,
+          "params": [
+            "lch"
+          ]
+        },
+        {
+          "name": "insertCauTraLoi",
+          "startLine": 359,
+          "endLine": 365,
+          "params": [
+            "ctl"
+          ]
+        },
+        {
+          "name": "insert",
+          "startLine": 366,
+          "endLine": 376,
+          "params": [
+            "table",
+            "c"
+          ]
+        },
+        {
+          "name": "updateDaTraLoi",
+          "startLine": 379,
+          "endLine": 386,
+          "params": [
+            "MaCH",
+            "DaTraLoiDung"
+          ]
+        },
+        {
+          "name": "updateLuuLaiCauHoi",
+          "startLine": 388,
+          "endLine": 395,
+          "params": [
+            "MaCH",
+            "Luu"
+          ]
+        },
+        {
+          "name": "findLoaiBang",
+          "startLine": 397,
+          "endLine": 412,
+          "params": [
+            "MaLB"
+          ]
+        },
+        {
+          "name": "findBBByID",
+          "startLine": 414,
+          "endLine": 429,
+          "params": [
+            "MaBB"
+          ]
+        },
+        {
+          "name": "findLCHByID",
+          "startLine": 431,
+          "endLine": 446,
+          "params": [
+            "MLCH"
+          ]
+        },
+        {
+          "name": "findCHByID",
+          "startLine": 448,
+          "endLine": 468,
+          "params": [
+            "ID"
+          ]
+        },
+        {
+          "name": "findCauTraLoiByID",
+          "startLine": 470,
+          "endLine": 486,
+          "params": [
+            "idDeThi",
+            "idCauHoi"
+          ]
+        },
+        {
+          "name": "finDDeThiByID",
+          "startLine": 487,
+          "endLine": 504,
+          "params": [
+            "ID"
+          ]
+        },
+        {
+          "name": "coCauHoiChoLoaiBang",
+          "startLine": 505,
+          "endLine": 515,
+          "params": [
+            "loaiBang"
+          ]
+        },
+        {
+          "name": "generateDeThiTuCauHoi",
+          "startLine": 517,
+          "endLine": 587,
+          "params": [
+            "loaiBang"
+          ]
+        },
+        {
+          "name": "onDowngrade",
+          "startLine": 589,
+          "endLine": 593,
+          "params": [
+            "db",
+            "oldVersion",
+            "newVersion"
+          ]
+        },
+        {
+          "name": "updateLoaiBang",
+          "startLine": 595,
+          "endLine": 602,
+          "params": [
+            "lch"
+          ]
+        },
+        {
+          "name": "updateCauTraLoi",
+          "startLine": 604,
+          "endLine": 614,
+          "params": [
+            "ctl"
+          ]
+        },
+        {
+          "name": "updateLoaiCauHoi",
+          "startLine": 616,
+          "endLine": 624,
+          "params": [
+            "lch"
+          ]
+        },
+        {
+          "name": "updateBB",
+          "startLine": 626,
+          "endLine": 637,
+          "params": [
+            "bb"
+          ]
+        },
+        {
+          "name": "updateDeThi",
+          "startLine": 639,
+          "endLine": 647,
+          "params": [
+            "dt"
+          ]
+        },
+        {
+          "name": "updateCauHoi",
+          "startLine": 649,
+          "endLine": 667,
+          "params": [
+            "ch"
+          ]
+        },
+        {
+          "name": "updateCauTraLoi",
+          "startLine": 669,
+          "endLine": 677,
+          "params": [
+            "ctl"
+          ]
+        },
+        {
+          "name": "updateDapAnChon",
+          "startLine": 679,
+          "endLine": 686,
+          "params": [
+            "ctl"
+          ]
+        },
+        {
+          "name": "RandomQuizz",
+          "startLine": 688,
+          "endLine": 718,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "DBHandler",
+          "startLine": 27,
+          "endLine": 719,
+          "methods": [
+            "DBHandler",
+            "onCreate",
+            "onUpgrade",
+            "isLastestVersion",
+            "UpdateVersion",
+            "docDeThi",
+            "docLoaiCauHoi",
+            "docCauTraLoi",
+            "docCauHaySai",
+            "docCauHoiSai",
+            "getData",
+            "docCauHoiLuu",
+            "docLoaiBienBao",
+            "getListCauTraLoiByMaDeThi",
+            "getListCauHoiByMaCH",
+            "getCauHoiByID",
+            "isBienBaoEmpty",
+            "loadBienBaoFromAssets",
+            "docBienBao",
+            "docCauHoi",
+            "insertLoaiBang",
+            "insertBB",
+            "insertDeThi",
+            "insertCauHoi",
+            "insertLoaiCauHoi",
+            "insertCauTraLoi",
+            "insert",
+            "updateDaTraLoi",
+            "updateLuuLaiCauHoi",
+            "findLoaiBang",
+            "findBBByID",
+            "findLCHByID",
+            "findCHByID",
+            "findCauTraLoiByID",
+            "finDDeThiByID",
+            "coCauHoiChoLoaiBang",
+            "generateDeThiTuCauHoi",
+            "onDowngrade",
+            "updateLoaiBang",
+            "updateCauTraLoi",
+            "updateLoaiCauHoi",
+            "updateBB",
+            "updateDeThi",
+            "updateCauHoi",
+            "updateCauTraLoi",
+            "updateDapAnChon",
+            "RandomQuizz"
+          ],
+          "properties": [
+            "mDatabase",
+            "context",
+            "DB_NAME",
+            "DB_VERSION"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "DBHandler",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "onCreate",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "onUpgrade",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "isLastestVersion",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "UpdateVersion",
+          "line": 66,
+          "isDefault": false
+        },
+        {
+          "name": "docDeThi",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "docLoaiCauHoi",
+          "line": 90,
+          "isDefault": false
+        },
+        {
+          "name": "docCauTraLoi",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "docCauHaySai",
+          "line": 119,
+          "isDefault": false
+        },
+        {
+          "name": "docCauHoiSai",
+          "line": 134,
+          "isDefault": false
+        },
+        {
+          "name": "getData",
+          "line": 148,
+          "isDefault": false
+        },
+        {
+          "name": "docCauHoiLuu",
+          "line": 152,
+          "isDefault": false
+        },
+        {
+          "name": "docLoaiBienBao",
+          "line": 167,
+          "isDefault": false
+        },
+        {
+          "name": "getListCauTraLoiByMaDeThi",
+          "line": 181,
+          "isDefault": false
+        },
+        {
+          "name": "getListCauHoiByMaCH",
+          "line": 195,
+          "isDefault": false
+        },
+        {
+          "name": "getCauHoiByID",
+          "line": 208,
+          "isDefault": false
+        },
+        {
+          "name": "isBienBaoEmpty",
+          "line": 218,
+          "isDefault": false
+        },
+        {
+          "name": "loadBienBaoFromAssets",
+          "line": 227,
+          "isDefault": false
+        },
+        {
+          "name": "docBienBao",
+          "line": 271,
+          "isDefault": false
+        },
+        {
+          "name": "docCauHoi",
+          "line": 285,
+          "isDefault": false
+        },
+        {
+          "name": "insertLoaiBang",
+          "line": 303,
+          "isDefault": false
+        },
+        {
+          "name": "insertBB",
+          "line": 312,
+          "isDefault": false
+        },
+        {
+          "name": "insertDeThi",
+          "line": 324,
+          "isDefault": false
+        },
+        {
+          "name": "insertCauHoi",
+          "line": 333,
+          "isDefault": false
+        },
+        {
+          "name": "insertLoaiCauHoi",
+          "line": 350,
+          "isDefault": false
+        },
+        {
+          "name": "insertCauTraLoi",
+          "line": 359,
+          "isDefault": false
+        },
+        {
+          "name": "updateDaTraLoi",
+          "line": 379,
+          "isDefault": false
+        },
+        {
+          "name": "updateLuuLaiCauHoi",
+          "line": 388,
+          "isDefault": false
+        },
+        {
+          "name": "findLoaiBang",
+          "line": 397,
+          "isDefault": false
+        },
+        {
+          "name": "findBBByID",
+          "line": 414,
+          "isDefault": false
+        },
+        {
+          "name": "findLCHByID",
+          "line": 431,
+          "isDefault": false
+        },
+        {
+          "name": "findCHByID",
+          "line": 448,
+          "isDefault": false
+        },
+        {
+          "name": "findCauTraLoiByID",
+          "line": 470,
+          "isDefault": false
+        },
+        {
+          "name": "finDDeThiByID",
+          "line": 487,
+          "isDefault": false
+        },
+        {
+          "name": "coCauHoiChoLoaiBang",
+          "line": 505,
+          "isDefault": false
+        },
+        {
+          "name": "generateDeThiTuCauHoi",
+          "line": 517,
+          "isDefault": false
+        },
+        {
+          "name": "onDowngrade",
+          "line": 589,
+          "isDefault": false
+        },
+        {
+          "name": "updateLoaiBang",
+          "line": 595,
+          "isDefault": false
+        },
+        {
+          "name": "updateCauTraLoi",
+          "line": 604,
+          "isDefault": false
+        },
+        {
+          "name": "updateLoaiCauHoi",
+          "line": 616,
+          "isDefault": false
+        },
+        {
+          "name": "updateBB",
+          "line": 626,
+          "isDefault": false
+        },
+        {
+          "name": "updateDeThi",
+          "line": 639,
+          "isDefault": false
+        },
+        {
+          "name": "updateCauHoi",
+          "line": 649,
+          "isDefault": false
+        },
+        {
+          "name": "updateCauTraLoi",
+          "line": 669,
+          "isDefault": false
+        },
+        {
+          "name": "updateDapAnChon",
+          "line": 679,
+          "isDefault": false
+        },
+        {
+          "name": "RandomQuizz",
+          "line": 688,
+          "isDefault": false
+        },
+        {
+          "name": "DBHandler",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "DBHandler",
+          "callee": "context.openOrCreateDatabase",
+          "lineNumber": 36
+        },
+        {
+          "caller": "DBHandler",
+          "callee": "context.openOrCreateDatabase",
+          "lineNumber": 37
+        },
+        {
+          "caller": "onCreate",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 42
+        },
+        {
+          "caller": "isLastestVersion",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 52
+        },
+        {
+          "caller": "isLastestVersion",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 53
+        },
+        {
+          "caller": "isLastestVersion",
+          "callee": "cursor.moveToFirst",
+          "lineNumber": 56
+        },
+        {
+          "caller": "isLastestVersion",
+          "callee": "Integer.parseInt",
+          "lineNumber": 58
+        },
+        {
+          "caller": "isLastestVersion",
+          "callee": "cursor.getString",
+          "lineNumber": 58
+        },
+        {
+          "caller": "isLastestVersion",
+          "callee": "cursor.moveToNext",
+          "lineNumber": 59
+        },
+        {
+          "caller": "isLastestVersion",
+          "callee": "cursor.close",
+          "lineNumber": 61
+        },
+        {
+          "caller": "UpdateVersion",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 68
+        },
+        {
+          "caller": "UpdateVersion",
+          "callee": "new ContentValues",
+          "lineNumber": 69
+        },
+        {
+          "caller": "UpdateVersion",
+          "callee": "contentValues.put",
+          "lineNumber": 71
+        },
+        {
+          "caller": "UpdateVersion",
+          "callee": "mDatabase.update",
+          "lineNumber": 72
+        },
+        {
+          "caller": "UpdateVersion",
+          "callee": "mDatabase.close",
+          "lineNumber": 73
+        },
+        {
+          "caller": "docDeThi",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 78
+        },
+        {
+          "caller": "docDeThi",
+          "callee": "new ArrayList<>",
+          "lineNumber": 79
+        },
+        {
+          "caller": "docDeThi",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 80
+        },
+        {
+          "caller": "docDeThi",
+          "callee": "DanhSach.getLoaiBang",
+          "lineNumber": 80
+        },
+        {
+          "caller": "docDeThi",
+          "callee": "cursor.moveToFirst",
+          "lineNumber": 81
+        },
+        {
+          "caller": "docDeThi",
+          "callee": "dsDeThi.add",
+          "lineNumber": 83
+        },
+        {
+          "caller": "docDeThi",
+          "callee": "new DeThi",
+          "lineNumber": 83
+        },
+        {
+          "caller": "docDeThi",
+          "callee": "cursor.getInt",
+          "lineNumber": 83
+        },
+        {
+          "caller": "docDeThi",
+          "callee": "cursor.getString",
+          "lineNumber": 83
+        },
+        {
+          "caller": "docDeThi",
+          "callee": "cursor.moveToNext",
+          "lineNumber": 84
+        },
+        {
+          "caller": "docDeThi",
+          "callee": "cursor.close",
+          "lineNumber": 86
+        },
+        {
+          "caller": "docDeThi",
+          "callee": "mDatabase.close",
+          "lineNumber": 87
+        },
+        {
+          "caller": "docLoaiCauHoi",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 92
+        },
+        {
+          "caller": "docLoaiCauHoi",
+          "callee": "new ArrayList<>",
+          "lineNumber": 93
+        },
+        {
+          "caller": "docLoaiCauHoi",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 94
+        },
+        {
+          "caller": "docLoaiCauHoi",
+          "callee": "cursor.moveToFirst",
+          "lineNumber": 95
+        },
+        {
+          "caller": "docLoaiCauHoi",
+          "callee": "dsCauTraLoi.add",
+          "lineNumber": 97
+        },
+        {
+          "caller": "docLoaiCauHoi",
+          "callee": "new LoaiCauHoi",
+          "lineNumber": 97
+        },
+        {
+          "caller": "docLoaiCauHoi",
+          "callee": "cursor.getInt",
+          "lineNumber": 97
+        },
+        {
+          "caller": "docLoaiCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 97
+        },
+        {
+          "caller": "docLoaiCauHoi",
+          "callee": "cursor.moveToNext",
+          "lineNumber": 98
+        },
+        {
+          "caller": "docLoaiCauHoi",
+          "callee": "cursor.close",
+          "lineNumber": 100
+        },
+        {
+          "caller": "docLoaiCauHoi",
+          "callee": "mDatabase.close",
+          "lineNumber": 101
+        },
+        {
+          "caller": "docCauTraLoi",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 106
+        },
+        {
+          "caller": "docCauTraLoi",
+          "callee": "new ArrayList<>",
+          "lineNumber": 107
+        },
+        {
+          "caller": "docCauTraLoi",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 108
+        },
+        {
+          "caller": "docCauTraLoi",
+          "callee": "cursor.moveToFirst",
+          "lineNumber": 109
+        },
+        {
+          "caller": "docCauTraLoi",
+          "callee": "dsCauTraLoi.add",
+          "lineNumber": 111
+        },
+        {
+          "caller": "docCauTraLoi",
+          "callee": "new CauTraLoi",
+          "lineNumber": 111
+        },
+        {
+          "caller": "docCauTraLoi",
+          "callee": "cursor.getInt",
+          "lineNumber": 111
+        },
+        {
+          "caller": "docCauTraLoi",
+          "callee": "cursor.getInt",
+          "lineNumber": 111
+        },
+        {
+          "caller": "docCauTraLoi",
+          "callee": "cursor.moveToNext",
+          "lineNumber": 112
+        },
+        {
+          "caller": "docCauTraLoi",
+          "callee": "cursor.close",
+          "lineNumber": 114
+        },
+        {
+          "caller": "docCauTraLoi",
+          "callee": "mDatabase.close",
+          "lineNumber": 115
+        },
+        {
+          "caller": "docCauHaySai",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 121
+        },
+        {
+          "caller": "docCauHaySai",
+          "callee": "new ArrayList<>",
+          "lineNumber": 122
+        },
+        {
+          "caller": "docCauHaySai",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 123
+        },
+        {
+          "caller": "docCauHaySai",
+          "callee": "DanhSach.getLoaiBang",
+          "lineNumber": 123
+        },
+        {
+          "caller": "docCauHaySai",
+          "callee": "cursor.moveToFirst",
+          "lineNumber": 124
+        },
+        {
+          "caller": "docCauHaySai",
+          "callee": "dsCauHoi.add",
+          "lineNumber": 126
+        },
+        {
+          "caller": "docCauHaySai",
+          "callee": "getCauHoiByID",
+          "lineNumber": 126
+        },
+        {
+          "caller": "docCauHaySai",
+          "callee": "cursor.getInt",
+          "lineNumber": 126
+        },
+        {
+          "caller": "docCauHaySai",
+          "callee": "cursor.moveToNext",
+          "lineNumber": 127
+        },
+        {
+          "caller": "docCauHaySai",
+          "callee": "cursor.close",
+          "lineNumber": 129
+        },
+        {
+          "caller": "docCauHaySai",
+          "callee": "mDatabase.close",
+          "lineNumber": 130
+        },
+        {
+          "caller": "docCauHoiSai",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 136
+        },
+        {
+          "caller": "docCauHoiSai",
+          "callee": "new ArrayList<>",
+          "lineNumber": 137
+        },
+        {
+          "caller": "docCauHoiSai",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 138
+        },
+        {
+          "caller": "docCauHoiSai",
+          "callee": "DanhSach.getLoaiBang",
+          "lineNumber": 138
+        },
+        {
+          "caller": "docCauHoiSai",
+          "callee": "cursor.moveToFirst",
+          "lineNumber": 139
+        },
+        {
+          "caller": "docCauHoiSai",
+          "callee": "dsCauHoiSai.add",
+          "lineNumber": 141
+        },
+        {
+          "caller": "docCauHoiSai",
+          "callee": "getCauHoiByID",
+          "lineNumber": 141
+        },
+        {
+          "caller": "docCauHoiSai",
+          "callee": "cursor.getInt",
+          "lineNumber": 141
+        },
+        {
+          "caller": "docCauHoiSai",
+          "callee": "cursor.moveToNext",
+          "lineNumber": 142
+        },
+        {
+          "caller": "docCauHoiSai",
+          "callee": "cursor.close",
+          "lineNumber": 144
+        },
+        {
+          "caller": "docCauHoiSai",
+          "callee": "mDatabase.close",
+          "lineNumber": 145
+        },
+        {
+          "caller": "getData",
+          "callee": "getReadableDatabase",
+          "lineNumber": 149
+        },
+        {
+          "caller": "getData",
+          "callee": "database.rawQuery",
+          "lineNumber": 150
+        },
+        {
+          "caller": "docCauHoiLuu",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 154
+        },
+        {
+          "caller": "docCauHoiLuu",
+          "callee": "new ArrayList<>",
+          "lineNumber": 155
+        },
+        {
+          "caller": "docCauHoiLuu",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 156
+        },
+        {
+          "caller": "docCauHoiLuu",
+          "callee": "DanhSach.getLoaiBang",
+          "lineNumber": 156
+        },
+        {
+          "caller": "docCauHoiLuu",
+          "callee": "cursor.moveToFirst",
+          "lineNumber": 157
+        },
+        {
+          "caller": "docCauHoiLuu",
+          "callee": "dsCauHoiSai.add",
+          "lineNumber": 159
+        },
+        {
+          "caller": "docCauHoiLuu",
+          "callee": "getCauHoiByID",
+          "lineNumber": 159
+        },
+        {
+          "caller": "docCauHoiLuu",
+          "callee": "cursor.getInt",
+          "lineNumber": 159
+        },
+        {
+          "caller": "docCauHoiLuu",
+          "callee": "cursor.moveToNext",
+          "lineNumber": 160
+        },
+        {
+          "caller": "docCauHoiLuu",
+          "callee": "cursor.close",
+          "lineNumber": 162
+        },
+        {
+          "caller": "docCauHoiLuu",
+          "callee": "mDatabase.close",
+          "lineNumber": 163
+        },
+        {
+          "caller": "docLoaiBienBao",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 169
+        },
+        {
+          "caller": "docLoaiBienBao",
+          "callee": "new ArrayList<>",
+          "lineNumber": 170
+        },
+        {
+          "caller": "docLoaiBienBao",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 171
+        },
+        {
+          "caller": "docLoaiBienBao",
+          "callee": "cursor.moveToFirst",
+          "lineNumber": 172
+        },
+        {
+          "caller": "docLoaiBienBao",
+          "callee": "dsLoaiBienBao.add",
+          "lineNumber": 174
+        },
+        {
+          "caller": "docLoaiBienBao",
+          "callee": "new LoaiBienBao",
+          "lineNumber": 174
+        },
+        {
+          "caller": "docLoaiBienBao",
+          "callee": "cursor.getInt",
+          "lineNumber": 174
+        },
+        {
+          "caller": "docLoaiBienBao",
+          "callee": "cursor.getString",
+          "lineNumber": 174
+        },
+        {
+          "caller": "docLoaiBienBao",
+          "callee": "cursor.moveToNext",
+          "lineNumber": 175
+        },
+        {
+          "caller": "docLoaiBienBao",
+          "callee": "cursor.close",
+          "lineNumber": 177
+        },
+        {
+          "caller": "getListCauTraLoiByMaDeThi",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 184
+        },
+        {
+          "caller": "getListCauTraLoiByMaDeThi",
+          "callee": "new ArrayList<>",
+          "lineNumber": 185
+        },
+        {
+          "caller": "getListCauTraLoiByMaDeThi",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 186
+        },
+        {
+          "caller": "getListCauTraLoiByMaDeThi",
+          "callee": "String.valueOf",
+          "lineNumber": 186
+        },
+        {
+          "caller": "getListCauTraLoiByMaDeThi",
+          "callee": "cursor.moveToFirst",
+          "lineNumber": 187
+        },
+        {
+          "caller": "getListCauTraLoiByMaDeThi",
+          "callee": "cursor.getCount",
+          "lineNumber": 187
+        },
+        {
+          "caller": "getListCauTraLoiByMaDeThi",
+          "callee": "dsCTL.add",
+          "lineNumber": 189
+        },
+        {
+          "caller": "getListCauTraLoiByMaDeThi",
+          "callee": "new CauTraLoi",
+          "lineNumber": 189
+        },
+        {
+          "caller": "getListCauTraLoiByMaDeThi",
+          "callee": "cursor.getInt",
+          "lineNumber": 189
+        },
+        {
+          "caller": "getListCauTraLoiByMaDeThi",
+          "callee": "cursor.getInt",
+          "lineNumber": 189
+        },
+        {
+          "caller": "getListCauTraLoiByMaDeThi",
+          "callee": "cursor.getString",
+          "lineNumber": 189
+        },
+        {
+          "caller": "getListCauTraLoiByMaDeThi",
+          "callee": "cursor.moveToNext",
+          "lineNumber": 190
+        },
+        {
+          "caller": "getListCauTraLoiByMaDeThi",
+          "callee": "cursor.close",
+          "lineNumber": 192
+        },
+        {
+          "caller": "getListCauHoiByMaCH",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 197
+        },
+        {
+          "caller": "getListCauHoiByMaCH",
+          "callee": "new ArrayList<>",
+          "lineNumber": 198
+        },
+        {
+          "caller": "getListCauHoiByMaCH",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 199
+        },
+        {
+          "caller": "getListCauHoiByMaCH",
+          "callee": "String.valueOf",
+          "lineNumber": 199
+        },
+        {
+          "caller": "getListCauHoiByMaCH",
+          "callee": "cursor.moveToFirst",
+          "lineNumber": 200
+        },
+        {
+          "caller": "getListCauHoiByMaCH",
+          "callee": "cursor.getCount",
+          "lineNumber": 200
+        },
+        {
+          "caller": "getListCauHoiByMaCH",
+          "callee": "ds.add",
+          "lineNumber": 202
+        },
+        {
+          "caller": "getListCauHoiByMaCH",
+          "callee": "getCauHoiByID",
+          "lineNumber": 202
+        },
+        {
+          "caller": "getListCauHoiByMaCH",
+          "callee": "cursor.getInt",
+          "lineNumber": 202
+        },
+        {
+          "caller": "getListCauHoiByMaCH",
+          "callee": "cursor.moveToNext",
+          "lineNumber": 203
+        },
+        {
+          "caller": "getListCauHoiByMaCH",
+          "callee": "cursor.close",
+          "lineNumber": 205
+        },
+        {
+          "caller": "getCauHoiByID",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 210
+        },
+        {
+          "caller": "getCauHoiByID",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 211
+        },
+        {
+          "caller": "getCauHoiByID",
+          "callee": "String.valueOf",
+          "lineNumber": 211
+        },
+        {
+          "caller": "getCauHoiByID",
+          "callee": "cursor.moveToFirst",
+          "lineNumber": 212
+        },
+        {
+          "caller": "getCauHoiByID",
+          "callee": "cursor.getCount",
+          "lineNumber": 213
+        },
+        {
+          "caller": "getCauHoiByID",
+          "callee": "new CauHoi",
+          "lineNumber": 214
+        },
+        {
+          "caller": "getCauHoiByID",
+          "callee": "cursor.getInt",
+          "lineNumber": 214
+        },
+        {
+          "caller": "getCauHoiByID",
+          "callee": "cursor.getInt",
+          "lineNumber": 214
+        },
+        {
+          "caller": "getCauHoiByID",
+          "callee": "cursor.getInt",
+          "lineNumber": 214
+        },
+        {
+          "caller": "getCauHoiByID",
+          "callee": "cursor.getString",
+          "lineNumber": 214
+        },
+        {
+          "caller": "getCauHoiByID",
+          "callee": "cursor.getString",
+          "lineNumber": 214
+        },
+        {
+          "caller": "getCauHoiByID",
+          "callee": "cursor.getString",
+          "lineNumber": 214
+        },
+        {
+          "caller": "getCauHoiByID",
+          "callee": "cursor.getString",
+          "lineNumber": 214
+        },
+        {
+          "caller": "getCauHoiByID",
+          "callee": "cursor.getString",
+          "lineNumber": 214
+        },
+        {
+          "caller": "getCauHoiByID",
+          "callee": "cursor.getString",
+          "lineNumber": 214
+        },
+        {
+          "caller": "getCauHoiByID",
+          "callee": "cursor.getString",
+          "lineNumber": 214
+        },
+        {
+          "caller": "getCauHoiByID",
+          "callee": "cursor.getString",
+          "lineNumber": 214
+        },
+        {
+          "caller": "getCauHoiByID",
+          "callee": "cursor.getInt",
+          "lineNumber": 214
+        },
+        {
+          "caller": "getCauHoiByID",
+          "callee": "cursor.getInt",
+          "lineNumber": 214
+        },
+        {
+          "caller": "getCauHoiByID",
+          "callee": "cursor.getInt",
+          "lineNumber": 214
+        },
+        {
+          "caller": "getCauHoiByID",
+          "callee": "cursor.close",
+          "lineNumber": 215
+        },
+        {
+          "caller": "isBienBaoEmpty",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 219
+        },
+        {
+          "caller": "isBienBaoEmpty",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 220
+        },
+        {
+          "caller": "isBienBaoEmpty",
+          "callee": "cursor.moveToFirst",
+          "lineNumber": 221
+        },
+        {
+          "caller": "isBienBaoEmpty",
+          "callee": "cursor.getInt",
+          "lineNumber": 222
+        },
+        {
+          "caller": "isBienBaoEmpty",
+          "callee": "cursor.close",
+          "lineNumber": 223
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "context.getAssets().open",
+          "lineNumber": 229
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "context.getAssets",
+          "lineNumber": 229
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "is.available",
+          "lineNumber": 230
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "is.read",
+          "lineNumber": 231
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "is.close",
+          "lineNumber": 232
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "new String",
+          "lineNumber": 233
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "new JSONObject",
+          "lineNumber": 235
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 237
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "mDatabase.beginTransaction",
+          "lineNumber": 238
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "mDatabase.execSQL",
+          "lineNumber": 240
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "root.getJSONArray",
+          "lineNumber": 241
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "loaiArr.length",
+          "lineNumber": 242
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "loaiArr.getJSONObject",
+          "lineNumber": 243
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "new ContentValues",
+          "lineNumber": 244
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "cv.put",
+          "lineNumber": 245
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "o.getInt",
+          "lineNumber": 245
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "cv.put",
+          "lineNumber": 246
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "o.getString",
+          "lineNumber": 246
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "mDatabase.insert",
+          "lineNumber": 247
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "root.getJSONArray",
+          "lineNumber": 250
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "bbArr.length",
+          "lineNumber": 251
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "bbArr.getJSONObject",
+          "lineNumber": 252
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "new ContentValues",
+          "lineNumber": 253
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "cv.put",
+          "lineNumber": 254
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "o.getString",
+          "lineNumber": 254
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "cv.put",
+          "lineNumber": 255
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "o.getInt",
+          "lineNumber": 255
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "cv.put",
+          "lineNumber": 256
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "o.getString",
+          "lineNumber": 256
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "cv.put",
+          "lineNumber": 257
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "o.getString",
+          "lineNumber": 257
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "cv.put",
+          "lineNumber": 258
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "o.getString",
+          "lineNumber": 258
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "mDatabase.insertWithOnConflict",
+          "lineNumber": 259
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "mDatabase.setTransactionSuccessful",
+          "lineNumber": 261
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "mDatabase.endTransaction",
+          "lineNumber": 263
+        },
+        {
+          "caller": "loadBienBaoFromAssets",
+          "callee": "e.printStackTrace",
+          "lineNumber": 266
+        },
+        {
+          "caller": "docBienBao",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 273
+        },
+        {
+          "caller": "docBienBao",
+          "callee": "new ArrayList<>",
+          "lineNumber": 274
+        },
+        {
+          "caller": "docBienBao",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 275
+        },
+        {
+          "caller": "docBienBao",
+          "callee": "cursor.moveToNext",
+          "lineNumber": 276
+        },
+        {
+          "caller": "docBienBao",
+          "callee": "dsLoaiBienBao.add",
+          "lineNumber": 278
+        },
+        {
+          "caller": "docBienBao",
+          "callee": "new BienBao",
+          "lineNumber": 278
+        },
+        {
+          "caller": "docBienBao",
+          "callee": "cursor.getString",
+          "lineNumber": 278
+        },
+        {
+          "caller": "docBienBao",
+          "callee": "cursor.getInt",
+          "lineNumber": 278
+        },
+        {
+          "caller": "docBienBao",
+          "callee": "cursor.getString",
+          "lineNumber": 278
+        },
+        {
+          "caller": "docBienBao",
+          "callee": "cursor.getString",
+          "lineNumber": 278
+        },
+        {
+          "caller": "docBienBao",
+          "callee": "cursor.getString",
+          "lineNumber": 278
+        },
+        {
+          "caller": "docBienBao",
+          "callee": "cursor.close",
+          "lineNumber": 280
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 287
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "new ArrayList<>",
+          "lineNumber": 288
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 289
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "DanhSach.getLoaiBang",
+          "lineNumber": 289
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "cursor.moveToNext",
+          "lineNumber": 290
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "cursor.getInt",
+          "lineNumber": 293
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "dsCauHoi.add",
+          "lineNumber": 296
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "new CauHoi",
+          "lineNumber": 296
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "cursor.getInt",
+          "lineNumber": 296
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "cursor.getInt",
+          "lineNumber": 296
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "cursor.getInt",
+          "lineNumber": 296
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 296
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 296
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 296
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 296
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 296
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 296
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 296
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 296
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "cursor.getInt",
+          "lineNumber": 296
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "cursor.getInt",
+          "lineNumber": 296
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "cursor.getInt",
+          "lineNumber": 296
+        },
+        {
+          "caller": "docCauHoi",
+          "callee": "cursor.close",
+          "lineNumber": 298
+        },
+        {
+          "caller": "insertLoaiBang",
+          "callee": "new ContentValues",
+          "lineNumber": 305
+        },
+        {
+          "caller": "insertLoaiBang",
+          "callee": "contentValues.put",
+          "lineNumber": 306
+        },
+        {
+          "caller": "insertLoaiBang",
+          "callee": "lb.getMaLoaiBang",
+          "lineNumber": 306
+        },
+        {
+          "caller": "insertLoaiBang",
+          "callee": "contentValues.put",
+          "lineNumber": 307
+        },
+        {
+          "caller": "insertLoaiBang",
+          "callee": "lb.getTenLoaiBang",
+          "lineNumber": 307
+        },
+        {
+          "caller": "insertLoaiBang",
+          "callee": "insert",
+          "lineNumber": 308
+        },
+        {
+          "caller": "insertBB",
+          "callee": "new ContentValues",
+          "lineNumber": 314
+        },
+        {
+          "caller": "insertBB",
+          "callee": "contentValues.put",
+          "lineNumber": 315
+        },
+        {
+          "caller": "insertBB",
+          "callee": "bb.getMaBB",
+          "lineNumber": 315
+        },
+        {
+          "caller": "insertBB",
+          "callee": "contentValues.put",
+          "lineNumber": 316
+        },
+        {
+          "caller": "insertBB",
+          "callee": "bb.getMaLoaiBB",
+          "lineNumber": 316
+        },
+        {
+          "caller": "insertBB",
+          "callee": "contentValues.put",
+          "lineNumber": 317
+        },
+        {
+          "caller": "insertBB",
+          "callee": "bb.getTieuDe",
+          "lineNumber": 317
+        },
+        {
+          "caller": "insertBB",
+          "callee": "contentValues.put",
+          "lineNumber": 318
+        },
+        {
+          "caller": "insertBB",
+          "callee": "bb.getNoidung",
+          "lineNumber": 318
+        },
+        {
+          "caller": "insertBB",
+          "callee": "contentValues.put",
+          "lineNumber": 319
+        },
+        {
+          "caller": "insertBB",
+          "callee": "bb.getHinhAnh",
+          "lineNumber": 319
+        },
+        {
+          "caller": "insertBB",
+          "callee": "insert",
+          "lineNumber": 320
+        },
+        {
+          "caller": "insertDeThi",
+          "callee": "new ContentValues",
+          "lineNumber": 326
+        },
+        {
+          "caller": "insertDeThi",
+          "callee": "contentValues.put",
+          "lineNumber": 327
+        },
+        {
+          "caller": "insertDeThi",
+          "callee": "dt.getMaDeThi",
+          "lineNumber": 327
+        },
+        {
+          "caller": "insertDeThi",
+          "callee": "contentValues.put",
+          "lineNumber": 328
+        },
+        {
+          "caller": "insertDeThi",
+          "callee": "dt.getMaDeThi",
+          "lineNumber": 328
+        },
+        {
+          "caller": "insertDeThi",
+          "callee": "contentValues.put",
+          "lineNumber": 329
+        },
+        {
+          "caller": "insertDeThi",
+          "callee": "dt.getMaLoaiBang",
+          "lineNumber": 329
+        },
+        {
+          "caller": "insertDeThi",
+          "callee": "insert",
+          "lineNumber": 330
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "new ContentValues",
+          "lineNumber": 335
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 336
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "ch.getMaCH",
+          "lineNumber": 336
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 337
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "ch.getMaLoaiCH",
+          "lineNumber": 337
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 338
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "ch.getMaLoaiBang",
+          "lineNumber": 338
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 339
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "ch.getNoiDung",
+          "lineNumber": 339
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 340
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "ch.getHinhAnh",
+          "lineNumber": 340
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 341
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "ch.getDapAnA",
+          "lineNumber": 341
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 342
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "ch.getDapAnB",
+          "lineNumber": 342
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 343
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "ch.getDapAnC",
+          "lineNumber": 343
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 344
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "ch.getDapAnD",
+          "lineNumber": 344
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 345
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "ch.getDapAnDung",
+          "lineNumber": 345
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 346
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "ch.getGiaiThich",
+          "lineNumber": 346
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 347
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "ch.getHaySai",
+          "lineNumber": 347
+        },
+        {
+          "caller": "insertCauHoi",
+          "callee": "insert",
+          "lineNumber": 348
+        },
+        {
+          "caller": "insertLoaiCauHoi",
+          "callee": "new ContentValues",
+          "lineNumber": 353
+        },
+        {
+          "caller": "insertLoaiCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 354
+        },
+        {
+          "caller": "insertLoaiCauHoi",
+          "callee": "lch.getMaLoaiCH",
+          "lineNumber": 354
+        },
+        {
+          "caller": "insertLoaiCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 355
+        },
+        {
+          "caller": "insertLoaiCauHoi",
+          "callee": "lch.getTenLoaiCauHoi",
+          "lineNumber": 355
+        },
+        {
+          "caller": "insertLoaiCauHoi",
+          "callee": "insert",
+          "lineNumber": 356
+        },
+        {
+          "caller": "insertCauTraLoi",
+          "callee": "new ContentValues",
+          "lineNumber": 361
+        },
+        {
+          "caller": "insertCauTraLoi",
+          "callee": "contentValues.put",
+          "lineNumber": 362
+        },
+        {
+          "caller": "insertCauTraLoi",
+          "callee": "ctl.getMaDeThi",
+          "lineNumber": 362
+        },
+        {
+          "caller": "insertCauTraLoi",
+          "callee": "contentValues.put",
+          "lineNumber": 363
+        },
+        {
+          "caller": "insertCauTraLoi",
+          "callee": "ctl.getMaCH",
+          "lineNumber": 363
+        },
+        {
+          "caller": "insertCauTraLoi",
+          "callee": "insert",
+          "lineNumber": 364
+        },
+        {
+          "caller": "insert",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 369
+        },
+        {
+          "caller": "insert",
+          "callee": "mDatabase.insert",
+          "lineNumber": 370
+        },
+        {
+          "caller": "insert",
+          "callee": "mDatabase.close",
+          "lineNumber": 371
+        },
+        {
+          "caller": "insert",
+          "callee": "ex.printStackTrace",
+          "lineNumber": 374
+        },
+        {
+          "caller": "updateDaTraLoi",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 381
+        },
+        {
+          "caller": "updateDaTraLoi",
+          "callee": "new ContentValues",
+          "lineNumber": 382
+        },
+        {
+          "caller": "updateDaTraLoi",
+          "callee": "contentValues.put",
+          "lineNumber": 383
+        },
+        {
+          "caller": "updateDaTraLoi",
+          "callee": "mDatabase.update",
+          "lineNumber": 384
+        },
+        {
+          "caller": "updateDaTraLoi",
+          "callee": "String.valueOf",
+          "lineNumber": 384
+        },
+        {
+          "caller": "updateLuuLaiCauHoi",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 390
+        },
+        {
+          "caller": "updateLuuLaiCauHoi",
+          "callee": "new ContentValues",
+          "lineNumber": 391
+        },
+        {
+          "caller": "updateLuuLaiCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 392
+        },
+        {
+          "caller": "updateLuuLaiCauHoi",
+          "callee": "mDatabase.update",
+          "lineNumber": 393
+        },
+        {
+          "caller": "updateLuuLaiCauHoi",
+          "callee": "String.valueOf",
+          "lineNumber": 393
+        },
+        {
+          "caller": "findLoaiBang",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 399
+        },
+        {
+          "caller": "findLoaiBang",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 400
+        },
+        {
+          "caller": "findLoaiBang",
+          "callee": "cursor3.moveToFirst",
+          "lineNumber": 401
+        },
+        {
+          "caller": "findLoaiBang",
+          "callee": "cursor3.getCount",
+          "lineNumber": 402
+        },
+        {
+          "caller": "findLoaiBang",
+          "callee": "cursor3.getInt",
+          "lineNumber": 404
+        },
+        {
+          "caller": "findLoaiBang",
+          "callee": "cursor3.close",
+          "lineNumber": 410
+        },
+        {
+          "caller": "findBBByID",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 416
+        },
+        {
+          "caller": "findBBByID",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 417
+        },
+        {
+          "caller": "findBBByID",
+          "callee": "cursor3.moveToFirst",
+          "lineNumber": 418
+        },
+        {
+          "caller": "findBBByID",
+          "callee": "cursor3.getCount",
+          "lineNumber": 419
+        },
+        {
+          "caller": "findBBByID",
+          "callee": "cursor3.getString",
+          "lineNumber": 421
+        },
+        {
+          "caller": "findBBByID",
+          "callee": "cursor3.close",
+          "lineNumber": 427
+        },
+        {
+          "caller": "findLCHByID",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 433
+        },
+        {
+          "caller": "findLCHByID",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 434
+        },
+        {
+          "caller": "findLCHByID",
+          "callee": "cursor3.moveToFirst",
+          "lineNumber": 435
+        },
+        {
+          "caller": "findLCHByID",
+          "callee": "cursor3.getCount",
+          "lineNumber": 436
+        },
+        {
+          "caller": "findLCHByID",
+          "callee": "cursor3.getInt",
+          "lineNumber": 438
+        },
+        {
+          "caller": "findLCHByID",
+          "callee": "cursor3.close",
+          "lineNumber": 444
+        },
+        {
+          "caller": "findCHByID",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 450
+        },
+        {
+          "caller": "findCHByID",
+          "callee": "mDatabase.query",
+          "lineNumber": 454
+        },
+        {
+          "caller": "findCHByID",
+          "callee": "cursor3.moveToFirst",
+          "lineNumber": 455
+        },
+        {
+          "caller": "findCHByID",
+          "callee": "cursor3.getCount",
+          "lineNumber": 456
+        },
+        {
+          "caller": "findCHByID",
+          "callee": "cursor3.getInt",
+          "lineNumber": 460
+        },
+        {
+          "caller": "findCHByID",
+          "callee": "cursor3.close",
+          "lineNumber": 466
+        },
+        {
+          "caller": "findCauTraLoiByID",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 472
+        },
+        {
+          "caller": "findCauTraLoiByID",
+          "callee": "mDatabase.query",
+          "lineNumber": 475
+        },
+        {
+          "caller": "findCauTraLoiByID",
+          "callee": "cursor3.moveToFirst",
+          "lineNumber": 476
+        },
+        {
+          "caller": "findCauTraLoiByID",
+          "callee": "cursor3.getCount",
+          "lineNumber": 477
+        },
+        {
+          "caller": "findCauTraLoiByID",
+          "callee": "cursor3.getInt",
+          "lineNumber": 479
+        },
+        {
+          "caller": "findCauTraLoiByID",
+          "callee": "cursor3.getInt",
+          "lineNumber": 479
+        },
+        {
+          "caller": "findCauTraLoiByID",
+          "callee": "cursor3.close",
+          "lineNumber": 484
+        },
+        {
+          "caller": "finDDeThiByID",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 489
+        },
+        {
+          "caller": "finDDeThiByID",
+          "callee": "mDatabase.query",
+          "lineNumber": 492
+        },
+        {
+          "caller": "finDDeThiByID",
+          "callee": "cursor3.moveToFirst",
+          "lineNumber": 493
+        },
+        {
+          "caller": "finDDeThiByID",
+          "callee": "cursor3.getCount",
+          "lineNumber": 494
+        },
+        {
+          "caller": "finDDeThiByID",
+          "callee": "cursor3.getInt",
+          "lineNumber": 496
+        },
+        {
+          "caller": "finDDeThiByID",
+          "callee": "cursor3.close",
+          "lineNumber": 502
+        },
+        {
+          "caller": "coCauHoiChoLoaiBang",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 506
+        },
+        {
+          "caller": "coCauHoiChoLoaiBang",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 507
+        },
+        {
+          "caller": "coCauHoiChoLoaiBang",
+          "callee": "String.valueOf",
+          "lineNumber": 509
+        },
+        {
+          "caller": "coCauHoiChoLoaiBang",
+          "callee": "cursor.moveToFirst",
+          "lineNumber": 510
+        },
+        {
+          "caller": "coCauHoiChoLoaiBang",
+          "callee": "cursor.getInt",
+          "lineNumber": 511
+        },
+        {
+          "caller": "coCauHoiChoLoaiBang",
+          "callee": "cursor.close",
+          "lineNumber": 512
+        },
+        {
+          "caller": "coCauHoiChoLoaiBang",
+          "callee": "mDatabase.close",
+          "lineNumber": 513
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 518
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 521
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "String.valueOf",
+          "lineNumber": 523
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "check.moveToFirst",
+          "lineNumber": 524
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "check.getInt",
+          "lineNumber": 525
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "check.close",
+          "lineNumber": 526
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 534
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "String.valueOf",
+          "lineNumber": 536
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "new LinkedHashMap<>",
+          "lineNumber": 537
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "cursor.moveToNext",
+          "lineNumber": 538
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "cursor.getInt",
+          "lineNumber": 539
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "cursor.getInt",
+          "lineNumber": 540
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "topicGroups.containsKey",
+          "lineNumber": 541
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "topicGroups.put",
+          "lineNumber": 542
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "new ArrayList<>",
+          "lineNumber": 542
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "topicGroups.get(maLoaiCH).add",
+          "lineNumber": 543
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "topicGroups.get",
+          "lineNumber": 543
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "cursor.close",
+          "lineNumber": 545
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "topicGroups.isEmpty",
+          "lineNumber": 547
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "new Random",
+          "lineNumber": 550
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "topicGroups.values",
+          "lineNumber": 551
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "Collections.shuffle",
+          "lineNumber": 551
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "new ArrayList<>",
+          "lineNumber": 555
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "topicGroups.values",
+          "lineNumber": 555
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "g.size",
+          "lineNumber": 557
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "g.size",
+          "lineNumber": 557
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "new ArrayList<>",
+          "lineNumber": 559
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "g.size",
+          "lineNumber": 562
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "interleaved.add",
+          "lineNumber": 562
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "g.get",
+          "lineNumber": 562
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "interleaved.size",
+          "lineNumber": 567
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "new ContentValues",
+          "lineNumber": 573
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "cvDe.put",
+          "lineNumber": 574
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "cvDe.put",
+          "lineNumber": 575
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "cvDe.put",
+          "lineNumber": 576
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "mDatabase.insert",
+          "lineNumber": 577
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "new ContentValues",
+          "lineNumber": 580
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "cvCTL.put",
+          "lineNumber": 581
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "cvCTL.put",
+          "lineNumber": 582
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "interleaved.get",
+          "lineNumber": 582
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "mDatabase.insert",
+          "lineNumber": 583
+        },
+        {
+          "caller": "generateDeThiTuCauHoi",
+          "callee": "mDatabase.close",
+          "lineNumber": 586
+        },
+        {
+          "caller": "onDowngrade",
+          "callee": "super.onDowngrade",
+          "lineNumber": 591
+        },
+        {
+          "caller": "onDowngrade",
+          "callee": "db.setVersion",
+          "lineNumber": 592
+        },
+        {
+          "caller": "updateLoaiBang",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 597
+        },
+        {
+          "caller": "updateLoaiBang",
+          "callee": "new ContentValues",
+          "lineNumber": 598
+        },
+        {
+          "caller": "updateLoaiBang",
+          "callee": "contentValues.put",
+          "lineNumber": 599
+        },
+        {
+          "caller": "updateLoaiBang",
+          "callee": "lch.getTenLoaiBang",
+          "lineNumber": 599
+        },
+        {
+          "caller": "updateLoaiBang",
+          "callee": "mDatabase.update",
+          "lineNumber": 600
+        },
+        {
+          "caller": "updateLoaiBang",
+          "callee": "String.valueOf",
+          "lineNumber": 600
+        },
+        {
+          "caller": "updateLoaiBang",
+          "callee": "lch.getMaLoaiBang",
+          "lineNumber": 600
+        },
+        {
+          "caller": "updateLoaiBang",
+          "callee": "mDatabase.close",
+          "lineNumber": 601
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 606
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "new ContentValues",
+          "lineNumber": 607
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "contentValues.put",
+          "lineNumber": 610
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "tl.getDapAnChon",
+          "lineNumber": 610
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "mDatabase.update",
+          "lineNumber": 611
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "String.valueOf",
+          "lineNumber": 611
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "tl.getMaDeThi",
+          "lineNumber": 611
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "String.valueOf",
+          "lineNumber": 611
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "tl.getMaCH",
+          "lineNumber": 611
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "mDatabase.close",
+          "lineNumber": 613
+        },
+        {
+          "caller": "updateLoaiCauHoi",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 618
+        },
+        {
+          "caller": "updateLoaiCauHoi",
+          "callee": "new ContentValues",
+          "lineNumber": 619
+        },
+        {
+          "caller": "updateLoaiCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 620
+        },
+        {
+          "caller": "updateLoaiCauHoi",
+          "callee": "lch.getMaLoaiCH",
+          "lineNumber": 620
+        },
+        {
+          "caller": "updateLoaiCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 621
+        },
+        {
+          "caller": "updateLoaiCauHoi",
+          "callee": "lch.getTenLoaiCauHoi",
+          "lineNumber": 621
+        },
+        {
+          "caller": "updateLoaiCauHoi",
+          "callee": "mDatabase.update",
+          "lineNumber": 622
+        },
+        {
+          "caller": "updateLoaiCauHoi",
+          "callee": "String.valueOf",
+          "lineNumber": 622
+        },
+        {
+          "caller": "updateLoaiCauHoi",
+          "callee": "lch.getMaLoaiCH",
+          "lineNumber": 622
+        },
+        {
+          "caller": "updateLoaiCauHoi",
+          "callee": "mDatabase.close",
+          "lineNumber": 623
+        },
+        {
+          "caller": "updateBB",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 628
+        },
+        {
+          "caller": "updateBB",
+          "callee": "new ContentValues",
+          "lineNumber": 629
+        },
+        {
+          "caller": "updateBB",
+          "callee": "contentValues.put",
+          "lineNumber": 630
+        },
+        {
+          "caller": "updateBB",
+          "callee": "bb.getMaBB",
+          "lineNumber": 630
+        },
+        {
+          "caller": "updateBB",
+          "callee": "contentValues.put",
+          "lineNumber": 631
+        },
+        {
+          "caller": "updateBB",
+          "callee": "bb.getMaLoaiBB",
+          "lineNumber": 631
+        },
+        {
+          "caller": "updateBB",
+          "callee": "contentValues.put",
+          "lineNumber": 632
+        },
+        {
+          "caller": "updateBB",
+          "callee": "bb.getTieuDe",
+          "lineNumber": 632
+        },
+        {
+          "caller": "updateBB",
+          "callee": "contentValues.put",
+          "lineNumber": 633
+        },
+        {
+          "caller": "updateBB",
+          "callee": "bb.getNoidung",
+          "lineNumber": 633
+        },
+        {
+          "caller": "updateBB",
+          "callee": "contentValues.put",
+          "lineNumber": 634
+        },
+        {
+          "caller": "updateBB",
+          "callee": "bb.getHinhAnh",
+          "lineNumber": 634
+        },
+        {
+          "caller": "updateBB",
+          "callee": "mDatabase.update",
+          "lineNumber": 635
+        },
+        {
+          "caller": "updateBB",
+          "callee": "String.valueOf",
+          "lineNumber": 635
+        },
+        {
+          "caller": "updateBB",
+          "callee": "bb.getMaBB",
+          "lineNumber": 635
+        },
+        {
+          "caller": "updateBB",
+          "callee": "mDatabase.close",
+          "lineNumber": 636
+        },
+        {
+          "caller": "updateDeThi",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 641
+        },
+        {
+          "caller": "updateDeThi",
+          "callee": "new ContentValues",
+          "lineNumber": 642
+        },
+        {
+          "caller": "updateDeThi",
+          "callee": "contentValues.put",
+          "lineNumber": 643
+        },
+        {
+          "caller": "updateDeThi",
+          "callee": "dt.getMaDeThi",
+          "lineNumber": 643
+        },
+        {
+          "caller": "updateDeThi",
+          "callee": "contentValues.put",
+          "lineNumber": 644
+        },
+        {
+          "caller": "updateDeThi",
+          "callee": "dt.getMaLoaiBang",
+          "lineNumber": 644
+        },
+        {
+          "caller": "updateDeThi",
+          "callee": "mDatabase.update",
+          "lineNumber": 645
+        },
+        {
+          "caller": "updateDeThi",
+          "callee": "String.valueOf",
+          "lineNumber": 645
+        },
+        {
+          "caller": "updateDeThi",
+          "callee": "dt.getMaDeThi",
+          "lineNumber": 645
+        },
+        {
+          "caller": "updateDeThi",
+          "callee": "mDatabase.close",
+          "lineNumber": 646
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 651
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "new ContentValues",
+          "lineNumber": 652
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 653
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "ch.getMaCH",
+          "lineNumber": 653
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 654
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "ch.getMaLoaiCH",
+          "lineNumber": 654
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 655
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "ch.getMaLoaiBang",
+          "lineNumber": 655
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 656
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "ch.getNoiDung",
+          "lineNumber": 656
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 657
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "ch.getHinhAnh",
+          "lineNumber": 657
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 658
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "ch.getDapAnA",
+          "lineNumber": 658
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 659
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "ch.getDapAnB",
+          "lineNumber": 659
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 660
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "ch.getDapAnC",
+          "lineNumber": 660
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 661
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "ch.getDapAnD",
+          "lineNumber": 661
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 662
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "ch.getDapAnDung",
+          "lineNumber": 662
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 663
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "ch.getGiaiThich",
+          "lineNumber": 663
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "contentValues.put",
+          "lineNumber": 664
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "ch.getHaySai",
+          "lineNumber": 664
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "mDatabase.update",
+          "lineNumber": 665
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "String.valueOf",
+          "lineNumber": 665
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "ch.getMaCH",
+          "lineNumber": 665
+        },
+        {
+          "caller": "updateCauHoi",
+          "callee": "mDatabase.close",
+          "lineNumber": 666
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 671
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "new ContentValues",
+          "lineNumber": 672
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "contentValues.put",
+          "lineNumber": 673
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "ctl.getMaCH",
+          "lineNumber": 673
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "contentValues.put",
+          "lineNumber": 674
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "ctl.getMaDeThi",
+          "lineNumber": 674
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "mDatabase.update",
+          "lineNumber": 675
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "String.valueOf",
+          "lineNumber": 675
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "ctl.getMaCH",
+          "lineNumber": 675
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "String.valueOf",
+          "lineNumber": 675
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "ctl.getMaDeThi",
+          "lineNumber": 675
+        },
+        {
+          "caller": "updateCauTraLoi",
+          "callee": "mDatabase.close",
+          "lineNumber": 676
+        },
+        {
+          "caller": "updateDapAnChon",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 681
+        },
+        {
+          "caller": "updateDapAnChon",
+          "callee": "new ContentValues",
+          "lineNumber": 682
+        },
+        {
+          "caller": "updateDapAnChon",
+          "callee": "contentValues.put",
+          "lineNumber": 683
+        },
+        {
+          "caller": "updateDapAnChon",
+          "callee": "ctl.getDapAnChon",
+          "lineNumber": 683
+        },
+        {
+          "caller": "updateDapAnChon",
+          "callee": "mDatabase.update",
+          "lineNumber": 684
+        },
+        {
+          "caller": "updateDapAnChon",
+          "callee": "String.valueOf",
+          "lineNumber": 684
+        },
+        {
+          "caller": "updateDapAnChon",
+          "callee": "ctl.getMaCH",
+          "lineNumber": 684
+        },
+        {
+          "caller": "updateDapAnChon",
+          "callee": "String.valueOf",
+          "lineNumber": 684
+        },
+        {
+          "caller": "updateDapAnChon",
+          "callee": "ctl.getMaDeThi",
+          "lineNumber": 684
+        },
+        {
+          "caller": "updateDapAnChon",
+          "callee": "mDatabase.close",
+          "lineNumber": 685
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "new ArrayList<>",
+          "lineNumber": 691
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 692
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "new DeThi",
+          "lineNumber": 693
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "DeThi.setTenDeThi",
+          "lineNumber": 694
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "DeThi.setMaDeThi",
+          "lineNumber": 695
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "DanhSach.getDsDeThi().set",
+          "lineNumber": 696
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "DanhSach.getDsDeThi",
+          "lineNumber": 696
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "this.getWritableDatabase",
+          "lineNumber": 697
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 698
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "DanhSach.getLoaiBang",
+          "lineNumber": 698
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "cursor.moveToNext",
+          "lineNumber": 699
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "dsCauHoiRanDom.add",
+          "lineNumber": 701
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "getCauHoiByID",
+          "lineNumber": 701
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "cursor.getInt",
+          "lineNumber": 701
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "mDatabase.rawQuery",
+          "lineNumber": 703
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "DanhSach.getLoaiBang",
+          "lineNumber": 703
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "cursor.moveToNext",
+          "lineNumber": 704
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "dsCauHoiRanDom.add",
+          "lineNumber": 706
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "getCauHoiByID",
+          "lineNumber": 706
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "cursor.getInt",
+          "lineNumber": 706
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "cursor.close",
+          "lineNumber": 708
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "new ArrayList<>",
+          "lineNumber": 709
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "dsCTL.add",
+          "lineNumber": 712
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "new CauTraLoi",
+          "lineNumber": 712
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "DeThi.getMaDeThi",
+          "lineNumber": 712
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "ch.getMaCH",
+          "lineNumber": 712
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "Collections.shuffle",
+          "lineNumber": 715
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "DanhSach.getDsCauTraLoi().addAll",
+          "lineNumber": 716
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "DanhSach.getDsCauTraLoi",
+          "lineNumber": 716
+        },
+        {
+          "caller": "RandomQuizz",
+          "callee": "mDatabase.close",
+          "lineNumber": 717
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 47,
+        "functionCount": 47,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Interface/RecyclerViewInterface.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 5,
+      "nonEmptyLines": 4,
+      "classes": [
+        {
+          "name": "RecyclerViewInterface",
+          "startLine": 3,
+          "endLine": 5,
+          "methods": [
+            "onItemClick"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RecyclerViewInterface",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DeThi.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 46,
+      "nonEmptyLines": 35,
+      "functions": [
+        {
+          "name": "DeThi",
+          "startLine": 7,
+          "endLine": 11,
+          "params": [
+            "maDeThi",
+            "tenDeThi",
+            "maLoaiBang"
+          ]
+        },
+        {
+          "name": "getMaLoaiBang",
+          "startLine": 13,
+          "endLine": 15,
+          "params": []
+        },
+        {
+          "name": "setMaLoaiBang",
+          "startLine": 17,
+          "endLine": 19,
+          "params": [
+            "maLoaiBang"
+          ]
+        },
+        {
+          "name": "getMaDeThi",
+          "startLine": 23,
+          "endLine": 25,
+          "params": []
+        },
+        {
+          "name": "setMaDeThi",
+          "startLine": 27,
+          "endLine": 29,
+          "params": [
+            "maDeThi"
+          ]
+        },
+        {
+          "name": "getTenDeThi",
+          "startLine": 31,
+          "endLine": 33,
+          "params": []
+        },
+        {
+          "name": "setTenDeThi",
+          "startLine": 35,
+          "endLine": 37,
+          "params": [
+            "tenDeThi"
+          ]
+        },
+        {
+          "name": "DeThi",
+          "startLine": 39,
+          "endLine": 40,
+          "params": []
+        },
+        {
+          "name": "DeThi",
+          "startLine": 42,
+          "endLine": 45,
+          "params": [
+            "maDeThi",
+            "tenDeThi"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "DeThi",
+          "startLine": 3,
+          "endLine": 46,
+          "methods": [
+            "DeThi",
+            "getMaLoaiBang",
+            "setMaLoaiBang",
+            "getMaDeThi",
+            "setMaDeThi",
+            "getTenDeThi",
+            "setTenDeThi",
+            "DeThi",
+            "DeThi"
+          ],
+          "properties": [
+            "MaDeThi",
+            "TenDeThi",
+            "MaLoaiBang"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "DeThi",
+          "line": 7,
+          "isDefault": false
+        },
+        {
+          "name": "getMaLoaiBang",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "setMaLoaiBang",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "getMaDeThi",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "setMaDeThi",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "getTenDeThi",
+          "line": 31,
+          "isDefault": false
+        },
+        {
+          "name": "setTenDeThi",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "DeThi",
+          "line": 39,
+          "isDefault": false
+        },
+        {
+          "name": "DeThi",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "DeThi",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 9,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiCauHoi.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 61,
+      "nonEmptyLines": 48,
+      "functions": [
+        {
+          "name": "getHinh",
+          "startLine": 9,
+          "endLine": 11,
+          "params": []
+        },
+        {
+          "name": "setHinh",
+          "startLine": 13,
+          "endLine": 15,
+          "params": [
+            "hinh"
+          ]
+        },
+        {
+          "name": "getMaLoaiCH",
+          "startLine": 17,
+          "endLine": 19,
+          "params": []
+        },
+        {
+          "name": "setMaLoaiCH",
+          "startLine": 21,
+          "endLine": 23,
+          "params": [
+            "maLoaiCH"
+          ]
+        },
+        {
+          "name": "getTenLoaiCauHoi",
+          "startLine": 25,
+          "endLine": 27,
+          "params": []
+        },
+        {
+          "name": "setTenLoaiCauHoi",
+          "startLine": 29,
+          "endLine": 31,
+          "params": [
+            "tenLoaiCauHoi"
+          ]
+        },
+        {
+          "name": "isDiemLiet",
+          "startLine": 33,
+          "endLine": 35,
+          "params": []
+        },
+        {
+          "name": "setDiemLiet",
+          "startLine": 37,
+          "endLine": 39,
+          "params": [
+            "diemLiet"
+          ]
+        },
+        {
+          "name": "LoaiCauHoi",
+          "startLine": 41,
+          "endLine": 42,
+          "params": []
+        },
+        {
+          "name": "LoaiCauHoi",
+          "startLine": 44,
+          "endLine": 47,
+          "params": [
+            "maLoaiCH",
+            "tenLoaiCauHoi"
+          ]
+        },
+        {
+          "name": "LoaiCauHoi",
+          "startLine": 49,
+          "endLine": 53,
+          "params": [
+            "maLoaiCH",
+            "hinh",
+            "TenLoaiCauHoi"
+          ]
+        },
+        {
+          "name": "LoaiCauHoi",
+          "startLine": 55,
+          "endLine": 60,
+          "params": [
+            "maLoaiCH",
+            "hinh",
+            "TenLoaiCauHoi",
+            "diemLiet"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "LoaiCauHoi",
+          "startLine": 3,
+          "endLine": 61,
+          "methods": [
+            "getHinh",
+            "setHinh",
+            "getMaLoaiCH",
+            "setMaLoaiCH",
+            "getTenLoaiCauHoi",
+            "setTenLoaiCauHoi",
+            "isDiemLiet",
+            "setDiemLiet",
+            "LoaiCauHoi",
+            "LoaiCauHoi",
+            "LoaiCauHoi",
+            "LoaiCauHoi"
+          ],
+          "properties": [
+            "hinh",
+            "MaLoaiCH",
+            "TenLoaiCauHoi",
+            "diemLiet"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getHinh",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "setHinh",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "getMaLoaiCH",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "setMaLoaiCH",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "getTenLoaiCauHoi",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "setTenLoaiCauHoi",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "isDiemLiet",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "setDiemLiet",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "LoaiCauHoi",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "LoaiCauHoi",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "LoaiCauHoi",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "LoaiCauHoi",
+          "line": 55,
+          "isDefault": false
+        },
+        {
+          "name": "LoaiCauHoi",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 13,
+        "functionCount": 12,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/StudyFragment.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 135,
+      "nonEmptyLines": 110,
+      "functions": [
+        {
+          "name": "onCreateView",
+          "startLine": 45,
+          "endLine": 51,
+          "params": [
+            "inflater",
+            "container",
+            "savedInstanceState"
+          ]
+        },
+        {
+          "name": "onViewCreated",
+          "startLine": 53,
+          "endLine": 100,
+          "params": [
+            "view",
+            "savedInstanceState"
+          ]
+        },
+        {
+          "name": "onResume",
+          "startLine": 102,
+          "endLine": 107,
+          "params": []
+        },
+        {
+          "name": "refreshProgress",
+          "startLine": 109,
+          "endLine": 131,
+          "params": []
+        },
+        {
+          "name": "onItemClick",
+          "startLine": 133,
+          "endLine": 134,
+          "params": [
+            "position"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "StudyFragment",
+          "startLine": 27,
+          "endLine": 135,
+          "methods": [
+            "onCreateView",
+            "onViewCreated",
+            "onResume",
+            "refreshProgress",
+            "onItemClick"
+          ],
+          "properties": [
+            "txtSubtitle",
+            "txtProgressCount",
+            "pbOverall",
+            "txtProgressMeta",
+            "rvTheLoaiCauHoi",
+            "cardExam",
+            "card600Cau",
+            "cardBienBao",
+            "cardMeoThi",
+            "txtModeExamSub",
+            "db",
+            "tlchAdapter"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "tlchAdapter",
+          "line": 43,
+          "isDefault": false
+        },
+        {
+          "name": "onCreateView",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "onViewCreated",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "onResume",
+          "line": 102,
+          "isDefault": false
+        },
+        {
+          "name": "refreshProgress",
+          "line": 109,
+          "isDefault": false
+        },
+        {
+          "name": "onItemClick",
+          "line": 133,
+          "isDefault": false
+        },
+        {
+          "name": "StudyFragment",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "onCreateView",
+          "callee": "inflater.inflate",
+          "lineNumber": 50
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "new DBHandler",
+          "lineNumber": 55
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "requireContext",
+          "lineNumber": 55
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "view.findViewById",
+          "lineNumber": 57
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "view.findViewById",
+          "lineNumber": 58
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "view.findViewById",
+          "lineNumber": 59
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "view.findViewById",
+          "lineNumber": 60
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "view.findViewById",
+          "lineNumber": 61
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "view.findViewById",
+          "lineNumber": 63
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "view.findViewById",
+          "lineNumber": 64
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "view.findViewById",
+          "lineNumber": 65
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "view.findViewById",
+          "lineNumber": 66
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "view.findViewById",
+          "lineNumber": 67
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "new ArrayList<>",
+          "lineNumber": 69
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "topics.add",
+          "lineNumber": 70
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "new LoaiCauHoi",
+          "lineNumber": 70
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "topics.add",
+          "lineNumber": 71
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "new LoaiCauHoi",
+          "lineNumber": 71
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "topics.add",
+          "lineNumber": 72
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "new LoaiCauHoi",
+          "lineNumber": 72
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "topics.add",
+          "lineNumber": 73
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "new LoaiCauHoi",
+          "lineNumber": 73
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "topics.add",
+          "lineNumber": 74
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "new LoaiCauHoi",
+          "lineNumber": 74
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "topics.add",
+          "lineNumber": 75
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "new LoaiCauHoi",
+          "lineNumber": 75
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "topics.add",
+          "lineNumber": 76
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "new LoaiCauHoi",
+          "lineNumber": 76
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "new TheLoaiCauHoiAdapter",
+          "lineNumber": 78
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "requireContext",
+          "lineNumber": 78
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "rvTheLoaiCauHoi.setLayoutManager",
+          "lineNumber": 79
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "new LinearLayoutManager",
+          "lineNumber": 79
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "requireContext",
+          "lineNumber": 79
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "rvTheLoaiCauHoi.setAdapter",
+          "lineNumber": 80
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "cardExam.setOnClickListener",
+          "lineNumber": 82
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "startActivity",
+          "lineNumber": 83
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "new Intent",
+          "lineNumber": 83
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "requireContext",
+          "lineNumber": 83
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "card600Cau.setOnClickListener",
+          "lineNumber": 85
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "new Intent",
+          "lineNumber": 86
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "requireContext",
+          "lineNumber": 86
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "intent.putExtra",
+          "lineNumber": 87
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "startActivity",
+          "lineNumber": 88
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "cardBienBao.setOnClickListener",
+          "lineNumber": 91
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "startActivity",
+          "lineNumber": 92
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "new Intent",
+          "lineNumber": 92
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "requireContext",
+          "lineNumber": 92
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "cardMeoThi.setOnClickListener",
+          "lineNumber": 94
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "new Intent",
+          "lineNumber": 95
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "requireContext",
+          "lineNumber": 95
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "intent.putExtra",
+          "lineNumber": 96
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "intent.putExtra",
+          "lineNumber": 97
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "startActivity",
+          "lineNumber": 98
+        },
+        {
+          "caller": "onResume",
+          "callee": "super.onResume",
+          "lineNumber": 104
+        },
+        {
+          "caller": "onResume",
+          "callee": "refreshProgress",
+          "lineNumber": 105
+        },
+        {
+          "caller": "onResume",
+          "callee": "tlchAdapter.notifyDataSetChanged",
+          "lineNumber": 106
+        },
+        {
+          "caller": "refreshProgress",
+          "callee": "DanhSach.getDsCauHoi",
+          "lineNumber": 110
+        },
+        {
+          "caller": "refreshProgress",
+          "callee": "all.size",
+          "lineNumber": 111
+        },
+        {
+          "caller": "refreshProgress",
+          "callee": "ch.getDaTraLoiDung",
+          "lineNumber": 114
+        },
+        {
+          "caller": "refreshProgress",
+          "callee": "pbOverall.setMax",
+          "lineNumber": 117
+        },
+        {
+          "caller": "refreshProgress",
+          "callee": "pbOverall.setProgress",
+          "lineNumber": 118
+        },
+        {
+          "caller": "refreshProgress",
+          "callee": "txtProgressCount.setText",
+          "lineNumber": 119
+        },
+        {
+          "caller": "refreshProgress",
+          "callee": "txtProgressMeta.setText",
+          "lineNumber": 120
+        },
+        {
+          "caller": "refreshProgress",
+          "callee": "DanhSach.getDsDeThi",
+          "lineNumber": 122
+        },
+        {
+          "caller": "refreshProgress",
+          "callee": "allDeThi.size",
+          "lineNumber": 123
+        },
+        {
+          "caller": "refreshProgress",
+          "callee": "DanhSach.getLoaiBang",
+          "lineNumber": 124
+        },
+        {
+          "caller": "refreshProgress",
+          "callee": "txtModeExamSub.setText",
+          "lineNumber": 127
+        },
+        {
+          "caller": "refreshProgress",
+          "callee": "txtSubtitle.setText",
+          "lineNumber": 130
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 7,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    }
+  ]
+}

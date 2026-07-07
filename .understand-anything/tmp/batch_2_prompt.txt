@@ -1,0 +1,380 @@
+Analyze these files and produce GraphNode and GraphEdge objects.
+Project root: /mnt/data1/KMA/on-thi-bang-lai-xe
+Project: on-thi-bang-lai-xe (Vietnamese Driving License Exam App)
+Languages: Java, XML, Gradle, JSON
+Batch: 2/19
+Skill directory (for bundled scripts): /home/trtung/.claude/plugins/cache/understand-anything/understand-anything/2.7.6/skills/understand
+Output: write to /mnt/data1/KMA/on-thi-bang-lai-xe/.understand-anything/intermediate/batch-2.json
+
+Pre-resolved import data for this batch (use directly — do NOT re-resolve imports from source):
+```json
+{
+  "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/ViewWelcomeAdapter.java": [],
+  "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java": [
+    "app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+    "app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java",
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java",
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DeThi.java",
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBang.java",
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiCauHoi.java"
+  ],
+  "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MySharedPreferences.java": [],
+  "app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java": [
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MySharedPreferences.java",
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+  ],
+  "app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java": [
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+  ],
+  "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBang.java": [],
+  "app/src/main/java/com/kma/OnThiBangLaiXe/OnBoardingActivity.java": [
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/ViewWelcomeAdapter.java",
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java"
+  ],
+  "app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java": [
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MySharedPreferences.java",
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+  ]
+}
+```
+
+Cross-batch neighbors with their exported symbols (confidence boost for cross-batch edges):
+```json
+{
+  "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java": [
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+      "batchIndex": 6,
+      "symbols": [
+        "DBHandler",
+        "onCreate",
+        "onUpgrade",
+        "isLastestVersion",
+        "UpdateVersion",
+        "docDeThi",
+        "docLoaiCauHoi",
+        "docCauTraLoi",
+        "docCauHaySai",
+        "docCauHoiSai",
+        "getData",
+        "docCauHoiLuu",
+        "docLoaiBienBao",
+        "getListCauTraLoiByMaDeThi",
+        "getListCauHoiByMaCH",
+        "getCauHoiByID",
+        "isBienBaoEmpty",
+        "loadBienBaoFromAssets",
+        "docBienBao",
+        "docCauHoi",
+        "insertLoaiBang",
+        "insertBB",
+        "insertDeThi",
+        "insertCauHoi",
+        "insertLoaiCauHoi",
+        "insertCauTraLoi",
+        "updateDaTraLoi",
+        "updateLuuLaiCauHoi",
+        "findLoaiBang",
+        "findBBByID",
+        "findLCHByID",
+        "findCHByID",
+        "findCauTraLoiByID",
+        "finDDeThiByID",
+        "coCauHoiChoLoaiBang",
+        "generateDeThiTuCauHoi",
+        "onDowngrade",
+        "updateLoaiBang",
+        "updateCauTraLoi",
+        "updateLoaiCauHoi",
+        "updateBB",
+        "updateDeThi",
+        "updateCauHoi",
+        "updateCauTraLoi",
+        "updateDapAnChon",
+        "RandomQuizz",
+        "DBHandler"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+      "batchIndex": 3,
+      "symbols": [
+        "getHinhAnh",
+        "setHinhAnh",
+        "getMaBB",
+        "setMaBB",
+        "getTieuDe",
+        "setTieuDe",
+        "getNoidung",
+        "setNoidung",
+        "getMaLoaiBB",
+        "setMaLoaiBB",
+        "BienBao",
+        "BienBao",
+        "BienBao"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "batchIndex": 1,
+      "symbols": [
+        "getMaCH",
+        "setMaCH",
+        "getMaLoaiCH",
+        "setMaLoaiCH",
+        "getMaLoaiBang",
+        "setMaLoaiBang",
+        "getHaySai",
+        "setHaySai",
+        "getLuu",
+        "setLuu",
+        "getNoiDung",
+        "setNoiDung",
+        "getHinhAnh",
+        "setHinhAnh",
+        "getDapAnA",
+        "setDapAnA",
+        "getDapAnB",
+        "setDapAnB",
+        "getDapAnC",
+        "setDapAnC",
+        "getDapAnD",
+        "setDapAnD",
+        "getDapAnDung",
+        "setDapAnDung",
+        "getGiaiThich",
+        "setGiaiThich",
+        "getDaTraLoiDung",
+        "setDaTraLoiDung",
+        "CauHoi",
+        "CauHoi",
+        "CauHoi",
+        "CauHoi"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java",
+      "batchIndex": 4,
+      "symbols": [
+        "CauTraLoi",
+        "getMaDeThi",
+        "setMaDeThi",
+        "getMaCH",
+        "setMaCH",
+        "getDapAnChon",
+        "setDapAnChon",
+        "CauTraLoi",
+        "CauTraLoi",
+        "CauTraLoi"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "batchIndex": 5,
+      "symbols": [
+        "getLoaiBang",
+        "setLoaiBang",
+        "getDsBang",
+        "setDsBang",
+        "getDsDeThi",
+        "setDsDeThi",
+        "getDsCauTraLoi",
+        "setDsCauTraLoi",
+        "getDsLoaiBienBao",
+        "setDsLoaiBienBao",
+        "getDsBienBao",
+        "setDsBienBao",
+        "clearBienBao",
+        "getDsCauHoi",
+        "setDsCauHoi",
+        "DanhSach"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DeThi.java",
+      "batchIndex": 6,
+      "symbols": [
+        "DeThi",
+        "getMaLoaiBang",
+        "setMaLoaiBang",
+        "getMaDeThi",
+        "setMaDeThi",
+        "getTenDeThi",
+        "setTenDeThi",
+        "DeThi",
+        "DeThi",
+        "DeThi"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiCauHoi.java",
+      "batchIndex": 6,
+      "symbols": [
+        "getHinh",
+        "setHinh",
+        "getMaLoaiCH",
+        "setMaLoaiCH",
+        "getTenLoaiCauHoi",
+        "setTenLoaiCauHoi",
+        "isDiemLiet",
+        "setDiemLiet",
+        "LoaiCauHoi",
+        "LoaiCauHoi",
+        "LoaiCauHoi",
+        "LoaiCauHoi",
+        "LoaiCauHoi"
+      ]
+    }
+  ],
+  "app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java": [
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "batchIndex": 5,
+      "symbols": [
+        "getLoaiBang",
+        "setLoaiBang",
+        "getDsBang",
+        "setDsBang",
+        "getDsDeThi",
+        "setDsDeThi",
+        "getDsCauTraLoi",
+        "setDsCauTraLoi",
+        "getDsLoaiBienBao",
+        "setDsLoaiBienBao",
+        "getDsBienBao",
+        "setDsBienBao",
+        "clearBienBao",
+        "getDsCauHoi",
+        "setDsCauHoi",
+        "DanhSach"
+      ]
+    }
+  ],
+  "app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java": [
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "batchIndex": 5,
+      "symbols": [
+        "getLoaiBang",
+        "setLoaiBang",
+        "getDsBang",
+        "setDsBang",
+        "getDsDeThi",
+        "setDsDeThi",
+        "getDsCauTraLoi",
+        "setDsCauTraLoi",
+        "getDsLoaiBienBao",
+        "setDsLoaiBienBao",
+        "getDsBienBao",
+        "setDsBienBao",
+        "clearBienBao",
+        "getDsCauHoi",
+        "setDsCauHoi",
+        "DanhSach"
+      ]
+    }
+  ],
+  "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBang.java": [
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+      "batchIndex": 6,
+      "symbols": [
+        "DBHandler",
+        "onCreate",
+        "onUpgrade",
+        "isLastestVersion",
+        "UpdateVersion",
+        "docDeThi",
+        "docLoaiCauHoi",
+        "docCauTraLoi",
+        "docCauHaySai",
+        "docCauHoiSai",
+        "getData",
+        "docCauHoiLuu",
+        "docLoaiBienBao",
+        "getListCauTraLoiByMaDeThi",
+        "getListCauHoiByMaCH",
+        "getCauHoiByID",
+        "isBienBaoEmpty",
+        "loadBienBaoFromAssets",
+        "docBienBao",
+        "docCauHoi",
+        "insertLoaiBang",
+        "insertBB",
+        "insertDeThi",
+        "insertCauHoi",
+        "insertLoaiCauHoi",
+        "insertCauTraLoi",
+        "updateDaTraLoi",
+        "updateLuuLaiCauHoi",
+        "findLoaiBang",
+        "findBBByID",
+        "findLCHByID",
+        "findCHByID",
+        "findCauTraLoiByID",
+        "finDDeThiByID",
+        "coCauHoiChoLoaiBang",
+        "generateDeThiTuCauHoi",
+        "onDowngrade",
+        "updateLoaiBang",
+        "updateCauTraLoi",
+        "updateLoaiCauHoi",
+        "updateBB",
+        "updateDeThi",
+        "updateCauHoi",
+        "updateCauTraLoi",
+        "updateDapAnChon",
+        "RandomQuizz",
+        "DBHandler"
+      ]
+    }
+  ],
+  "app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java": [
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "batchIndex": 5,
+      "symbols": [
+        "getLoaiBang",
+        "setLoaiBang",
+        "getDsBang",
+        "setDsBang",
+        "getDsDeThi",
+        "setDsDeThi",
+        "getDsCauTraLoi",
+        "setDsCauTraLoi",
+        "getDsLoaiBienBao",
+        "setDsLoaiBienBao",
+        "getDsBienBao",
+        "setDsBienBao",
+        "clearBienBao",
+        "getDsCauHoi",
+        "setDsCauHoi",
+        "DanhSach"
+      ]
+    }
+  ]
+}
+```
+
+Files to analyze in this batch (every entry MUST be passed through to batchFiles with all four fields — path, language, sizeLines, fileCategory):
+1. `app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/ViewWelcomeAdapter.java` (29 lines, language: `java`, fileCategory: `code`)
+2. `app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java` (284 lines, language: `java`, fileCategory: `code`)
+3. `app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MySharedPreferences.java` (39 lines, language: `java`, fileCategory: `code`)
+4. `app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java` (103 lines, language: `java`, fileCategory: `code`)
+5. `app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java` (120 lines, language: `java`, fileCategory: `code`)
+6. `app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBang.java` (30 lines, language: `java`, fileCategory: `code`)
+7. `app/src/main/java/com/kma/OnThiBangLaiXe/OnBoardingActivity.java` (92 lines, language: `java`, fileCategory: `code`)
+8. `app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java` (136 lines, language: `java`, fileCategory: `code`)
+
+**Additional context from main session:**
+
+Project: on-thi-bang-lai-xe — Vietnamese Driving License Exam Practice App (Android/Java)
+Languages: Java, XML, Gradle, JSON, Python
+
+> **Language directive**: Generate all textual content (summaries, descriptions, tags, titles, languageNotes, languageLesson) in **English**. Maintain technical accuracy while using natural, native-level phrasing in the target language. Keep technical terms in English when no standard translation exists (e.g., "middleware", "hook", "barrel").

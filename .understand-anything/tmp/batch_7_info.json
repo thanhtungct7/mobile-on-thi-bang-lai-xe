@@ -1,0 +1,43 @@
+{
+  "batchIndex": 7,
+  "files": [
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 93,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "build.gradle",
+      "language": "gradle",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gradle.properties",
+      "language": "properties",
+      "sizeLines": 20,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gradlew.bat",
+      "language": "batch",
+      "sizeLines": 89,
+      "fileCategory": "script"
+    },
+    {
+      "path": "settings.gradle",
+      "language": "gradle",
+      "sizeLines": 16,
+      "fileCategory": "config"
+    }
+  ],
+  "batchImportData": {
+    "README.md": [],
+    "build.gradle": [],
+    "gradle.properties": [],
+    "gradlew.bat": [],
+    "settings.gradle": []
+  },
+  "neighborMap": {}
+}

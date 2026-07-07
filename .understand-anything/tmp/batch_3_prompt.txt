@@ -1,0 +1,225 @@
+Analyze these files and produce GraphNode and GraphEdge objects.
+Project root: /mnt/data1/KMA/on-thi-bang-lai-xe
+Project: on-thi-bang-lai-xe (Vietnamese Driving License Exam App)
+Languages: Java, XML, Gradle, JSON
+Batch: 3/19
+Skill directory (for bundled scripts): /home/trtung/.claude/plugins/cache/understand-anything/understand-anything/2.7.6/skills/understand
+Output: write to /mnt/data1/KMA/on-thi-bang-lai-xe/.understand-anything/intermediate/batch-3.json
+
+Pre-resolved import data for this batch (use directly — do NOT re-resolve imports from source):
+```json
+{
+  "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java": [
+    "app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java",
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java"
+  ],
+  "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java": [
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java"
+  ],
+  "app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java": [
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java",
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+  ],
+  "app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java": [],
+  "app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java": [
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+  ],
+  "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java": [],
+  "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java": []
+}
+```
+
+Cross-batch neighbors with their exported symbols (confidence boost for cross-batch edges):
+```json
+{
+  "app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java": [
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "batchIndex": 5,
+      "symbols": [
+        "getLoaiBang",
+        "setLoaiBang",
+        "getDsBang",
+        "setDsBang",
+        "getDsDeThi",
+        "setDsDeThi",
+        "getDsCauTraLoi",
+        "setDsCauTraLoi",
+        "getDsLoaiBienBao",
+        "setDsLoaiBienBao",
+        "getDsBienBao",
+        "setDsBienBao",
+        "clearBienBao",
+        "getDsCauHoi",
+        "setDsCauHoi",
+        "DanhSach"
+      ]
+    }
+  ],
+  "app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java": [
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "batchIndex": 5,
+      "symbols": [
+        "getLoaiBang",
+        "setLoaiBang",
+        "getDsBang",
+        "setDsBang",
+        "getDsDeThi",
+        "setDsDeThi",
+        "getDsCauTraLoi",
+        "setDsCauTraLoi",
+        "getDsLoaiBienBao",
+        "setDsLoaiBienBao",
+        "getDsBienBao",
+        "setDsBienBao",
+        "clearBienBao",
+        "getDsCauHoi",
+        "setDsCauHoi",
+        "DanhSach"
+      ]
+    }
+  ],
+  "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java": [
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "batchIndex": 2,
+      "symbols": [
+        "progressDialog",
+        "MyDB",
+        "capNhatDatabase",
+        "downloadWithBytes",
+        "downloadImagesIfNeeded",
+        "kiemTraPhienBan",
+        "MyDB"
+      ]
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+      "batchIndex": 6,
+      "symbols": [
+        "DBHandler",
+        "onCreate",
+        "onUpgrade",
+        "isLastestVersion",
+        "UpdateVersion",
+        "docDeThi",
+        "docLoaiCauHoi",
+        "docCauTraLoi",
+        "docCauHaySai",
+        "docCauHoiSai",
+        "getData",
+        "docCauHoiLuu",
+        "docLoaiBienBao",
+        "getListCauTraLoiByMaDeThi",
+        "getListCauHoiByMaCH",
+        "getCauHoiByID",
+        "isBienBaoEmpty",
+        "loadBienBaoFromAssets",
+        "docBienBao",
+        "docCauHoi",
+        "insertLoaiBang",
+        "insertBB",
+        "insertDeThi",
+        "insertCauHoi",
+        "insertLoaiCauHoi",
+        "insertCauTraLoi",
+        "updateDaTraLoi",
+        "updateLuuLaiCauHoi",
+        "findLoaiBang",
+        "findBBByID",
+        "findLCHByID",
+        "findCHByID",
+        "findCauTraLoiByID",
+        "finDDeThiByID",
+        "coCauHoiChoLoaiBang",
+        "generateDeThiTuCauHoi",
+        "onDowngrade",
+        "updateLoaiBang",
+        "updateCauTraLoi",
+        "updateLoaiCauHoi",
+        "updateBB",
+        "updateDeThi",
+        "updateCauHoi",
+        "updateCauTraLoi",
+        "updateDapAnChon",
+        "RandomQuizz",
+        "DBHandler"
+      ]
+    }
+  ],
+  "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java": [
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+      "batchIndex": 6,
+      "symbols": [
+        "DBHandler",
+        "onCreate",
+        "onUpgrade",
+        "isLastestVersion",
+        "UpdateVersion",
+        "docDeThi",
+        "docLoaiCauHoi",
+        "docCauTraLoi",
+        "docCauHaySai",
+        "docCauHoiSai",
+        "getData",
+        "docCauHoiLuu",
+        "docLoaiBienBao",
+        "getListCauTraLoiByMaDeThi",
+        "getListCauHoiByMaCH",
+        "getCauHoiByID",
+        "isBienBaoEmpty",
+        "loadBienBaoFromAssets",
+        "docBienBao",
+        "docCauHoi",
+        "insertLoaiBang",
+        "insertBB",
+        "insertDeThi",
+        "insertCauHoi",
+        "insertLoaiCauHoi",
+        "insertCauTraLoi",
+        "updateDaTraLoi",
+        "updateLuuLaiCauHoi",
+        "findLoaiBang",
+        "findBBByID",
+        "findLCHByID",
+        "findCHByID",
+        "findCauTraLoiByID",
+        "finDDeThiByID",
+        "coCauHoiChoLoaiBang",
+        "generateDeThiTuCauHoi",
+        "onDowngrade",
+        "updateLoaiBang",
+        "updateCauTraLoi",
+        "updateLoaiCauHoi",
+        "updateBB",
+        "updateDeThi",
+        "updateCauHoi",
+        "updateCauTraLoi",
+        "updateDapAnChon",
+        "RandomQuizz",
+        "DBHandler"
+      ]
+    }
+  ]
+}
+```
+
+Files to analyze in this batch (every entry MUST be passed through to batchFiles with all four fields — path, language, sizeLines, fileCategory):
+1. `app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java` (88 lines, language: `java`, fileCategory: `code`)
+2. `app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java` (74 lines, language: `java`, fileCategory: `code`)
+3. `app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java` (50 lines, language: `java`, fileCategory: `code`)
+4. `app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java` (48 lines, language: `java`, fileCategory: `code`)
+5. `app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java` (167 lines, language: `java`, fileCategory: `code`)
+6. `app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java` (59 lines, language: `java`, fileCategory: `code`)
+7. `app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java` (43 lines, language: `java`, fileCategory: `code`)
+
+**Additional context from main session:**
+
+Project: on-thi-bang-lai-xe — Vietnamese Driving License Exam Practice App (Android/Java)
+Languages: Java, XML, Gradle, JSON, Python
+
+> **Language directive**: Generate all textual content (summaries, descriptions, tags, titles, languageNotes, languageLesson) in **English**. Maintain technical accuracy while using natural, native-level phrasing in the target language. Keep technical terms in English when no standard translation exists (e.g., "middleware", "hook", "barrel").

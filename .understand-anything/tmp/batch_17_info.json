@@ -1,0 +1,36 @@
+{
+  "batchIndex": 17,
+  "files": [
+    {
+      "path": "app/src/main/res/xml/backup_rules.xml",
+      "language": "xml",
+      "sizeLines": 12,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/xml/data_extraction_rules.xml",
+      "language": "xml",
+      "sizeLines": 18,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/xml/widget_info.xml",
+      "language": "xml",
+      "sizeLines": 10,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/xml/widget_sign_detect_info.xml",
+      "language": "xml",
+      "sizeLines": 10,
+      "fileCategory": "config"
+    }
+  ],
+  "batchImportData": {
+    "app/src/main/res/xml/backup_rules.xml": [],
+    "app/src/main/res/xml/data_extraction_rules.xml": [],
+    "app/src/main/res/xml/widget_info.xml": [],
+    "app/src/main/res/xml/widget_sign_detect_info.xml": []
+  },
+  "neighborMap": {}
+}

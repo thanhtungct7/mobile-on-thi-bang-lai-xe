@@ -1,0 +1,627 @@
+{
+  "nodes": [
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/ViewWelcomeAdapter.java",
+      "type": "file",
+      "name": "ViewWelcomeAdapter.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/ViewWelcomeAdapter.java",
+      "summary": "FragmentStatePagerAdapter subclass that backs the onboarding ViewPager, providing fragments from a list and reporting the fragment count.",
+      "tags": ["adapter", "component", "onboarding", "view-pager"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/ViewWelcomeAdapter.java:ViewWelcomeAdapter",
+      "type": "class",
+      "name": "ViewWelcomeAdapter",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/ViewWelcomeAdapter.java",
+      "lineRange": [11, 29],
+      "summary": "FragmentStatePagerAdapter that holds a list of onboarding Fragment instances and serves them to a ViewPager.",
+      "tags": ["adapter", "component", "fragment", "view-pager"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "type": "file",
+      "name": "MyDB.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "summary": "Orchestrates Firebase Realtime Database and Storage synchronisation: checks the remote data version, downloads updated questions, traffic signs, exam sets, and answer choices into the local SQLite database, and fetches sign images to device storage.",
+      "tags": ["service", "firebase", "database", "synchronisation"],
+      "complexity": "complex",
+      "languageNotes": "Uses nested Firebase ValueEventListener callbacks to chain multiple Realtime Database reads; image bytes are fetched from Firebase Storage and persisted to the app's private directory via ContextWrapper."
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java:MyDB",
+      "type": "class",
+      "name": "MyDB",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "lineRange": [32, 284],
+      "summary": "Manages remote-to-local data sync by comparing versions, bulk-downloading Firebase data into SQLite, caching traffic-sign images, and navigating to MainActivity when the update completes.",
+      "tags": ["service", "firebase", "database", "synchronisation"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java:capNhatDatabase",
+      "type": "function",
+      "name": "capNhatDatabase",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "lineRange": [48, 184],
+      "summary": "Pulls all question categories, traffic signs, questions, exam papers, answer choices, and license-type records from Firebase and upserts them into the local SQLite database in cascading listener callbacks.",
+      "tags": ["firebase", "database", "synchronisation", "data-pipeline"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java:kiemTraPhienBan",
+      "type": "function",
+      "name": "kiemTraPhienBan",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "lineRange": [229, 279],
+      "summary": "Listens for the remote version number on Firebase; triggers a full database update or image download when the remote version is newer than the local one, then navigates to MainActivity.",
+      "tags": ["firebase", "version-check", "synchronisation"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java:downloadWithBytes",
+      "type": "function",
+      "name": "downloadWithBytes",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "lineRange": [185, 199],
+      "summary": "Lists all items under a Firebase Storage path and downloads each image as a byte array, skipping files already cached locally.",
+      "tags": ["firebase", "image-download", "storage"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java:storeImageBytes",
+      "type": "function",
+      "name": "storeImageBytes",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "lineRange": [206, 217],
+      "summary": "Writes a raw byte array to the app's private image directory, creating the directory if absent.",
+      "tags": ["utility", "file-io", "image"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MySharedPreferences.java",
+      "type": "file",
+      "name": "MySharedPreferences.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MySharedPreferences.java",
+      "summary": "Thin wrapper around Android SharedPreferences exposing typed get/put methods for boolean and integer values, used to persist user settings such as onboarding completion status and selected license type.",
+      "tags": ["utility", "shared-preferences", "persistence", "wrapper"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MySharedPreferences.java:MySharedPreferences",
+      "type": "class",
+      "name": "MySharedPreferences",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MySharedPreferences.java",
+      "lineRange": [7, 39],
+      "summary": "Provides context-aware helpers for reading and writing boolean and integer values to a named SharedPreferences file.",
+      "tags": ["utility", "shared-preferences", "persistence"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java",
+      "type": "file",
+      "name": "OnboardingFragment.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java",
+      "summary": "Fragment displayed on each onboarding screen; the last slide includes a license-type selector and a 'Next' button that stores the selection and triggers the Firebase version check to begin data sync.",
+      "tags": ["component", "fragment", "onboarding", "ui"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java:OnboardingFragment",
+      "type": "class",
+      "name": "OnboardingFragment",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java",
+      "lineRange": [22, 103],
+      "summary": "Fragment for a single onboarding page; factory methods newInstance and newInstanceLast populate image, title, and content arguments; the last page exposes a license dropdown and triggers database sync on confirmation.",
+      "tags": ["component", "fragment", "onboarding", "ui"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java:onCreateView",
+      "type": "function",
+      "name": "onCreateView",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java",
+      "lineRange": [56, 102],
+      "summary": "Inflates the fragment layout, populates views from arguments, and on the last slide wires the license-type autocomplete and 'Next' button to save preferences and initiate the version check.",
+      "tags": ["ui", "fragment", "lifecycle", "event-handler"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java",
+      "type": "file",
+      "name": "MainActivity.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java",
+      "summary": "Main host activity that manages a bottom-navigation bar and four fragments (Dashboard, Study, Results, Profile), loading exam data from SQLite into the shared DanhSach singleton on startup.",
+      "tags": ["entry-point", "activity", "navigation", "component"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java:MainActivity",
+      "type": "class",
+      "name": "MainActivity",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java",
+      "lineRange": [20, 120],
+      "summary": "AppCompatActivity that hosts bottom-navigation-driven fragment switching and pre-loads questions, exam papers, and answers from the local database into the in-memory DanhSach list on creation.",
+      "tags": ["entry-point", "activity", "navigation", "component"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java:loadDBToDanhSach",
+      "type": "function",
+      "name": "loadDBToDanhSach",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java",
+      "lineRange": [88, 96],
+      "summary": "Reads questions, exam papers, and answers from SQLite via DBHandler and populates the static DanhSach singleton; also seeds traffic signs from assets if the table is empty.",
+      "tags": ["database", "data-model", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBang.java",
+      "type": "file",
+      "name": "LoaiBang.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBang.java",
+      "summary": "Plain data model representing a driving-license type (LoaiBang) with an ID and a display name, used when populating the license-type selector and filtering exam questions.",
+      "tags": ["data-model", "entity", "model"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBang.java:LoaiBang",
+      "type": "class",
+      "name": "LoaiBang",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBang.java",
+      "lineRange": [3, 30],
+      "summary": "Simple POJO with MaLoaiBang (ID) and TenLoaiBang (name) fields representing a license category such as A1, A2, B1, or B2.",
+      "tags": ["data-model", "entity", "pojo"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/OnBoardingActivity.java",
+      "type": "file",
+      "name": "OnBoardingActivity.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/OnBoardingActivity.java",
+      "summary": "Activity that presents a swipeable three-page onboarding sequence using a ViewPager, a circle page indicator, and skip/next controls; shown only on first launch.",
+      "tags": ["activity", "onboarding", "component", "ui"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/OnBoardingActivity.java:OnBoardingActivity",
+      "type": "class",
+      "name": "OnBoardingActivity",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/OnBoardingActivity.java",
+      "lineRange": [23, 93],
+      "summary": "Hosts the onboarding flow by wiring OnboardingFragment pages into a ViewPager with a circle indicator, and managing the visibility of skip and next controls based on the current page.",
+      "tags": ["activity", "onboarding", "ui", "fragment"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/OnBoardingActivity.java:init",
+      "type": "function",
+      "name": "init",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/OnBoardingActivity.java",
+      "lineRange": [70, 92],
+      "summary": "Finds and binds all onboarding UI views, attaches a skip listener that jumps to the last page, and attaches a next listener that advances the ViewPager one step at a time.",
+      "tags": ["ui", "event-handler", "initialization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java",
+      "type": "file",
+      "name": "SplashActivity.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java",
+      "summary": "Splash screen activity that copies the bundled SQLite database from assets on first install, retrieves an FCM token, checks network connectivity, and routes the user to either OnBoardingActivity or MainActivity depending on prior onboarding state.",
+      "tags": ["entry-point", "activity", "splash", "initialization"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java:SplashActivity",
+      "type": "class",
+      "name": "SplashActivity",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java",
+      "lineRange": [25, 137],
+      "summary": "Controls app startup: copies the pre-packaged SQLite database to the device database directory, fetches the FCM token, determines onboarding completion via SharedPreferences, then navigates appropriately after a brief delay.",
+      "tags": ["entry-point", "activity", "splash", "initialization"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java:CopyDataBaseFromAsset",
+      "type": "function",
+      "name": "CopyDataBaseFromAsset",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java",
+      "lineRange": [110, 131],
+      "summary": "Streams the bundled SQLite database file from app assets to the device's database directory, creating the parent directory if necessary.",
+      "tags": ["utility", "file-io", "database", "initialization"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java:onCreate",
+      "type": "function",
+      "name": "onCreate",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java",
+      "lineRange": [31, 74],
+      "summary": "Initialises the splash screen, schedules a delayed Runnable that checks onboarding status and network availability, then routes to the correct next activity.",
+      "tags": ["lifecycle", "entry-point", "navigation"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/ViewWelcomeAdapter.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/ViewWelcomeAdapter.java:ViewWelcomeAdapter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/ViewWelcomeAdapter.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/ViewWelcomeAdapter.java:ViewWelcomeAdapter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java:MyDB",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java:MyDB",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java:capNhatDatabase",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java:capNhatDatabase",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java:kiemTraPhienBan",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java:kiemTraPhienBan",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java:downloadWithBytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java:downloadWithBytes",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java:storeImageBytes",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/DeThi.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBang.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiCauHoi.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java:capNhatDatabase",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java:kiemTraPhienBan",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MySharedPreferences.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MySharedPreferences.java:MySharedPreferences",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MySharedPreferences.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MySharedPreferences.java:MySharedPreferences",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java:OnboardingFragment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java:OnboardingFragment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java:onCreateView",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MySharedPreferences.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java:onCreateView",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java:kiemTraPhienBan",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java:MainActivity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java:MainActivity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java:loadDBToDanhSach",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java:loadDBToDanhSach",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBang.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBang.java:LoaiBang",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBang.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBang.java:LoaiBang",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/OnBoardingActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/OnBoardingActivity.java:OnBoardingActivity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/OnBoardingActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/OnBoardingActivity.java:OnBoardingActivity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/OnBoardingActivity.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/OnBoardingActivity.java:init",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/OnBoardingActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/ViewWelcomeAdapter.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/OnBoardingActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/OnBoardingActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java:SplashActivity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java:SplashActivity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java:CopyDataBaseFromAsset",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java:CopyDataBaseFromAsset",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java:onCreate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MySharedPreferences.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java:onCreate",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java:kiemTraPhienBan",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java:onCreate",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java:downloadWithBytes",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

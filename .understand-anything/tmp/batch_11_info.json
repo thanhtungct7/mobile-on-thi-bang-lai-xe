@@ -1,0 +1,148 @@
+{
+  "batchIndex": 11,
+  "files": [
+    {
+      "path": "app/src/main/res/drawable/diem_liet_badge.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/exam_icon_bg.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/explanation_card_bg.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/fail_badge.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/header_background_shape.xml",
+      "language": "xml",
+      "sizeLines": 7,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_check.xml",
+      "language": "xml",
+      "sizeLines": 14,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_chevron_right.xml",
+      "language": "xml",
+      "sizeLines": 14,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_close.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_exam_doc.xml",
+      "language": "xml",
+      "sizeLines": 36,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_filter.xml",
+      "language": "xml",
+      "sizeLines": 13,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_launcher_background.xml",
+      "language": "xml",
+      "sizeLines": 170,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_search.xml",
+      "language": "xml",
+      "sizeLines": 18,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_tab_camera.xml",
+      "language": "xml",
+      "sizeLines": 15,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_tab_home.xml",
+      "language": "xml",
+      "sizeLines": 13,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_tab_profile.xml",
+      "language": "xml",
+      "sizeLines": 13,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_tab_results.xml",
+      "language": "xml",
+      "sizeLines": 17,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_tab_study.xml",
+      "language": "xml",
+      "sizeLines": 13,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_x_close.xml",
+      "language": "xml",
+      "sizeLines": 13,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/mode_card_icon_primary_bg.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/pass_badge.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    }
+  ],
+  "batchImportData": {
+    "app/src/main/res/drawable/diem_liet_badge.xml": [],
+    "app/src/main/res/drawable/exam_icon_bg.xml": [],
+    "app/src/main/res/drawable/explanation_card_bg.xml": [],
+    "app/src/main/res/drawable/fail_badge.xml": [],
+    "app/src/main/res/drawable/header_background_shape.xml": [],
+    "app/src/main/res/drawable/ic_check.xml": [],
+    "app/src/main/res/drawable/ic_chevron_right.xml": [],
+    "app/src/main/res/drawable/ic_close.xml": [],
+    "app/src/main/res/drawable/ic_exam_doc.xml": [],
+    "app/src/main/res/drawable/ic_filter.xml": [],
+    "app/src/main/res/drawable/ic_launcher_background.xml": [],
+    "app/src/main/res/drawable/ic_search.xml": [],
+    "app/src/main/res/drawable/ic_tab_camera.xml": [],
+    "app/src/main/res/drawable/ic_tab_home.xml": [],
+    "app/src/main/res/drawable/ic_tab_profile.xml": [],
+    "app/src/main/res/drawable/ic_tab_results.xml": [],
+    "app/src/main/res/drawable/ic_tab_study.xml": [],
+    "app/src/main/res/drawable/ic_x_close.xml": [],
+    "app/src/main/res/drawable/mode_card_icon_primary_bg.xml": [],
+    "app/src/main/res/drawable/pass_badge.xml": []
+  },
+  "neighborMap": {}
+}

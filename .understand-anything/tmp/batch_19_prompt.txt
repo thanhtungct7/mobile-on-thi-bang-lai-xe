@@ -1,0 +1,53 @@
+Analyze these files and produce GraphNode and GraphEdge objects.
+Project root: /mnt/data1/KMA/on-thi-bang-lai-xe
+Project: on-thi-bang-lai-xe (Vietnamese Driving License Exam App)
+Languages: Java, XML, Gradle, JSON
+Batch: 19/19
+Skill directory (for bundled scripts): /home/trtung/.claude/plugins/cache/understand-anything/understand-anything/2.7.6/skills/understand
+Output: write to /mnt/data1/KMA/on-thi-bang-lai-xe/.understand-anything/intermediate/batch-19.json
+
+Pre-resolved import data for this batch (use directly — do NOT re-resolve imports from source):
+```json
+{
+  "app/src/main/res/menu/bottom_nav_main.xml": [],
+  "app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml": [],
+  "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml": [],
+  "app/src/main/res/values-land/dimens.xml": [],
+  "app/src/main/res/values-night/colors.xml": [],
+  "app/src/main/res/values-night/themes.xml": [],
+  "app/src/main/res/values-w1240dp/dimens.xml": [],
+  "app/src/main/res/values-w600dp/dimens.xml": [],
+  "app/src/test/java/com/kma/OnThiBangLaiXe/ExampleUnitTest.java": [],
+  "gradle/wrapper/gradle-wrapper.jar": [],
+  "gradle/wrapper/gradle-wrapper.properties": [],
+  "gradlew": [],
+  "traffic-signs-detection-using-yolov8.ipynb": []
+}
+```
+
+Cross-batch neighbors with their exported symbols (confidence boost for cross-batch edges):
+```json
+{}
+```
+
+Files to analyze in this batch (every entry MUST be passed through to batchFiles with all four fields — path, language, sizeLines, fileCategory):
+1. `app/src/main/res/menu/bottom_nav_main.xml` (23 lines, language: `xml`, fileCategory: `config`)
+2. `app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml` (4 lines, language: `xml`, fileCategory: `config`)
+3. `app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml` (4 lines, language: `xml`, fileCategory: `config`)
+4. `app/src/main/res/values-land/dimens.xml` (3 lines, language: `xml`, fileCategory: `config`)
+5. `app/src/main/res/values-night/colors.xml` (25 lines, language: `xml`, fileCategory: `config`)
+6. `app/src/main/res/values-night/themes.xml` (27 lines, language: `xml`, fileCategory: `config`)
+7. `app/src/main/res/values-w1240dp/dimens.xml` (2 lines, language: `xml`, fileCategory: `config`)
+8. `app/src/main/res/values-w600dp/dimens.xml` (3 lines, language: `xml`, fileCategory: `config`)
+9. `app/src/test/java/com/kma/OnThiBangLaiXe/ExampleUnitTest.java` (16 lines, language: `java`, fileCategory: `code`)
+10. `gradle/wrapper/gradle-wrapper.jar` (348 lines, language: `jar`, fileCategory: `code`)
+11. `gradle/wrapper/gradle-wrapper.properties` (7 lines, language: `properties`, fileCategory: `config`)
+12. `gradlew` (185 lines, language: `unknown`, fileCategory: `code`)
+13. `traffic-signs-detection-using-yolov8.ipynb` (0 lines, language: `ipynb`, fileCategory: `code`)
+
+**Additional context from main session:**
+
+Project: on-thi-bang-lai-xe — Vietnamese Driving License Exam Practice App (Android/Java)
+Languages: Java, XML, Gradle, JSON, Python
+
+> **Language directive**: Generate all textual content (summaries, descriptions, tags, titles, languageNotes, languageLesson) in **English**. Maintain technical accuracy while using natural, native-level phrasing in the target language. Keep technical terms in English when no standard translation exists (e.g., "middleware", "hook", "barrel").

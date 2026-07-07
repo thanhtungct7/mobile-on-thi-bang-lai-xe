@@ -1,0 +1,37 @@
+Analyze these files and produce GraphNode and GraphEdge objects.
+Project root: /mnt/data1/KMA/on-thi-bang-lai-xe
+Project: on-thi-bang-lai-xe (Vietnamese Driving License Exam App)
+Languages: Java, XML, Gradle, JSON
+Batch: 7/19
+Skill directory (for bundled scripts): /home/trtung/.claude/plugins/cache/understand-anything/understand-anything/2.7.6/skills/understand
+Output: write to /mnt/data1/KMA/on-thi-bang-lai-xe/.understand-anything/intermediate/batch-7.json
+
+Pre-resolved import data for this batch (use directly — do NOT re-resolve imports from source):
+```json
+{
+  "README.md": [],
+  "build.gradle": [],
+  "gradle.properties": [],
+  "gradlew.bat": [],
+  "settings.gradle": []
+}
+```
+
+Cross-batch neighbors with their exported symbols (confidence boost for cross-batch edges):
+```json
+{}
+```
+
+Files to analyze in this batch (every entry MUST be passed through to batchFiles with all four fields — path, language, sizeLines, fileCategory):
+1. `README.md` (93 lines, language: `markdown`, fileCategory: `docs`)
+2. `build.gradle` (8 lines, language: `gradle`, fileCategory: `config`)
+3. `gradle.properties` (20 lines, language: `properties`, fileCategory: `config`)
+4. `gradlew.bat` (89 lines, language: `batch`, fileCategory: `script`)
+5. `settings.gradle` (16 lines, language: `gradle`, fileCategory: `config`)
+
+**Additional context from main session:**
+
+Project: on-thi-bang-lai-xe — Vietnamese Driving License Exam Practice App (Android/Java)
+Languages: Java, XML, Gradle, JSON, Python
+
+> **Language directive**: Generate all textual content (summaries, descriptions, tags, titles, languageNotes, languageLesson) in **English**. Maintain technical accuracy while using natural, native-level phrasing in the target language. Keep technical terms in English when no standard translation exists (e.g., "middleware", "hook", "barrel").

@@ -1,0 +1,535 @@
+{
+  "batchIndex": 5,
+  "files": [
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/DeThiAdapter.java",
+      "language": "java",
+      "sizeLines": 134,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/menuCauHoiAdapter.java",
+      "language": "java",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/DeThiActivity.java",
+      "language": "java",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "language": "java",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/ProfileFragment.java",
+      "language": "java",
+      "sizeLines": 100,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/ResultsFragment.java",
+      "language": "java",
+      "sizeLines": 119,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/ThiThuActivity.java",
+      "language": "java",
+      "sizeLines": 189,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/DeThiAdapter.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/KetQuaActivity.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DeThi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/ThiThuActivity.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/menuCauHoiAdapter.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/ThiThuActivity.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/DeThiActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/DeThiAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DeThi.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/ProfileFragment.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/ResultsFragment.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/DeThiAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/ResultDeThiAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/ThiThuActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauTraLoiAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/menuCauHoiAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ]
+  },
+  "neighborMap": {
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/DeThiAdapter.java": [
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+        "batchIndex": 6,
+        "symbols": [
+          "DBHandler",
+          "onCreate",
+          "onUpgrade",
+          "isLastestVersion",
+          "UpdateVersion",
+          "docDeThi",
+          "docLoaiCauHoi",
+          "docCauTraLoi",
+          "docCauHaySai",
+          "docCauHoiSai",
+          "getData",
+          "docCauHoiLuu",
+          "docLoaiBienBao",
+          "getListCauTraLoiByMaDeThi",
+          "getListCauHoiByMaCH",
+          "getCauHoiByID",
+          "isBienBaoEmpty",
+          "loadBienBaoFromAssets",
+          "docBienBao",
+          "docCauHoi",
+          "insertLoaiBang",
+          "insertBB",
+          "insertDeThi",
+          "insertCauHoi",
+          "insertLoaiCauHoi",
+          "insertCauTraLoi",
+          "updateDaTraLoi",
+          "updateLuuLaiCauHoi",
+          "findLoaiBang",
+          "findBBByID",
+          "findLCHByID",
+          "findCHByID",
+          "findCauTraLoiByID",
+          "finDDeThiByID",
+          "coCauHoiChoLoaiBang",
+          "generateDeThiTuCauHoi",
+          "onDowngrade",
+          "updateLoaiBang",
+          "updateCauTraLoi",
+          "updateLoaiCauHoi",
+          "updateBB",
+          "updateDeThi",
+          "updateCauHoi",
+          "updateCauTraLoi",
+          "updateDapAnChon",
+          "RandomQuizz",
+          "DBHandler"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/KetQuaActivity.java",
+        "batchIndex": 4,
+        "symbols": [
+          "ThiLai",
+          "txtlyDo",
+          "txtKetQua",
+          "txtScore",
+          "txtScoreNum",
+          "txtScoreDenom",
+          "txtThoiGianLam",
+          "txtThoiGianConLai",
+          "getType",
+          "KetQuaActivity"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java",
+        "batchIndex": 4,
+        "symbols": [
+          "CauTraLoi",
+          "getMaDeThi",
+          "setMaDeThi",
+          "getMaCH",
+          "setMaCH",
+          "getDapAnChon",
+          "setDapAnChon",
+          "CauTraLoi",
+          "CauTraLoi",
+          "CauTraLoi"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DeThi.java",
+        "batchIndex": 6,
+        "symbols": [
+          "DeThi",
+          "getMaLoaiBang",
+          "setMaLoaiBang",
+          "getMaDeThi",
+          "setMaDeThi",
+          "getTenDeThi",
+          "setTenDeThi",
+          "DeThi",
+          "DeThi",
+          "DeThi"
+        ]
+      }
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/menuCauHoiAdapter.java": [
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+        "batchIndex": 1,
+        "symbols": [
+          "getMaCH",
+          "setMaCH",
+          "getMaLoaiCH",
+          "setMaLoaiCH",
+          "getMaLoaiBang",
+          "setMaLoaiBang",
+          "getHaySai",
+          "setHaySai",
+          "getLuu",
+          "setLuu",
+          "getNoiDung",
+          "setNoiDung",
+          "getHinhAnh",
+          "setHinhAnh",
+          "getDapAnA",
+          "setDapAnA",
+          "getDapAnB",
+          "setDapAnB",
+          "getDapAnC",
+          "setDapAnC",
+          "getDapAnD",
+          "setDapAnD",
+          "getDapAnDung",
+          "setDapAnDung",
+          "getGiaiThich",
+          "setGiaiThich",
+          "getDaTraLoiDung",
+          "setDaTraLoiDung",
+          "CauHoi",
+          "CauHoi",
+          "CauHoi",
+          "CauHoi"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java",
+        "batchIndex": 4,
+        "symbols": [
+          "CauTraLoi",
+          "getMaDeThi",
+          "setMaDeThi",
+          "getMaCH",
+          "setMaCH",
+          "getDapAnChon",
+          "setDapAnChon",
+          "CauTraLoi",
+          "CauTraLoi",
+          "CauTraLoi"
+        ]
+      }
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/DeThiActivity.java": [
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DeThi.java",
+        "batchIndex": 6,
+        "symbols": [
+          "DeThi",
+          "getMaLoaiBang",
+          "setMaLoaiBang",
+          "getMaDeThi",
+          "setMaDeThi",
+          "getTenDeThi",
+          "setTenDeThi",
+          "DeThi",
+          "DeThi",
+          "DeThi"
+        ]
+      }
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java": [
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+        "batchIndex": 1,
+        "symbols": [
+          "CauHoiAdapter",
+          "onCreateViewHolder",
+          "getItemViewType",
+          "onBindViewHolder",
+          "getItemCount",
+          "CauHoiAdapter"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauTraLoiAdapter.java",
+        "batchIndex": 4,
+        "symbols": [
+          "CauTraLoiAdapter",
+          "onCreateViewHolder",
+          "getItemViewType",
+          "onBindViewHolder",
+          "getItemCount",
+          "CauTraLoiAdapter"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/KetQuaAdapter.java",
+        "batchIndex": 4,
+        "symbols": [
+          "KetQuaAdapter",
+          "onCreateViewHolder",
+          "getItemViewType",
+          "onBindViewHolder",
+          "getItemCount",
+          "KetQuaAdapter"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java",
+        "batchIndex": 3,
+        "symbols": [
+          "BienBaoActivity"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/CauHoiActivity.java",
+        "batchIndex": 1,
+        "symbols": [
+          "vp",
+          "onBackPressed",
+          "CauHoiActivity"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/CauSaiActivity.java",
+        "batchIndex": 1,
+        "symbols": [
+          "vp",
+          "onBackPressed",
+          "CauSaiActivity"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+        "batchIndex": 2,
+        "symbols": [
+          "progressDialog",
+          "MyDB",
+          "capNhatDatabase",
+          "downloadWithBytes",
+          "downloadImagesIfNeeded",
+          "kiemTraPhienBan",
+          "MyDB"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java",
+        "batchIndex": 1,
+        "symbols": [
+          "onCreateView",
+          "onViewCreated",
+          "onResume",
+          "refresh",
+          "DashboardFragment"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+        "batchIndex": 6,
+        "symbols": [
+          "DBHandler",
+          "onCreate",
+          "onUpgrade",
+          "isLastestVersion",
+          "UpdateVersion",
+          "docDeThi",
+          "docLoaiCauHoi",
+          "docCauTraLoi",
+          "docCauHaySai",
+          "docCauHoiSai",
+          "getData",
+          "docCauHoiLuu",
+          "docLoaiBienBao",
+          "getListCauTraLoiByMaDeThi",
+          "getListCauHoiByMaCH",
+          "getCauHoiByID",
+          "isBienBaoEmpty",
+          "loadBienBaoFromAssets",
+          "docBienBao",
+          "docCauHoi",
+          "insertLoaiBang",
+          "insertBB",
+          "insertDeThi",
+          "insertCauHoi",
+          "insertLoaiCauHoi",
+          "insertCauTraLoi",
+          "updateDaTraLoi",
+          "updateLuuLaiCauHoi",
+          "findLoaiBang",
+          "findBBByID",
+          "findLCHByID",
+          "findCHByID",
+          "findCauTraLoiByID",
+          "finDDeThiByID",
+          "coCauHoiChoLoaiBang",
+          "generateDeThiTuCauHoi",
+          "onDowngrade",
+          "updateLoaiBang",
+          "updateCauTraLoi",
+          "updateLoaiCauHoi",
+          "updateBB",
+          "updateDeThi",
+          "updateCauHoi",
+          "updateCauTraLoi",
+          "updateDapAnChon",
+          "RandomQuizz",
+          "DBHandler"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java",
+        "batchIndex": 3,
+        "symbols": [
+          "FlashcardActivity"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java",
+        "batchIndex": 2,
+        "symbols": [
+          "btnNext",
+          "OnboardingFragment",
+          "newInstance",
+          "newInstanceLast",
+          "onCreateView",
+          "OnboardingFragment"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/HaySaiActivity.java",
+        "batchIndex": 1,
+        "symbols": [
+          "vp",
+          "onBackPressed",
+          "HaySaiActivity"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/KetQuaActivity.java",
+        "batchIndex": 4,
+        "symbols": [
+          "ThiLai",
+          "txtlyDo",
+          "txtKetQua",
+          "txtScore",
+          "txtScoreNum",
+          "txtScoreDenom",
+          "txtThoiGianLam",
+          "txtThoiGianConLai",
+          "getType",
+          "KetQuaActivity"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java",
+        "batchIndex": 2,
+        "symbols": [
+          "onTrimMemory",
+          "dialog",
+          "MainActivity"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java",
+        "batchIndex": 1,
+        "symbols": [
+          "onUpdate",
+          "onReceive",
+          "QuestionWidgetProvider"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java",
+        "batchIndex": 2,
+        "symbols": [
+          "CopyDataBaseFromAsset",
+          "SplashActivity"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/StudyFragment.java",
+        "batchIndex": 6,
+        "symbols": [
+          "tlchAdapter",
+          "onCreateView",
+          "onViewCreated",
+          "onResume",
+          "refreshProgress",
+          "onItemClick",
+          "StudyFragment"
+        ]
+      }
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/ResultsFragment.java": [
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/ResultDeThiAdapter.java",
+        "batchIndex": 6,
+        "symbols": [
+          "FILTER_ALL",
+          "FILTER_DAU",
+          "FILTER_ROT",
+          "ResultDeThiAdapter",
+          "setFilter",
+          "getTotalCompleted",
+          "getTotalPass",
+          "getTotalFail",
+          "onCreateViewHolder",
+          "onBindViewHolder",
+          "getItemCount",
+          "ResultDeThiAdapter"
+        ]
+      }
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/ThiThuActivity.java": [
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauTraLoiAdapter.java",
+        "batchIndex": 4,
+        "symbols": [
+          "CauTraLoiAdapter",
+          "onCreateViewHolder",
+          "getItemViewType",
+          "onBindViewHolder",
+          "getItemCount",
+          "CauTraLoiAdapter"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java",
+        "batchIndex": 4,
+        "symbols": [
+          "CauTraLoi",
+          "getMaDeThi",
+          "setMaDeThi",
+          "getMaCH",
+          "setMaCH",
+          "getDapAnChon",
+          "setDapAnChon",
+          "CauTraLoi",
+          "CauTraLoi",
+          "CauTraLoi"
+        ]
+      }
+    ]
+  }
+}

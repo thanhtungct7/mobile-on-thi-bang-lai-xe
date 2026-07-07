@@ -1,0 +1,241 @@
+{
+  "batchIndex": 3,
+  "files": [
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java",
+      "language": "java",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java",
+      "language": "java",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java",
+      "language": "java",
+      "sizeLines": 50,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java",
+      "language": "java",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java",
+      "language": "java",
+      "sizeLines": 167,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+      "language": "java",
+      "sizeLines": 59,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java",
+      "language": "java",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java": []
+  },
+  "neighborMap": {
+    "app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java": [
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+        "batchIndex": 5,
+        "symbols": [
+          "getLoaiBang",
+          "setLoaiBang",
+          "getDsBang",
+          "setDsBang",
+          "getDsDeThi",
+          "setDsDeThi",
+          "getDsCauTraLoi",
+          "setDsCauTraLoi",
+          "getDsLoaiBienBao",
+          "setDsLoaiBienBao",
+          "getDsBienBao",
+          "setDsBienBao",
+          "clearBienBao",
+          "getDsCauHoi",
+          "setDsCauHoi",
+          "DanhSach"
+        ]
+      }
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java": [
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+        "batchIndex": 5,
+        "symbols": [
+          "getLoaiBang",
+          "setLoaiBang",
+          "getDsBang",
+          "setDsBang",
+          "getDsDeThi",
+          "setDsDeThi",
+          "getDsCauTraLoi",
+          "setDsCauTraLoi",
+          "getDsLoaiBienBao",
+          "setDsLoaiBienBao",
+          "getDsBienBao",
+          "setDsBienBao",
+          "clearBienBao",
+          "getDsCauHoi",
+          "setDsCauHoi",
+          "DanhSach"
+        ]
+      }
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java": [
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+        "batchIndex": 2,
+        "symbols": [
+          "progressDialog",
+          "MyDB",
+          "capNhatDatabase",
+          "downloadWithBytes",
+          "downloadImagesIfNeeded",
+          "kiemTraPhienBan",
+          "MyDB"
+        ]
+      },
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+        "batchIndex": 6,
+        "symbols": [
+          "DBHandler",
+          "onCreate",
+          "onUpgrade",
+          "isLastestVersion",
+          "UpdateVersion",
+          "docDeThi",
+          "docLoaiCauHoi",
+          "docCauTraLoi",
+          "docCauHaySai",
+          "docCauHoiSai",
+          "getData",
+          "docCauHoiLuu",
+          "docLoaiBienBao",
+          "getListCauTraLoiByMaDeThi",
+          "getListCauHoiByMaCH",
+          "getCauHoiByID",
+          "isBienBaoEmpty",
+          "loadBienBaoFromAssets",
+          "docBienBao",
+          "docCauHoi",
+          "insertLoaiBang",
+          "insertBB",
+          "insertDeThi",
+          "insertCauHoi",
+          "insertLoaiCauHoi",
+          "insertCauTraLoi",
+          "updateDaTraLoi",
+          "updateLuuLaiCauHoi",
+          "findLoaiBang",
+          "findBBByID",
+          "findLCHByID",
+          "findCHByID",
+          "findCauTraLoiByID",
+          "finDDeThiByID",
+          "coCauHoiChoLoaiBang",
+          "generateDeThiTuCauHoi",
+          "onDowngrade",
+          "updateLoaiBang",
+          "updateCauTraLoi",
+          "updateLoaiCauHoi",
+          "updateBB",
+          "updateDeThi",
+          "updateCauHoi",
+          "updateCauTraLoi",
+          "updateDapAnChon",
+          "RandomQuizz",
+          "DBHandler"
+        ]
+      }
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java": [
+      {
+        "path": "app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+        "batchIndex": 6,
+        "symbols": [
+          "DBHandler",
+          "onCreate",
+          "onUpgrade",
+          "isLastestVersion",
+          "UpdateVersion",
+          "docDeThi",
+          "docLoaiCauHoi",
+          "docCauTraLoi",
+          "docCauHaySai",
+          "docCauHoiSai",
+          "getData",
+          "docCauHoiLuu",
+          "docLoaiBienBao",
+          "getListCauTraLoiByMaDeThi",
+          "getListCauHoiByMaCH",
+          "getCauHoiByID",
+          "isBienBaoEmpty",
+          "loadBienBaoFromAssets",
+          "docBienBao",
+          "docCauHoi",
+          "insertLoaiBang",
+          "insertBB",
+          "insertDeThi",
+          "insertCauHoi",
+          "insertLoaiCauHoi",
+          "insertCauTraLoi",
+          "updateDaTraLoi",
+          "updateLuuLaiCauHoi",
+          "findLoaiBang",
+          "findBBByID",
+          "findLCHByID",
+          "findCHByID",
+          "findCauTraLoiByID",
+          "finDDeThiByID",
+          "coCauHoiChoLoaiBang",
+          "generateDeThiTuCauHoi",
+          "onDowngrade",
+          "updateLoaiBang",
+          "updateCauTraLoi",
+          "updateLoaiCauHoi",
+          "updateBB",
+          "updateDeThi",
+          "updateCauHoi",
+          "updateCauTraLoi",
+          "updateDapAnChon",
+          "RandomQuizz",
+          "DBHandler"
+        ]
+      }
+    ]
+  }
+}

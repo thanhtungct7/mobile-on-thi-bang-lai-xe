@@ -1,0 +1,33 @@
+{
+  "projectRoot": "/mnt/data1/KMA/on-thi-bang-lai-xe",
+  "batchFiles": [
+    {"path": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java", "language": "java", "sizeLines": 88, "fileCategory": "code"},
+    {"path": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java", "language": "java", "sizeLines": 74, "fileCategory": "code"},
+    {"path": "app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java", "language": "java", "sizeLines": 50, "fileCategory": "code"},
+    {"path": "app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java", "language": "java", "sizeLines": 48, "fileCategory": "code"},
+    {"path": "app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java", "language": "java", "sizeLines": 167, "fileCategory": "code"},
+    {"path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java", "language": "java", "sizeLines": 59, "fileCategory": "code"},
+    {"path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java", "language": "java", "sizeLines": 43, "fileCategory": "code"}
+  ],
+  "batchImportData": {
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java": []
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "batchIndex": 12,
+  "files": [
+    {
+      "path": "app/src/main/res/drawable/progress_bar.xml",
+      "language": "xml",
+      "sizeLines": 17,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/progress_bar_low.xml",
+      "language": "xml",
+      "sizeLines": 17,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/q_dot_answered_active_bg.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/q_dot_answered_bg.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/q_dot_critical_active_bg.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/q_dot_critical_bg.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/q_dot_default_active_bg.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/q_dot_default_bg.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/radio_button_background_shape.xml",
+      "language": "xml",
+      "sizeLines": 4,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/radio_button_background_shape_checked.xml",
+      "language": "xml",
+      "sizeLines": 4,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/radio_button_background_shape_correct.xml",
+      "language": "xml",
+      "sizeLines": 4,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/radio_button_background_shape_wrong.xml",
+      "language": "xml",
+      "sizeLines": 4,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/result_fail_icon_bg.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/result_pass_icon_bg.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/stat_grid_bg.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/tag_stroke.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/topic_icon_bg.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/widget_answer_correct.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/widget_answer_default.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/widget_answer_dim.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    }
+  ],
+  "batchImportData": {
+    "app/src/main/res/drawable/progress_bar.xml": [],
+    "app/src/main/res/drawable/progress_bar_low.xml": [],
+    "app/src/main/res/drawable/q_dot_answered_active_bg.xml": [],
+    "app/src/main/res/drawable/q_dot_answered_bg.xml": [],
+    "app/src/main/res/drawable/q_dot_critical_active_bg.xml": [],
+    "app/src/main/res/drawable/q_dot_critical_bg.xml": [],
+    "app/src/main/res/drawable/q_dot_default_active_bg.xml": [],
+    "app/src/main/res/drawable/q_dot_default_bg.xml": [],
+    "app/src/main/res/drawable/radio_button_background_shape.xml": [],
+    "app/src/main/res/drawable/radio_button_background_shape_checked.xml": [],
+    "app/src/main/res/drawable/radio_button_background_shape_correct.xml": [],
+    "app/src/main/res/drawable/radio_button_background_shape_wrong.xml": [],
+    "app/src/main/res/drawable/result_fail_icon_bg.xml": [],
+    "app/src/main/res/drawable/result_pass_icon_bg.xml": [],
+    "app/src/main/res/drawable/stat_grid_bg.xml": [],
+    "app/src/main/res/drawable/tag_stroke.xml": [],
+    "app/src/main/res/drawable/topic_icon_bg.xml": [],
+    "app/src/main/res/drawable/widget_answer_correct.xml": [],
+    "app/src/main/res/drawable/widget_answer_default.xml": [],
+    "app/src/main/res/drawable/widget_answer_dim.xml": []
+  },
+  "neighborMap": {}
+}

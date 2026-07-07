@@ -1,0 +1,4135 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 10,
+  "filesSkipped": [],
+  "results": [
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 240,
+      "nonEmptyLines": 206,
+      "functions": [
+        {
+          "name": "CauHoiAdapter",
+          "startLine": 34,
+          "endLine": 38,
+          "params": [
+            "dsCauHoi",
+            "context"
+          ]
+        },
+        {
+          "name": "onCreateViewHolder",
+          "startLine": 40,
+          "endLine": 45,
+          "params": [
+            "parent",
+            "viewType"
+          ]
+        },
+        {
+          "name": "getItemViewType",
+          "startLine": 47,
+          "endLine": 48,
+          "params": [
+            "position"
+          ]
+        },
+        {
+          "name": "onBindViewHolder",
+          "startLine": 50,
+          "endLine": 96,
+          "params": [
+            "holder",
+            "position"
+          ]
+        },
+        {
+          "name": "bindOption",
+          "startLine": 98,
+          "endLine": 119,
+          "params": [
+            "holder",
+            "position",
+            "letter",
+            "wrap",
+            "tvLetter",
+            "rb",
+            "text"
+          ]
+        },
+        {
+          "name": "uncheckOthers",
+          "startLine": 121,
+          "endLine": 126,
+          "params": [
+            "holder",
+            "except"
+          ]
+        },
+        {
+          "name": "setDapAn",
+          "startLine": 128,
+          "endLine": 157,
+          "params": [
+            "holder",
+            "position",
+            "value"
+          ]
+        },
+        {
+          "name": "setCardForLetter",
+          "startLine": 159,
+          "endLine": 171,
+          "params": [
+            "holder",
+            "letter",
+            "correct"
+          ]
+        },
+        {
+          "name": "setCardDefault",
+          "startLine": 173,
+          "endLine": 177,
+          "params": [
+            "wrap",
+            "letter"
+          ]
+        },
+        {
+          "name": "setCardCorrect",
+          "startLine": 179,
+          "endLine": 183,
+          "params": [
+            "wrap",
+            "letter"
+          ]
+        },
+        {
+          "name": "setCardWrong",
+          "startLine": 185,
+          "endLine": 189,
+          "params": [
+            "wrap",
+            "letter"
+          ]
+        },
+        {
+          "name": "loadImage",
+          "startLine": 191,
+          "endLine": 203,
+          "params": [
+            "hinhAnh",
+            "iv"
+          ]
+        },
+        {
+          "name": "getItemCount",
+          "startLine": 205,
+          "endLine": 206,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CauHoiAdapter",
+          "startLine": 28,
+          "endLine": 240,
+          "methods": [
+            "CauHoiAdapter",
+            "onCreateViewHolder",
+            "getItemViewType",
+            "onBindViewHolder",
+            "bindOption",
+            "uncheckOthers",
+            "setDapAn",
+            "setCardForLetter",
+            "setCardDefault",
+            "setCardCorrect",
+            "setCardWrong",
+            "loadImage",
+            "getItemCount"
+          ],
+          "properties": [
+            "dsCauHoi",
+            "context",
+            "db"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CauHoiAdapter",
+          "line": 34,
+          "isDefault": false
+        },
+        {
+          "name": "onCreateViewHolder",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "getItemViewType",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "onBindViewHolder",
+          "line": 50,
+          "isDefault": false
+        },
+        {
+          "name": "getItemCount",
+          "line": 205,
+          "isDefault": false
+        },
+        {
+          "name": "CauHoiAdapter",
+          "line": 28,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "CauHoiAdapter",
+          "callee": "new DBHandler",
+          "lineNumber": 37
+        },
+        {
+          "caller": "onCreateViewHolder",
+          "callee": "new ViewHolder",
+          "lineNumber": 43
+        },
+        {
+          "caller": "onCreateViewHolder",
+          "callee": "LayoutInflater.from(parent.getContext()).inflate",
+          "lineNumber": 43
+        },
+        {
+          "caller": "onCreateViewHolder",
+          "callee": "LayoutInflater.from",
+          "lineNumber": 43
+        },
+        {
+          "caller": "onCreateViewHolder",
+          "callee": "parent.getContext",
+          "lineNumber": 43
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "dsCauHoi.get",
+          "lineNumber": 52
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.txtSoCauHoi.setText",
+          "lineNumber": 53
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "dsCauHoi.size",
+          "lineNumber": 53
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.ivSave.setTag",
+          "lineNumber": 54
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ch.getLuu",
+          "lineNumber": 56
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.ivSave.setImageResource",
+          "lineNumber": 57
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.ivSave.setTag",
+          "lineNumber": 58
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ch.getDaTraLoiDung",
+          "lineNumber": 61
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.txtDungSai.setText",
+          "lineNumber": 62
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ch.getDaTraLoiDung",
+          "lineNumber": 63
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.ivDungSai.setImageResource",
+          "lineNumber": 64
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ch.getDaTraLoiDung",
+          "lineNumber": 65
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.ivDungSai.setImageResource",
+          "lineNumber": 66
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.txtDungSai.setText",
+          "lineNumber": 69
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.txtNoiDungCauHoi.setText",
+          "lineNumber": 72
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ch.getNoiDung",
+          "lineNumber": 72
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.ivSave.setOnClickListener",
+          "lineNumber": 73
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.ivSave.getTag",
+          "lineNumber": 74
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.ivSave.setImageResource",
+          "lineNumber": 75
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.ivSave.setTag",
+          "lineNumber": 76
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "db.updateLuuLaiCauHoi",
+          "lineNumber": 77
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ch.getMaCH",
+          "lineNumber": 77
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.ivSave.setImageResource",
+          "lineNumber": 79
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.ivSave.setTag",
+          "lineNumber": 80
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "db.updateLuuLaiCauHoi",
+          "lineNumber": 81
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ch.getMaCH",
+          "lineNumber": 81
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "loadImage",
+          "lineNumber": 85
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ch.getHinhAnh",
+          "lineNumber": 85
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "bindOption",
+          "lineNumber": 87
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ch.getDapAnA",
+          "lineNumber": 87
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "bindOption",
+          "lineNumber": 88
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ch.getDapAnB",
+          "lineNumber": 88
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "bindOption",
+          "lineNumber": 89
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ch.getDapAnC",
+          "lineNumber": 89
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "bindOption",
+          "lineNumber": 90
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "ch.getDapAnD",
+          "lineNumber": 90
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "new LinearLayoutManager",
+          "lineNumber": 92
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "llm.setReverseLayout",
+          "lineNumber": 93
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "llm.setStackFromEnd",
+          "lineNumber": 94
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.rvCauHoi.setLayoutManager",
+          "lineNumber": 95
+        },
+        {
+          "caller": "bindOption",
+          "callee": "text.equals",
+          "lineNumber": 100
+        },
+        {
+          "caller": "bindOption",
+          "callee": "text.isEmpty",
+          "lineNumber": 100
+        },
+        {
+          "caller": "bindOption",
+          "callee": "wrap.setVisibility",
+          "lineNumber": 101
+        },
+        {
+          "caller": "bindOption",
+          "callee": "wrap.setVisibility",
+          "lineNumber": 104
+        },
+        {
+          "caller": "bindOption",
+          "callee": "rb.setText",
+          "lineNumber": 105
+        },
+        {
+          "caller": "bindOption",
+          "callee": "rb.setOnCheckedChangeListener",
+          "lineNumber": 106
+        },
+        {
+          "caller": "bindOption",
+          "callee": "rb.setChecked",
+          "lineNumber": 107
+        },
+        {
+          "caller": "bindOption",
+          "callee": "setCardDefault",
+          "lineNumber": 108
+        },
+        {
+          "caller": "bindOption",
+          "callee": "rb.setOnCheckedChangeListener",
+          "lineNumber": 110
+        },
+        {
+          "caller": "bindOption",
+          "callee": "setDapAn",
+          "lineNumber": 112
+        },
+        {
+          "caller": "bindOption",
+          "callee": "wrap.setOnClickListener",
+          "lineNumber": 115
+        },
+        {
+          "caller": "bindOption",
+          "callee": "uncheckOthers",
+          "lineNumber": 116
+        },
+        {
+          "caller": "bindOption",
+          "callee": "rb.setChecked",
+          "lineNumber": 117
+        },
+        {
+          "caller": "uncheckOthers",
+          "callee": "except.equals",
+          "lineNumber": 122
+        },
+        {
+          "caller": "uncheckOthers",
+          "callee": "holder.rbA.setChecked",
+          "lineNumber": 122
+        },
+        {
+          "caller": "uncheckOthers",
+          "callee": "except.equals",
+          "lineNumber": 123
+        },
+        {
+          "caller": "uncheckOthers",
+          "callee": "holder.rbB.setChecked",
+          "lineNumber": 123
+        },
+        {
+          "caller": "uncheckOthers",
+          "callee": "except.equals",
+          "lineNumber": 124
+        },
+        {
+          "caller": "uncheckOthers",
+          "callee": "holder.rbC.setChecked",
+          "lineNumber": 124
+        },
+        {
+          "caller": "uncheckOthers",
+          "callee": "except.equals",
+          "lineNumber": 125
+        },
+        {
+          "caller": "uncheckOthers",
+          "callee": "holder.rbD.setChecked",
+          "lineNumber": 125
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "dsCauHoi.get",
+          "lineNumber": 129
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "ch.getGiaiThich",
+          "lineNumber": 131
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "ch.getGiaiThich().isEmpty",
+          "lineNumber": 131
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "ch.getGiaiThich",
+          "lineNumber": 131
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "ch.getGiaiThich().equals",
+          "lineNumber": 131
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "ch.getGiaiThich",
+          "lineNumber": 131
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "holder.txtGiaiThichCauHoi.setText",
+          "lineNumber": 132
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "ch.getGiaiThich",
+          "lineNumber": 132
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "holder.txtGiaiThichCauHoi.setVisibility",
+          "lineNumber": 133
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "holder.wrapA.setClickable",
+          "lineNumber": 136
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "holder.wrapB.setClickable",
+          "lineNumber": 137
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "holder.wrapC.setClickable",
+          "lineNumber": 138
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "holder.wrapD.setClickable",
+          "lineNumber": 139
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "holder.rbA.setEnabled",
+          "lineNumber": 140
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "holder.rbB.setEnabled",
+          "lineNumber": 141
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "holder.rbC.setEnabled",
+          "lineNumber": 142
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "holder.rbD.setEnabled",
+          "lineNumber": 143
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "holder.txtDungSai.setText",
+          "lineNumber": 144
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "ch.getDapAnDung().equals",
+          "lineNumber": 146
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "ch.getDapAnDung",
+          "lineNumber": 146
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "holder.ivDungSai.setImageResource",
+          "lineNumber": 148
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "holder.ivDungSai.setImageResource",
+          "lineNumber": 150
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "setCardForLetter",
+          "lineNumber": 151
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "setCardForLetter",
+          "lineNumber": 153
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "ch.getDapAnDung",
+          "lineNumber": 153
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "DanhSach.getDsCauHoi().get(position).setDaTraLoiDung",
+          "lineNumber": 155
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "DanhSach.getDsCauHoi().get",
+          "lineNumber": 155
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "DanhSach.getDsCauHoi",
+          "lineNumber": 155
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "db.updateDaTraLoi",
+          "lineNumber": 156
+        },
+        {
+          "caller": "setDapAn",
+          "callee": "ch.getMaCH",
+          "lineNumber": 156
+        },
+        {
+          "caller": "setCardForLetter",
+          "callee": "setCardCorrect",
+          "lineNumber": 169
+        },
+        {
+          "caller": "setCardForLetter",
+          "callee": "setCardWrong",
+          "lineNumber": 170
+        },
+        {
+          "caller": "setCardDefault",
+          "callee": "wrap.setBackground",
+          "lineNumber": 174
+        },
+        {
+          "caller": "setCardDefault",
+          "callee": "AppCompatResources.getDrawable",
+          "lineNumber": 174
+        },
+        {
+          "caller": "setCardDefault",
+          "callee": "letter.setBackground",
+          "lineNumber": 175
+        },
+        {
+          "caller": "setCardDefault",
+          "callee": "AppCompatResources.getDrawable",
+          "lineNumber": 175
+        },
+        {
+          "caller": "setCardDefault",
+          "callee": "letter.setTextColor",
+          "lineNumber": 176
+        },
+        {
+          "caller": "setCardDefault",
+          "callee": "context.getColor",
+          "lineNumber": 176
+        },
+        {
+          "caller": "setCardCorrect",
+          "callee": "wrap.setBackground",
+          "lineNumber": 180
+        },
+        {
+          "caller": "setCardCorrect",
+          "callee": "AppCompatResources.getDrawable",
+          "lineNumber": 180
+        },
+        {
+          "caller": "setCardCorrect",
+          "callee": "letter.setBackground",
+          "lineNumber": 181
+        },
+        {
+          "caller": "setCardCorrect",
+          "callee": "AppCompatResources.getDrawable",
+          "lineNumber": 181
+        },
+        {
+          "caller": "setCardCorrect",
+          "callee": "letter.setTextColor",
+          "lineNumber": 182
+        },
+        {
+          "caller": "setCardCorrect",
+          "callee": "context.getColor",
+          "lineNumber": 182
+        },
+        {
+          "caller": "setCardWrong",
+          "callee": "wrap.setBackground",
+          "lineNumber": 186
+        },
+        {
+          "caller": "setCardWrong",
+          "callee": "AppCompatResources.getDrawable",
+          "lineNumber": 186
+        },
+        {
+          "caller": "setCardWrong",
+          "callee": "letter.setBackground",
+          "lineNumber": 187
+        },
+        {
+          "caller": "setCardWrong",
+          "callee": "AppCompatResources.getDrawable",
+          "lineNumber": 187
+        },
+        {
+          "caller": "setCardWrong",
+          "callee": "letter.setTextColor",
+          "lineNumber": 188
+        },
+        {
+          "caller": "setCardWrong",
+          "callee": "context.getColor",
+          "lineNumber": 188
+        },
+        {
+          "caller": "loadImage",
+          "callee": "hinhAnh.equals",
+          "lineNumber": 192
+        },
+        {
+          "caller": "loadImage",
+          "callee": "iv.setVisibility",
+          "lineNumber": 193
+        },
+        {
+          "caller": "loadImage",
+          "callee": "new File",
+          "lineNumber": 196
+        },
+        {
+          "caller": "loadImage",
+          "callee": "new ContextWrapper(context).getDir",
+          "lineNumber": 196
+        },
+        {
+          "caller": "loadImage",
+          "callee": "new ContextWrapper",
+          "lineNumber": 196
+        },
+        {
+          "caller": "loadImage",
+          "callee": "f.exists",
+          "lineNumber": 197
+        },
+        {
+          "caller": "loadImage",
+          "callee": "iv.setVisibility",
+          "lineNumber": 198
+        },
+        {
+          "caller": "loadImage",
+          "callee": "iv.setVisibility",
+          "lineNumber": 201
+        },
+        {
+          "caller": "loadImage",
+          "callee": "Glide.with(context).load(f).into",
+          "lineNumber": 202
+        },
+        {
+          "caller": "loadImage",
+          "callee": "Glide.with(context).load",
+          "lineNumber": 202
+        },
+        {
+          "caller": "loadImage",
+          "callee": "Glide.with",
+          "lineNumber": 202
+        },
+        {
+          "caller": "getItemCount",
+          "callee": "dsCauHoi.size",
+          "lineNumber": 206
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 218
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 219
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 220
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 221
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 222
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 223
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 224
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 225
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 226
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 227
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 228
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 229
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 230
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 231
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 232
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 233
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 234
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 235
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 236
+        },
+        {
+          "caller": "ViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 237
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 6,
+        "functionCount": 13,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/SaveQuestionAdapter.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 68,
+      "nonEmptyLines": 50,
+      "functions": [
+        {
+          "name": "SaveQuestionAdapter",
+          "startLine": 22,
+          "endLine": 25,
+          "params": [
+            "context",
+            "cauHois"
+          ]
+        },
+        {
+          "name": "setCauHois",
+          "startLine": 27,
+          "endLine": 30,
+          "params": [
+            "cauHois"
+          ]
+        },
+        {
+          "name": "onCreateViewHolder",
+          "startLine": 32,
+          "endLine": 38,
+          "params": [
+            "parent",
+            "viewType"
+          ]
+        },
+        {
+          "name": "onBindViewHolder",
+          "startLine": 40,
+          "endLine": 47,
+          "params": [
+            "holder",
+            "position"
+          ]
+        },
+        {
+          "name": "getItemCount",
+          "startLine": 49,
+          "endLine": 52,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "SaveQuestionAdapter",
+          "startLine": 17,
+          "endLine": 68,
+          "methods": [
+            "SaveQuestionAdapter",
+            "setCauHois",
+            "onCreateViewHolder",
+            "onBindViewHolder",
+            "getItemCount"
+          ],
+          "properties": [
+            "context",
+            "cauHois"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "SaveQuestionAdapter",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "setCauHois",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "onCreateViewHolder",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "onBindViewHolder",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "getItemCount",
+          "line": 49,
+          "isDefault": false
+        },
+        {
+          "name": "SaveQuestionAdapter",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "setCauHois",
+          "callee": "notifyDataSetChanged",
+          "lineNumber": 29
+        },
+        {
+          "caller": "onCreateViewHolder",
+          "callee": "new SaveQuestionViewHolder",
+          "lineNumber": 35
+        },
+        {
+          "caller": "onCreateViewHolder",
+          "callee": "LayoutInflater.from(parent.getContext()).inflate",
+          "lineNumber": 36
+        },
+        {
+          "caller": "onCreateViewHolder",
+          "callee": "LayoutInflater.from",
+          "lineNumber": 36
+        },
+        {
+          "caller": "onCreateViewHolder",
+          "callee": "parent.getContext",
+          "lineNumber": 36
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "cauHois.get",
+          "lineNumber": 42
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "holder.onBind",
+          "lineNumber": 46
+        },
+        {
+          "caller": "getItemCount",
+          "callee": "cauHois.size",
+          "lineNumber": 51
+        },
+        {
+          "caller": "SaveQuestionViewHolder",
+          "callee": "itemView.findViewById",
+          "lineNumber": 61
+        },
+        {
+          "caller": "onBind",
+          "callee": "textContent.setText",
+          "lineNumber": 65
+        },
+        {
+          "caller": "onBind",
+          "callee": "cauHoi.getNoiDung",
+          "lineNumber": 65
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 6,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/WeakAreaAdapter.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 83,
+      "nonEmptyLines": 67,
+      "functions": [
+        {
+          "name": "WeakAreaAdapter",
+          "startLine": 40,
+          "endLine": 43,
+          "params": [
+            "items",
+            "listener"
+          ]
+        },
+        {
+          "name": "onCreateViewHolder",
+          "startLine": 45,
+          "endLine": 51,
+          "params": [
+            "parent",
+            "viewType"
+          ]
+        },
+        {
+          "name": "onBindViewHolder",
+          "startLine": 53,
+          "endLine": 69,
+          "params": [
+            "h",
+            "pos"
+          ]
+        },
+        {
+          "name": "getItemCount",
+          "startLine": 71,
+          "endLine": 72,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "WeakAreaAdapter",
+          "startLine": 15,
+          "endLine": 83,
+          "methods": [
+            "WeakAreaAdapter",
+            "onCreateViewHolder",
+            "onBindViewHolder",
+            "getItemCount"
+          ],
+          "properties": [
+            "items",
+            "listener"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "WeakAreaAdapter",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "onCreateViewHolder",
+          "line": 45,
+          "isDefault": false
+        },
+        {
+          "name": "onBindViewHolder",
+          "line": 53,
+          "isDefault": false
+        },
+        {
+          "name": "getItemCount",
+          "line": 71,
+          "isDefault": false
+        },
+        {
+          "name": "WeakAreaAdapter",
+          "line": 15,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "onCreateViewHolder",
+          "callee": "LayoutInflater.from(parent.getContext()).inflate",
+          "lineNumber": 48
+        },
+        {
+          "caller": "onCreateViewHolder",
+          "callee": "LayoutInflater.from",
+          "lineNumber": 48
+        },
+        {
+          "caller": "onCreateViewHolder",
+          "callee": "parent.getContext",
+          "lineNumber": 48
+        },
+        {
+          "caller": "onCreateViewHolder",
+          "callee": "new VH",
+          "lineNumber": 50
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "items.get",
+          "lineNumber": 55
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "h.name.setText",
+          "lineNumber": 56
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "h.wrong.setText",
+          "lineNumber": 57
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "h.accuracy.setText",
+          "lineNumber": 58
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "h.itemView.setPadding",
+          "lineNumber": 61
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "h.itemView.getPaddingLeft",
+          "lineNumber": 62
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "h.itemView.getPaddingRight",
+          "lineNumber": 63
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "h.itemView.setOnClickListener",
+          "lineNumber": 66
+        },
+        {
+          "caller": "onBindViewHolder",
+          "callee": "listener.onWeakAreaClick",
+          "lineNumber": 67
+        },
+        {
+          "caller": "getItemCount",
+          "callee": "items.size",
+          "lineNumber": 72
+        },
+        {
+          "caller": "VH",
+          "callee": "v.findViewById",
+          "lineNumber": 78
+        },
+        {
+          "caller": "VH",
+          "callee": "v.findViewById",
+          "lineNumber": 79
+        },
+        {
+          "caller": "VH",
+          "callee": "v.findViewById",
+          "lineNumber": 80
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 5,
+        "functionCount": 4,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/CauHoiActivity.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 67,
+      "nonEmptyLines": 57,
+      "functions": [
+        {
+          "name": "onCreate",
+          "startLine": 25,
+          "endLine": 59,
+          "params": [
+            "savedInstanceState"
+          ]
+        },
+        {
+          "name": "onBackPressed",
+          "startLine": 61,
+          "endLine": 66,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CauHoiActivity",
+          "startLine": 19,
+          "endLine": 67,
+          "methods": [
+            "onCreate",
+            "onBackPressed"
+          ],
+          "properties": [
+            "vp",
+            "txtTitle",
+            "btnNavBack",
+            "btnNavForward",
+            "toolbarBack",
+            "dsCauHoi"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "vp",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "onBackPressed",
+          "line": 61,
+          "isDefault": false
+        },
+        {
+          "name": "CauHoiActivity",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "onCreate",
+          "callee": "super.onCreate",
+          "lineNumber": 27
+        },
+        {
+          "caller": "onCreate",
+          "callee": "setContentView",
+          "lineNumber": 28
+        },
+        {
+          "caller": "onCreate",
+          "callee": "findViewById",
+          "lineNumber": 29
+        },
+        {
+          "caller": "onCreate",
+          "callee": "findViewById",
+          "lineNumber": 30
+        },
+        {
+          "caller": "onCreate",
+          "callee": "findViewById(R.id.navPanel).setVisibility",
+          "lineNumber": 31
+        },
+        {
+          "caller": "onCreate",
+          "callee": "findViewById",
+          "lineNumber": 31
+        },
+        {
+          "caller": "onCreate",
+          "callee": "getIntent().getIntExtra",
+          "lineNumber": 33
+        },
+        {
+          "caller": "onCreate",
+          "callee": "getIntent",
+          "lineNumber": 33
+        },
+        {
+          "caller": "onCreate",
+          "callee": "getIntent().getBooleanExtra",
+          "lineNumber": 34
+        },
+        {
+          "caller": "onCreate",
+          "callee": "getIntent",
+          "lineNumber": 34
+        },
+        {
+          "caller": "onCreate",
+          "callee": "txtTitle.setText",
+          "lineNumber": 35
+        },
+        {
+          "caller": "onCreate",
+          "callee": "findViewById",
+          "lineNumber": 36
+        },
+        {
+          "caller": "onCreate",
+          "callee": "findViewById",
+          "lineNumber": 37
+        },
+        {
+          "caller": "onCreate",
+          "callee": "findViewById",
+          "lineNumber": 38
+        },
+        {
+          "caller": "onCreate",
+          "callee": "new DBHandler",
+          "lineNumber": 39
+        },
+        {
+          "caller": "onCreate",
+          "callee": "DanhSach.setDsCauHoi",
+          "lineNumber": 40
+        },
+        {
+          "caller": "onCreate",
+          "callee": "db.docCauHoi",
+          "lineNumber": 40
+        },
+        {
+          "caller": "onCreate",
+          "callee": "new ArrayList<>",
+          "lineNumber": 41
+        },
+        {
+          "caller": "onCreate",
+          "callee": "DanhSach.getDsCauHoi",
+          "lineNumber": 42
+        },
+        {
+          "caller": "onCreate",
+          "callee": "a.getMaLoaiCH",
+          "lineNumber": 43
+        },
+        {
+          "caller": "onCreate",
+          "callee": "a.getDaTraLoiDung",
+          "lineNumber": 44
+        },
+        {
+          "caller": "onCreate",
+          "callee": "dsCauHoi.add",
+          "lineNumber": 45
+        },
+        {
+          "caller": "onCreate",
+          "callee": "vp.setAdapter",
+          "lineNumber": 49
+        },
+        {
+          "caller": "onCreate",
+          "callee": "new CauHoiAdapter",
+          "lineNumber": 49
+        },
+        {
+          "caller": "onCreate",
+          "callee": "toolbarBack.setNavigationOnClickListener",
+          "lineNumber": 50
+        },
+        {
+          "caller": "onCreate",
+          "callee": "onBackPressed",
+          "lineNumber": 50
+        },
+        {
+          "caller": "onCreate",
+          "callee": "btnNavBack.setOnClickListener",
+          "lineNumber": 52
+        },
+        {
+          "caller": "onCreate",
+          "callee": "vp.getCurrentItem",
+          "lineNumber": 53
+        },
+        {
+          "caller": "onCreate",
+          "callee": "vp.setCurrentItem",
+          "lineNumber": 53
+        },
+        {
+          "caller": "onCreate",
+          "callee": "vp.getCurrentItem",
+          "lineNumber": 53
+        },
+        {
+          "caller": "onCreate",
+          "callee": "btnNavForward.setOnClickListener",
+          "lineNumber": 55
+        },
+        {
+          "caller": "onCreate",
+          "callee": "vp.getCurrentItem",
+          "lineNumber": 56
+        },
+        {
+          "caller": "onCreate",
+          "callee": "dsCauHoi.size",
+          "lineNumber": 56
+        },
+        {
+          "caller": "onCreate",
+          "callee": "vp.setCurrentItem",
+          "lineNumber": 57
+        },
+        {
+          "caller": "onCreate",
+          "callee": "vp.getCurrentItem",
+          "lineNumber": 57
+        },
+        {
+          "caller": "onBackPressed",
+          "callee": "StudyFragment.tlchAdapter.notifyDataSetChanged",
+          "lineNumber": 64
+        },
+        {
+          "caller": "onBackPressed",
+          "callee": "super.onBackPressed",
+          "lineNumber": 65
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/CauLuuActivity.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 76,
+      "nonEmptyLines": 66,
+      "functions": [
+        {
+          "name": "onCreate",
+          "startLine": 23,
+          "endLine": 31,
+          "params": [
+            "savedInstanceState"
+          ]
+        },
+        {
+          "name": "init",
+          "startLine": 32,
+          "endLine": 39,
+          "params": []
+        },
+        {
+          "name": "getCauHoi",
+          "startLine": 41,
+          "endLine": 66,
+          "params": []
+        },
+        {
+          "name": "showData",
+          "startLine": 68,
+          "endLine": 71,
+          "params": []
+        },
+        {
+          "name": "setOnclick",
+          "startLine": 73,
+          "endLine": 75,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CauLuuActivity",
+          "startLine": 16,
+          "endLine": 76,
+          "methods": [
+            "onCreate",
+            "init",
+            "getCauHoi",
+            "showData",
+            "setOnclick"
+          ],
+          "properties": [
+            "db",
+            "cauHois",
+            "imageBack",
+            "rcv",
+            "adapter"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CauLuuActivity",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "onCreate",
+          "callee": "super.onCreate",
+          "lineNumber": 25
+        },
+        {
+          "caller": "onCreate",
+          "callee": "setContentView",
+          "lineNumber": 26
+        },
+        {
+          "caller": "onCreate",
+          "callee": "init",
+          "lineNumber": 27
+        },
+        {
+          "caller": "onCreate",
+          "callee": "getCauHoi",
+          "lineNumber": 28
+        },
+        {
+          "caller": "onCreate",
+          "callee": "showData",
+          "lineNumber": 29
+        },
+        {
+          "caller": "onCreate",
+          "callee": "setOnclick",
+          "lineNumber": 30
+        },
+        {
+          "caller": "init",
+          "callee": "new DBHandler",
+          "lineNumber": 33
+        },
+        {
+          "caller": "init",
+          "callee": "new ArrayList<>",
+          "lineNumber": 34
+        },
+        {
+          "caller": "init",
+          "callee": "new SaveQuestionAdapter",
+          "lineNumber": 35
+        },
+        {
+          "caller": "init",
+          "callee": "findViewById",
+          "lineNumber": 37
+        },
+        {
+          "caller": "init",
+          "callee": "findViewById",
+          "lineNumber": 38
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "db.getData",
+          "lineNumber": 43
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "cursor.moveToNext",
+          "lineNumber": 44
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "Integer.parseInt",
+          "lineNumber": 45
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 45
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "Integer.parseInt",
+          "lineNumber": 46
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 46
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "cursor.getInt",
+          "lineNumber": 47
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 48
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 49
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 50
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 51
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 52
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 53
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 54
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 55
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "Integer.parseInt",
+          "lineNumber": 56
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 56
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "Integer.parseInt",
+          "lineNumber": 57
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 57
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "Integer.parseInt",
+          "lineNumber": 58
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "cursor.getString",
+          "lineNumber": 58
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "new CauHoi",
+          "lineNumber": 59
+        },
+        {
+          "caller": "getCauHoi",
+          "callee": "cauHois.add",
+          "lineNumber": 64
+        },
+        {
+          "caller": "showData",
+          "callee": "adapter.setCauHois",
+          "lineNumber": 69
+        },
+        {
+          "caller": "showData",
+          "callee": "rcv.setAdapter",
+          "lineNumber": 70
+        },
+        {
+          "caller": "setOnclick",
+          "callee": "imageBack.setOnClickListener",
+          "lineNumber": 74
+        },
+        {
+          "caller": "setOnclick",
+          "callee": "finish",
+          "lineNumber": 74
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 5,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/CauSaiActivity.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 63,
+      "nonEmptyLines": 57,
+      "functions": [
+        {
+          "name": "onCreate",
+          "startLine": 25,
+          "endLine": 57,
+          "params": [
+            "savedInstanceState"
+          ]
+        },
+        {
+          "name": "onBackPressed",
+          "startLine": 58,
+          "endLine": 62,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "CauSaiActivity",
+          "startLine": 19,
+          "endLine": 63,
+          "methods": [
+            "onCreate",
+            "onBackPressed"
+          ],
+          "properties": [
+            "vp",
+            "txtTitle",
+            "bnv",
+            "toolbarBack",
+            "dsCauHoi"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "vp",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "onBackPressed",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "CauSaiActivity",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "onCreate",
+          "callee": "super.onCreate",
+          "lineNumber": 27
+        },
+        {
+          "caller": "onCreate",
+          "callee": "setContentView",
+          "lineNumber": 28
+        },
+        {
+          "caller": "onCreate",
+          "callee": "findViewById",
+          "lineNumber": 29
+        },
+        {
+          "caller": "onCreate",
+          "callee": "txtTitle.setText",
+          "lineNumber": 30
+        },
+        {
+          "caller": "onCreate",
+          "callee": "findViewById",
+          "lineNumber": 31
+        },
+        {
+          "caller": "onCreate",
+          "callee": "toolbarBack.setNavigationOnClickListener",
+          "lineNumber": 32
+        },
+        {
+          "caller": "onCreate",
+          "callee": "onBackPressed",
+          "lineNumber": 32
+        },
+        {
+          "caller": "onCreate",
+          "callee": "findViewById",
+          "lineNumber": 33
+        },
+        {
+          "caller": "onCreate",
+          "callee": "findViewById",
+          "lineNumber": 34
+        },
+        {
+          "caller": "onCreate",
+          "callee": "new DBHandler",
+          "lineNumber": 35
+        },
+        {
+          "caller": "onCreate",
+          "callee": "new ArrayList<>",
+          "lineNumber": 36
+        },
+        {
+          "caller": "onCreate",
+          "callee": "db.docCauHoiSai",
+          "lineNumber": 37
+        },
+        {
+          "caller": "onCreate",
+          "callee": "vp.setAdapter",
+          "lineNumber": 38
+        },
+        {
+          "caller": "onCreate",
+          "callee": "new CauHoiAdapter",
+          "lineNumber": 38
+        },
+        {
+          "caller": "onCreate",
+          "callee": "toolbarBack.setNavigationOnClickListener",
+          "lineNumber": 39
+        },
+        {
+          "caller": "onCreate",
+          "callee": "onBackPressed",
+          "lineNumber": 39
+        },
+        {
+          "caller": "onCreate",
+          "callee": "bnv.getMenu",
+          "lineNumber": 40
+        },
+        {
+          "caller": "onCreate",
+          "callee": "bnv.setOnNavigationItemSelectedListener",
+          "lineNumber": 41
+        },
+        {
+          "caller": "onCreate",
+          "callee": "item.getItemId",
+          "lineNumber": 43
+        },
+        {
+          "caller": "onCreate",
+          "callee": "vp.getCurrentItem",
+          "lineNumber": 45
+        },
+        {
+          "caller": "onCreate",
+          "callee": "vp.setCurrentItem",
+          "lineNumber": 46
+        },
+        {
+          "caller": "onCreate",
+          "callee": "vp.getCurrentItem",
+          "lineNumber": 46
+        },
+        {
+          "caller": "onCreate",
+          "callee": "vp.getCurrentItem",
+          "lineNumber": 49
+        },
+        {
+          "caller": "onCreate",
+          "callee": "dsCauHoi.size",
+          "lineNumber": 49
+        },
+        {
+          "caller": "onCreate",
+          "callee": "vp.setCurrentItem",
+          "lineNumber": 50
+        },
+        {
+          "caller": "onCreate",
+          "callee": "vp.getCurrentItem",
+          "lineNumber": 50
+        },
+        {
+          "caller": "onCreate",
+          "callee": "menu.setGroupCheckable",
+          "lineNumber": 56
+        },
+        {
+          "caller": "onBackPressed",
+          "callee": "StudyFragment.tlchAdapter.notifyDataSetChanged",
+          "lineNumber": 60
+        },
+        {
+          "caller": "onBackPressed",
+          "callee": "super.onBackPressed",
+          "lineNumber": 61
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 184,
+      "nonEmptyLines": 157,
+      "functions": [
+        {
+          "name": "onCreateView",
+          "startLine": 44,
+          "endLine": 50,
+          "params": [
+            "inflater",
+            "container",
+            "savedInstanceState"
+          ]
+        },
+        {
+          "name": "onViewCreated",
+          "startLine": 52,
+          "endLine": 78,
+          "params": [
+            "view",
+            "savedInstanceState"
+          ]
+        },
+        {
+          "name": "onResume",
+          "startLine": 80,
+          "endLine": 84,
+          "params": []
+        },
+        {
+          "name": "refresh",
+          "startLine": 86,
+          "endLine": 115,
+          "params": []
+        },
+        {
+          "name": "computeReadiness",
+          "startLine": 117,
+          "endLine": 131,
+          "params": [
+            "all",
+            "topicsCovered"
+          ]
+        },
+        {
+          "name": "countTopicsCovered",
+          "startLine": 133,
+          "endLine": 143,
+          "params": [
+            "all"
+          ]
+        },
+        {
+          "name": "buildWeakAreas",
+          "startLine": 145,
+          "endLine": 174,
+          "params": [
+            "all"
+          ]
+        },
+        {
+          "name": "setGreeting",
+          "startLine": 176,
+          "endLine": 183,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "DashboardFragment",
+          "startLine": 26,
+          "endLine": 184,
+          "methods": [
+            "onCreateView",
+            "onViewCreated",
+            "onResume",
+            "refresh",
+            "computeReadiness",
+            "countTopicsCovered",
+            "buildWeakAreas",
+            "setGreeting"
+          ],
+          "properties": [
+            "readinessRing",
+            "txtGreeting",
+            "txtSubtitle",
+            "txtStatQuestions",
+            "txtStatAccuracy",
+            "txtStatTopics",
+            "rvWeakAreas",
+            "cardWeakAreas",
+            "txtNoWeakAreas",
+            "weakAreaListener",
+            "CAT_IDS",
+            "CAT_NAMES"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "onCreateView",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "onViewCreated",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "onResume",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "refresh",
+          "line": 86,
+          "isDefault": false
+        },
+        {
+          "name": "DashboardFragment",
+          "line": 26,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "onCreateView",
+          "callee": "inflater.inflate",
+          "lineNumber": 49
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "view.findViewById",
+          "lineNumber": 54
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "view.findViewById",
+          "lineNumber": 55
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "view.findViewById",
+          "lineNumber": 56
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "view.findViewById",
+          "lineNumber": 57
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "view.findViewById",
+          "lineNumber": 58
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "view.findViewById",
+          "lineNumber": 59
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "view.findViewById",
+          "lineNumber": 60
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "view.findViewById",
+          "lineNumber": 61
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "view.findViewById",
+          "lineNumber": 62
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "rvWeakAreas.setLayoutManager",
+          "lineNumber": 64
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "new LinearLayoutManager",
+          "lineNumber": 64
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "requireContext",
+          "lineNumber": 64
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "rvWeakAreas.setNestedScrollingEnabled",
+          "lineNumber": 65
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "view.findViewById(R.id.btnStartPractice).setOnClickListener",
+          "lineNumber": 67
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "view.findViewById",
+          "lineNumber": 67
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "startActivity",
+          "lineNumber": 68
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "new Intent",
+          "lineNumber": 68
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "requireContext",
+          "lineNumber": 68
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "new Intent",
+          "lineNumber": 71
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "requireContext",
+          "lineNumber": 71
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "intent.putExtra",
+          "lineNumber": 72
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "intent.putExtra",
+          "lineNumber": 73
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "startActivity",
+          "lineNumber": 74
+        },
+        {
+          "caller": "onViewCreated",
+          "callee": "setGreeting",
+          "lineNumber": 77
+        },
+        {
+          "caller": "onResume",
+          "callee": "super.onResume",
+          "lineNumber": 82
+        },
+        {
+          "caller": "onResume",
+          "callee": "refresh",
+          "lineNumber": 83
+        },
+        {
+          "caller": "refresh",
+          "callee": "getView",
+          "lineNumber": 87
+        },
+        {
+          "caller": "refresh",
+          "callee": "DanhSach.getDsCauHoi",
+          "lineNumber": 88
+        },
+        {
+          "caller": "refresh",
+          "callee": "ch.getDaTraLoiDung",
+          "lineNumber": 92
+        },
+        {
+          "caller": "refresh",
+          "callee": "ch.getDaTraLoiDung",
+          "lineNumber": 94
+        },
+        {
+          "caller": "refresh",
+          "callee": "countTopicsCovered",
+          "lineNumber": 99
+        },
+        {
+          "caller": "refresh",
+          "callee": "computeReadiness",
+          "lineNumber": 100
+        },
+        {
+          "caller": "refresh",
+          "callee": "readinessRing.setProgress",
+          "lineNumber": 102
+        },
+        {
+          "caller": "refresh",
+          "callee": "txtStatQuestions.setText",
+          "lineNumber": 103
+        },
+        {
+          "caller": "refresh",
+          "callee": "txtStatAccuracy.setText",
+          "lineNumber": 104
+        },
+        {
+          "caller": "refresh",
+          "callee": "txtStatTopics.setText",
+          "lineNumber": 105
+        },
+        {
+          "caller": "refresh",
+          "callee": "txtSubtitle.setText",
+          "lineNumber": 109
+        },
+        {
+          "caller": "refresh",
+          "callee": "txtSubtitle.setText",
+          "lineNumber": 111
+        },
+        {
+          "caller": "refresh",
+          "callee": "buildWeakAreas",
+          "lineNumber": 114
+        },
+        {
+          "caller": "computeReadiness",
+          "callee": "all.size",
+          "lineNumber": 118
+        },
+        {
+          "caller": "computeReadiness",
+          "callee": "ch.getDaTraLoiDung",
+          "lineNumber": 122
+        },
+        {
+          "caller": "computeReadiness",
+          "callee": "ch.getDaTraLoiDung",
+          "lineNumber": 124
+        },
+        {
+          "caller": "countTopicsCovered",
+          "callee": "ch.getMaLoaiCH",
+          "lineNumber": 138
+        },
+        {
+          "caller": "countTopicsCovered",
+          "callee": "ch.getDaTraLoiDung",
+          "lineNumber": 138
+        },
+        {
+          "caller": "buildWeakAreas",
+          "callee": "new ArrayList<>",
+          "lineNumber": 146
+        },
+        {
+          "caller": "buildWeakAreas",
+          "callee": "ch.getMaLoaiCH",
+          "lineNumber": 152
+        },
+        {
+          "caller": "buildWeakAreas",
+          "callee": "ch.getDaTraLoiDung",
+          "lineNumber": 153
+        },
+        {
+          "caller": "buildWeakAreas",
+          "callee": "ch.getDaTraLoiDung",
+          "lineNumber": 154
+        },
+        {
+          "caller": "buildWeakAreas",
+          "callee": "areas.add",
+          "lineNumber": 159
+        },
+        {
+          "caller": "buildWeakAreas",
+          "callee": "new WeakAreaAdapter.WeakArea",
+          "lineNumber": 159
+        },
+        {
+          "caller": "buildWeakAreas",
+          "callee": "areas.sort",
+          "lineNumber": 164
+        },
+        {
+          "caller": "buildWeakAreas",
+          "callee": "areas.isEmpty",
+          "lineNumber": 166
+        },
+        {
+          "caller": "buildWeakAreas",
+          "callee": "cardWeakAreas.setVisibility",
+          "lineNumber": 167
+        },
+        {
+          "caller": "buildWeakAreas",
+          "callee": "txtNoWeakAreas.setVisibility",
+          "lineNumber": 168
+        },
+        {
+          "caller": "buildWeakAreas",
+          "callee": "cardWeakAreas.setVisibility",
+          "lineNumber": 170
+        },
+        {
+          "caller": "buildWeakAreas",
+          "callee": "txtNoWeakAreas.setVisibility",
+          "lineNumber": 171
+        },
+        {
+          "caller": "buildWeakAreas",
+          "callee": "rvWeakAreas.setAdapter",
+          "lineNumber": 172
+        },
+        {
+          "caller": "buildWeakAreas",
+          "callee": "new WeakAreaAdapter",
+          "lineNumber": 172
+        },
+        {
+          "caller": "setGreeting",
+          "callee": "Calendar.getInstance",
+          "lineNumber": 177
+        },
+        {
+          "caller": "setGreeting",
+          "callee": "cal.get",
+          "lineNumber": 180
+        },
+        {
+          "caller": "setGreeting",
+          "callee": "new SimpleDateFormat(\"d 'Tháng' M\", new Locale(\"vi\")).format",
+          "lineNumber": 181
+        },
+        {
+          "caller": "setGreeting",
+          "callee": "new SimpleDateFormat",
+          "lineNumber": 181
+        },
+        {
+          "caller": "setGreeting",
+          "callee": "new Locale",
+          "lineNumber": 181
+        },
+        {
+          "caller": "setGreeting",
+          "callee": "cal.getTime",
+          "lineNumber": 181
+        },
+        {
+          "caller": "setGreeting",
+          "callee": "txtGreeting.setText",
+          "lineNumber": 182
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 5,
+        "functionCount": 8,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/HaySaiActivity.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 63,
+      "nonEmptyLines": 57,
+      "functions": [
+        {
+          "name": "onCreate",
+          "startLine": 25,
+          "endLine": 57,
+          "params": [
+            "savedInstanceState"
+          ]
+        },
+        {
+          "name": "onBackPressed",
+          "startLine": 58,
+          "endLine": 62,
+          "params": []
+        }
+      ],
+      "classes": [
+        {
+          "name": "HaySaiActivity",
+          "startLine": 19,
+          "endLine": 63,
+          "methods": [
+            "onCreate",
+            "onBackPressed"
+          ],
+          "properties": [
+            "vp",
+            "txtTitle",
+            "bnv",
+            "toolbarBack",
+            "dsCauHoi"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "vp",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "onBackPressed",
+          "line": 58,
+          "isDefault": false
+        },
+        {
+          "name": "HaySaiActivity",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "onCreate",
+          "callee": "super.onCreate",
+          "lineNumber": 27
+        },
+        {
+          "caller": "onCreate",
+          "callee": "setContentView",
+          "lineNumber": 28
+        },
+        {
+          "caller": "onCreate",
+          "callee": "findViewById",
+          "lineNumber": 29
+        },
+        {
+          "caller": "onCreate",
+          "callee": "txtTitle.setText",
+          "lineNumber": 30
+        },
+        {
+          "caller": "onCreate",
+          "callee": "findViewById",
+          "lineNumber": 31
+        },
+        {
+          "caller": "onCreate",
+          "callee": "toolbarBack.setNavigationOnClickListener",
+          "lineNumber": 32
+        },
+        {
+          "caller": "onCreate",
+          "callee": "onBackPressed",
+          "lineNumber": 32
+        },
+        {
+          "caller": "onCreate",
+          "callee": "findViewById",
+          "lineNumber": 33
+        },
+        {
+          "caller": "onCreate",
+          "callee": "findViewById",
+          "lineNumber": 34
+        },
+        {
+          "caller": "onCreate",
+          "callee": "new DBHandler",
+          "lineNumber": 35
+        },
+        {
+          "caller": "onCreate",
+          "callee": "new ArrayList<>",
+          "lineNumber": 36
+        },
+        {
+          "caller": "onCreate",
+          "callee": "db.docCauHaySai",
+          "lineNumber": 37
+        },
+        {
+          "caller": "onCreate",
+          "callee": "vp.setAdapter",
+          "lineNumber": 38
+        },
+        {
+          "caller": "onCreate",
+          "callee": "new CauHoiAdapter",
+          "lineNumber": 38
+        },
+        {
+          "caller": "onCreate",
+          "callee": "toolbarBack.setNavigationOnClickListener",
+          "lineNumber": 39
+        },
+        {
+          "caller": "onCreate",
+          "callee": "onBackPressed",
+          "lineNumber": 39
+        },
+        {
+          "caller": "onCreate",
+          "callee": "bnv.getMenu",
+          "lineNumber": 40
+        },
+        {
+          "caller": "onCreate",
+          "callee": "bnv.setOnNavigationItemSelectedListener",
+          "lineNumber": 41
+        },
+        {
+          "caller": "onCreate",
+          "callee": "item.getItemId",
+          "lineNumber": 43
+        },
+        {
+          "caller": "onCreate",
+          "callee": "vp.getCurrentItem",
+          "lineNumber": 45
+        },
+        {
+          "caller": "onCreate",
+          "callee": "vp.setCurrentItem",
+          "lineNumber": 46
+        },
+        {
+          "caller": "onCreate",
+          "callee": "vp.getCurrentItem",
+          "lineNumber": 46
+        },
+        {
+          "caller": "onCreate",
+          "callee": "vp.getCurrentItem",
+          "lineNumber": 49
+        },
+        {
+          "caller": "onCreate",
+          "callee": "dsCauHoi.size",
+          "lineNumber": 49
+        },
+        {
+          "caller": "onCreate",
+          "callee": "vp.setCurrentItem",
+          "lineNumber": 50
+        },
+        {
+          "caller": "onCreate",
+          "callee": "vp.getCurrentItem",
+          "lineNumber": 50
+        },
+        {
+          "caller": "onCreate",
+          "callee": "menu.setGroupCheckable",
+          "lineNumber": 56
+        },
+        {
+          "caller": "onBackPressed",
+          "callee": "StudyFragment.tlchAdapter.notifyDataSetChanged",
+          "lineNumber": 60
+        },
+        {
+          "caller": "onBackPressed",
+          "callee": "super.onBackPressed",
+          "lineNumber": 61
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 155,
+      "nonEmptyLines": 122,
+      "functions": [
+        {
+          "name": "getMaCH",
+          "startLine": 8,
+          "endLine": 10,
+          "params": []
+        },
+        {
+          "name": "setMaCH",
+          "startLine": 12,
+          "endLine": 14,
+          "params": [
+            "maCH"
+          ]
+        },
+        {
+          "name": "getMaLoaiCH",
+          "startLine": 16,
+          "endLine": 18,
+          "params": []
+        },
+        {
+          "name": "setMaLoaiCH",
+          "startLine": 20,
+          "endLine": 22,
+          "params": [
+            "maLoaiCH"
+          ]
+        },
+        {
+          "name": "getMaLoaiBang",
+          "startLine": 24,
+          "endLine": 26,
+          "params": []
+        },
+        {
+          "name": "setMaLoaiBang",
+          "startLine": 28,
+          "endLine": 30,
+          "params": [
+            "maLoaiBang"
+          ]
+        },
+        {
+          "name": "getHaySai",
+          "startLine": 32,
+          "endLine": 34,
+          "params": []
+        },
+        {
+          "name": "setHaySai",
+          "startLine": 36,
+          "endLine": 38,
+          "params": [
+            "haySai"
+          ]
+        },
+        {
+          "name": "getLuu",
+          "startLine": 40,
+          "endLine": 42,
+          "params": []
+        },
+        {
+          "name": "setLuu",
+          "startLine": 44,
+          "endLine": 46,
+          "params": [
+            "luu"
+          ]
+        },
+        {
+          "name": "getNoiDung",
+          "startLine": 48,
+          "endLine": 50,
+          "params": []
+        },
+        {
+          "name": "setNoiDung",
+          "startLine": 52,
+          "endLine": 54,
+          "params": [
+            "noiDung"
+          ]
+        },
+        {
+          "name": "getHinhAnh",
+          "startLine": 56,
+          "endLine": 58,
+          "params": []
+        },
+        {
+          "name": "setHinhAnh",
+          "startLine": 60,
+          "endLine": 62,
+          "params": [
+            "hinhAnh"
+          ]
+        },
+        {
+          "name": "getDapAnA",
+          "startLine": 64,
+          "endLine": 66,
+          "params": []
+        },
+        {
+          "name": "setDapAnA",
+          "startLine": 68,
+          "endLine": 70,
+          "params": [
+            "dapAnA"
+          ]
+        },
+        {
+          "name": "getDapAnB",
+          "startLine": 72,
+          "endLine": 74,
+          "params": []
+        },
+        {
+          "name": "setDapAnB",
+          "startLine": 76,
+          "endLine": 78,
+          "params": [
+            "dapAnB"
+          ]
+        },
+        {
+          "name": "getDapAnC",
+          "startLine": 80,
+          "endLine": 82,
+          "params": []
+        },
+        {
+          "name": "setDapAnC",
+          "startLine": 84,
+          "endLine": 86,
+          "params": [
+            "dapAnC"
+          ]
+        },
+        {
+          "name": "getDapAnD",
+          "startLine": 88,
+          "endLine": 90,
+          "params": []
+        },
+        {
+          "name": "setDapAnD",
+          "startLine": 92,
+          "endLine": 94,
+          "params": [
+            "dapAnD"
+          ]
+        },
+        {
+          "name": "getDapAnDung",
+          "startLine": 96,
+          "endLine": 98,
+          "params": []
+        },
+        {
+          "name": "setDapAnDung",
+          "startLine": 100,
+          "endLine": 102,
+          "params": [
+            "dapAnDung"
+          ]
+        },
+        {
+          "name": "getGiaiThich",
+          "startLine": 104,
+          "endLine": 106,
+          "params": []
+        },
+        {
+          "name": "setGiaiThich",
+          "startLine": 108,
+          "endLine": 110,
+          "params": [
+            "giaiThich"
+          ]
+        },
+        {
+          "name": "getDaTraLoiDung",
+          "startLine": 112,
+          "endLine": 114,
+          "params": []
+        },
+        {
+          "name": "setDaTraLoiDung",
+          "startLine": 116,
+          "endLine": 118,
+          "params": [
+            "daTraLoiDung"
+          ]
+        },
+        {
+          "name": "CauHoi",
+          "startLine": 120,
+          "endLine": 135,
+          "params": [
+            "maCH",
+            "maLoaiCH",
+            "maLoaiBang",
+            "noiDung",
+            "hinhAnh",
+            "dapAnA",
+            "dapAnB",
+            "dapAnC",
+            "dapAnD",
+            "dapAnDung",
+            "giaiThich",
+            "luu",
+            "haySai",
+            "daTraLoi"
+          ]
+        },
+        {
+          "name": "CauHoi",
+          "startLine": 137,
+          "endLine": 138,
+          "params": []
+        },
+        {
+          "name": "CauHoi",
+          "startLine": 140,
+          "endLine": 154,
+          "params": [
+            "maCH",
+            "maLoaiCH",
+            "maLoaiBang",
+            "noiDung",
+            "hinhAnh",
+            "dapAnA",
+            "dapAnB",
+            "dapAnC",
+            "dapAnD",
+            "dapAnDung",
+            "giaiThich",
+            "luu",
+            "haySai"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "CauHoi",
+          "startLine": 3,
+          "endLine": 155,
+          "methods": [
+            "getMaCH",
+            "setMaCH",
+            "getMaLoaiCH",
+            "setMaLoaiCH",
+            "getMaLoaiBang",
+            "setMaLoaiBang",
+            "getHaySai",
+            "setHaySai",
+            "getLuu",
+            "setLuu",
+            "getNoiDung",
+            "setNoiDung",
+            "getHinhAnh",
+            "setHinhAnh",
+            "getDapAnA",
+            "setDapAnA",
+            "getDapAnB",
+            "setDapAnB",
+            "getDapAnC",
+            "setDapAnC",
+            "getDapAnD",
+            "setDapAnD",
+            "getDapAnDung",
+            "setDapAnDung",
+            "getGiaiThich",
+            "setGiaiThich",
+            "getDaTraLoiDung",
+            "setDaTraLoiDung",
+            "CauHoi",
+            "CauHoi",
+            "CauHoi"
+          ],
+          "properties": [
+            "MaCH",
+            "MaLoaiCH",
+            "HaySai",
+            "Luu",
+            "DaTraLoiDung",
+            "MaLoaiBang",
+            "NoiDung",
+            "HinhAnh",
+            "DapAnA",
+            "DapAnB",
+            "DapAnC",
+            "DapAnD",
+            "DapAnDung",
+            "GiaiThich"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getMaCH",
+          "line": 8,
+          "isDefault": false
+        },
+        {
+          "name": "setMaCH",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "getMaLoaiCH",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "setMaLoaiCH",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "getMaLoaiBang",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "setMaLoaiBang",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "getHaySai",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "setHaySai",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "getLuu",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "setLuu",
+          "line": 44,
+          "isDefault": false
+        },
+        {
+          "name": "getNoiDung",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "setNoiDung",
+          "line": 52,
+          "isDefault": false
+        },
+        {
+          "name": "getHinhAnh",
+          "line": 56,
+          "isDefault": false
+        },
+        {
+          "name": "setHinhAnh",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "getDapAnA",
+          "line": 64,
+          "isDefault": false
+        },
+        {
+          "name": "setDapAnA",
+          "line": 68,
+          "isDefault": false
+        },
+        {
+          "name": "getDapAnB",
+          "line": 72,
+          "isDefault": false
+        },
+        {
+          "name": "setDapAnB",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "getDapAnC",
+          "line": 80,
+          "isDefault": false
+        },
+        {
+          "name": "setDapAnC",
+          "line": 84,
+          "isDefault": false
+        },
+        {
+          "name": "getDapAnD",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "setDapAnD",
+          "line": 92,
+          "isDefault": false
+        },
+        {
+          "name": "getDapAnDung",
+          "line": 96,
+          "isDefault": false
+        },
+        {
+          "name": "setDapAnDung",
+          "line": 100,
+          "isDefault": false
+        },
+        {
+          "name": "getGiaiThich",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "setGiaiThich",
+          "line": 108,
+          "isDefault": false
+        },
+        {
+          "name": "getDaTraLoiDung",
+          "line": 112,
+          "isDefault": false
+        },
+        {
+          "name": "setDaTraLoiDung",
+          "line": 116,
+          "isDefault": false
+        },
+        {
+          "name": "CauHoi",
+          "line": 120,
+          "isDefault": false
+        },
+        {
+          "name": "CauHoi",
+          "line": 137,
+          "isDefault": false
+        },
+        {
+          "name": "CauHoi",
+          "line": 140,
+          "isDefault": false
+        },
+        {
+          "name": "CauHoi",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 32,
+        "functionCount": 31,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java",
+      "language": "java",
+      "fileCategory": "code",
+      "totalLines": 273,
+      "nonEmptyLines": 230,
+      "functions": [
+        {
+          "name": "onUpdate",
+          "startLine": 42,
+          "endLine": 45,
+          "params": [
+            "ctx",
+            "mgr",
+            "ids"
+          ]
+        },
+        {
+          "name": "onReceive",
+          "startLine": 47,
+          "endLine": 69,
+          "params": [
+            "ctx",
+            "intent"
+          ]
+        },
+        {
+          "name": "loadNewQuestion",
+          "startLine": 73,
+          "endLine": 89,
+          "params": [
+            "ctx",
+            "mgr",
+            "widgetId"
+          ]
+        },
+        {
+          "name": "handleAnswer",
+          "startLine": 93,
+          "endLine": 106,
+          "params": [
+            "ctx",
+            "mgr",
+            "widgetId",
+            "selected"
+          ]
+        },
+        {
+          "name": "render",
+          "startLine": 110,
+          "endLine": 134,
+          "params": [
+            "ctx",
+            "mgr",
+            "widgetId",
+            "q",
+            "selected"
+          ]
+        },
+        {
+          "name": "renderOpt",
+          "startLine": 136,
+          "endLine": 169,
+          "params": [
+            "ctx",
+            "views",
+            "viewId",
+            "letter",
+            "text",
+            "answered",
+            "selected",
+            "correct",
+            "widgetId"
+          ]
+        },
+        {
+          "name": "renderEmpty",
+          "startLine": 171,
+          "endLine": 181,
+          "params": [
+            "ctx",
+            "mgr",
+            "widgetId"
+          ]
+        },
+        {
+          "name": "wireGlobal",
+          "startLine": 185,
+          "endLine": 202,
+          "params": [
+            "ctx",
+            "widgetId",
+            "views"
+          ]
+        },
+        {
+          "name": "answerPendingIntent",
+          "startLine": 204,
+          "endLine": 218,
+          "params": [
+            "ctx",
+            "widgetId",
+            "letter"
+          ]
+        },
+        {
+          "name": "saveQuestion",
+          "startLine": 222,
+          "endLine": 233,
+          "params": [
+            "prefs",
+            "id",
+            "q"
+          ]
+        },
+        {
+          "name": "loadQuestionFromPrefs",
+          "startLine": 235,
+          "endLine": 248,
+          "params": [
+            "prefs",
+            "id"
+          ]
+        },
+        {
+          "name": "nvl",
+          "startLine": 250,
+          "endLine": 250,
+          "params": [
+            "s"
+          ]
+        },
+        {
+          "name": "loadScaledBitmap",
+          "startLine": 254,
+          "endLine": 272,
+          "params": [
+            "ctx",
+            "hinhAnh"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "QuestionWidgetProvider",
+          "startLine": 22,
+          "endLine": 273,
+          "methods": [
+            "onUpdate",
+            "onReceive",
+            "loadNewQuestion",
+            "handleAnswer",
+            "render",
+            "renderOpt",
+            "renderEmpty",
+            "wireGlobal",
+            "answerPendingIntent",
+            "saveQuestion",
+            "loadQuestionFromPrefs",
+            "nvl",
+            "loadScaledBitmap"
+          ],
+          "properties": [
+            "ACTION_REFRESH",
+            "ACTION_ANSWER_A",
+            "ACTION_ANSWER_B",
+            "ACTION_ANSWER_C",
+            "ACTION_ANSWER_D",
+            "PREFS",
+            "KEY_LB",
+            "RC_OPEN",
+            "RC_REFRESH",
+            "RC_A",
+            "RC_B",
+            "RC_C",
+            "RC_D",
+            "RC_STRIDE"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "onUpdate",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "onReceive",
+          "line": 47,
+          "isDefault": false
+        },
+        {
+          "name": "QuestionWidgetProvider",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "onUpdate",
+          "callee": "loadNewQuestion",
+          "lineNumber": 44
+        },
+        {
+          "caller": "onReceive",
+          "callee": "super.onReceive",
+          "lineNumber": 49
+        },
+        {
+          "caller": "onReceive",
+          "callee": "intent.getAction",
+          "lineNumber": 50
+        },
+        {
+          "caller": "onReceive",
+          "callee": "intent.getIntExtra",
+          "lineNumber": 53
+        },
+        {
+          "caller": "onReceive",
+          "callee": "AppWidgetManager.getInstance",
+          "lineNumber": 56
+        },
+        {
+          "caller": "onReceive",
+          "callee": "ACTION_REFRESH.equals",
+          "lineNumber": 58
+        },
+        {
+          "caller": "onReceive",
+          "callee": "loadNewQuestion",
+          "lineNumber": 59
+        },
+        {
+          "caller": "onReceive",
+          "callee": "ACTION_ANSWER_A.equals",
+          "lineNumber": 60
+        },
+        {
+          "caller": "onReceive",
+          "callee": "handleAnswer",
+          "lineNumber": 61
+        },
+        {
+          "caller": "onReceive",
+          "callee": "ACTION_ANSWER_B.equals",
+          "lineNumber": 62
+        },
+        {
+          "caller": "onReceive",
+          "callee": "handleAnswer",
+          "lineNumber": 63
+        },
+        {
+          "caller": "onReceive",
+          "callee": "ACTION_ANSWER_C.equals",
+          "lineNumber": 64
+        },
+        {
+          "caller": "onReceive",
+          "callee": "handleAnswer",
+          "lineNumber": 65
+        },
+        {
+          "caller": "onReceive",
+          "callee": "ACTION_ANSWER_D.equals",
+          "lineNumber": 66
+        },
+        {
+          "caller": "onReceive",
+          "callee": "handleAnswer",
+          "lineNumber": 67
+        },
+        {
+          "caller": "loadNewQuestion",
+          "callee": "ctx.getSharedPreferences",
+          "lineNumber": 74
+        },
+        {
+          "caller": "loadNewQuestion",
+          "callee": "prefs.getInt",
+          "lineNumber": 75
+        },
+        {
+          "caller": "loadNewQuestion",
+          "callee": "DanhSach.setLoaiBang",
+          "lineNumber": 76
+        },
+        {
+          "caller": "loadNewQuestion",
+          "callee": "new DBHandler",
+          "lineNumber": 79
+        },
+        {
+          "caller": "loadNewQuestion",
+          "callee": "db.docCauHoi",
+          "lineNumber": 80
+        },
+        {
+          "caller": "loadNewQuestion",
+          "callee": "all.isEmpty",
+          "lineNumber": 81
+        },
+        {
+          "caller": "loadNewQuestion",
+          "callee": "renderEmpty",
+          "lineNumber": 81
+        },
+        {
+          "caller": "loadNewQuestion",
+          "callee": "all.get",
+          "lineNumber": 83
+        },
+        {
+          "caller": "loadNewQuestion",
+          "callee": "new Random().nextInt",
+          "lineNumber": 83
+        },
+        {
+          "caller": "loadNewQuestion",
+          "callee": "new Random",
+          "lineNumber": 83
+        },
+        {
+          "caller": "loadNewQuestion",
+          "callee": "all.size",
+          "lineNumber": 83
+        },
+        {
+          "caller": "loadNewQuestion",
+          "callee": "saveQuestion",
+          "lineNumber": 84
+        },
+        {
+          "caller": "loadNewQuestion",
+          "callee": "render",
+          "lineNumber": 85
+        },
+        {
+          "caller": "loadNewQuestion",
+          "callee": "renderEmpty",
+          "lineNumber": 87
+        },
+        {
+          "caller": "handleAnswer",
+          "callee": "ctx.getSharedPreferences",
+          "lineNumber": 94
+        },
+        {
+          "caller": "handleAnswer",
+          "callee": "prefs.getString(\"w_\" + widgetId + \"_sel\", \"\").isEmpty",
+          "lineNumber": 97
+        },
+        {
+          "caller": "handleAnswer",
+          "callee": "prefs.getString",
+          "lineNumber": 97
+        },
+        {
+          "caller": "handleAnswer",
+          "callee": "prefs.edit().putString(\"w_\" + widgetId + \"_sel\", selected).apply",
+          "lineNumber": 99
+        },
+        {
+          "caller": "handleAnswer",
+          "callee": "prefs.edit().putString",
+          "lineNumber": 99
+        },
+        {
+          "caller": "handleAnswer",
+          "callee": "prefs.edit",
+          "lineNumber": 99
+        },
+        {
+          "caller": "handleAnswer",
+          "callee": "loadQuestionFromPrefs",
+          "lineNumber": 102
+        },
+        {
+          "caller": "handleAnswer",
+          "callee": "renderEmpty",
+          "lineNumber": 103
+        },
+        {
+          "caller": "handleAnswer",
+          "callee": "render",
+          "lineNumber": 105
+        },
+        {
+          "caller": "render",
+          "callee": "new RemoteViews",
+          "lineNumber": 111
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.getPackageName",
+          "lineNumber": 111
+        },
+        {
+          "caller": "render",
+          "callee": "views.setTextViewText",
+          "lineNumber": 113
+        },
+        {
+          "caller": "render",
+          "callee": "q.getNoiDung",
+          "lineNumber": 113
+        },
+        {
+          "caller": "render",
+          "callee": "loadScaledBitmap",
+          "lineNumber": 116
+        },
+        {
+          "caller": "render",
+          "callee": "q.getHinhAnh",
+          "lineNumber": 116
+        },
+        {
+          "caller": "render",
+          "callee": "views.setImageViewBitmap",
+          "lineNumber": 118
+        },
+        {
+          "caller": "render",
+          "callee": "views.setViewVisibility",
+          "lineNumber": 119
+        },
+        {
+          "caller": "render",
+          "callee": "views.setViewVisibility",
+          "lineNumber": 121
+        },
+        {
+          "caller": "render",
+          "callee": "selected.isEmpty",
+          "lineNumber": 124
+        },
+        {
+          "caller": "render",
+          "callee": "q.getDapAnDung",
+          "lineNumber": 125
+        },
+        {
+          "caller": "render",
+          "callee": "renderOpt",
+          "lineNumber": 127
+        },
+        {
+          "caller": "render",
+          "callee": "q.getDapAnA",
+          "lineNumber": 127
+        },
+        {
+          "caller": "render",
+          "callee": "renderOpt",
+          "lineNumber": 128
+        },
+        {
+          "caller": "render",
+          "callee": "q.getDapAnB",
+          "lineNumber": 128
+        },
+        {
+          "caller": "render",
+          "callee": "renderOpt",
+          "lineNumber": 129
+        },
+        {
+          "caller": "render",
+          "callee": "q.getDapAnC",
+          "lineNumber": 129
+        },
+        {
+          "caller": "render",
+          "callee": "renderOpt",
+          "lineNumber": 130
+        },
+        {
+          "caller": "render",
+          "callee": "q.getDapAnD",
+          "lineNumber": 130
+        },
+        {
+          "caller": "render",
+          "callee": "wireGlobal",
+          "lineNumber": 132
+        },
+        {
+          "caller": "render",
+          "callee": "mgr.updateAppWidget",
+          "lineNumber": 133
+        },
+        {
+          "caller": "renderOpt",
+          "callee": "text.equals",
+          "lineNumber": 140
+        },
+        {
+          "caller": "renderOpt",
+          "callee": "text.trim().isEmpty",
+          "lineNumber": 140
+        },
+        {
+          "caller": "renderOpt",
+          "callee": "text.trim",
+          "lineNumber": 140
+        },
+        {
+          "caller": "renderOpt",
+          "callee": "views.setViewVisibility",
+          "lineNumber": 141
+        },
+        {
+          "caller": "renderOpt",
+          "callee": "views.setViewVisibility",
+          "lineNumber": 144
+        },
+        {
+          "caller": "renderOpt",
+          "callee": "views.setTextViewText",
+          "lineNumber": 145
+        },
+        {
+          "caller": "renderOpt",
+          "callee": "views.setInt",
+          "lineNumber": 149
+        },
+        {
+          "caller": "renderOpt",
+          "callee": "views.setTextColor",
+          "lineNumber": 150
+        },
+        {
+          "caller": "renderOpt",
+          "callee": "views.setOnClickPendingIntent",
+          "lineNumber": 151
+        },
+        {
+          "caller": "renderOpt",
+          "callee": "answerPendingIntent",
+          "lineNumber": 151
+        },
+        {
+          "caller": "renderOpt",
+          "callee": "letter.equals",
+          "lineNumber": 154
+        },
+        {
+          "caller": "renderOpt",
+          "callee": "letter.equals",
+          "lineNumber": 155
+        },
+        {
+          "caller": "renderOpt",
+          "callee": "views.setInt",
+          "lineNumber": 158
+        },
+        {
+          "caller": "renderOpt",
+          "callee": "views.setTextColor",
+          "lineNumber": 159
+        },
+        {
+          "caller": "renderOpt",
+          "callee": "views.setInt",
+          "lineNumber": 161
+        },
+        {
+          "caller": "renderOpt",
+          "callee": "views.setTextColor",
+          "lineNumber": 162
+        },
+        {
+          "caller": "renderOpt",
+          "callee": "views.setInt",
+          "lineNumber": 164
+        },
+        {
+          "caller": "renderOpt",
+          "callee": "views.setTextColor",
+          "lineNumber": 165
+        },
+        {
+          "caller": "renderEmpty",
+          "callee": "new RemoteViews",
+          "lineNumber": 172
+        },
+        {
+          "caller": "renderEmpty",
+          "callee": "ctx.getPackageName",
+          "lineNumber": 172
+        },
+        {
+          "caller": "renderEmpty",
+          "callee": "views.setTextViewText",
+          "lineNumber": 173
+        },
+        {
+          "caller": "renderEmpty",
+          "callee": "views.setViewVisibility",
+          "lineNumber": 174
+        },
+        {
+          "caller": "renderEmpty",
+          "callee": "views.setViewVisibility",
+          "lineNumber": 175
+        },
+        {
+          "caller": "renderEmpty",
+          "callee": "views.setViewVisibility",
+          "lineNumber": 176
+        },
+        {
+          "caller": "renderEmpty",
+          "callee": "views.setViewVisibility",
+          "lineNumber": 177
+        },
+        {
+          "caller": "renderEmpty",
+          "callee": "views.setViewVisibility",
+          "lineNumber": 178
+        },
+        {
+          "caller": "renderEmpty",
+          "callee": "wireGlobal",
+          "lineNumber": 179
+        },
+        {
+          "caller": "renderEmpty",
+          "callee": "mgr.updateAppWidget",
+          "lineNumber": 180
+        },
+        {
+          "caller": "wireGlobal",
+          "callee": "new Intent",
+          "lineNumber": 187
+        },
+        {
+          "caller": "wireGlobal",
+          "callee": "openIntent.addFlags",
+          "lineNumber": 188
+        },
+        {
+          "caller": "wireGlobal",
+          "callee": "PendingIntent.getActivity",
+          "lineNumber": 189
+        },
+        {
+          "caller": "wireGlobal",
+          "callee": "views.setOnClickPendingIntent",
+          "lineNumber": 192
+        },
+        {
+          "caller": "wireGlobal",
+          "callee": "new Intent",
+          "lineNumber": 195
+        },
+        {
+          "caller": "wireGlobal",
+          "callee": "refreshIntent.setAction",
+          "lineNumber": 196
+        },
+        {
+          "caller": "wireGlobal",
+          "callee": "refreshIntent.putExtra",
+          "lineNumber": 197
+        },
+        {
+          "caller": "wireGlobal",
+          "callee": "PendingIntent.getBroadcast",
+          "lineNumber": 198
+        },
+        {
+          "caller": "wireGlobal",
+          "callee": "views.setOnClickPendingIntent",
+          "lineNumber": 201
+        },
+        {
+          "caller": "answerPendingIntent",
+          "callee": "new Intent",
+          "lineNumber": 213
+        },
+        {
+          "caller": "answerPendingIntent",
+          "callee": "intent.setAction",
+          "lineNumber": 214
+        },
+        {
+          "caller": "answerPendingIntent",
+          "callee": "intent.putExtra",
+          "lineNumber": 215
+        },
+        {
+          "caller": "answerPendingIntent",
+          "callee": "PendingIntent.getBroadcast",
+          "lineNumber": 216
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "prefs.edit()\n                .putString(\"w_\" + id + \"_q\",   q.getNoiDung())\n                .putString(\"w_\" + id + \"_oa\",  nvl(q.getDapAnA()))\n                .putString(\"w_\" + id + \"_ob\",  nvl(q.getDapAnB()))\n                .putString(\"w_\" + id + \"_oc\",  nvl(q.getDapAnC()))\n                .putString(\"w_\" + id + \"_od\",  nvl(q.getDapAnD()))\n                .putString(\"w_\" + id + \"_cor\", nvl(q.getDapAnDung()))\n                .putString(\"w_\" + id + \"_img\", nvl(q.getHinhAnh()))\n                .putString(\"w_\" + id + \"_sel\", \"\").apply",
+          "lineNumber": 223
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "prefs.edit()\n                .putString(\"w_\" + id + \"_q\",   q.getNoiDung())\n                .putString(\"w_\" + id + \"_oa\",  nvl(q.getDapAnA()))\n                .putString(\"w_\" + id + \"_ob\",  nvl(q.getDapAnB()))\n                .putString(\"w_\" + id + \"_oc\",  nvl(q.getDapAnC()))\n                .putString(\"w_\" + id + \"_od\",  nvl(q.getDapAnD()))\n                .putString(\"w_\" + id + \"_cor\", nvl(q.getDapAnDung()))\n                .putString(\"w_\" + id + \"_img\", nvl(q.getHinhAnh())).putString",
+          "lineNumber": 223
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "prefs.edit()\n                .putString(\"w_\" + id + \"_q\",   q.getNoiDung())\n                .putString(\"w_\" + id + \"_oa\",  nvl(q.getDapAnA()))\n                .putString(\"w_\" + id + \"_ob\",  nvl(q.getDapAnB()))\n                .putString(\"w_\" + id + \"_oc\",  nvl(q.getDapAnC()))\n                .putString(\"w_\" + id + \"_od\",  nvl(q.getDapAnD()))\n                .putString(\"w_\" + id + \"_cor\", nvl(q.getDapAnDung())).putString",
+          "lineNumber": 223
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "prefs.edit()\n                .putString(\"w_\" + id + \"_q\",   q.getNoiDung())\n                .putString(\"w_\" + id + \"_oa\",  nvl(q.getDapAnA()))\n                .putString(\"w_\" + id + \"_ob\",  nvl(q.getDapAnB()))\n                .putString(\"w_\" + id + \"_oc\",  nvl(q.getDapAnC()))\n                .putString(\"w_\" + id + \"_od\",  nvl(q.getDapAnD())).putString",
+          "lineNumber": 223
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "prefs.edit()\n                .putString(\"w_\" + id + \"_q\",   q.getNoiDung())\n                .putString(\"w_\" + id + \"_oa\",  nvl(q.getDapAnA()))\n                .putString(\"w_\" + id + \"_ob\",  nvl(q.getDapAnB()))\n                .putString(\"w_\" + id + \"_oc\",  nvl(q.getDapAnC())).putString",
+          "lineNumber": 223
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "prefs.edit()\n                .putString(\"w_\" + id + \"_q\",   q.getNoiDung())\n                .putString(\"w_\" + id + \"_oa\",  nvl(q.getDapAnA()))\n                .putString(\"w_\" + id + \"_ob\",  nvl(q.getDapAnB())).putString",
+          "lineNumber": 223
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "prefs.edit()\n                .putString(\"w_\" + id + \"_q\",   q.getNoiDung())\n                .putString(\"w_\" + id + \"_oa\",  nvl(q.getDapAnA())).putString",
+          "lineNumber": 223
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "prefs.edit()\n                .putString(\"w_\" + id + \"_q\",   q.getNoiDung()).putString",
+          "lineNumber": 223
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "prefs.edit().putString",
+          "lineNumber": 223
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "prefs.edit",
+          "lineNumber": 223
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "q.getNoiDung",
+          "lineNumber": 224
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "nvl",
+          "lineNumber": 225
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "q.getDapAnA",
+          "lineNumber": 225
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "nvl",
+          "lineNumber": 226
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "q.getDapAnB",
+          "lineNumber": 226
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "nvl",
+          "lineNumber": 227
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "q.getDapAnC",
+          "lineNumber": 227
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "nvl",
+          "lineNumber": 228
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "q.getDapAnD",
+          "lineNumber": 228
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "nvl",
+          "lineNumber": 229
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "q.getDapAnDung",
+          "lineNumber": 229
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "nvl",
+          "lineNumber": 230
+        },
+        {
+          "caller": "saveQuestion",
+          "callee": "q.getHinhAnh",
+          "lineNumber": 230
+        },
+        {
+          "caller": "loadQuestionFromPrefs",
+          "callee": "prefs.getString",
+          "lineNumber": 236
+        },
+        {
+          "caller": "loadQuestionFromPrefs",
+          "callee": "q.isEmpty",
+          "lineNumber": 237
+        },
+        {
+          "caller": "loadQuestionFromPrefs",
+          "callee": "new CauHoi",
+          "lineNumber": 238
+        },
+        {
+          "caller": "loadQuestionFromPrefs",
+          "callee": "ch.setNoiDung",
+          "lineNumber": 239
+        },
+        {
+          "caller": "loadQuestionFromPrefs",
+          "callee": "ch.setDapAnA",
+          "lineNumber": 240
+        },
+        {
+          "caller": "loadQuestionFromPrefs",
+          "callee": "prefs.getString",
+          "lineNumber": 240
+        },
+        {
+          "caller": "loadQuestionFromPrefs",
+          "callee": "ch.setDapAnB",
+          "lineNumber": 241
+        },
+        {
+          "caller": "loadQuestionFromPrefs",
+          "callee": "prefs.getString",
+          "lineNumber": 241
+        },
+        {
+          "caller": "loadQuestionFromPrefs",
+          "callee": "ch.setDapAnC",
+          "lineNumber": 242
+        },
+        {
+          "caller": "loadQuestionFromPrefs",
+          "callee": "prefs.getString",
+          "lineNumber": 242
+        },
+        {
+          "caller": "loadQuestionFromPrefs",
+          "callee": "ch.setDapAnD",
+          "lineNumber": 243
+        },
+        {
+          "caller": "loadQuestionFromPrefs",
+          "callee": "prefs.getString",
+          "lineNumber": 243
+        },
+        {
+          "caller": "loadQuestionFromPrefs",
+          "callee": "ch.setDapAnDung",
+          "lineNumber": 244
+        },
+        {
+          "caller": "loadQuestionFromPrefs",
+          "callee": "prefs.getString",
+          "lineNumber": 244
+        },
+        {
+          "caller": "loadQuestionFromPrefs",
+          "callee": "prefs.getString",
+          "lineNumber": 245
+        },
+        {
+          "caller": "loadQuestionFromPrefs",
+          "callee": "ch.setHinhAnh",
+          "lineNumber": 246
+        },
+        {
+          "caller": "loadQuestionFromPrefs",
+          "callee": "img.isEmpty",
+          "lineNumber": 246
+        },
+        {
+          "caller": "loadScaledBitmap",
+          "callee": "hinhAnh.equals",
+          "lineNumber": 255
+        },
+        {
+          "caller": "loadScaledBitmap",
+          "callee": "hinhAnh.trim().isEmpty",
+          "lineNumber": 255
+        },
+        {
+          "caller": "loadScaledBitmap",
+          "callee": "hinhAnh.trim",
+          "lineNumber": 255
+        },
+        {
+          "caller": "loadScaledBitmap",
+          "callee": "new File",
+          "lineNumber": 257
+        },
+        {
+          "caller": "loadScaledBitmap",
+          "callee": "new ContextWrapper(ctx).getDir",
+          "lineNumber": 257
+        },
+        {
+          "caller": "loadScaledBitmap",
+          "callee": "new ContextWrapper",
+          "lineNumber": 257
+        },
+        {
+          "caller": "loadScaledBitmap",
+          "callee": "f.exists",
+          "lineNumber": 258
+        },
+        {
+          "caller": "loadScaledBitmap",
+          "callee": "new BitmapFactory.Options",
+          "lineNumber": 259
+        },
+        {
+          "caller": "loadScaledBitmap",
+          "callee": "BitmapFactory.decodeFile",
+          "lineNumber": 261
+        },
+        {
+          "caller": "loadScaledBitmap",
+          "callee": "f.getAbsolutePath",
+          "lineNumber": 261
+        },
+        {
+          "caller": "loadScaledBitmap",
+          "callee": "BitmapFactory.decodeFile",
+          "lineNumber": 268
+        },
+        {
+          "caller": "loadScaledBitmap",
+          "callee": "f.getAbsolutePath",
+          "lineNumber": 268
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 3,
+        "functionCount": 13,
+        "classCount": 1
+      }
+    }
+  ]
+}

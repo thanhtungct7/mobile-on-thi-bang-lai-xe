@@ -1,0 +1,99 @@
+{
+  "batchIndex": 19,
+  "files": [
+    {
+      "path": "app/src/main/res/menu/bottom_nav_main.xml",
+      "language": "xml",
+      "sizeLines": 23,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml",
+      "language": "xml",
+      "sizeLines": 4,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+      "language": "xml",
+      "sizeLines": 4,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/values-land/dimens.xml",
+      "language": "xml",
+      "sizeLines": 3,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/values-night/colors.xml",
+      "language": "xml",
+      "sizeLines": 25,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/values-night/themes.xml",
+      "language": "xml",
+      "sizeLines": 27,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/values-w1240dp/dimens.xml",
+      "language": "xml",
+      "sizeLines": 2,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/values-w600dp/dimens.xml",
+      "language": "xml",
+      "sizeLines": 3,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/test/java/com/kma/OnThiBangLaiXe/ExampleUnitTest.java",
+      "language": "java",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.jar",
+      "language": "jar",
+      "sizeLines": 348,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.properties",
+      "language": "properties",
+      "sizeLines": 7,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gradlew",
+      "language": "unknown",
+      "sizeLines": 185,
+      "fileCategory": "code"
+    },
+    {
+      "path": "traffic-signs-detection-using-yolov8.ipynb",
+      "language": "ipynb",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "app/src/main/res/menu/bottom_nav_main.xml": [],
+    "app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml": [],
+    "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml": [],
+    "app/src/main/res/values-land/dimens.xml": [],
+    "app/src/main/res/values-night/colors.xml": [],
+    "app/src/main/res/values-night/themes.xml": [],
+    "app/src/main/res/values-w1240dp/dimens.xml": [],
+    "app/src/main/res/values-w600dp/dimens.xml": [],
+    "app/src/test/java/com/kma/OnThiBangLaiXe/ExampleUnitTest.java": [],
+    "gradle/wrapper/gradle-wrapper.jar": [],
+    "gradle/wrapper/gradle-wrapper.properties": [],
+    "gradlew": [],
+    "traffic-signs-detection-using-yolov8.ipynb": []
+  },
+  "neighborMap": {}
+}

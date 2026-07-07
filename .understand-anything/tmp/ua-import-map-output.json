@@ -1,0 +1,378 @@
+{
+  "scriptCompleted": true,
+  "stats": {
+    "filesScanned": 221,
+    "filesWithImports": 34,
+    "totalEdges": 113
+  },
+  "importMap": {
+    ".understand-anything/.understandignore": [],
+    "app/build.gradle": [],
+    "app/proguard-rules.pro": [],
+    "app/release/app-release.apk": [],
+    "app/release/output-metadata.json": [],
+    "app/src/androidTest/java/com/kma/OnThiBangLaiXe/ExampleInstrumentedTest.java": [],
+    "app/src/main/AndroidManifest.xml": [],
+    "app/src/main/assets/best.tflite": [],
+    "app/src/main/assets/bien_bao_assets.json": [],
+    "app/src/main/assets/db.db": [],
+    "app/src/main/assets/html/ChinhSach.html": [],
+    "app/src/main/assets/html/practice_exam.html": [],
+    "app/src/main/assets/html/tips600.html": [],
+    "app/src/main/assets/labels.txt": [],
+    "app/src/main/assets/questions.js": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiResultAdapter.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietKetQuaActivity.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauTraLoiAdapter.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/ThiThuActivity.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/DeThiAdapter.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/KetQuaActivity.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DeThi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/ThiThuActivity.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/FunctionAdapter.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/function.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/KetQuaAdapter.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/menuCauHoiAdapter.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/ThiThuActivity.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/ResultDeThiAdapter.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/KetQuaActivity.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DeThi.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/SaveQuestionAdapter.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/TheLoaiCauHoiAdapter.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/CauHoiActivity.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Interface/RecyclerViewInterface.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiCauHoi.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/ViewWelcomeAdapter.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/WeakAreaAdapter.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/CauHoiActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/CauLuuActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/SaveQuestionAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/CauSaiActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietKetQuaActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauTraLoiAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DeThi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBang.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiCauHoi.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyFirebaseMessagingService.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MySharedPreferences.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/WeakAreaAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DeThi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBang.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiCauHoi.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/DeThiActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/DeThiAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DeThi.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MySharedPreferences.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/ResultFragment.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiResultAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/function.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/HaySaiActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Interface/RecyclerViewInterface.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/KetQuaActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/ResultFragment.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/MainActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DeThi.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBang.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiCauHoi.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiKetQua.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/OnBoardingActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/ViewWelcomeAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Fragment/OnboardingFragment.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/ProfileFragment.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/ReadinessRingView.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/ResultsFragment.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/DeThiAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/ResultDeThiAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/SignDetectActivity.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/SignDetectWidgetProvider.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/SplashActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MyDB.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Custom/MySharedPreferences.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/StudyFragment.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/TheLoaiCauHoiAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Interface/RecyclerViewInterface.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DeThi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiCauHoi.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/TFLiteSignDetector.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/ThiThuActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauTraLoiAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/menuCauHoiAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauTraLoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/WebActivity.java": [],
+    "app/src/main/res/color/bnv_tint.xml": [],
+    "app/src/main/res/drawable-v24/ic_launcher_foreground.xml": [],
+    "app/src/main/res/drawable/accent_card_bg.xml": [],
+    "app/src/main/res/drawable/answer_card_correct.xml": [],
+    "app/src/main/res/drawable/answer_card_default.xml": [],
+    "app/src/main/res/drawable/answer_card_selected.xml": [],
+    "app/src/main/res/drawable/answer_card_wrong.xml": [],
+    "app/src/main/res/drawable/answer_letter_bg.xml": [],
+    "app/src/main/res/drawable/answer_letter_correct_bg.xml": [],
+    "app/src/main/res/drawable/answer_letter_selected_bg.xml": [],
+    "app/src/main/res/drawable/answer_letter_wrong_bg.xml": [],
+    "app/src/main/res/drawable/baseline_arrow_back_ios_new_24.xml": [],
+    "app/src/main/res/drawable/baseline_arrow_forward_ios_24.xml": [],
+    "app/src/main/res/drawable/baseline_bookmark_24_green.xml": [],
+    "app/src/main/res/drawable/baseline_bookmark_24.xml": [],
+    "app/src/main/res/drawable/baseline_cancel_12.xml": [],
+    "app/src/main/res/drawable/baseline_cancel_16.xml": [],
+    "app/src/main/res/drawable/baseline_cancel_24.xml": [],
+    "app/src/main/res/drawable/baseline_check_circle_12.xml": [],
+    "app/src/main/res/drawable/baseline_check_circle_16.xml": [],
+    "app/src/main/res/drawable/baseline_check_circle_24.xml": [],
+    "app/src/main/res/drawable/baseline_circle_notifications_24.xml": [],
+    "app/src/main/res/drawable/baseline_keyboard_double_arrow_up_24.xml": [],
+    "app/src/main/res/drawable/baseline_warning_24.xml": [],
+    "app/src/main/res/drawable/baseline_west_24.xml": [],
+    "app/src/main/res/drawable/baseline_west_36.xml": [],
+    "app/src/main/res/drawable/bg_circle_red.xml": [],
+    "app/src/main/res/drawable/border_layout.xml": [],
+    "app/src/main/res/drawable/btn_nav_next.xml": [],
+    "app/src/main/res/drawable/btn_nav_prev.xml": [],
+    "app/src/main/res/drawable/bubble_correct_bg.xml": [],
+    "app/src/main/res/drawable/bubble_skip_bg.xml": [],
+    "app/src/main/res/drawable/bubble_wrong_bg.xml": [],
+    "app/src/main/res/drawable/button_result.xml": [],
+    "app/src/main/res/drawable/card_de_thi_fail.xml": [],
+    "app/src/main/res/drawable/card_de_thi_new.xml": [],
+    "app/src/main/res/drawable/card_de_thi_pass.xml": [],
+    "app/src/main/res/drawable/card_stroke.xml": [],
+    "app/src/main/res/drawable/chip_active.xml": [],
+    "app/src/main/res/drawable/chip_default.xml": [],
+    "app/src/main/res/drawable/custom_button.xml": [],
+    "app/src/main/res/drawable/dialog_notify_bg.xml": [],
+    "app/src/main/res/drawable/diem_liet_badge.xml": [],
+    "app/src/main/res/drawable/exam_icon_bg.xml": [],
+    "app/src/main/res/drawable/explanation_card_bg.xml": [],
+    "app/src/main/res/drawable/fail_badge.xml": [],
+    "app/src/main/res/drawable/header_background_shape.xml": [],
+    "app/src/main/res/drawable/ic_check.xml": [],
+    "app/src/main/res/drawable/ic_chevron_right.xml": [],
+    "app/src/main/res/drawable/ic_close.xml": [],
+    "app/src/main/res/drawable/ic_exam_doc.xml": [],
+    "app/src/main/res/drawable/ic_filter.xml": [],
+    "app/src/main/res/drawable/ic_launcher_background.xml": [],
+    "app/src/main/res/drawable/ic_search.xml": [],
+    "app/src/main/res/drawable/ic_tab_camera.xml": [],
+    "app/src/main/res/drawable/ic_tab_home.xml": [],
+    "app/src/main/res/drawable/ic_tab_profile.xml": [],
+    "app/src/main/res/drawable/ic_tab_results.xml": [],
+    "app/src/main/res/drawable/ic_tab_study.xml": [],
+    "app/src/main/res/drawable/ic_x_close.xml": [],
+    "app/src/main/res/drawable/mode_card_icon_primary_bg.xml": [],
+    "app/src/main/res/drawable/pass_badge.xml": [],
+    "app/src/main/res/drawable/progress_bar_low.xml": [],
+    "app/src/main/res/drawable/progress_bar.xml": [],
+    "app/src/main/res/drawable/q_dot_answered_active_bg.xml": [],
+    "app/src/main/res/drawable/q_dot_answered_bg.xml": [],
+    "app/src/main/res/drawable/q_dot_critical_active_bg.xml": [],
+    "app/src/main/res/drawable/q_dot_critical_bg.xml": [],
+    "app/src/main/res/drawable/q_dot_default_active_bg.xml": [],
+    "app/src/main/res/drawable/q_dot_default_bg.xml": [],
+    "app/src/main/res/drawable/radio_button_background_shape_checked.xml": [],
+    "app/src/main/res/drawable/radio_button_background_shape_correct.xml": [],
+    "app/src/main/res/drawable/radio_button_background_shape_wrong.xml": [],
+    "app/src/main/res/drawable/radio_button_background_shape.xml": [],
+    "app/src/main/res/drawable/result_fail_icon_bg.xml": [],
+    "app/src/main/res/drawable/result_pass_icon_bg.xml": [],
+    "app/src/main/res/drawable/stat_grid_bg.xml": [],
+    "app/src/main/res/drawable/tag_stroke.xml": [],
+    "app/src/main/res/drawable/topic_icon_bg.xml": [],
+    "app/src/main/res/drawable/widget_answer_correct.xml": [],
+    "app/src/main/res/drawable/widget_answer_default.xml": [],
+    "app/src/main/res/drawable/widget_answer_dim.xml": [],
+    "app/src/main/res/drawable/widget_answer_wrong.xml": [],
+    "app/src/main/res/drawable/widget_bg.xml": [],
+    "app/src/main/res/drawable/widget_btn_camera.xml": [],
+    "app/src/main/res/font/lubalin_demi.otf": [],
+    "app/src/main/res/layout/activity_bien_bao.xml": [],
+    "app/src/main/res/layout/activity_cau_hoi.xml": [],
+    "app/src/main/res/layout/activity_cau_luu.xml": [],
+    "app/src/main/res/layout/activity_cau_sai.xml": [],
+    "app/src/main/res/layout/activity_de_thi.xml": [],
+    "app/src/main/res/layout/activity_details_bien_bao.xml": [],
+    "app/src/main/res/layout/activity_flashcard.xml": [],
+    "app/src/main/res/layout/activity_ket_qua.xml": [],
+    "app/src/main/res/layout/activity_main.xml": [],
+    "app/src/main/res/layout/activity_on_boarding.xml": [],
+    "app/src/main/res/layout/activity_sign_detect.xml": [],
+    "app/src/main/res/layout/activity_splash.xml": [],
+    "app/src/main/res/layout/activity_web.xml": [],
+    "app/src/main/res/layout/custom_alter_dailog.xml": [],
+    "app/src/main/res/layout/fragment_dashboard.xml": [],
+    "app/src/main/res/layout/fragment_onboarding.xml": [],
+    "app/src/main/res/layout/fragment_profile.xml": [],
+    "app/src/main/res/layout/fragment_result.xml": [],
+    "app/src/main/res/layout/fragment_results.xml": [],
+    "app/src/main/res/layout/fragment_study.xml": [],
+    "app/src/main/res/layout/item_cau_hoi_chi_tiet.xml": [],
+    "app/src/main/res/layout/item_cau_hoi_result.xml": [],
+    "app/src/main/res/layout/item_cau_hoi_save.xml": [],
+    "app/src/main/res/layout/item_cau_hoi.xml": [],
+    "app/src/main/res/layout/item_cau_tra_loi.xml": [],
+    "app/src/main/res/layout/item_de_thi.xml": [],
+    "app/src/main/res/layout/item_function.xml": [],
+    "app/src/main/res/layout/item_loaibienbao.xml": [],
+    "app/src/main/res/layout/item_result_row.xml": [],
+    "app/src/main/res/layout/item_theloaicauhoi.xml": [],
+    "app/src/main/res/layout/item_weak_area.xml": [],
+    "app/src/main/res/layout/layout_bien_bao.xml": [],
+    "app/src/main/res/layout/list_item_loai_bang.xml": [],
+    "app/src/main/res/layout/toolbar.xml": [],
+    "app/src/main/res/layout/widget_random_question.xml": [],
+    "app/src/main/res/layout/widget_sign_detect.xml": [],
+    "app/src/main/res/menu/bnv_menu.xml": [],
+    "app/src/main/res/menu/bottom_nav_main.xml": [],
+    "app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml": [],
+    "app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml": [],
+    "app/src/main/res/values-land/dimens.xml": [],
+    "app/src/main/res/values-night/colors.xml": [],
+    "app/src/main/res/values-night/themes.xml": [],
+    "app/src/main/res/values-w1240dp/dimens.xml": [],
+    "app/src/main/res/values-w600dp/dimens.xml": [],
+    "app/src/main/res/values/colors.xml": [],
+    "app/src/main/res/values/dimens.xml": [],
+    "app/src/main/res/values/ic_launcher_background.xml": [],
+    "app/src/main/res/values/strings.xml": [],
+    "app/src/main/res/values/styles.xml": [],
+    "app/src/main/res/values/themes.xml": [],
+    "app/src/main/res/xml/backup_rules.xml": [],
+    "app/src/main/res/xml/data_extraction_rules.xml": [],
+    "app/src/main/res/xml/widget_info.xml": [],
+    "app/src/main/res/xml/widget_sign_detect_info.xml": [],
+    "app/src/test/java/com/kma/OnThiBangLaiXe/ExampleUnitTest.java": [],
+    "build.gradle": [],
+    "gradle.properties": [],
+    "gradle/wrapper/gradle-wrapper.jar": [],
+    "gradle/wrapper/gradle-wrapper.properties": [],
+    "gradlew": [],
+    "gradlew.bat": [],
+    "README.md": [],
+    "settings.gradle": [],
+    "traffic-signs-detection-using-yolov8.ipynb": []
+  }
+}

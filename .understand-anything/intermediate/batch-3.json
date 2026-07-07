@@ -1,0 +1,441 @@
+{
+  "nodes": [
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java",
+      "type": "file",
+      "name": "BienBaoAdapter.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java",
+      "summary": "RecyclerView adapter for displaying individual traffic sign (BienBao) items, loading sign images from assets, and launching the detail screen on item click.",
+      "tags": ["adapter", "component", "event-handler", "data-model"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java:BienBaoAdapter",
+      "type": "class",
+      "name": "BienBaoAdapter",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java",
+      "lineRange": [24, 88],
+      "summary": "RecyclerView.Adapter subclass that binds a list of BienBao objects to item views and navigates to ChiTietBienBaoActivity when an item is tapped.",
+      "tags": ["adapter", "component", "event-handler"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java:onBindViewHolder",
+      "type": "function",
+      "name": "onBindViewHolder",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java",
+      "lineRange": [41, 67],
+      "summary": "Binds a BienBao item to its view holder: loads the sign image from assets (with fallback), sets code/title/content text fields, and wires an Intent-based click handler to open the detail activity.",
+      "tags": ["adapter", "event-handler", "component"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java",
+      "type": "file",
+      "name": "LoaiBienBaoAdapter.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java",
+      "summary": "RecyclerView adapter for traffic sign categories (LoaiBienBao) that renders a nested horizontal list of signs per category using BienBaoAdapter.",
+      "tags": ["adapter", "component", "data-model"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java:LoaiBienBaoAdapter",
+      "type": "class",
+      "name": "LoaiBienBaoAdapter",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java",
+      "lineRange": [19, 74],
+      "summary": "RecyclerView.Adapter that groups BienBao items by category, creating a nested BienBaoAdapter and LinearLayoutManager per category row.",
+      "tags": ["adapter", "component"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java:onBindViewHolder",
+      "type": "function",
+      "name": "onBindViewHolder",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java",
+      "lineRange": [38, 57],
+      "summary": "Filters the full BienBao list to only those matching the current category, then attaches a BienBaoAdapter with a LinearLayoutManager to the nested RecyclerView.",
+      "tags": ["adapter", "component"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java",
+      "type": "file",
+      "name": "BienBaoActivity.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java",
+      "summary": "Activity that displays all traffic signs grouped by category in a ViewPager2 with TabLayout, loads sign data from the database on first launch, and provides a navigation button to the flashcard study mode.",
+      "tags": ["entry-point", "api-handler", "component"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java:BienBaoActivity",
+      "type": "class",
+      "name": "BienBaoActivity",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java",
+      "lineRange": [18, 51],
+      "summary": "AppCompatActivity that initialises the ViewPager2+TabLayout traffic-sign browser and lazily loads BienBao/LoaiBienBao data from the database into the shared DanhSach singleton.",
+      "tags": ["entry-point", "component", "api-handler"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java:onCreate",
+      "type": "function",
+      "name": "onCreate",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java",
+      "lineRange": [20, 44],
+      "summary": "Sets up the traffic-sign screen: conditionally reads sign and category data from DB, wires the toolbar back button, flashcard launch button, ViewPager2 adapter, and TabLayout mediator.",
+      "tags": ["entry-point", "event-handler", "component"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java",
+      "type": "file",
+      "name": "ChiTietBienBaoActivity.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java",
+      "summary": "Detail screen Activity that displays a single traffic sign's image (loaded from assets), code, title, and description received via Intent extras from BienBaoAdapter.",
+      "tags": ["api-handler", "component", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java:ChiTietBienBaoActivity",
+      "type": "class",
+      "name": "ChiTietBienBaoActivity",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java",
+      "lineRange": [15, 49],
+      "summary": "AppCompatActivity that populates image, ID, title, and content views from Intent extras passed by the sign list adapter.",
+      "tags": ["api-handler", "component"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java:onCreate",
+      "type": "function",
+      "name": "onCreate",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java",
+      "lineRange": [20, 39],
+      "summary": "Reads sign data from Intent extras, decodes the sign image from assets (with fallback to a placeholder), and populates the image, code, title, and content text views.",
+      "tags": ["api-handler", "event-handler", "component"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java",
+      "type": "file",
+      "name": "FlashcardActivity.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java",
+      "summary": "Activity implementing an interactive flashcard interface for studying traffic signs, with a 3D flip animation between the image front face and the text back face, and previous/next navigation.",
+      "tags": ["component", "entry-point", "event-handler", "api-handler"],
+      "complexity": "complex",
+      "languageNotes": "Uses ObjectAnimator with AnimatorSet and a mid-animation visibility swap to achieve a convincing 3D card-flip effect on the Y axis."
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java:FlashcardActivity",
+      "type": "class",
+      "name": "FlashcardActivity",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java",
+      "lineRange": [29, 167],
+      "summary": "AppCompatActivity that manages a flashcard deck of BienBao items, coordinating card display, Y-axis flip animation, and sequential navigation.",
+      "tags": ["component", "event-handler"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java:onCreate",
+      "type": "function",
+      "name": "onCreate",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java",
+      "lineRange": [43, 94],
+      "summary": "Initialises all flashcard views, lazily loads BienBao data from DB, sets camera distance for 3D perspective, wires click/touch listeners for flip and navigation, and shows the first card.",
+      "tags": ["entry-point", "event-handler", "component"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java:showCard",
+      "type": "function",
+      "name": "showCard",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java",
+      "lineRange": [96, 119],
+      "summary": "Populates front and back card faces for the given index: sets the counter label, fills in sign code/title/content, loads the image from assets, and resets card rotation to un-flipped state.",
+      "tags": ["component", "utility"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java:flipCard",
+      "type": "function",
+      "name": "flipCard",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java",
+      "lineRange": [121, 159],
+      "summary": "Executes a 3D Y-axis flip animation between the front and back card panels using ObjectAnimator, swapping panel visibility at the 90-degree midpoint via an update listener.",
+      "tags": ["component", "event-handler"],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+      "type": "file",
+      "name": "BienBao.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+      "summary": "POJO model representing a traffic sign (BienBao) with fields for sign code, category code, title, description, and image asset path, plus full getters/setters and a parameterised constructor.",
+      "tags": ["data-model", "serialization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java:BienBao",
+      "type": "class",
+      "name": "BienBao",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+      "lineRange": [3, 59],
+      "summary": "Data class encapsulating a Vietnamese traffic sign entity with MaBB, MaLoaiBB, TieuDe, Noidung, and HinhAnh fields and standard JavaBean accessors.",
+      "tags": ["data-model", "serialization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java",
+      "type": "file",
+      "name": "LoaiBienBao.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java",
+      "summary": "POJO model representing a traffic sign category (LoaiBienBao) with a category code, category name, and a list of associated BienBao signs.",
+      "tags": ["data-model", "serialization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java:LoaiBienBao",
+      "type": "class",
+      "name": "LoaiBienBao",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java",
+      "lineRange": [6, 43],
+      "summary": "Data class representing a traffic sign category with MaLoaiBB (code), TenLoaiBB (name), and an ArrayList of BienBao items belonging to this category.",
+      "tags": ["data-model", "serialization"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java:BienBaoAdapter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java:onBindViewHolder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java:BienBaoAdapter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java:onBindViewHolder",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java:ChiTietBienBaoActivity",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java:LoaiBienBaoAdapter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java:onBindViewHolder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java:LoaiBienBaoAdapter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java:onBindViewHolder",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/BienBaoAdapter.java:BienBaoAdapter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java:BienBaoActivity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java:onCreate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java:BienBaoActivity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:app/src/main/java/com/kma/OnThiBangLaiXe/BienBaoActivity.java:onCreate",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/LoaiBienBaoAdapter.java:LoaiBienBaoAdapter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java:ChiTietBienBaoActivity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java:onCreate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/ChiTietBienBaoActivity.java:ChiTietBienBaoActivity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java:FlashcardActivity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java:onCreate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java:showCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java:flipCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java:FlashcardActivity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/FlashcardActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java:BienBao",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java:BienBao",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java:LoaiBienBao",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java:LoaiBienBao",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Model/LoaiBienBao.java:LoaiBienBao",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Model/BienBao.java:BienBao",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

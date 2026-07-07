@@ -1,0 +1,148 @@
+{
+  "batchIndex": 10,
+  "files": [
+    {
+      "path": "app/src/main/res/drawable/baseline_keyboard_double_arrow_up_24.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/baseline_warning_24.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/baseline_west_24.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/baseline_west_36.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/bg_circle_red.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/border_layout.xml",
+      "language": "xml",
+      "sizeLines": 4,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/btn_nav_next.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/btn_nav_prev.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/bubble_correct_bg.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/bubble_skip_bg.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/bubble_wrong_bg.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/button_result.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/card_de_thi_fail.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/card_de_thi_new.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/card_de_thi_pass.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/card_stroke.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/chip_active.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/chip_default.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/custom_button.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/dialog_notify_bg.xml",
+      "language": "xml",
+      "sizeLines": 11,
+      "fileCategory": "config"
+    }
+  ],
+  "batchImportData": {
+    "app/src/main/res/drawable/baseline_keyboard_double_arrow_up_24.xml": [],
+    "app/src/main/res/drawable/baseline_warning_24.xml": [],
+    "app/src/main/res/drawable/baseline_west_24.xml": [],
+    "app/src/main/res/drawable/baseline_west_36.xml": [],
+    "app/src/main/res/drawable/bg_circle_red.xml": [],
+    "app/src/main/res/drawable/border_layout.xml": [],
+    "app/src/main/res/drawable/btn_nav_next.xml": [],
+    "app/src/main/res/drawable/btn_nav_prev.xml": [],
+    "app/src/main/res/drawable/bubble_correct_bg.xml": [],
+    "app/src/main/res/drawable/bubble_skip_bg.xml": [],
+    "app/src/main/res/drawable/bubble_wrong_bg.xml": [],
+    "app/src/main/res/drawable/button_result.xml": [],
+    "app/src/main/res/drawable/card_de_thi_fail.xml": [],
+    "app/src/main/res/drawable/card_de_thi_new.xml": [],
+    "app/src/main/res/drawable/card_de_thi_pass.xml": [],
+    "app/src/main/res/drawable/card_stroke.xml": [],
+    "app/src/main/res/drawable/chip_active.xml": [],
+    "app/src/main/res/drawable/chip_default.xml": [],
+    "app/src/main/res/drawable/custom_button.xml": [],
+    "app/src/main/res/drawable/dialog_notify_bg.xml": []
+  },
+  "neighborMap": {}
+}

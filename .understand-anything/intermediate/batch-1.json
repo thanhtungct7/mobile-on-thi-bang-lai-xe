@@ -1,0 +1,671 @@
+{
+  "nodes": [
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "type": "file",
+      "name": "CauHoiAdapter.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "summary": "RecyclerView adapter that renders individual exam questions as swipeable cards in a ViewPager, handling answer selection, correct/wrong visual feedback, bookmark toggling, and Glide-based image loading for questions that have associated images.",
+      "tags": ["component", "adapter", "ui", "data-model", "event-handler"],
+      "complexity": "complex",
+      "languageNotes": "Uses RecyclerView.Adapter pattern with an inner ViewHolder. Interacts with DBHandler to persist bookmark and answer state directly from onBindViewHolder."
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java:CauHoiAdapter",
+      "type": "class",
+      "name": "CauHoiAdapter",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "lineRange": [28, 240],
+      "summary": "RecyclerView adapter for question cards providing option binding, answer validation coloring, save-icon toggling, and image loading via Glide.",
+      "tags": ["adapter", "component", "event-handler", "ui"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java:onBindViewHolder",
+      "type": "function",
+      "name": "onBindViewHolder",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "lineRange": [50, 96],
+      "summary": "Binds a CauHoi question object to a ViewHolder, setting question text, bookmark state, correct/wrong icons, answer options, and image visibility.",
+      "tags": ["adapter", "ui", "data-binding", "event-handler"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java:setDapAn",
+      "type": "function",
+      "name": "setDapAn",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "lineRange": [128, 157],
+      "summary": "Locks all answer options, displays the explanation text, highlights the correct answer card in green and the wrong selection in red, then persists the answered state to the database.",
+      "tags": ["validation", "ui", "event-handler"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java:bindOption",
+      "type": "function",
+      "name": "bindOption",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "lineRange": [98, 119],
+      "summary": "Configures a single answer option row: hides empty options, sets the option text, attaches a radio-button listener, and wires up click handling to call setDapAn.",
+      "tags": ["ui", "event-handler", "component"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/SaveQuestionAdapter.java",
+      "type": "file",
+      "name": "SaveQuestionAdapter.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/SaveQuestionAdapter.java",
+      "summary": "Simple RecyclerView adapter for displaying a list of bookmarked (saved) exam questions, showing only the question text in each item row.",
+      "tags": ["adapter", "component", "ui"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/SaveQuestionAdapter.java:SaveQuestionAdapter",
+      "type": "class",
+      "name": "SaveQuestionAdapter",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/SaveQuestionAdapter.java",
+      "lineRange": [17, 68],
+      "summary": "RecyclerView adapter that renders bookmarked questions as simple text rows with a setCauHois updater method.",
+      "tags": ["adapter", "component", "ui"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/WeakAreaAdapter.java",
+      "type": "file",
+      "name": "WeakAreaAdapter.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/WeakAreaAdapter.java",
+      "summary": "RecyclerView adapter for the dashboard's weak-area list, displaying topic name, wrong-answer count, and accuracy percentage, with click-through to filtered question browsing.",
+      "tags": ["adapter", "component", "ui", "event-handler"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/WeakAreaAdapter.java:WeakAreaAdapter",
+      "type": "class",
+      "name": "WeakAreaAdapter",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/WeakAreaAdapter.java",
+      "lineRange": [15, 83],
+      "summary": "Adapter backing the dashboard weak-areas RecyclerView, routing item clicks through an OnWeakAreaClickListener interface.",
+      "tags": ["adapter", "component", "ui", "event-handler"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/CauHoiActivity.java",
+      "type": "file",
+      "name": "CauHoiActivity.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/CauHoiActivity.java",
+      "summary": "Activity that displays a filterable set of exam questions in a horizontal ViewPager, loading questions from the database, filtering by category and answered state, and providing previous/next navigation buttons.",
+      "tags": ["component", "api-handler", "ui"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/CauHoiActivity.java:CauHoiActivity",
+      "type": "class",
+      "name": "CauHoiActivity",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/CauHoiActivity.java",
+      "lineRange": [19, 67],
+      "summary": "Android Activity hosting a paged question viewer with nav-back/forward controls and category-filtered question loading.",
+      "tags": ["component", "api-handler", "ui"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/CauLuuActivity.java",
+      "type": "file",
+      "name": "CauLuuActivity.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/CauLuuActivity.java",
+      "summary": "Activity that shows all bookmarked (saved) exam questions in a RecyclerView, reading them directly from the SQLite database cursor and presenting them via SaveQuestionAdapter.",
+      "tags": ["component", "api-handler", "ui"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/CauLuuActivity.java:CauLuuActivity",
+      "type": "class",
+      "name": "CauLuuActivity",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/CauLuuActivity.java",
+      "lineRange": [16, 76],
+      "summary": "Activity for the bookmarked-questions screen, populating a list from a DB cursor and wiring the back-navigation button.",
+      "tags": ["component", "api-handler", "ui"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/CauSaiActivity.java",
+      "type": "file",
+      "name": "CauSaiActivity.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/CauSaiActivity.java",
+      "summary": "Activity for reviewing previously wrong-answered questions in a ViewPager, loading the wrong-answer set from the database and providing bottom-nav prev/next controls.",
+      "tags": ["component", "api-handler", "ui"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/CauSaiActivity.java:CauSaiActivity",
+      "type": "class",
+      "name": "CauSaiActivity",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/CauSaiActivity.java",
+      "lineRange": [19, 63],
+      "summary": "Android Activity presenting previously-wrong questions with bottom navigation and paged swiping.",
+      "tags": ["component", "api-handler", "ui"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java",
+      "type": "file",
+      "name": "DashboardFragment.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java",
+      "summary": "Home dashboard Fragment computing and displaying study readiness (progress ring), answer statistics, topics covered, and a ranked weak-areas list derived from the full question set held in DanhSach.",
+      "tags": ["component", "ui", "service", "event-handler"],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java:DashboardFragment",
+      "type": "class",
+      "name": "DashboardFragment",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java",
+      "lineRange": [26, 184],
+      "summary": "Fragment computing readiness score, per-topic accuracy statistics, and weak-area rankings from in-memory question data refreshed on every onResume.",
+      "tags": ["component", "ui", "service"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java:refresh",
+      "type": "function",
+      "name": "refresh",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java",
+      "lineRange": [86, 115],
+      "summary": "Re-computes all dashboard statistics from the global question list: answered count, accuracy, topics covered, readiness percentage, and weak areas.",
+      "tags": ["service", "utility", "ui"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java:buildWeakAreas",
+      "type": "function",
+      "name": "buildWeakAreas",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java",
+      "lineRange": [145, 174],
+      "summary": "Aggregates wrong-answer counts by topic category, sorts by worst-performing topics, and updates the WeakAreaAdapter with the resulting ranked list.",
+      "tags": ["service", "utility"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/HaySaiActivity.java",
+      "type": "file",
+      "name": "HaySaiActivity.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/HaySaiActivity.java",
+      "summary": "Activity for reviewing high-difficulty (commonly wrong) questions in a ViewPager, loading the hay-sai question set from the database with bottom-nav prev/next controls.",
+      "tags": ["component", "api-handler", "ui"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/HaySaiActivity.java:HaySaiActivity",
+      "type": "class",
+      "name": "HaySaiActivity",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/HaySaiActivity.java",
+      "lineRange": [19, 63],
+      "summary": "Android Activity for paged browsing of frequently-wrong questions with bottom navigation and toolbar back.",
+      "tags": ["component", "api-handler", "ui"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "type": "file",
+      "name": "CauHoi.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "summary": "Core data model representing a single exam question with all its fields: ID, category, license type, question text, image name, four answer options, the correct answer key, explanation, bookmark flag, difficulty flag, and answered state.",
+      "tags": ["data-model", "type-definition"],
+      "complexity": "moderate",
+      "languageNotes": "Plain POJO with three overloaded constructors (full with daTraLoi, compact without daTraLoi, and default no-arg)."
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java:CauHoi",
+      "type": "class",
+      "name": "CauHoi",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "lineRange": [3, 155],
+      "summary": "POJO data model holding all attributes of an exam question, providing getters/setters for 14 fields and three constructor overloads for flexible instantiation.",
+      "tags": ["data-model", "type-definition"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java",
+      "type": "file",
+      "name": "QuestionWidgetProvider.java",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java",
+      "summary": "Android AppWidgetProvider that presents a random exam question on the home screen widget, handling answer selection via broadcast intents, persisting question state in SharedPreferences, and rendering option rows with correct/wrong color feedback.",
+      "tags": ["component", "service", "event-handler", "ui"],
+      "complexity": "complex",
+      "languageNotes": "Uses RemoteViews for widget rendering since widgets cannot use normal View inflation. PendingIntent with FLAG_MUTABLE is required on Android 12+ for broadcast-based interactivity."
+    },
+    {
+      "id": "class:app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java:QuestionWidgetProvider",
+      "type": "class",
+      "name": "QuestionWidgetProvider",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java",
+      "lineRange": [22, 273],
+      "summary": "AppWidgetProvider subclass managing widget lifecycle, random question selection from the DB, SharedPreferences persistence, and RemoteViews-based rendering with answer-feedback coloring.",
+      "tags": ["component", "service", "event-handler"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java:render",
+      "type": "function",
+      "name": "render",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java",
+      "lineRange": [110, 134],
+      "summary": "Builds a RemoteViews layout for the widget displaying the question text, optional image, and four answer option rows, then calls mgr.updateAppWidget.",
+      "tags": ["ui", "component"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java:renderOpt",
+      "type": "function",
+      "name": "renderOpt",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java",
+      "lineRange": [136, 169],
+      "summary": "Configures a single answer-option row in the widget RemoteViews, applying correct/wrong/default background colors and attaching the answer PendingIntent.",
+      "tags": ["ui", "component"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java:loadScaledBitmap",
+      "type": "function",
+      "name": "loadScaledBitmap",
+      "filePath": "app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java",
+      "lineRange": [254, 272],
+      "summary": "Decodes a question image from the app's internal directory using BitmapFactory with optional inSampleSize downscaling for widget memory constraints.",
+      "tags": ["utility"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java:CauHoiAdapter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java:onBindViewHolder",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java:setDapAn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java:bindOption",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java:CauHoiAdapter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java:CauHoi",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "function:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java:setDapAn",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java:updateDaTraLoi",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/SaveQuestionAdapter.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/SaveQuestionAdapter.java:SaveQuestionAdapter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/SaveQuestionAdapter.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/SaveQuestionAdapter.java:SaveQuestionAdapter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/SaveQuestionAdapter.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/WeakAreaAdapter.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/WeakAreaAdapter.java:WeakAreaAdapter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/WeakAreaAdapter.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/WeakAreaAdapter.java:WeakAreaAdapter",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/CauHoiActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/CauHoiActivity.java:CauHoiActivity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/CauHoiActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/CauHoiActivity.java:CauHoiActivity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/CauHoiActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/CauHoiActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/CauHoiActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/CauHoiActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java:CauHoiAdapter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/CauLuuActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/CauLuuActivity.java:CauLuuActivity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/CauLuuActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/CauLuuActivity.java:CauLuuActivity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/CauLuuActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/SaveQuestionAdapter.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/CauLuuActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/CauLuuActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/SaveQuestionAdapter.java:SaveQuestionAdapter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/CauSaiActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/CauSaiActivity.java:CauSaiActivity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/CauSaiActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/CauSaiActivity.java:CauSaiActivity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/CauSaiActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/CauSaiActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/CauSaiActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/CauSaiActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java:CauHoiAdapter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java:DashboardFragment",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java:refresh",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java:buildWeakAreas",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java:DashboardFragment",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/WeakAreaAdapter.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "function:app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java:buildWeakAreas",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/WeakAreaAdapter.java:WeakAreaAdapter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/HaySaiActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/HaySaiActivity.java:HaySaiActivity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/HaySaiActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/HaySaiActivity.java:HaySaiActivity",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/HaySaiActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/HaySaiActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/HaySaiActivity.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/HaySaiActivity.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java:CauHoiAdapter",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java:CauHoi",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java:CauHoi",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java:QuestionWidgetProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java:render",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java:renderOpt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java",
+      "target": "function:app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java:loadScaledBitmap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java:QuestionWidgetProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java",
+      "target": "file:app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java",
+      "target": "class:app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java:CauHoi",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

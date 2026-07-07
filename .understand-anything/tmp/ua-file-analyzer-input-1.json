@@ -1,0 +1,55 @@
+{
+  "projectRoot": "/mnt/data1/KMA/on-thi-bang-lai-xe",
+  "batchFiles": [
+    {"path": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java", "language": "java", "sizeLines": 240, "fileCategory": "code"},
+    {"path": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/SaveQuestionAdapter.java", "language": "java", "sizeLines": 68, "fileCategory": "code"},
+    {"path": "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/WeakAreaAdapter.java", "language": "java", "sizeLines": 83, "fileCategory": "code"},
+    {"path": "app/src/main/java/com/kma/OnThiBangLaiXe/CauHoiActivity.java", "language": "java", "sizeLines": 66, "fileCategory": "code"},
+    {"path": "app/src/main/java/com/kma/OnThiBangLaiXe/CauLuuActivity.java", "language": "java", "sizeLines": 75, "fileCategory": "code"},
+    {"path": "app/src/main/java/com/kma/OnThiBangLaiXe/CauSaiActivity.java", "language": "java", "sizeLines": 62, "fileCategory": "code"},
+    {"path": "app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java", "language": "java", "sizeLines": 184, "fileCategory": "code"},
+    {"path": "app/src/main/java/com/kma/OnThiBangLaiXe/HaySaiActivity.java", "language": "java", "sizeLines": 62, "fileCategory": "code"},
+    {"path": "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java", "language": "java", "sizeLines": 155, "fileCategory": "code"},
+    {"path": "app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java", "language": "java", "sizeLines": 273, "fileCategory": "code"}
+  ],
+  "batchImportData": {
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/DBHandler.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/SaveQuestionAdapter.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/WeakAreaAdapter.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/CauHoiActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/CauLuuActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/SaveQuestionAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/CauSaiActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/DashboardFragment.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/WeakAreaAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/HaySaiActivity.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Adapter/CauHoiAdapter.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java": [],
+    "app/src/main/java/com/kma/OnThiBangLaiXe/QuestionWidgetProvider.java": [
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/CauHoi.java",
+      "app/src/main/java/com/kma/OnThiBangLaiXe/Model/DanhSach.java"
+    ]
+  }
+}
