@@ -54,7 +54,7 @@ public class WeakAreaAdapter extends RecyclerView.Adapter<WeakAreaAdapter.VH> {
     public void onBindViewHolder(@NonNull VH h, int pos) {
         WeakArea item = items.get(pos);
         h.name.setText(item.categoryName);
-        h.wrong.setText(item.wrongCount + " câu trả lời sai");
+        h.wrong.setText(item.wrongCount + " câu cần ôn lại");
         h.accuracy.setText(item.accuracyPercent + "%");
 
         if (pos == 0) {

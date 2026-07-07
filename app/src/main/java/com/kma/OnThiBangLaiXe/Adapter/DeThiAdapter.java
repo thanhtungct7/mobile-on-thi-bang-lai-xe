@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.kma.OnThiBangLaiXe.DBHandler;
 import com.kma.OnThiBangLaiXe.KetQuaActivity;
+import com.kma.OnThiBangLaiXe.Model.CauHoi;
 import com.kma.OnThiBangLaiXe.Model.CauTraLoi;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
 import com.kma.OnThiBangLaiXe.Model.DeThi;
@@ -59,18 +60,33 @@ public class DeThiAdapter extends RecyclerView.Adapter<DeThiAdapter.ViewHolder> 
         int nguongDat = (loaiBang == 2) ? 27 : 22;
 
         int soCauDung = 0, soCauSai = 0;
+        boolean attempted = false;
+        boolean saiDiemLiet = false;
         List<CauTraLoi> dsCTL = db.getListCauTraLoiByMaDeThi(de.getMaDeThi());
         for (CauTraLoi ctl : dsCTL) {
             String chon = ctl.getDapAnChon();
-            if (chon == null || chon.equals("0")) continue;
-            if (chon.equals(db.getCauHoiByID(ctl.getMaCH()).getDapAnDung()))
+            if (chon == null || chon.equals("null")) continue;
+            attempted = true;
+
+            CauHoi cauHoi = db.getCauHoiByID(ctl.getMaCH());
+            if (cauHoi == null) continue;
+
+            boolean boQua = chon.equals("0");
+            boolean traLoiDung = cauHoi.getDapAnDung().equals(chon);
+            if (boQua) {
+                if (cauHoi.getMaLoaiCH() == 1) saiDiemLiet = true;
+                continue;
+            }
+
+            if (traLoiDung) {
                 soCauDung++;
-            else
+            } else {
                 soCauSai++;
+                if (cauHoi.getMaLoaiCH() == 1) saiDiemLiet = true;
+            }
         }
 
-        boolean attempted = (soCauDung + soCauSai) > 0;
-        boolean passed = attempted && soCauDung >= nguongDat;
+        boolean passed = attempted && soCauDung >= nguongDat && !saiDiemLiet;
 
         if (!attempted) {
             holder.itemView.setBackground(ContextCompat.getDrawable(context, R.drawable.card_de_thi_new));
@@ -90,10 +106,11 @@ public class DeThiAdapter extends RecyclerView.Adapter<DeThiAdapter.ViewHolder> 
             holder.txtSoCauSai.setText(String.valueOf(soCauSai));
         }
 
+        final boolean attemptedFinal = attempted;
         final int soCauDungFinal = soCauDung;
         final int soCauSaiFinal = soCauSai;
         holder.itemView.setOnClickListener(view -> {
-            if (soCauDungFinal > 0 || soCauSaiFinal > 0) {
+            if (attemptedFinal || soCauDungFinal > 0 || soCauSaiFinal > 0) {
                 Intent intent = new Intent(context, KetQuaActivity.class);
                 intent.putExtra("MaDeThi", de.getMaDeThi());
                 context.startActivity(intent);

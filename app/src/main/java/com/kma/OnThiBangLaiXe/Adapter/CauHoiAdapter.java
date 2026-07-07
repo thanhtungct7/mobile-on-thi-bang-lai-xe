@@ -152,8 +152,15 @@ public class CauHoiAdapter extends RecyclerView.Adapter<CauHoiAdapter.ViewHolder
         }
         setCardForLetter(holder, ch.getDapAnDung(), true);
 
-        DanhSach.getDsCauHoi().get(position).setDaTraLoiDung(correct ? 1 : 2);
-        db.updateDaTraLoi(ch.getMaCH(), correct ? 1 : 2);
+        int result = correct ? 1 : 2;
+        ch.setDaTraLoiDung(result);
+        for (CauHoi item : DanhSach.getDsCauHoi()) {
+            if (item.getMaCH() == ch.getMaCH()) {
+                item.setDaTraLoiDung(result);
+                break;
+            }
+        }
+        db.updateDaTraLoi(ch.getMaCH(), result);
     }
 
     private void setCardForLetter(ViewHolder holder, String letter, boolean correct) {

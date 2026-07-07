@@ -78,7 +78,7 @@ public class ResultDeThiAdapter extends RecyclerView.Adapter<ResultDeThiAdapter.
     private boolean isCompleted(DeThi dt) {
         for (CauTraLoi ctl : db.getListCauTraLoiByMaDeThi(dt.getMaDeThi())) {
             String ans = ctl.getDapAnChon();
-            if (ans != null && !ans.equals("null") && !ans.equals("0")) return true;
+            if (ans != null && !ans.equals("null")) return true;
         }
         return false;
     }
@@ -93,9 +93,13 @@ public class ResultDeThiAdapter extends RecyclerView.Adapter<ResultDeThiAdapter.
         int cauDung = 0, cauSai = 0, diemLietSai = 0;
         for (CauTraLoi ctl : db.getListCauTraLoiByMaDeThi(dt.getMaDeThi())) {
             String ans = ctl.getDapAnChon();
-            if (ans == null || ans.equals("null") || ans.equals("0")) continue;
+            if (ans == null || ans.equals("null")) continue;
             CauHoi ch = db.getCauHoiByID(ctl.getMaCH());
             if (ch == null) continue;
+            if (ans.equals("0")) {
+                if (ch.getMaLoaiCH() == 1) diemLietSai++;
+                continue;
+            }
             if (ch.getDapAnDung().equals(ans)) {
                 cauDung++;
             } else {
@@ -155,7 +159,7 @@ public class ResultDeThiAdapter extends RecyclerView.Adapter<ResultDeThiAdapter.
             holder.txtScore.setTextColor(
                     ContextCompat.getColor(context, R.color.result_fail_fg));
             String reason = saiDiemLiet
-                    ? "Sai câu điểm liệt"
+                    ? "Không trả lời đúng câu điểm liệt"
                     : "Không đủ " + passThreshold(dt) + " câu đúng";
             holder.txtReason.setText(reason);
             holder.txtReason.setVisibility(View.VISIBLE);

@@ -17,6 +17,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.kma.OnThiBangLaiXe.R;
 import com.kma.OnThiBangLaiXe.Adapter.CauTraLoiAdapter;
 import com.kma.OnThiBangLaiXe.Adapter.menuCauHoiAdapter;
+import com.kma.OnThiBangLaiXe.Model.CauHoi;
 import com.kma.OnThiBangLaiXe.Model.CauTraLoi;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
 import com.google.android.material.tabs.TabLayout;
@@ -30,6 +31,7 @@ public class ThiThuActivity extends AppCompatActivity {
     public static RecyclerView rvCauHoi;
     private CountDownTimer countDownTimer;
     private long time;
+    private long totalTime;
     TextView txtTitle,txtNopBai;
     private int maDeThi;
     TabLayout tabLayout;
@@ -42,7 +44,7 @@ public class ThiThuActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        startTime();
+        if (countDownTimer == null) startTime();
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +57,8 @@ public class ThiThuActivity extends AppCompatActivity {
         btnNavBack = findViewById(R.id.btnNavBack);
         btnNavForward = findViewById(R.id.btnNavForward);
         toolbarBack =findViewById(R.id.toolbarBack);
-        time = DanhSach.getLoaiBang() == 2 ? 1_200_000L : 1_140_000L;
+        totalTime = DanhSach.getLoaiBang() == 2 ? 1_200_000L : 1_140_000L;
+        time = totalTime;
         // Mã loại câu hỏi
         maDeThi = getIntent().getIntExtra("MaDeThi", 0);
         db=new DBHandler(this);
@@ -103,6 +106,10 @@ public class ThiThuActivity extends AppCompatActivity {
 
     private void ketThuc()
     {
+        if (countDownTimer != null) {
+            countDownTimer.cancel();
+            countDownTimer = null;
+        }
         List<CauTraLoi> temp = new ArrayList<>();
 
         for (CauTraLoi ctl : DanhSach.getDsCauTraLoi())
@@ -117,6 +124,8 @@ public class ThiThuActivity extends AppCompatActivity {
             }
         }
 
+        syncPracticeProgress(temp);
+
         if (maDeThi != 0)
         {
             db.updateCauTraLoi(temp);
@@ -126,9 +135,35 @@ public class ThiThuActivity extends AppCompatActivity {
 
         Intent intent = new Intent(this, KetQuaActivity.class);
         intent.putExtra("MaDeThi", maDeThi);
-        intent.putExtra("ThoiGianConLai", time);
+        long thoiGianConLai = Math.max(0L, Math.min(time, totalTime));
+        intent.putExtra("ThoiGianConLai", thoiGianConLai);
+        intent.putExtra("TongThoiGian", totalTime);
         startActivity(intent);
         finish();
+    }
+
+    private void syncPracticeProgress(List<CauTraLoi> answers) {
+        for (CauTraLoi ctl : answers) {
+            CauHoi cauHoi = findCauHoi(ctl.getMaCH());
+            if (cauHoi == null) continue;
+
+            String selected = ctl.getDapAnChon();
+            boolean correct = selected != null
+                    && !selected.equals("null")
+                    && !selected.equals("0")
+                    && selected.equals(cauHoi.getDapAnDung());
+            int result = correct ? 1 : 2;
+
+            cauHoi.setDaTraLoiDung(result);
+            db.updateDaTraLoi(cauHoi.getMaCH(), result);
+        }
+    }
+
+    private CauHoi findCauHoi(int maCauHoi) {
+        for (CauHoi cauHoi : DanhSach.getDsCauHoi()) {
+            if (cauHoi.getMaCH() == maCauHoi) return cauHoi;
+        }
+        return null;
     }
 
     private void nopBai()
@@ -152,6 +187,8 @@ public class ThiThuActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+                countDownTimer = null;
+                time = 0L;
                 txtTitle.setText("Hết giờ");
                 final AlertDialog.Builder alertDialog=new AlertDialog.Builder(ThiThuActivity.this);
                 alertDialog.setTitle("Thông báo");
@@ -168,7 +205,10 @@ public class ThiThuActivity extends AppCompatActivity {
         alertDialog.setTitle("Thông báo");
         alertDialog.setMessage("Dữ liệu bài thi đang làm sẽ không được lưu lại, bạn có chắc chắn muốn thoát?");
         alertDialog.setPositiveButton("Có", (dialogInterface, i) -> {
-            countDownTimer.cancel();
+            if (countDownTimer != null) {
+                countDownTimer.cancel();
+                countDownTimer = null;
+            }
             finish();
         });
         alertDialog.setNegativeButton("Không", (dialogInterface, i) -> {});

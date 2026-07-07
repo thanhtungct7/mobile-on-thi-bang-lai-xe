@@ -31,14 +31,16 @@ public class DashboardFragment extends Fragment {
     private View cardWeakAreas, txtNoWeakAreas;
     private WeakAreaAdapter.OnItemClickListener weakAreaListener;
 
-    // Category metadata (matches loadDBToDanhSach order in MainActivity)
-    private static final int[]    CAT_IDS   = {1, 2, 3, 4, 5};
+    // Category metadata (matches StudyFragment topics)
+    private static final int[]    CAT_IDS   = {1, 2, 3, 4, 5, 6, 7};
     private static final String[] CAT_NAMES = {
             "Câu hỏi điểm liệt",
-            "Kỹ thuật lái xe",
             "Khái niệm và quy tắc",
-            "Văn hóa và đạo đức",
-            "Nghiệp vụ vận tải"
+            "Biển báo",
+            "Tình huống giao thông",
+            "Kỹ thuật lái xe",
+            "Cấu tạo phương tiện",
+            "Văn hóa và đạo đức"
     };
 
     @Nullable
@@ -96,17 +98,21 @@ public class DashboardFragment extends Fragment {
         }
 
         int accuracyPct = answered > 0 ? (int) ((correct / (float) answered) * 100) : 0;
-        int topicsCovered = countTopicsCovered(all);
-        int readiness = computeReadiness(all, topicsCovered);
+        int completedTopics = countCompletedTopics(all);
+        int readiness = computeReadiness(all, completedTopics);
 
         readinessRing.setProgress(readiness);
         txtStatQuestions.setText(answered + "");
         txtStatAccuracy.setText(accuracyPct + "%");
-        txtStatTopics.setText(topicsCovered + "/" + CAT_IDS.length);
+        txtStatTopics.setText(completedTopics + "/" + CAT_IDS.length);
 
-        int remaining = CAT_IDS.length - topicsCovered;
-        if (remaining > 0) {
-            txtSubtitle.setText("Còn " + remaining + " chủ đề cần hoàn thành\ntrước khi thi");
+        int remaining = CAT_IDS.length - completedTopics;
+        if (all.isEmpty()) {
+            txtSubtitle.setText("Chưa có dữ liệu ôn tập");
+        } else if (answered == 0) {
+            txtSubtitle.setText("Bắt đầu ôn tập để theo dõi\nmức độ sẵn sàng");
+        } else if (remaining > 0) {
+            txtSubtitle.setText("Còn " + remaining + " chủ đề chưa hoàn thành\ntrước khi thi");
         } else {
             txtSubtitle.setText("Bạn đã hoàn thành tất cả chủ đề!");
         }
@@ -114,7 +120,7 @@ public class DashboardFragment extends Fragment {
         buildWeakAreas(all);
     }
 
-    private int computeReadiness(List<CauHoi> all, int topicsCovered) {
+    private int computeReadiness(List<CauHoi> all, int completedTopics) {
         int total = all.size();
         if (total == 0) return 0;
         int answered = 0, correct = 0;
@@ -126,24 +132,28 @@ public class DashboardFragment extends Fragment {
         }
         int progressPct  = (int) ((answered / (float) total) * 100);
         int accuracyPct  = answered > 0 ? (int) ((correct / (float) answered) * 100) : 0;
-        int topicsPct    = (int) ((topicsCovered / (float) CAT_IDS.length) * 100);
-        return (progressPct * 40 + accuracyPct * 40 + topicsPct * 20) / 100;
+        int topicsPct    = (int) ((completedTopics / (float) CAT_IDS.length) * 100);
+        return (progressPct * 30 + accuracyPct * 30 + topicsPct * 40) / 100;
     }
 
-    private int countTopicsCovered(List<CauHoi> all) {
-        int covered = 0;
+    private int countCompletedTopics(List<CauHoi> all) {
+        int completed = 0;
         for (int catId : CAT_IDS) {
-            int catAnswered = 0;
+            boolean hasQuestion = false;
+            boolean allAnswered = true;
             for (CauHoi ch : all) {
-                if (ch.getMaLoaiCH() == catId && ch.getDaTraLoiDung() != 0) catAnswered++;
+                if (ch.getMaLoaiCH() != catId) continue;
+                hasQuestion = true;
+                if (ch.getDaTraLoiDung() == 0) allAnswered = false;
             }
-            if (catAnswered > 0) covered++;
+            if (hasQuestion && allAnswered) completed++;
         }
-        return covered;
+        return completed;
     }
 
     private void buildWeakAreas(List<CauHoi> all) {
         List<WeakAreaAdapter.WeakArea> areas = new ArrayList<>();
+        boolean hasAnswered = false;
 
         for (int i = 0; i < CAT_IDS.length; i++) {
             int catId = CAT_IDS[i];
@@ -153,9 +163,10 @@ public class DashboardFragment extends Fragment {
                 if (ch.getDaTraLoiDung() == 1) { catCorrect++; catAnswered++; }
                 else if (ch.getDaTraLoiDung() == 2) { wrong++; catAnswered++; }
             }
+            if (catAnswered > 0) hasAnswered = true;
             if (catAnswered == 0) continue;
             int acc = (int) ((catCorrect / (float) catAnswered) * 100);
-            if (acc < 80) {
+            if (wrong > 0) {
                 areas.add(new WeakAreaAdapter.WeakArea(CAT_NAMES[i], catId, wrong, acc, 0));
             }
         }
@@ -166,6 +177,10 @@ public class DashboardFragment extends Fragment {
         if (areas.isEmpty()) {
             cardWeakAreas.setVisibility(View.GONE);
             txtNoWeakAreas.setVisibility(View.VISIBLE);
+            if (txtNoWeakAreas instanceof TextView) {
+                ((TextView) txtNoWeakAreas).setText(
+                        hasAnswered ? "Chưa có câu nào cần ôn lại." : "Bắt đầu ôn tập để xem thống kê!");
+            }
         } else {
             cardWeakAreas.setVisibility(View.VISIBLE);
             txtNoWeakAreas.setVisibility(View.GONE);

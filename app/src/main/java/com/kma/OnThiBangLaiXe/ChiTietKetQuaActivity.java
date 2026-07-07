@@ -1,7 +1,8 @@
 package com.kma.OnThiBangLaiXe;
 
 import android.os.Bundle;
-import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +11,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.kma.OnThiBangLaiXe.Adapter.CauTraLoiAdapter;
 import com.kma.OnThiBangLaiXe.Model.CauTraLoi;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.kma.OnThiBangLaiXe.Model.DanhSach;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,19 +21,22 @@ import java.util.Map;
 public class ChiTietKetQuaActivity extends AppCompatActivity {
     public ViewPager2 vp;
     TextView txtTitle;
-    BottomNavigationView bnv;
+    Button btnNavBack, btnNavForward;
     Toolbar toolbarBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cau_hoi);
         txtTitle = findViewById(R.id.txtTitle);
-        txtTitle.setText("Câu hỏi ôn thi");
+        txtTitle.setText("Chi tiết kết quả");
         toolbarBack =findViewById(R.id.toolbarBack);
-        bnv = findViewById(R.id.bottomNavigationView);
+        btnNavBack = findViewById(R.id.btnNavBack);
+        btnNavForward = findViewById(R.id.btnNavForward);
+        findViewById(R.id.navPanel).setVisibility(View.GONE);
         vp = findViewById(R.id.vp);
 
         DBHandler db = new DBHandler(this);
+        DanhSach.setDsCauHoi(db.docCauHoi());
         List<CauTraLoi> dsCauTraLoi = new ArrayList<>();
 
         int maDeThi = getIntent().getIntExtra("MaDeThi", 0);
@@ -55,30 +59,22 @@ public class ChiTietKetQuaActivity extends AppCompatActivity {
         vp.setAdapter(new CauTraLoiAdapter(dsCauTraLoi, this, true));
         toolbarBack.setNavigationOnClickListener(view -> onBackPressed() );
 
-        Menu menu = bnv.getMenu();
-
-        bnv.setOnNavigationItemSelectedListener(item ->
-        {
-            int itemId = item.getItemId();
-
-            if (itemId == R.id.tiBack) {
-                if (vp.getCurrentItem() > 0) {
-                    vp.setCurrentItem(vp.getCurrentItem() - 1, true);
-                }
-            } else if (itemId == R.id.tiForward) {
-                if (vp.getCurrentItem() < dsCauTraLoi.size() - 1) {
-                    vp.setCurrentItem(vp.getCurrentItem() + 1, true);
-                }
-            }
-
-            return false;
+        btnNavBack.setOnClickListener(v -> {
+            if (vp.getCurrentItem() > 0) vp.setCurrentItem(vp.getCurrentItem() - 1, true);
         });
 
-        menu.setGroupCheckable(0, false, true);
+        btnNavForward.setOnClickListener(v -> {
+            if (vp.getCurrentItem() < dsCauTraLoi.size() - 1)
+                vp.setCurrentItem(vp.getCurrentItem() + 1, true);
+        });
 
-        vp.setCurrentItem(viTri, true);
-
-        // Thêm vòng lặp hoặc phương thức để lấy ds câu hỏi của loại câu hỏi này ra
+        if (dsCauTraLoi.isEmpty()) {
+            btnNavBack.setEnabled(false);
+            btnNavForward.setEnabled(false);
+            return;
+        }
+        int safePosition = Math.max(0, Math.min(viTri, dsCauTraLoi.size() - 1));
+        vp.setCurrentItem(safePosition, false);
     }
 
     @Override

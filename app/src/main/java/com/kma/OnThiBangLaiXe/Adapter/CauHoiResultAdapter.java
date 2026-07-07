@@ -12,7 +12,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.kma.OnThiBangLaiXe.ChiTietKetQuaActivity;
 import com.kma.OnThiBangLaiXe.DBHandler;
@@ -64,8 +63,16 @@ public class CauHoiResultAdapter extends RecyclerView.Adapter<CauHoiResultAdapte
         CauHoi ch = db.getCauHoiByID(ctl.getMaCH());
 
         // Show original question number in the exam
-        int originalPos = fullList.indexOf(ctl);
+        int originalPos = fullList != null ? fullList.indexOf(ctl) : -1;
         holder.cau.setText(String.valueOf(originalPos >= 0 ? originalPos + 1 : position + 1));
+
+        if (ch == null) {
+            holder.imageCauHoiLiet.setVisibility(View.GONE);
+            holder.cau.setBackground(ContextCompat.getDrawable(context, R.drawable.bubble_skip_bg));
+            holder.cau.setTextColor(ContextCompat.getColor(context, R.color.muted));
+            holder.itemView.setOnClickListener(null);
+            return;
+        }
 
         // Điểm liệt badge
         if (ch.getMaLoaiCH() == 1) {
@@ -76,7 +83,7 @@ public class CauHoiResultAdapter extends RecyclerView.Adapter<CauHoiResultAdapte
 
         // Bubble color based on answer status
         String dapAn = ctl.getDapAnChon();
-        if (dapAn == null || dapAn.equals("0")) {
+        if (dapAn == null || dapAn.equals("null") || dapAn.equals("0")) {
             holder.cau.setBackground(ContextCompat.getDrawable(context, R.drawable.bubble_skip_bg));
             holder.cau.setTextColor(ContextCompat.getColor(context, R.color.muted));
         } else if (dapAn.equals(ch.getDapAnDung())) {

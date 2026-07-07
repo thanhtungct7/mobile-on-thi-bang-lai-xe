@@ -33,8 +33,8 @@ public class ResultFragment extends Fragment {
                              Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.fragment_result, container, false);
         rv = mView.findViewById(R.id.rvCauHoiResult);
-        adapter = new CauHoiResultAdapter(dsCTl, fullList, getContext());
-        rv.setLayoutManager(new GridLayoutManager(getContext(), 5));
+        adapter = new CauHoiResultAdapter(dsCTl, fullList, requireContext());
+        rv.setLayoutManager(new GridLayoutManager(requireContext(), 5));
         rv.setNestedScrollingEnabled(false);
         rv.setAdapter(adapter);
         return mView;

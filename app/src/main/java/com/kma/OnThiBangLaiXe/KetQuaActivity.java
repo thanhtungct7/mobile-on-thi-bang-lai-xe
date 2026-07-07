@@ -64,9 +64,14 @@ public class KetQuaActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         maDeThi = intent.getIntExtra("MaDeThi", 1);
-        long thoiGianConLaiMs = intent.getLongExtra("ThoiGianConLai", 0);
-        long tongThoiGian = 1200000L;
-        long thoiGianLamMs = Math.max(0, tongThoiGian - thoiGianConLaiMs);
+        long tongThoiGianMacDinh = DanhSach.getLoaiBang() == 2 ? 1_200_000L : 1_140_000L;
+        long tongThoiGian = intent.getLongExtra("TongThoiGian", tongThoiGianMacDinh);
+        boolean coDuLieuThoiGian = intent.hasExtra("ThoiGianConLai");
+        long thoiGianConLaiMs = coDuLieuThoiGian
+                ? intent.getLongExtra("ThoiGianConLai", 0)
+                : 0;
+        thoiGianConLaiMs = Math.max(0L, Math.min(thoiGianConLaiMs, tongThoiGian));
+        long thoiGianLamMs = Math.max(0L, tongThoiGian - thoiGianConLaiMs);
 
         db = new DBHandler(this);
 
@@ -77,6 +82,7 @@ public class KetQuaActivity extends AppCompatActivity {
 
         // --- Count answers ---
         int soCauDung = 0, soCauSai = 0, soCauChuaTraLoi = 0;
+        boolean saiDiemLiet = false;
         dsCTL = new ArrayList<>();
 
         if (maDeThi == 0) {
@@ -88,12 +94,22 @@ public class KetQuaActivity extends AppCompatActivity {
         }
 
         for (CauTraLoi ctl : dsCTL) {
-            if (ctl.getDapAnChon().equals("0"))
+            String dapAnChon = ctl.getDapAnChon();
+            CauHoi cauHoi = db.getCauHoiByID(ctl.getMaCH());
+            boolean coKetQuaThi = dapAnChon != null && !dapAnChon.equals("null");
+            boolean boQua = !coKetQuaThi || dapAnChon.equals("0");
+            boolean traLoiDung = cauHoi != null && cauHoi.getDapAnDung().equals(dapAnChon);
+
+            if (boQua)
                 soCauChuaTraLoi++;
-            else if (ctl.getDapAnChon().equals(db.getCauHoiByID(ctl.getMaCH()).getDapAnDung()))
+            else if (traLoiDung)
                 soCauDung++;
             else
                 soCauSai++;
+
+            if (coKetQuaThi && cauHoi != null && cauHoi.getMaLoaiCH() == 1 && !traLoiDung) {
+                saiDiemLiet = true;
+            }
         }
 
         int loaiBang  = DanhSach.getLoaiBang();
@@ -113,8 +129,13 @@ public class KetQuaActivity extends AppCompatActivity {
         txtScore.setText("Điểm đạt là " + nguongDat + "/" + tongCau + " câu.");
 
         // --- Time stats ---
-        txtThoiGianLam.setText(formatTime(thoiGianLamMs));
-        txtThoiGianConLai.setText(formatTime(thoiGianConLaiMs));
+        if (coDuLieuThoiGian) {
+            txtThoiGianLam.setText(formatTime(thoiGianLamMs));
+            txtThoiGianConLai.setText(formatTime(thoiGianConLaiMs));
+        } else {
+            txtThoiGianLam.setText("--:--");
+            txtThoiGianConLai.setText("--:--");
+        }
 
         // --- Ring ---
         int phanTram = tongCau > 0 ? soCauDung * 100 / tongCau : 0;
@@ -168,7 +189,8 @@ public class KetQuaActivity extends AppCompatActivity {
         });
 
         // --- Verdict & colors ---
-        if (soCauDung >= nguongDat) {
+        boolean dat = soCauDung >= nguongDat && !saiDiemLiet;
+        if (dat) {
             txtlyDo.setText("");
             txtKetQua.setText("ĐẠT");
             txtKetQua.setTextColor(ContextCompat.getColor(this, R.color.result_pass_fg));
@@ -184,17 +206,14 @@ public class KetQuaActivity extends AppCompatActivity {
                 ContextCompat.getColor(this, R.color.result_fail_fg),
                 ContextCompat.getColor(this, R.color.result_fail_fg)
             );
-            for (CauTraLoi ctl : dsCTL) {
-                for (CauHoi ch : DanhSach.getDsCauHoi()) {
-                    if (ch.getMaCH() == ctl.getMaCH()
-                            && ch.getMaLoaiCH() == 1
-                            && !ch.getDapAnDung().equals(ctl.getDapAnChon())) {
-                        txtlyDo.setText("Sai câu điểm liệt · cần đúng ≥ " + nguongDat + " câu");
-                        return;
-                    }
-                }
+            txtKetQua.setText("KHÔNG ĐẠT");
+            txtKetQua.setTextColor(ContextCompat.getColor(this, R.color.result_fail_fg));
+            txtScoreNum.setTextColor(ContextCompat.getColor(this, R.color.result_fail_fg));
+            if (saiDiemLiet) {
+                txtlyDo.setText("Không trả lời đúng câu điểm liệt");
+            } else {
+                txtlyDo.setText("Cần đúng ≥ " + nguongDat + " câu để đạt");
             }
-            txtlyDo.setText("Cần đúng ≥ " + nguongDat + " câu để đạt");
         }
     }
 

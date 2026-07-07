@@ -218,7 +218,7 @@
                     android:id="@+id/txtStatTopics"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0/5"
+                    android:text="0/7"
                     android:textSize="22sp"
                     android:textStyle="bold"
                     android:textColor="@color/fg"
