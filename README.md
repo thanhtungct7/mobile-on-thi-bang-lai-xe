@@ -32,10 +32,12 @@
 - [2.2	Biển báo](#BienBao)
 - [2.3	Mẹo ôn thi](#MeoOnThi)
 - [2.4	Sa hình](#SaHinh)
-- [2.6	Thi thử (Đề thi)](#ThiThu)
-- [2.7	Kết quả](#KetQua)
-- [2.8	Thi thử](#ThiThu)
+- [2.5	Nhận diện biển báo (YOLOv8)](#NhanDien)
+- [2.6	Thi thử (Đề thi)](#DanhSachDeThi)
+- [2.7	Kết quả chi tiết](#KetQua)
+- [2.8	Thi thử (Làm bài)](#LamBaiThi)
 - [2.9	Câu hỏi ôn tập theo chủ đề](#CauHoiTheoChuDe)
+- [2.10	Lịch sử thi](#LichSuThi)
 
 [III. Tổng kết](#TongKet)
 
@@ -47,38 +49,55 @@
 <a name="GiaoDien"></a>
 ## II. Giao diện
 <a name="Main"></a>
-### 2.1 Main
+### 2.1 Main (Tổng quan)
+- Màn hình chính hiển thị tiến độ ôn tập, mức độ sẵn sàng đi thi và gợi ý các chủ đề cần ôn luyện lại.
 ![dashboard](app/src/main/assets/img/dashboard.jpg)
 
 <a name="BienBao"></a>
 ### 2.2 Biển báo
-![image](https://user-images.githubusercontent.com/107678223/236499799-edf9d85b-6e23-4e00-8834-a4470da721e4.png)
+- Danh sách hệ thống các biển báo giao thông đường bộ (biển báo cấm, biển báo nguy hiểm...). Tích hợp tính năng học qua Flashcard để ghi nhớ nhanh chóng.
+![bien_bao](app/src/main/assets/img/bien_bao.jpg)
+![flashcard_bien_bao](app/src/main/assets/img/flashcard_bien_bao.jpg)
 
 <a name="MeoOnThi"></a>
 ### 2.3 Mẹo ôn thi
-![image](https://user-images.githubusercontent.com/107678223/236499969-9f4aa046-48a3-47c0-b9f8-90f27c0e87c0.png)
+- Tổng hợp các mẹo thi lý thuyết luật giao thông đường bộ hữu ích.
+![meo_on_thi](app/src/main/assets/img/meo_on_thi.jpg)
 
 <a name="SaHinh"></a>
 ### 2.4 Sa hình
-![image](https://user-images.githubusercontent.com/107678223/236500047-90d1744c-3984-48b8-9454-c0cff479720e.png) <br>
-![image](https://user-images.githubusercontent.com/107678223/236500540-4260bc3b-c61b-4769-84e4-c8b8928d694c.png)
+- Hướng dẫn các bước và mẹo làm 11 bài thi sa hình thực hành.
+![sa_hinh](app/src/main/assets/img/sa_hinh.jpg)
 
+<a name="NhanDien"></a>
+### 2.5 Nhận diện biển báo (YOLOv8)
+- Tính năng chụp ảnh hoặc sử dụng camera để tự động nhận diện và tra cứu thông tin biển báo giao thông sử dụng mô hình học máy YOLOv8.
+![nhan_dien_bien_bao](app/src/main/assets/img/nhan_dien_bien_bao.jpg)
 
-<a name="ThiThu"></a>
+<a name="DanhSachDeThi"></a>
 ### 2.6 Thi thử (Đề thi)
+- Danh sách các bộ đề thi thử được biên soạn theo cấu trúc chuẩn.
 ![list_exam](app/src/main/assets/img/list_exam.jpg)
 
 <a name="KetQua"></a>
-### 2.7 kết quả
+### 2.7 Kết quả chi tiết
+- Xem chi tiết kết quả bài thi thử, số lượng câu đúng/sai và bản đồ các câu hỏi đã làm (đặc biệt lưu ý các câu hỏi điểm liệt).
 ![exam_result](app/src/main/assets/img/exam_result.jpg)
 
-<a name="ThiThu"></a>
-### 2.8 Thi thử
-![image](https://user-images.githubusercontent.com/107678223/236501603-22dc8fc4-0b46-4714-8f51-1b4d8a9f40a9.png)
+<a name="LamBaiThi"></a>
+### 2.8 Thi thử (Làm bài)
+- Giao diện làm bài thi trắc nghiệm trực quan với thời gian đếm ngược.
+![thi_thu](app/src/main/assets/img/thi_thu.jpg)
 
-### 2.9 Câu hỏi ôn tập theo chủ đề
 <a name="CauHoiTheoChuDe"></a>
-![image](https://user-images.githubusercontent.com/107678223/236501778-8805853f-f19d-4ac2-a4ae-9af485ac1f8f.png)
+### 2.9 Câu hỏi ôn tập theo chủ đề
+- Học lý thuyết và ôn tập câu hỏi được phân loại theo từng chủ đề cụ thể (như luật giao thông, kỹ thuật lái xe, đạo đức...).
+![cau_hoi_theo_chu_de](app/src/main/assets/img/cau_hoi_theo_chu_de.jpg)
+
+<a name="LichSuThi"></a>
+### 2.10 Lịch sử thi
+- Lưu giữ và thống kê kết quả của các lần thi thử trước đó để theo dõi sự tiến bộ.
+![lich_su_thi](app/src/main/assets/img/lich_su_thi.jpg)
 
 ## III. Tổng kết
 <a name="TongKet"></a>

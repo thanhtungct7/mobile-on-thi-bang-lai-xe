@@ -14,3 +14,4 @@ local.properties
 json/
 .claude
 doc/
+.understand-anything/
