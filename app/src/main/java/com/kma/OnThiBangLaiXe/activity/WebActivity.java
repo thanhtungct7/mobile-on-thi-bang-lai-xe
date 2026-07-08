@@ -1,4 +1,4 @@
-package com.kma.OnThiBangLaiXe;
+package com.kma.OnThiBangLaiXe.activity;
 
 import android.os.Bundle;
 import android.webkit.WebSettings;
@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import com.kma.OnThiBangLaiXe.R;
 
 import java.util.Objects;
 

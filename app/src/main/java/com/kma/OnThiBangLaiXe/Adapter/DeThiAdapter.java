@@ -13,13 +13,13 @@ import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.kma.OnThiBangLaiXe.DBHandler;
-import com.kma.OnThiBangLaiXe.KetQuaActivity;
+import com.kma.OnThiBangLaiXe.activity.KetQuaActivity;
 import com.kma.OnThiBangLaiXe.Model.CauHoi;
 import com.kma.OnThiBangLaiXe.Model.CauTraLoi;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
 import com.kma.OnThiBangLaiXe.Model.DeThi;
 import com.kma.OnThiBangLaiXe.R;
-import com.kma.OnThiBangLaiXe.ThiThuActivity;
+import com.kma.OnThiBangLaiXe.activity.ThiThuActivity;
 
 import java.util.ArrayList;
 import java.util.List;

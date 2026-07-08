@@ -1,4 +1,4 @@
-package com.kma.OnThiBangLaiXe;
+package com.kma.OnThiBangLaiXe.widget;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -10,6 +10,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.view.View;
 import android.widget.RemoteViews;
+
+import com.kma.OnThiBangLaiXe.R;
+import com.kma.OnThiBangLaiXe.activity.SignDetectActivity;
 
 /*
  * Mô tả file:

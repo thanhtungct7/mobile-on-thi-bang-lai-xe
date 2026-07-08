@@ -1,4 +1,4 @@
-package com.kma.OnThiBangLaiXe;
+package com.kma.OnThiBangLaiXe.activity;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -12,10 +12,13 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.kma.OnThiBangLaiXe.DBHandler;
 import com.kma.OnThiBangLaiXe.Fragment.ResultFragment;
 import com.kma.OnThiBangLaiXe.Model.CauHoi;
 import com.kma.OnThiBangLaiXe.Model.CauTraLoi;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
+import com.kma.OnThiBangLaiXe.R;
+import com.kma.OnThiBangLaiXe.ReadinessRingView;
 
 import java.util.ArrayList;
 import java.util.List;

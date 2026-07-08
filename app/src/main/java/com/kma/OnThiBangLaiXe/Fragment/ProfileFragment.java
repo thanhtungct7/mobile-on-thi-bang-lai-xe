@@ -14,15 +14,15 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
-import com.kma.OnThiBangLaiXe.CauLuuActivity;
-import com.kma.OnThiBangLaiXe.CauSaiActivity;
+import com.kma.OnThiBangLaiXe.activity.CauLuuActivity;
+import com.kma.OnThiBangLaiXe.activity.CauSaiActivity;
 import com.kma.OnThiBangLaiXe.DBHandler;
-import com.kma.OnThiBangLaiXe.HaySaiActivity;
+import com.kma.OnThiBangLaiXe.activity.HaySaiActivity;
 import com.kma.OnThiBangLaiXe.MainActivity;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
 import com.kma.OnThiBangLaiXe.R;
-import com.kma.OnThiBangLaiXe.SplashActivity;
-import com.kma.OnThiBangLaiXe.WebActivity;
+import com.kma.OnThiBangLaiXe.activity.SplashActivity;
+import com.kma.OnThiBangLaiXe.activity.WebActivity;
 
 /*
  * Mô tả file:

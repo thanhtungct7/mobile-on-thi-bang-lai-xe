@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.kma.OnThiBangLaiXe.CauHoiActivity;
+import com.kma.OnThiBangLaiXe.activity.CauHoiActivity;
 import com.kma.OnThiBangLaiXe.DBHandler;
 import com.kma.OnThiBangLaiXe.Interface.RecyclerViewInterface;
 import com.kma.OnThiBangLaiXe.Model.CauHoi;

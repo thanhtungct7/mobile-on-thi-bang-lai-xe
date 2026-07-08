@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.core.content.ContextCompat;
 
-import com.kma.OnThiBangLaiXe.ChiTietKetQuaActivity;
+import com.kma.OnThiBangLaiXe.activity.ChiTietKetQuaActivity;
 import com.kma.OnThiBangLaiXe.DBHandler;
 import com.kma.OnThiBangLaiXe.Model.CauHoi;
 import com.kma.OnThiBangLaiXe.Model.CauTraLoi;

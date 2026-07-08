@@ -15,17 +15,17 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.kma.OnThiBangLaiXe.Adapter.TheLoaiCauHoiAdapter;
-import com.kma.OnThiBangLaiXe.BienBaoActivity;
-import com.kma.OnThiBangLaiXe.CauHoiActivity;
+import com.kma.OnThiBangLaiXe.activity.BienBaoActivity;
+import com.kma.OnThiBangLaiXe.activity.CauHoiActivity;
 import com.kma.OnThiBangLaiXe.DBHandler;
-import com.kma.OnThiBangLaiXe.DeThiActivity;
+import com.kma.OnThiBangLaiXe.activity.DeThiActivity;
 import com.kma.OnThiBangLaiXe.Interface.RecyclerViewInterface;
 import com.kma.OnThiBangLaiXe.Model.CauHoi;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
 import com.kma.OnThiBangLaiXe.Model.DeThi;
 import com.kma.OnThiBangLaiXe.Model.LoaiCauHoi;
 import com.kma.OnThiBangLaiXe.R;
-import com.kma.OnThiBangLaiXe.WebActivity;
+import com.kma.OnThiBangLaiXe.activity.WebActivity;
 
 import java.util.ArrayList;
 import java.util.List;

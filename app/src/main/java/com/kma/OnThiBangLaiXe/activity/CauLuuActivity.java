@@ -1,4 +1,4 @@
-package com.kma.OnThiBangLaiXe;
+package com.kma.OnThiBangLaiXe.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 import com.kma.OnThiBangLaiXe.Adapter.SaveQuestionAdapter;
+import com.kma.OnThiBangLaiXe.DBHandler;
 import com.kma.OnThiBangLaiXe.Model.CauHoi;
+import com.kma.OnThiBangLaiXe.R;
 
 import java.util.ArrayList;
 import java.util.List;

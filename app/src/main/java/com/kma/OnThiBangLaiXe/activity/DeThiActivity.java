@@ -1,7 +1,6 @@
-package com.kma.OnThiBangLaiXe;
+package com.kma.OnThiBangLaiXe.activity;
 
 import android.os.Bundle;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -11,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.kma.OnThiBangLaiXe.Adapter.DeThiAdapter;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
 import com.kma.OnThiBangLaiXe.Model.DeThi;
+import com.kma.OnThiBangLaiXe.R;
 
 import java.util.List;
 

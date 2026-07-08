@@ -1,4 +1,4 @@
-package com.kma.OnThiBangLaiXe;
+package com.kma.OnThiBangLaiXe.activity;
 
 import static com.kma.OnThiBangLaiXe.Model.DanhSach.getDsBienBao;
 
@@ -11,9 +11,11 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.kma.OnThiBangLaiXe.Adapter.LoaiBienBaoAdapter;
+import com.kma.OnThiBangLaiXe.DBHandler;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+import com.kma.OnThiBangLaiXe.R;
 
 /*
  * Mô tả file:

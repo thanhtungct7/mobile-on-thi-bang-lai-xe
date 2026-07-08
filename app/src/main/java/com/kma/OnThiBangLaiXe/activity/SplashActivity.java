@@ -1,4 +1,4 @@
-package com.kma.OnThiBangLaiXe;
+package com.kma.OnThiBangLaiXe.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,13 +8,14 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.kma.OnThiBangLaiXe.Custom.MyDB;
 import com.kma.OnThiBangLaiXe.Custom.MySharedPreferences;
+import com.kma.OnThiBangLaiXe.MainActivity;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.kma.OnThiBangLaiXe.R;
 
 import java.io.File;
 import java.io.FileOutputStream;

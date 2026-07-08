@@ -1,4 +1,4 @@
-package com.kma.OnThiBangLaiXe;
+package com.kma.OnThiBangLaiXe.widget;
 
 import android.content.Context;
 import android.content.res.AssetFileDescriptor;

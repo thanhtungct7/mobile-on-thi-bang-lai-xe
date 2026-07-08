@@ -1,4 +1,4 @@
-package com.kma.OnThiBangLaiXe;
+package com.kma.OnThiBangLaiXe.widget;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -12,8 +12,11 @@ import android.graphics.BitmapFactory;
 import android.view.View;
 import android.widget.RemoteViews;
 
+import com.kma.OnThiBangLaiXe.DBHandler;
 import com.kma.OnThiBangLaiXe.Model.CauHoi;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
+import com.kma.OnThiBangLaiXe.R;
+import com.kma.OnThiBangLaiXe.activity.SplashActivity;
 
 import java.io.File;
 import java.util.List;

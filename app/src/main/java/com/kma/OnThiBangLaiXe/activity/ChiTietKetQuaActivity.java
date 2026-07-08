@@ -1,4 +1,4 @@
-package com.kma.OnThiBangLaiXe;
+package com.kma.OnThiBangLaiXe.activity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -10,9 +10,11 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.kma.OnThiBangLaiXe.Adapter.CauTraLoiAdapter;
+import com.kma.OnThiBangLaiXe.DBHandler;
 import com.kma.OnThiBangLaiXe.Model.CauTraLoi;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
 import com.kma.OnThiBangLaiXe.Fragment.*;
+import com.kma.OnThiBangLaiXe.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

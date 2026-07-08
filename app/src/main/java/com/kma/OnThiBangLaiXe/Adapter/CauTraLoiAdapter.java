@@ -21,7 +21,7 @@ import com.kma.OnThiBangLaiXe.Model.CauHoi;
 import com.kma.OnThiBangLaiXe.Model.CauTraLoi;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
 import com.kma.OnThiBangLaiXe.R;
-import com.kma.OnThiBangLaiXe.ThiThuActivity;
+import com.kma.OnThiBangLaiXe.activity.ThiThuActivity;
 
 import java.io.File;
 import java.util.List;

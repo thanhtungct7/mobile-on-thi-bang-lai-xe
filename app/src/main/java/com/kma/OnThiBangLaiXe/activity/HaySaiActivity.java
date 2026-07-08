@@ -1,4 +1,4 @@
-package com.kma.OnThiBangLaiXe;
+package com.kma.OnThiBangLaiXe.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -9,10 +9,11 @@ import android.view.Menu;
 import android.widget.TextView;
 
 import com.kma.OnThiBangLaiXe.Adapter.CauHoiAdapter;
+import com.kma.OnThiBangLaiXe.DBHandler;
 import com.kma.OnThiBangLaiXe.Fragment.StudyFragment;
 import com.kma.OnThiBangLaiXe.Model.CauHoi;
-import com.kma.OnThiBangLaiXe.Model.DanhSach;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.kma.OnThiBangLaiXe.R;
 
 import java.util.ArrayList;
 import java.util.List;

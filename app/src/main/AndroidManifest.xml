@@ -20,49 +20,49 @@
         android:theme="@style/Theme.ÔnThiBằngLáiXe"
         tools:targetApi="31">
         <activity
-            android:name=".HaySaiActivity"
+            android:name=".activity.HaySaiActivity"
             android:exported="false"
             tools:ignore="MissingClass" />
         <activity
-            android:name=".CauLuuActivity"
+            android:name=".activity.CauLuuActivity"
             android:exported="false" />
         <activity
-            android:name=".CauSaiActivity"
+            android:name=".activity.CauSaiActivity"
             android:exported="false" />
         <activity
-            android:name=".ChiTietKetQuaActivity"
+            android:name=".activity.ChiTietKetQuaActivity"
             android:exported="false" />
 
         <activity
-            android:name=".ThiThuActivity"
+            android:name=".activity.ThiThuActivity"
             android:exported="false" />
         <activity
-            android:name=".DeThiActivity"
+            android:name=".activity.DeThiActivity"
             android:exported="false" />
         <activity
-            android:name=".CauHoiActivity"
+            android:name=".activity.CauHoiActivity"
             android:exported="false" />
         <activity
-            android:name=".WebActivity"
+            android:name=".activity.WebActivity"
             android:exported="false" />
         <activity
-            android:name=".ChiTietBienBaoActivity"
+            android:name=".activity.ChiTietBienBaoActivity"
             android:exported="false" />
         <activity
-            android:name=".BienBaoActivity"
+            android:name=".activity.BienBaoActivity"
             android:exported="false" />
         <activity
-            android:name=".KetQuaActivity"
+            android:name=".activity.KetQuaActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".OnBoardingActivity"
+            android:name=".activity.OnBoardingActivity"
             android:exported="false"
             android:noHistory="true" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".activity.SplashActivity"
             android:exported="true"
             android:noHistory="true">
             <intent-filter>
@@ -72,14 +72,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".FlashcardActivity"
+            android:name=".activity.FlashcardActivity"
             android:exported="false" />
         <activity
-            android:name=".SignDetectActivity"
+            android:name=".activity.SignDetectActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <receiver
-            android:name=".SignDetectWidgetProvider"
+            android:name=".widget.SignDetectWidgetProvider"
             android:exported="true"
             android:label="Nhận diện biển báo">
             <intent-filter>
@@ -91,7 +91,7 @@
         </receiver>
 
         <receiver
-            android:name=".QuestionWidgetProvider"
+            android:name=".widget.QuestionWidgetProvider"
             android:exported="true"
             android:label="Câu hỏi ngẫu nhiên">
             <intent-filter>

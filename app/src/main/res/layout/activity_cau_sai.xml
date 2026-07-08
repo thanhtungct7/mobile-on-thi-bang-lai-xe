@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CauSaiActivity">
+    tools:context=".activity.CauSaiActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".CauHoiActivity">
+        tools:context=".activity.CauHoiActivity">
 
         <include layout="@layout/toolbar" />
 

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     style="@style/TEXT"
-    tools:context=".ChiTietBienBaoActivity">
+    tools:context=".activity.ChiTietBienBaoActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"

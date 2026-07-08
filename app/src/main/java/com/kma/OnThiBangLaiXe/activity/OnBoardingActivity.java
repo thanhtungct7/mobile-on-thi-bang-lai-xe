@@ -1,4 +1,4 @@
-package com.kma.OnThiBangLaiXe;
+package com.kma.OnThiBangLaiXe.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -18,6 +18,8 @@ import java.util.List;
 
 import com.kma.OnThiBangLaiXe.Fragment.OnboardingFragment;
 import com.kma.OnThiBangLaiXe.Custom.MyDB;
+import com.kma.OnThiBangLaiXe.R;
+
 import me.relex.circleindicator.CircleIndicator;
 
 /*

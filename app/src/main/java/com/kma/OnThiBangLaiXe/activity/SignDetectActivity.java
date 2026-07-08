@@ -1,11 +1,10 @@
-package com.kma.OnThiBangLaiXe;
+package com.kma.OnThiBangLaiXe.activity;
 
 import android.Manifest;
 import android.appwidget.AppWidgetManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -33,6 +32,9 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.google.common.util.concurrent.ListenableFuture;
+import com.kma.OnThiBangLaiXe.R;
+import com.kma.OnThiBangLaiXe.widget.SignDetectWidgetProvider;
+import com.kma.OnThiBangLaiXe.widget.TFLiteSignDetector;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.kma.OnThiBangLaiXe.Adapter.WeakAreaAdapter;
-import com.kma.OnThiBangLaiXe.CauHoiActivity;
+import com.kma.OnThiBangLaiXe.activity.CauHoiActivity;
 import com.kma.OnThiBangLaiXe.Model.CauHoi;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
 import com.kma.OnThiBangLaiXe.R;

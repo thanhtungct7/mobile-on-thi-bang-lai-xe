@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.kma.OnThiBangLaiXe.ChiTietBienBaoActivity;
+import com.kma.OnThiBangLaiXe.activity.ChiTietBienBaoActivity;
 import com.kma.OnThiBangLaiXe.Model.BienBao;
 import com.kma.OnThiBangLaiXe.R;
 

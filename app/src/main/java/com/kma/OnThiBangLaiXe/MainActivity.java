@@ -20,6 +20,7 @@ import com.kma.OnThiBangLaiXe.Fragment.ResultsFragment;
 import com.kma.OnThiBangLaiXe.Fragment.StudyFragment;
 import com.kma.OnThiBangLaiXe.Model.DanhSach;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.kma.OnThiBangLaiXe.activity.SignDetectActivity;
 
 /*
  * Mô tả file:
