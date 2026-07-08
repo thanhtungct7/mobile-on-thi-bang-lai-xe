@@ -140,9 +140,11 @@ public class ThiThuActivity extends AppCompatActivity {
             if (ResultsFragment.dtAdapter != null) ResultsFragment.dtAdapter.notifyDataSetChanged();
         }
 
+        long thoiGianConLai = Math.max(0L, Math.min(time, totalTime));
+        db.saveExamTime(maDeThi, totalTime, thoiGianConLai);
+
         Intent intent = new Intent(this, KetQuaActivity.class);
         intent.putExtra("MaDeThi", maDeThi);
-        long thoiGianConLai = Math.max(0L, Math.min(time, totalTime));
         intent.putExtra("ThoiGianConLai", thoiGianConLai);
         intent.putExtra("TongThoiGian", totalTime);
         startActivity(intent);

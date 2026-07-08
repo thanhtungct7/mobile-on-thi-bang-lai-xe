@@ -36,6 +36,10 @@ public class DBHandler extends SQLiteOpenHelper {
     Context context;
     private static final String DB_NAME = "db.db";
     private static final int DB_VERSION = 1;
+    private static final String PREFS_EXAM_TIME = "EXAM_TIME_PREFS";
+    private static final String KEY_TOTAL_PREFIX = "total_";
+    private static final String KEY_REMAINING_PREFIX = "remaining_";
+
     public DBHandler(Context context) {
         super(context, DB_NAME, null, 2);
         this.context=context;
@@ -619,6 +623,29 @@ public class DBHandler extends SQLiteOpenHelper {
             mDatabase.update("CauTraLoi",contentValues,"MaDeThi=? AND MaCauHoi=?", new String[]{String.valueOf(tl.getMaDeThi()),String.valueOf(tl.getMaCH())});
         }
         mDatabase.close();
+    }
+
+    public void saveExamTime(int maDeThi, long tongThoiGian, long thoiGianConLai) {
+        long safeTotal = Math.max(0L, tongThoiGian);
+        long safeRemaining = Math.max(0L, Math.min(thoiGianConLai, safeTotal));
+        context.getSharedPreferences(PREFS_EXAM_TIME, Context.MODE_PRIVATE)
+                .edit()
+                .putLong(KEY_TOTAL_PREFIX + maDeThi, safeTotal)
+                .putLong(KEY_REMAINING_PREFIX + maDeThi, safeRemaining)
+                .apply();
+    }
+
+    public long[] getExamTime(int maDeThi) {
+        android.content.SharedPreferences prefs =
+                context.getSharedPreferences(PREFS_EXAM_TIME, Context.MODE_PRIVATE);
+        String totalKey = KEY_TOTAL_PREFIX + maDeThi;
+        String remainingKey = KEY_REMAINING_PREFIX + maDeThi;
+        if (!prefs.contains(totalKey) || !prefs.contains(remainingKey)) return null;
+
+        long total = prefs.getLong(totalKey, 0L);
+        if (total <= 0L) return null;
+        long remaining = Math.max(0L, Math.min(prefs.getLong(remainingKey, 0L), total));
+        return new long[]{total, remaining};
     }
 
     //Update loai câu hỏi

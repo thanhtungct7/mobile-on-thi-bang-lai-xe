@@ -70,16 +70,28 @@ public class KetQuaActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         maDeThi = intent.getIntExtra("MaDeThi", 1);
+        db = new DBHandler(this);
+
         long tongThoiGianMacDinh = DanhSach.getLoaiBang() == 2 ? 1_200_000L : 1_140_000L;
         long tongThoiGian = intent.getLongExtra("TongThoiGian", tongThoiGianMacDinh);
         boolean coDuLieuThoiGian = intent.hasExtra("ThoiGianConLai");
         long thoiGianConLaiMs = coDuLieuThoiGian
                 ? intent.getLongExtra("ThoiGianConLai", 0)
                 : 0;
+
+        if (coDuLieuThoiGian) {
+            db.saveExamTime(maDeThi, tongThoiGian, thoiGianConLaiMs);
+        } else {
+            long[] savedTime = db.getExamTime(maDeThi);
+            if (savedTime != null) {
+                tongThoiGian = savedTime[0];
+                thoiGianConLaiMs = savedTime[1];
+                coDuLieuThoiGian = true;
+            }
+        }
+
         thoiGianConLaiMs = Math.max(0L, Math.min(thoiGianConLaiMs, tongThoiGian));
         long thoiGianLamMs = Math.max(0L, tongThoiGian - thoiGianConLaiMs);
-
-        db = new DBHandler(this);
 
         Toolbar toolbarBack = findViewById(R.id.toolbarBack);
         toolbarBack.setNavigationOnClickListener(view -> onBackPressed());
